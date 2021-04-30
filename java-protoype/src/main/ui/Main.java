@@ -13,7 +13,7 @@ public class Main {
 
         // test data
         Vertex cpsc100 = new Vertex("CPSC", "100");
-        Vertex cpsc101 = new Vertex("CPSC", "100");
+        Vertex cpsc101 = new Vertex("CPSC", "101");
         Vertex cpsc103 = new Vertex("CPSC", "103");
         Vertex cpsc107 = new Vertex("CPSC", "107");
         Vertex cpsc110 = new Vertex("CPSC", "110");
@@ -34,6 +34,8 @@ public class Main {
         // instead of adding the edges individually, the edges can be put into 'data'
         // rather than passing empty LinkedLists.
         g.addEdge(cpsc107, cpsc103);
+        g.addEdge(cpsc107, cpsc121);
+        g.addEdge(cpsc110, cpsc121);
         g.addEdge(cpsc121, cpsc107);
         g.addEdge(cpsc121, cpsc110);
 
@@ -45,10 +47,10 @@ public class Main {
         HashMap<Vertex,LinkedList<Vertex>> adjList = g.getAdjList();
 
         for (Map.Entry<Vertex, LinkedList<Vertex>> v : adjList.entrySet()) {
-            System.out.print(v.getKey().toString() + " -> ");
+            System.out.print(v.getKey().toString() + " : ");
             LinkedList<Vertex> edgeList = v.getValue();
             for(Vertex e : edgeList) {
-                System.out.print(e.toString() + "  ");
+                System.out.print(e.toString() + g.getRelation(v.getKey(), e) + "  ");
             }
             System.out.println();
         }

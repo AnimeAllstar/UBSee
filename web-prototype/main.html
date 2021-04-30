@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> UBC degree visualizer </title>
-        <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
-    </head>
-    <body>
-        <div id="diagram" style="width:400px; height:400px; background-color: #DAE4E4;"></div>
+  <head>
+    <title>UBC degree visualizer</title>
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js"></script>
+  </head>
 
-        <script>
-            // $ = go.GraphObject.make()
-            var $ = go.GraphObject.make;
-            var diagram = $(go.Diagram, "diagram");
-        </script>
-    </body>
+  <body onload="init()">
+    <!--graph container-->
+    <div id="diagram-div" class="graph-container"></div>
+  </body>
 </html>

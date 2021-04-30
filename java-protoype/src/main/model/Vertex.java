@@ -28,6 +28,6 @@ public class Vertex {
 
     @Override
     public String toString() {
-        return this.dep + " " + this.id;
+        return getDep() + " " + getId();
     }
 }

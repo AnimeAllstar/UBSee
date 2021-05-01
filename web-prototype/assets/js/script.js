@@ -8,17 +8,16 @@ async function getData() {
 async function init() {
   const dataJson = await getData();
   const dataArray = dataJson.courses;
-  const vertices = [];
-  const edges = [];
+  const nodes = [];
+  const courses = [];
   dataArray.forEach((course) => {
     let v = { key: course.name };
-    vertices.push(v);
-    let e = [course.prereqs];
-    edges.push(e);
+   nodes.push(v);
+   courses.push(course);
   });
-  // console.log(vertices);
-  console.log(edges);
-  return { vertices, edges };
+  // console.log nodes);
+  // console.log courses);
+  return { nodes, courses };
 }
 
 async function createGraph() {
@@ -33,6 +32,7 @@ async function createGraph() {
     "undoManager.isEnabled": true,
     layout: $(go.LayeredDigraphLayout), // alternate layout : go.ForceDirectedLayout
   });
+  myDiagram.layout.direction = 90;
 
   myDiagram.nodeTemplate = $(
     go.Node,
@@ -48,22 +48,23 @@ async function createGraph() {
     )
   );
 
-  myDiagram.model = new go.GraphLinksModel(graphData.vertices);
+  myDiagram.model = new go.GraphLinksModel(graphData.nodes);
 
-  // [
-  //   // array of edges
-  //   { from: "Pre-calculus 12", to: "CPSC 121" },
-  //   { from: "CPSC 103", to: "CPSC 107" },
-  //   { from: "CPSC 107", to: "CPSC 121" },
-  //   { from: "CPSC 110", to: "CPSC 121" },
-  //   { from: "CPSC 121", to: "CPSC 107" },
-  //   { from: "CPSC 121", to: "CPSC 110" },
-
-  //   { from: "CPSC 103", to: "CPSC 203" },
-  //   { from: "CPSC 110", to: "CPSC 210" },
-  //   { from: "CPSC 121", to: "CPSC 213" },
-  //   { from: "CPSC 210", to: "CPSC 213" },
-  //   { from: "CPSC 210", to: "CPSC 221" },
-  //   { from: "CPSC 298", to: "CPSC 299" },
-  // ]
+  graphData.courses.forEach((course) => {
+    var tempPrereqs = course.prereqs;
+    tempPrereqs.forEach((andCombo) => {
+      andCombo.forEach((orCombo) => {
+        if(orCombo.constructor === Array){
+          return;
+        }
+        const link = {
+          from: orCombo,
+          to: course.name
+        }
+        // console.log(orCombo);
+        // console.log(link);
+        myDiagram.model.addLinkData(link);
+      });
+    });
+  });
 }

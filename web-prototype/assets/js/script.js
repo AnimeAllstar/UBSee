@@ -1,9 +1,35 @@
-function init() {
+async function getData() {
+  const response = await fetch("/web-prototype/assets/json/CPSC.json");
+  const json = await response.json();
+  console.log(json);
+  return json;
+}
+
+async function init() {
+  const dataJson = await getData();
+  const dataArray = dataJson.courses;
+  const vertices = [];
+  const edges = [];
+  dataArray.forEach((course) => {
+    let v = { key: course.name };
+    vertices.push(v);
+    let e = [course.prereqs];
+    edges.push(e);
+  });
+  // console.log(vertices);
+  console.log(edges);
+  return { vertices, edges };
+}
+
+async function createGraph() {
+
+  const graphData = await init();
+
   // $ is a function pointer for go.GraphObject.make()
-  var $ = go.GraphObject.make;
+  const $ = go.GraphObject.make;
 
   // make diagram
-  var myDiagram = $(go.Diagram, "diagram-div", {
+  const myDiagram = $(go.Diagram, "diagram-div", {
     "undoManager.isEnabled": true,
     layout: $(go.LayeredDigraphLayout), // alternate layout : go.ForceDirectedLayout
   });
@@ -22,40 +48,22 @@ function init() {
     )
   );
 
-  myDiagram.model = new go.GraphLinksModel(
-    [
-      // array of vertices
-      { key: "Pre-calculus 12" },
-      { key: "CPSC 100" },
-      { key: "CPSC 101" },
-      { key: "CPSC 103" },
-      { key: "CPSC 107" },
-      { key: "CPSC 110" },
-      { key: "CPSC 121" },
+  myDiagram.model = new go.GraphLinksModel(graphData.vertices);
 
-      { key: "CPSC 203" },
-      { key: "CPSC 210" },
-      { key: "CPSC 213" },
-      { key: "CPSC 259" },
-      { key: "CPSC 261" },
-      { key: "CPSC 298" },
-      { key: "CPSC 299" },
-    ],
-    [
-      // array of edges
-      { from: "Pre-calculus 12", to: "CPSC 121" },
-      { from: "CPSC 103", to: "CPSC 107" },
-      { from: "CPSC 107", to: "CPSC 121" },
-      { from: "CPSC 110", to: "CPSC 121" },
-      { from: "CPSC 121", to: "CPSC 107" },
-      { from: "CPSC 121", to: "CPSC 110" },
+  // [
+  //   // array of edges
+  //   { from: "Pre-calculus 12", to: "CPSC 121" },
+  //   { from: "CPSC 103", to: "CPSC 107" },
+  //   { from: "CPSC 107", to: "CPSC 121" },
+  //   { from: "CPSC 110", to: "CPSC 121" },
+  //   { from: "CPSC 121", to: "CPSC 107" },
+  //   { from: "CPSC 121", to: "CPSC 110" },
 
-      { from: "CPSC 103", to: "CPSC 203" },
-      { from: "CPSC 110", to: "CPSC 210" },
-      { from: "CPSC 121", to: "CPSC 213" },
-      { from: "CPSC 210", to: "CPSC 213" },
-      { from: "CPSC 210", to: "CPSC 221" },
-      { from: "CPSC 298", to: "CPSC 299" },
-    ]
-  );
+  //   { from: "CPSC 103", to: "CPSC 203" },
+  //   { from: "CPSC 110", to: "CPSC 210" },
+  //   { from: "CPSC 121", to: "CPSC 213" },
+  //   { from: "CPSC 210", to: "CPSC 213" },
+  //   { from: "CPSC 210", to: "CPSC 221" },
+  //   { from: "CPSC 298", to: "CPSC 299" },
+  // ]
 }

@@ -1,0 +1,168 @@
+{
+  "courses": [
+    {
+      "name": "CPSC 100",
+      "prereqs": [[]]
+    },
+    {
+      "name": "CPSC 103",
+      "prereqs": [[]]
+    },
+    {
+      "name": "CPSC 107",
+      "prereqs": [["CPSC 103"]]
+    },
+    {
+      "name": "CPSC 110",
+      "prereqs": [[]]
+    },
+    {
+      "name": "CPSC 121",
+      "prereqs": [[]]
+    },
+    {
+      "name": "CPSC 203",
+      "prereqs": [["CPSC 103", "CPSC 110"]]
+    },
+    {
+      "name": "CPSC 210",
+      "prereqs": [["CPSC 107", "CPSC 110"]]
+    },
+    {
+      "name": "CPSC 213",
+      "prereqs": [["CPSC 121", "CPSC 210"]]
+    },
+    {
+      "name": "CPSC 221",
+      "prereqs": [["CPSC 121", "CPSC 210"]]
+    },
+    {
+      "name": "CPSC 302",
+      "prereqs": [["CPSC 103", "CPSC 110"]]
+    },
+    {
+      "name": "CPSC 303",
+      "prereqs": [["CPSC 103", "CPSC 110"]]
+    },
+    {
+      "name": "CPSC 304",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 310",
+      "prereqs": [["CPSC 221", "CPSC 213"]]
+    },
+    {
+      "name": "CPSC 311",
+      "prereqs": [["CPSC 210"]]
+    },
+    {
+      "name": "CPSC 312",
+      "prereqs": [["CPSC 210"]]
+    },
+    {
+      "name": "CPSC 313",
+      "prereqs": [["CPSC 213", "CPSC 211"]]
+    },
+    {
+      "name": "CPSC 314",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 317",
+      "prereqs": [["CPSC 221", "CPSC 213"]]
+    },
+    {
+      "name": "CPSC 319",
+      "prereqs": [["CPSC 310"]]
+    },
+    {
+      "name": "CPSC 320",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 322",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 330",
+      "prereqs": [[["CPSC 203", "CPSC 210"]], [["CPSC 107", "CPSC 110"]]]
+    },
+    {
+      "name": "CPSC 340",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 344",
+      "prereqs": [["CPSC 210"]]
+    },
+    {
+      "name": "CPSC 404",
+      "prereqs": [["CPSC 304"], ["CPSC 213", "CPSC 261"]]
+    },
+    {
+      "name": "CPSC 406",
+      "prereqs": [["CPSC 302", "CPSC 303"]]
+    },
+    {
+      "name": "CPSC 410",
+      "prereqs": [["CPSC 310"]]
+    },
+    {
+      "name": "CPSC 411",
+      "prereqs": [["CPSC 213"], ["CPSC 221"], ["CPSC 311"]]
+    },
+    {
+      "name": "CPSC 415",
+      "prereqs": [["CPSC 313"]]
+    },
+    {
+      "name": "CPSC 416",
+      "prereqs": [["CPSC 313"], ["CPSC 317"]]
+    },
+    {
+      "name": "CPSC 417",
+      "prereqs": [["CPSC 313"], ["CPSC 317"]]
+    },
+    {
+      "name": "CPSC 418",
+      "prereqs": [["CPSC 261", "CPSC 313"], ["CPSC 320"]]
+    },
+    {
+      "name": "CPSC 420",
+      "prereqs": [["CPSC 320"]]
+    },
+    {
+      "name": "CPSC 421",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 422",
+      "prereqs": [["CPSC 322"]]
+    },
+    {
+      "name": "CPSC 425",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 427",
+      "prereqs": [["CPSC 221"]]
+    },
+    {
+      "name": "CPSC 430",
+      "prereqs": [["Year 3 standing"], ["3 CS Credits"]]
+    },
+    {
+      "name": "CPSC 440",
+      "prereqs": [["CPSC 320"], ["CPSC 340"]]
+    },
+    {
+      "name": "CPSC 444",
+      "prereqs": [["CPSC 310"], ["CPSC 344"]]
+    },
+    {
+      "name": "CPSC 445",
+      "prereqs": [["CPSC 320"]]
+    }
+  ]
+}

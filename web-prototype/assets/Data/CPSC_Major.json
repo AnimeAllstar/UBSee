@@ -1,0 +1,63 @@
+{
+  "courses": {
+    "CPSC 103": {
+      "prereqs": [[]]
+    },
+
+    "CPSC 107": {
+      "prereqs": [["CPSC 103"]]
+    },
+
+    "CPSC 110": {
+      "prereqs": [[]]
+    },
+
+    "CPSC 121": {
+      "prereqs":
+        [[]]
+    },
+
+    "CPSC 210": {
+      "prereqs": [
+        [
+          "CPSC 107",
+          "CPSC 110"
+        ]
+      ]
+    },
+
+    "CPSC 213": {
+      "prereqs": [
+        ["CPSC 121"],
+        ["CPSC 210"]
+      ]
+    },
+
+    "CPSC 221": {
+      "prereqs": [
+        ["CPSC 121"],
+        ["CPSC 210"]
+      ]
+    },
+
+    "CPSC 310": {
+      "prereqs": [
+        ["CPSC 221"],
+        ["CPSC 213"]
+      ]
+    },
+
+    "CPSC 313": {
+      "prereqs": [
+        ["CPSC 213"],
+        ["CPSC 221"]
+      ]
+    },
+
+    "CPSC 320": {
+      "prereqs": [
+        ["CPSC 221"]
+      ]
+    }
+  }
+}

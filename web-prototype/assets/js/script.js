@@ -72,12 +72,13 @@ function createDiagram() {
 }
 
 // returns new layout
+// https://gojs.net/latest/samples/ldLayout.html
 function createLayout() {
   const newLayout = new go.LayeredDigraphLayout();
   newLayout.direction = 270;
   newLayout.layerSpacing = 100;
   newLayout.columnSpacing = 50;
-  newLayout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSink;
+  newLayout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSource;
   newLayout.aggressiveOption = go.LayeredDigraphLayout.AggressiveMore;
   return newLayout;
 }
@@ -109,16 +110,16 @@ function createNodeTemplate() {
       { strokeWidth: 2, stroke: null, fill: "#FFF" },
       new go.Binding("fill", "color"),
       // the Shape.stroke color depends on whether Node.isHighlighted is true
+      // new go.Binding("stroke", "isSelected", function (h) { return h ? "#1e90ff" : "#000"; }).ofObject(),
+      // new go.Binding("fill", "isSelected", function (h) { return h ? "#1e90ff" : "#FFF"; }).ofObject(),
       new go.Binding("stroke", "isHighlighted", function (h) { return h ? "#FC5185" : "#000"; }).ofObject(),
-      new go.Binding("fill", "isHighlighted", function (h) { return h ? "#FC5185" : "#FFF"; }).ofObject(),
-      new go.Binding("stroke", "isSelected", function (h) { return h ? "#1e90ff" : "#000"; }).ofObject(),
-      new go.Binding("fill", "isSelected", function (h) { return h ? "#1e90ff" : "#FFF"; }).ofObject()),
+      new go.Binding("fill", "isHighlighted", function (h) { return h ? "#FC5185" : "#FFF"; }).ofObject()),
     $(go.TextBlock,
       "course id", // default text
       // text config, padding
       { margin: 12, stroke: "#000", font: "bold 16px sans-serif" },
       new go.Binding("stroke", "isHighlighted", function (h) { return h ? "#FFF" : "#000"; }).ofObject(),
-      new go.Binding("stroke", "isSelected", function (h) { return h ? "#FFF" : "#000"; }).ofObject(),
+      // new go.Binding("stroke", "isSelected", function (h) { return h ? "#FFF" : "#000"; }).ofObject(),
       new go.Binding("text", "key"))
   );
 }

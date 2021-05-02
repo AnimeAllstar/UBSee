@@ -34,10 +34,7 @@
     },
     {
       "name": "CPSC 221",
-      "prereqs": [
-        ["CPSC 121"],
-        ["CPSC 210"]
-      ]
+      "prereqs": [["CPSC 121"], ["CPSC 210"]]
     },
     {
       "name": "CPSC 302",
@@ -53,10 +50,7 @@
     },
     {
       "name": "CPSC 310",
-      "prereqs": [
-        ["CPSC 221"],
-        ["CPSC 213"]
-      ]
+      "prereqs": [["CPSC 221"], ["CPSC 213"]]
     },
     {
       "name": "CPSC 311",
@@ -64,10 +58,7 @@
     },
     {
       "name": "CPSC 312",
-      "prereqs": [
-        ["CPSC 213"],
-        ["CPSC 221"]
-      ]
+      "prereqs": [["CPSC 213"], ["CPSC 221"]]
     },
     {
       "name": "CPSC 313",
@@ -79,10 +70,7 @@
     },
     {
       "name": "CPSC 317",
-      "prereqs": [
-        ["CPSC 221"],
-        ["CPSC 213"]
-      ]
+      "prereqs": [["CPSC 221"], ["CPSC 213"]]
     },
     {
       "name": "CPSC 319",
@@ -98,14 +86,7 @@
     },
     {
       "name": "CPSC 330",
-      "prereqs": [
-        [
-          ["CPSC 203", "CPSC 210"]
-        ],
-        [
-          ["CPSC 107", "CPSC 110"]
-        ]
-      ]
+      "prereqs": [["CPSC 203", "CPSC 210", "CPSC 107", "CPSC 110"]]
     },
     {
       "name": "CPSC 340",

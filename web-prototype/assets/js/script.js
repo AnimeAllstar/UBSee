@@ -204,3 +204,5 @@ function updateHighlight(node){
     unhighlight(node);
   }
 }
+
+

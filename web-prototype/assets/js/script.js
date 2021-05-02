@@ -16,45 +16,36 @@ async function init() {
   const nodes = [];
   const links = [];
   dataArray.forEach((course) => {
-    let v = { key: course.name, prereqs: course.prereqs };
-    nodes.push(v);
+    let n = { key: course.name, prereqs: course.prereqs };
+    nodes.push(n);
     links.push(course);
   });
-  // console.log nodes);
-  // console.log courses);
   return { nodes, links: links };
 }
 
 async function createGraph() {
 
   const graphData = await init();
+
   // make diagram
   const myDiagram = createDiagram();
 
   // when the user clicks on the background of the Diagram, remove all highlighting
   myDiagram.click = function (e) {
-    e.diagram.commit(function (d) { 
+    e.diagram.commit(function (d) {
       d.clearHighlighteds();
-     }, "no highlighteds");
+    }, "no highlighteds");
   };
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
+
   // add links for edges
   graphData.links.forEach((link) => {
     const tempPrereqs = link.prereqs;
     tempPrereqs.forEach((andCombo) => {
       andCombo.forEach((orCombo) => {
-        if (orCombo.constructor === Array) {
-          return;
-        }
-        const currLink = {
-          from: orCombo,
-          to: link.name
-        }
-        // console.log(orCombo);
-        // console.log(link);
-        myDiagram.model.addLinkData(currLink);
+        myDiagram.model.addLinkData({ from: orCombo, to: link.name });
       });
     });
   });
@@ -75,7 +66,7 @@ function createDiagram() {
 // https://gojs.net/latest/samples/ldLayout.html
 function createLayout() {
   const newLayout = new go.LayeredDigraphLayout();
-  newLayout.direction = 90;
+  newLayout.direction = 270;
   newLayout.layerSpacing = 100;
   newLayout.columnSpacing = 50;
   newLayout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSource;
@@ -136,7 +127,7 @@ function createLinkTemplate() {
 function updateClickable(node) {
   node.clickable = true;
   node.findLinksInto().each((link) => {
-    if(link.isHighlighted === false){
+    if (link.isHighlighted === false) {
       node.clickable = false;
     }
   });
@@ -149,11 +140,11 @@ function checkPrerequisiteSatisfied(node) {
   var finalCheck = true;
   var linksIntoNode = [];
   node.findLinksInto().each(function (l) {
-    linksIntoNode.push({data:l.data, isHighlighted: l.isHighlighted});
+    linksIntoNode.push({ data: l.data, isHighlighted: l.isHighlighted });
   });
-  if(prereqs[0].length === 0){
+  if (prereqs[0].length === 0) {
     node.clickable = true;
-    console.log("final = "+node.clickable);
+    console.log("final = " + node.clickable);
     return;
   }
   prereqs.forEach((andCombo) => {
@@ -168,20 +159,20 @@ function checkPrerequisiteSatisfied(node) {
         }
       });
     });
-    if(!check){
+    if (!check) {
       finalCheck = false;
     }
     check = false;
   });
-  if(!finalCheck){
+  if (!finalCheck) {
     node.clickable = false;
   }
-  console.log("final = "+node.clickable);
+  console.log("final = " + node.clickable);
   return node.clickable
 }
 
 // function that highlights a given node and highlights the links coming out of it
-function highlight(node){
+function highlight(node) {
   const diagram = node.diagram;
   // lock
   diagram.startTransaction("highlight");
@@ -198,7 +189,7 @@ function highlight(node){
 
 //function that unhighlights a node, and child links
 //recursively calls updateHighlight on child nodes, to recheck prerequisite paramaters
-function unhighlight(node){
+function unhighlight(node) {
   const diagram = node.diagram;
   // lock
   diagram.startTransaction("unhighlight");
@@ -215,7 +206,7 @@ function unhighlight(node){
   diagram.commitTransaction("unhighlight");
 
   // recursively call update on children nodes
-  node.findNodesOutOf().each(function(node){
+  node.findNodesOutOf().each(function (node) {
     recursiveUpdateHighlight(node);
   });
 }
@@ -226,26 +217,26 @@ function unhighlight(node){
 //        calls unhighlight
 //    returns
 //if it is clickable then it calls the appropriate method to highlight/unhighlight
-function updateHighlight(node){
+function updateHighlight(node) {
   // updateClickable(node);
   checkPrerequisiteSatisfied(node);
-  if(!node.clickable){
-    if(node.isHighlighted === true){
+  if (!node.clickable) {
+    if (node.isHighlighted === true) {
       unhighlight(node);
     }
     return;
   }
-  if(node.isHighlighted === false){
+  if (node.isHighlighted === false) {
     highlight(node);
   } else {
     unhighlight(node);
   }
 }
 
-function recursiveUpdateHighlight(node){
+function recursiveUpdateHighlight(node) {
   checkPrerequisiteSatisfied(node);
-  if(!node.clickable){
-    if(node.isHighlighted === true){
+  if (!node.clickable) {
+    if (node.isHighlighted === true) {
       unhighlight(node);
     }
     return;

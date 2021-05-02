@@ -16,7 +16,7 @@ async function init() {
   const nodes = [];
   const links = [];
   dataArray.forEach((course) => {
-    let v = { key: course.name };
+    let v = { key: course.name, prereqs: course.prereqs };
     nodes.push(v);
     links.push(course);
   });
@@ -28,7 +28,6 @@ async function init() {
 async function createGraph() {
 
   const graphData = await init();
-
   // make diagram
   const myDiagram = createDiagram();
 
@@ -41,7 +40,6 @@ async function createGraph() {
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
-
   // add links for edges
   graphData.links.forEach((link) => {
     const tempPrereqs = link.prereqs;
@@ -92,7 +90,7 @@ function createNodeTemplate() {
     {
       click: function (e, node) {
         updateHighlight(node);
-      }
+      },
     },
     $(go.Shape, "Rectangle",
       { strokeWidth: 2, stroke: null, fill: "#FFF" },
@@ -144,6 +142,44 @@ function updateClickable(node) {
   });
 }
 
+function checkPrerequisiteSatisfied(node) {
+  node.clickable = true;
+  var prereqs = node.data.prereqs;
+  var check = false;
+  var finalCheck = true;
+  var linksIntoNode = [];
+  node.findLinksInto().each(function (l) {
+    linksIntoNode.push({data:l.data, isHighlighted: l.isHighlighted});
+  });
+  if(prereqs[0].length === 0){
+    node.clickable = true;
+    console.log("final = "+node.clickable);
+    return;
+  }
+  prereqs.forEach((andCombo) => {
+    console.log(andCombo);
+    andCombo.forEach((orCombo) => {
+      linksIntoNode.forEach((link) => {
+        if (link.data.from === orCombo && link.isHighlighted) {
+          console.log(link.data.from);
+          console.log(orCombo);
+          console.log(link.isHighlighted);
+          check = true;
+        }
+      });
+    });
+    if(!check){
+      finalCheck = false;
+    }
+    check = false;
+  });
+  if(!finalCheck){
+    node.clickable = false;
+  }
+  console.log("final = "+node.clickable);
+  return node.clickable
+}
+
 // function that highlights a given node and highlights the links coming out of it
 function highlight(node){
   const diagram = node.diagram;
@@ -180,7 +216,7 @@ function unhighlight(node){
 
   // recursively call update on children nodes
   node.findNodesOutOf().each(function(node){
-    updateHighlight(node);
+    recursiveUpdateHighlight(node);
   });
 }
 
@@ -191,7 +227,8 @@ function unhighlight(node){
 //    returns
 //if it is clickable then it calls the appropriate method to highlight/unhighlight
 function updateHighlight(node){
-  updateClickable(node);
+  // updateClickable(node);
+  checkPrerequisiteSatisfied(node);
   if(!node.clickable){
     if(node.isHighlighted === true){
       unhighlight(node);
@@ -205,4 +242,12 @@ function updateHighlight(node){
   }
 }
 
-
+function recursiveUpdateHighlight(node){
+  checkPrerequisiteSatisfied(node);
+  if(!node.clickable){
+    if(node.isHighlighted === true){
+      unhighlight(node);
+    }
+    return;
+  }
+}

@@ -34,7 +34,9 @@ async function createGraph() {
 
   // when the user clicks on the background of the Diagram, remove all highlighting
   myDiagram.click = function (e) {
-    e.diagram.commit(function (d) { d.clearHighlighteds(); }, "no highlighteds");
+    e.diagram.commit(function (d) { 
+      d.clearHighlighteds();
+     }, "no highlighteds");
   };
 
   // add nodes to new model
@@ -75,7 +77,7 @@ function createDiagram() {
 // https://gojs.net/latest/samples/ldLayout.html
 function createLayout() {
   const newLayout = new go.LayeredDigraphLayout();
-  newLayout.direction = 270;
+  newLayout.direction = 90;
   newLayout.layerSpacing = 100;
   newLayout.columnSpacing = 50;
   newLayout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSource;
@@ -89,21 +91,7 @@ function createNodeTemplate() {
     go.Node, "Auto",
     {
       click: function (e, node) {
-        const diagram = node.diagram;
-        // lock
-        diagram.startTransaction("highlight");
-        // remove any previous highlighting
-        diagram.clearHighlighteds();
-        // set Node.isHighlighted for all outgoing Links
-        node.findLinksOutOf().each(function (l) { l.isHighlighted = true; });
-        // set Node.isHighlighted for all outgoing Nodes
-        node.findNodesOutOf().each(function (n) { n.isHighlighted = true; });
-        // set Node.isHighlighted for all incoming Links
-        node.findLinksInto().each(function (l) { l.isHighlighted = true; });
-        // set Node.isHighlighted for all incoming Nodes
-        node.findNodesInto().each(function (n) { n.isHighlighted = true; });
-        // unlock
-        diagram.commitTransaction("highlight");
+        updateHighlight(node);
       }
     },
     $(go.Shape, "Rectangle",
@@ -142,4 +130,77 @@ function createLinkTemplate() {
         new go.Binding("fill", "isHighlighted", function (h) { return h ? "#FC5185" : "black"; })
           .ofObject())
     );
+}
+
+// This function will call the prerequisite check
+// currently just updates node.clickable 
+// if any incoming links are false then sets node.clickable to false
+function updateClickable(node) {
+  node.clickable = true;
+  node.findLinksInto().each((link) => {
+    if(link.isHighlighted === false){
+      node.clickable = false;
+    }
+  });
+}
+
+// function that highlights a given node and highlights the links coming out of it
+function highlight(node){
+  const diagram = node.diagram;
+  // lock
+  diagram.startTransaction("highlight");
+
+  // Color clicked node
+  node.isHighlighted = true;
+
+  // set Node.isHighlighted for all outgoing Links
+  node.findLinksOutOf().each(function (l) { l.isHighlighted = true; });
+
+  // unlock
+  diagram.commitTransaction("highlight");
+}
+
+//function that unhighlights a node, and child links
+//recursively calls updateHighlight on child nodes, to recheck prerequisite paramaters
+function unhighlight(node){
+  const diagram = node.diagram;
+  // lock
+  diagram.startTransaction("unhighlight");
+  // remove any previous highlighting
+  // diagram.clearHighlighteds();
+
+  // DeColor clicked nodes
+  node.isHighlighted = false;
+
+  // Decolor links coming out of node
+  node.findLinksOutOf().each(function (l) { l.isHighlighted = false; });
+
+  // unlock
+  diagram.commitTransaction("unhighlight");
+
+  // recursively call update on children nodes
+  node.findNodesOutOf().each(function(node){
+    updateHighlight(node);
+  });
+}
+
+//updates clickability of node
+//if not clickable node
+//    and if node is highlighted, 
+//        calls unhighlight
+//    returns
+//if it is clickable then it calls the appropriate method to highlight/unhighlight
+function updateHighlight(node){
+  updateClickable(node);
+  if(!node.clickable){
+    if(node.isHighlighted === true){
+      unhighlight(node);
+    }
+    return;
+  }
+  if(node.isHighlighted === false){
+    highlight(node);
+  } else {
+    unhighlight(node);
+  }
 }

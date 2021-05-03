@@ -39,6 +39,7 @@ async function createGraph() {
 
     // add nodes to new model
     myDiagram.model = new go.GraphLinksModel(graphData.nodes);
+    myDiagram.model.isReadOnly = true
 
     // add links for edges
     graphData.links.forEach((link) => {
@@ -79,6 +80,7 @@ function createNodeTemplate() {
     return nodeTemplate = $(
         go.Node, "Auto",
         {
+            selectionAdorned: false,
             click: function (e, node) {
                 updateHighlight(node);
             },
@@ -86,8 +88,10 @@ function createNodeTemplate() {
         $(go.Shape, "Rectangle",
             { strokeWidth: 2, stroke: null, fill: "#FFF" },
             new go.Binding("fill", "color"),
+            // bind Shape.stroke to Node.isSelected
+            new go.Binding("stroke", "isSelected", (sel) => { return sel ? "#1E90FF" : "#000"; }).ofObject(),
             // bind Shape.stroke and Shape.fill to Node.isHighlighted
-            new go.Binding("stroke", "isHighlighted", (h) => { return h ? "#FC5185" : "#000"; }).ofObject(),
+            new go.Binding("stroke", "isHighlighted", (h) => { return h ? "#000" : "#000"; }).ofObject(),
             new go.Binding("fill", "isHighlighted", (h) => { return h ? "#FC5185" : "#FFF"; }).ofObject()),
         $(go.TextBlock,
             "course id", // default text
@@ -105,14 +109,11 @@ function createLinkTemplate() {
             { routing: go.Link.AvoidsNodes, corner: 0 },
             $(go.Shape,
                 // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
-                new go.Binding("stroke", "isHighlighted", (h) => { return h ? "#FC5185" : "black"; })
-                    .ofObject(),
-                new go.Binding("strokeWidth", "isHighlighted", (h) => { return h ? 3 : 1; })
-                    .ofObject()),
+                new go.Binding("stroke", "isHighlighted", (h) => { return h ? "#FC5185" : "black"; }).ofObject(),
+                new go.Binding("strokeWidth", "isHighlighted", (h) => { return h ? 3 : 1; }).ofObject()),
             $(go.Shape,
                 { toArrow: "Standard", strokeWidth: 0 },
                 // bind Shape.fill to Link.isHighlighted
-                new go.Binding("fill", "isHighlighted", (h) => { return h ? "#FC5185" : "black"; })
-                    .ofObject())
+                new go.Binding("fill", "isHighlighted", (h) => { return h ? "#FC5185" : "black"; }).ofObject())
         );
 }

@@ -5,6 +5,7 @@
 //    returns
 //if it is clickable then it calls the appropriate method to highlight/unhighlight
 function updateHighlight(node) {
+  console.log(node.data.isClickable);
   checkPrerequisiteSatisfied(node);
   if (!node.clickable) {
     if (node.isHighlighted === true) {
@@ -70,7 +71,9 @@ function highlight(node) {
   node.isHighlighted = true;
 
   // set Node.isHighlighted for all outgoing Links
-  node.findLinksOutOf().each(function (l) { l.isHighlighted = true; });
+  node.findLinksOutOf().each(function (l) {
+    l.isHighlighted = true;
+  });
 
   // unlock
   diagram.commitTransaction("highlight");
@@ -87,7 +90,9 @@ function unhighlight(node) {
   node.isHighlighted = false;
 
   // Decolor links coming out of node
-  node.findLinksOutOf().each(function (l) { l.isHighlighted = false; });
+  node.findLinksOutOf().each(function (l) {
+    l.isHighlighted = false;
+  });
 
   // unlock
   diagram.commitTransaction("unhighlight");

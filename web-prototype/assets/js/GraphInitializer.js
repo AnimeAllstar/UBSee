@@ -85,7 +85,7 @@ function createNodeTemplate() {
     {
       selectionAdorned: false,
       click: function (e, node) {
-        updateHighlight(node);
+        nodeClickHandler(node);
       },
     },
     $(

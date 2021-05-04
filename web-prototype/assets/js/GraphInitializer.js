@@ -41,7 +41,6 @@ async function createGraph() {
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
-  myDiagram.model.isReadOnly = true;
 
   // add links for edges
   graphData.links.forEach((link) => {
@@ -62,6 +61,10 @@ function createDiagram() {
     layout: createLayout(),
     nodeTemplate: createNodeTemplate(),
     linkTemplate: createLinkTemplate(),
+    allowDelete: false,
+    allowCopy: false,
+    allowMove: false,
+    allowInsert: false,
   });
 }
 

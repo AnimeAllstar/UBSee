@@ -5,7 +5,6 @@ const $ = go.GraphObject.make;
 async function getData() {
   const response = await fetch("/web-prototype/assets/json/CPSC.json");
   const json = await response.json();
-  console.log(json);
   return json;
 }
 
@@ -31,13 +30,6 @@ async function createGraph() {
 
   // make diagram
   const myDiagram = createDiagram();
-
-  // when the user clicks on the background of the Diagram, remove all highlighting
-  myDiagram.click = function (e) {
-    e.diagram.commit(function (d) {
-      d.clearHighlighteds();
-    }, "no highlighteds");
-  };
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
@@ -95,27 +87,27 @@ function createNodeTemplate() {
       go.Shape,
       "Rectangle",
       { strokeWidth: 2, stroke: null, fill: "#FFF" },
-      new go.Binding("fill", "color"),
-      // bind Shape.stroke to Node.isSelected
-      new go.Binding("stroke", "isSelected", (sel) => {
-        return sel ? "#1E90FF" : "#000";
-      }).ofObject(),
-      // bind Shape.stroke and Shape.fill to Node.isHighlighted
+      // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
       new go.Binding("stroke", "isHighlighted", (h) => {
         return h ? "#000" : "#000";
       }).ofObject(),
-      new go.Binding("fill", "isHighlighted", (h) => {
-        return h ? "#FC5185" : "#FFF";
+      new go.Binding("fill", "", (node) => {
+        if (node.data.isClickable) {
+          if (node.isHighlighted) {
+            return "#6a65d8";
+          } else {
+            return "#28df99";
+          }
+        } else {
+          return "#ff1e56";
+        }
       }).ofObject()
     ),
     $(
       go.TextBlock,
       "course id", // default text
       // text config, padding
-      { margin: 12, stroke: "#000", font: "bold 16px sans-serif" },
-      new go.Binding("stroke", "isHighlighted", (h) => {
-        return h ? "#FFF" : "#000";
-      }).ofObject(),
+      { margin: 12, stroke: "#fff", font: "bold 16px sans-serif" },
       new go.Binding("text", "key")
     )
   ));
@@ -130,7 +122,7 @@ function createLinkTemplate() {
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
       new go.Binding("stroke", "isHighlighted", (h) => {
-        return h ? "#FC5185" : "black";
+        return h ? "#3d6cb9" : "black";
       }).ofObject(),
       new go.Binding("strokeWidth", "isHighlighted", (h) => {
         return h ? 3 : 1;
@@ -141,7 +133,7 @@ function createLinkTemplate() {
       { toArrow: "Standard", strokeWidth: 0 },
       // bind Shape.fill to Link.isHighlighted
       new go.Binding("fill", "isHighlighted", (h) => {
-        return h ? "#FC5185" : "black";
+        return h ? "#3d6cb9" : "black";
       }).ofObject()
     )
   ));

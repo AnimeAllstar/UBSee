@@ -1,17 +1,9 @@
 html,
 body {
-  height: 99%;
-  background-color: #eeeeee;
+  height: 100%;
+  overflow: hidden;
 }
 
 .graph-container {
-  width: 90%;
-  height: 90%;
   background-color: #fff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }

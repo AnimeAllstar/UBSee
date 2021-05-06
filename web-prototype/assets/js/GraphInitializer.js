@@ -84,8 +84,18 @@ function createNodeTemplate() {
       },
       toolTip: $(
         "ToolTip",
-        $(go.TextBlock, { margin: 4 }, new go.Binding("text", "title"))
-      ), // end of Adornment
+        $(
+          go.TextBlock,
+          { margin: 4 },
+          new go.Binding("text", "", (data) => {
+            return (
+              data.key +
+              "\nPre-reqs: " +
+              (data.prereqs[0].length !== 0 ? data.prereqs : "none")
+            );
+          })
+        )
+      ),
     },
     $(
       go.Shape,

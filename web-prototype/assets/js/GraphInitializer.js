@@ -19,6 +19,7 @@ async function init() {
       key: course.name,
       prereqs: course.prereqs,
       isClickable: course.prereqs[0].length === 0 ? true : false,
+      title: course.title,
     });
     links.push(course);
   });
@@ -67,6 +68,7 @@ function createLayout() {
   newLayout.angle = 0;
   newLayout.layerSpacing = 100;
   newLayout.columnSpacing = 20;
+  newLayout.alignment = go.TreeLayout.AlignmentCenterChildren;
   return newLayout;
 }
 
@@ -80,6 +82,10 @@ function createNodeTemplate() {
       click: function (e, node) {
         nodeClickHandler(node);
       },
+      toolTip: $(
+        "ToolTip",
+        $(go.TextBlock, { margin: 4 }, new go.Binding("text", "title"))
+      ), // end of Adornment
     },
     $(
       go.Shape,

@@ -13,21 +13,62 @@
       crossorigin="anonymous"
     />
 
-    <title>UBC degree visualizer</title>
+    <title>UBC Degree Visualizer</title>
     <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- UBC Degree Visualizer Scripts -->
     <script src="assets/js/GraphInitializer.js"></script>
     <script src="assets/js/NodeEventHandler.js"></script>
+    <script src="assets/js/SettingsUpdater.js"></script>
   </head>
 
   <body onload="createGraph()">
     <div class="container-fluid h-100">
       <div class="row h-100">
         <!-- Sidebar -->
-        <div class="text-white p-3 bg-dark col-md-3">
-          <span class="h1">UBC Degree Visualizer</span>
+        <div class="p-3 bg-dark col-md-3">
+          <span class="h1 text-white">UBC Degree Visualizer</span>
+          <hr />
+          <div class="accordion" id="sidebar-accordian">
+            <div class="text-white">
+              <h2 class="accordion-header" id="settings-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings-content">
+                  Settings
+                </button>
+              </h2>
+              <div id="settings-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <li class="list-group-item rounded-0">
+                      <h5>Direction</h5>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" id="right" value="0" checked />
+                        <label class="form-check-label" for="right">Right</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" id="down" value="90" />
+                        <label class="form-check-label" for="down">Down</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" id="left" value="180" />
+                        <label class="form-check-label" for="left">Left</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" id="up" value="270" />
+                        <label class="form-check-label" for="up">Up</label>
+                      </div>
+                    </li>
+                    <li class="list-group-item rounded-0">
+                      <h5>...</h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <br />
+            <button type="button" class="btn btn-primary" onclick="updateGraph()">Create Graph</button>
+          </div>
         </div>
 
         <!-- Graph -->

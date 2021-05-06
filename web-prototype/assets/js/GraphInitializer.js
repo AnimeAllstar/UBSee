@@ -1,6 +1,8 @@
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;
 
+var myDiagram;
+
 // get data asynchronously
 async function getData() {
   const response = await fetch("/web-prototype/assets/json/CPSC.json");
@@ -30,7 +32,7 @@ async function createGraph() {
   const graphData = await init();
 
   // make diagram
-  const myDiagram = createDiagram();
+  myDiagram = createDiagram();
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
@@ -88,11 +90,7 @@ function createNodeTemplate() {
           go.TextBlock,
           { margin: 4 },
           new go.Binding("text", "", (data) => {
-            return (
-              data.title +
-              "\nPre-reqs: " +
-              (data.prereqs[0].length !== 0 ? data.prereqs : "none")
-            );
+            return data.title + "\nPre-reqs: " + (data.prereqs[0].length !== 0 ? data.prereqs : "none");
           })
         )
       ),

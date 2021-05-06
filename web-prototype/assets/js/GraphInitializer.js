@@ -63,12 +63,10 @@ function createDiagram() {
 // returns new layout
 // https://gojs.net/latest/samples/ldLayout.html
 function createLayout() {
-  const newLayout = new go.LayeredDigraphLayout();
-  newLayout.direction = 270;
+  const newLayout = new go.TreeLayout();
+  newLayout.angle = 0;
   newLayout.layerSpacing = 100;
-  newLayout.columnSpacing = 50;
-  newLayout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSource;
-  newLayout.aggressiveOption = go.LayeredDigraphLayout.AggressiveMore;
+  newLayout.columnSpacing = 20;
   return newLayout;
 }
 
@@ -94,12 +92,12 @@ function createNodeTemplate() {
       new go.Binding("fill", "", (node) => {
         if (node.data.isClickable) {
           if (node.isHighlighted) {
-            return "#6a65d8";
+            return "#33a532";
           } else {
-            return "#28df99";
+            return "#f7b500";
           }
         } else {
-          return "#ff1e56";
+          return "#bb1e10";
         }
       }).ofObject()
     ),

@@ -229,12 +229,6 @@
       "title": "Video Game Programming"
     },
     {
-      "name": "CPSC 430",
-      "prereqs": [[]],
-      "link": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=430",
-      "title": "Computers and Society"
-    },
-    {
       "name": "CPSC 440",
       "prereqs": [["CPSC 320"], ["CPSC 340"]],
       "link": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=440",

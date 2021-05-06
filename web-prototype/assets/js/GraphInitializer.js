@@ -62,14 +62,14 @@ function createDiagram() {
 }
 
 // returns new layout
-// https://gojs.net/latest/samples/ldLayout.html
 function createLayout() {
-  const newLayout = new go.TreeLayout();
-  newLayout.angle = 0;
-  newLayout.layerSpacing = 100;
-  newLayout.columnSpacing = 20;
-  newLayout.alignment = go.TreeLayout.AlignmentCenterChildren;
-  return newLayout;
+  return (layout = $(go.LayeredDigraphLayout, {
+    direction: 0,
+    layerSpacing: 100,
+    columnSpacing: 10,
+    linkSpacing: 7,
+    layeringOption: go.LayeredDigraphLayout.LayerLongestPathSource,
+  }));
 }
 
 // retuns new node template
@@ -108,7 +108,7 @@ function createNodeTemplate() {
       new go.Binding("fill", "", (node) => {
         if (node.data.isClickable) {
           if (node.isHighlighted) {
-            return "#ffcd42";
+            return "#1e90ff";
           } else {
             return "#28df99";
           }
@@ -131,7 +131,7 @@ function createNodeTemplate() {
 function createLinkTemplate() {
   return (LinkTemplate = $(
     go.Link,
-    { routing: go.Link.AvoidsNodes, corner: 0 },
+    { routing: go.Link.Normal, corner: 0 },
     $(
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
@@ -148,6 +148,9 @@ function createLinkTemplate() {
       // bind Shape.fill to Link.isHighlighted
       new go.Binding("fill", "isHighlighted", (h) => {
         return h ? "#28df99" : "black";
+      }).ofObject(),
+      new go.Binding("fill", "isSelected", (sel) => {
+        return sel ? "#1e90ff" : "black";
       }).ofObject()
     )
   ));

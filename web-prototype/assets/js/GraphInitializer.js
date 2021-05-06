@@ -89,7 +89,7 @@ function createNodeTemplate() {
           { margin: 4 },
           new go.Binding("text", "", (data) => {
             return (
-              data.key +
+              data.title +
               "\nPre-reqs: " +
               (data.prereqs[0].length !== 0 ? data.prereqs : "none")
             );

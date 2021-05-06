@@ -92,12 +92,12 @@ function createNodeTemplate() {
       new go.Binding("fill", "", (node) => {
         if (node.data.isClickable) {
           if (node.isHighlighted) {
-            return "#33a532";
+            return "#ffcd42";
           } else {
-            return "#f7b500";
+            return "#28df99";
           }
         } else {
-          return "#bb1e10";
+          return "#ff1e56";
         }
       }).ofObject()
     ),
@@ -120,7 +120,7 @@ function createLinkTemplate() {
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
       new go.Binding("stroke", "isHighlighted", (h) => {
-        return h ? "#3d6cb9" : "black";
+        return h ? "#28df99" : "black";
       }).ofObject(),
       new go.Binding("strokeWidth", "isHighlighted", (h) => {
         return h ? 3 : 1;
@@ -131,7 +131,7 @@ function createLinkTemplate() {
       { toArrow: "Standard", strokeWidth: 0 },
       // bind Shape.fill to Link.isHighlighted
       new go.Binding("fill", "isHighlighted", (h) => {
-        return h ? "#3d6cb9" : "black";
+        return h ? "#28df99" : "black";
       }).ofObject()
     )
   ));

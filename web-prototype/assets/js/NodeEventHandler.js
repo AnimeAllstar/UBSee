@@ -83,3 +83,30 @@ function updateIsclickable(node) {
     model.set(node.data, "isClickable", finalCheck);
   }, "change isClickable");
 }
+
+// This function is called to update the tooltip information
+// depending on the bound data of the Node that is closest to the pointer.
+function updateInfoBox(mousePt, data, loc) {
+  var box = document.getElementById("infoBoxHolder");
+  box.innerHTML = "";
+  var infobox = document.createElement("div");
+  infobox.id = "infoBox";
+  box.appendChild(infobox);
+  for (var i = 0; i < 9; i++) {
+    var child = document.createElement("div");
+    switch (i) {
+      case 0: child.textContent = "Course info"; break;
+      case 1: child.className = "infoTitle"; child.textContent = "Course Title: " + data.title; break;
+      case 3: child.className = "infoTitle"; child.textContent = "Pre-reqs: " + (data.prereqs[0].length !== 0 ? data.prereqs : "none"); break;
+    }
+    infobox.appendChild(child);
+  }
+  var docloc = myDiagram.transformDocToView(loc);
+  box.style.left = (+docloc.x.toFixed(2) + +150) + "px";
+  box.style.top = (+docloc.y.toFixed(2) + +28) + "px";
+
+  // box.style.left = mousePt.x + 30 + "px";
+  // box.style.top = mousePt.y + 20 + "px";
+}
+
+

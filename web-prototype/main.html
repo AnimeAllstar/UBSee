@@ -31,7 +31,41 @@
           <span class="h1 text-white">UBC Degree Visualizer</span>
           <hr />
           <div class="accordion" id="sidebar-accordian">
-            <div class="text-white">
+            <!-- Selection tab -->
+            <div>
+              <h2 class="accordion-header" id="selection-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#selection-content">
+                  Course / Subject Selection
+                </button>
+              </h2>
+              <div id="selection-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <li class="list-group-item rounded-0">
+                      <div class="input-group mb-3">
+                        <select class="form-select" id="subject-select">
+                          <option selected>Select a subject</option>
+                          <option value="CPSC">CPSC</option>
+                          <option value="MATH">MATH</option>
+                          <option value="PHYS">PHYS</option>
+                        </select>
+                      </div>
+                      <div class="input-group">
+                        <select class="form-select" id="subject-select">
+                          <option selected>Select a Course</option>
+                          <option value="100">100</option>
+                          <option value="103">103</option>
+                          <option value="107">107</option>
+                          <option value="...">...</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Settings tab -->
+            <div>
               <h2 class="accordion-header" id="settings-tab">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings-content">
                   Settings
@@ -67,7 +101,7 @@
               </div>
             </div>
             <br />
-            <button type="button" class="btn btn-primary" onclick="updateGraph()">Update Graph</button>
+            <button type="button" class="btn btn-primary" onclick="updateGraph()">Create Graph</button>
           </div>
         </div>
 

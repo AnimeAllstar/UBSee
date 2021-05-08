@@ -22,6 +22,7 @@ async function init() {
       prereqs: course.prereqs,
       isClickable: course.prereqs[0].length === 0 ? true : false,
       title: course.title,
+      url: course.url,
     });
     links.push(course);
   });
@@ -84,16 +85,8 @@ function createNodeTemplate() {
       click: function (e, node) {
         nodeClickHandler(node);
       },
-      toolTip: $(
-        "ToolTip",
-        $(
-          go.TextBlock,
-          { margin: 4 },
-          new go.Binding("text", "", (data) => {
-            return data.title + "\nPre-reqs: " + (data.prereqs[0].length !== 0 ? data.prereqs : "none");
-          })
-        )
-      ),
+      toolTip: createToolTip(),
+      contextMenu: createContextMenu(),
     },
     $(
       go.Shape,
@@ -150,6 +143,59 @@ function createLinkTemplate() {
       new go.Binding("fill", "isSelected", (sel) => {
         return sel ? "#1e90ff" : "black";
       }).ofObject()
+    )
+  ));
+}
+
+// returns node tooltip
+function createToolTip() {
+  return (ToolTip = $(
+    "ToolTip",
+    { "Border.fill": "#ffffffdd" },
+    $(
+      go.Panel,
+      "Vertical",
+      $(go.TextBlock, { text: "Course Information", font: "12pt sans-serif", alignment: go.Spot.Left }),
+      $(
+        go.TextBlock,
+        { margin: 4 },
+        new go.Binding("text", "", (data) => {
+          return `${data.title} \nPre-reqs: ${data.prereqs[0].length !== 0 ? data.prereqs : "none"}`;
+        })
+      )
+    )
+  ));
+}
+
+// returns contextmenu
+function createContextMenu() {
+  return (ContextMenu = $(
+    "ContextMenu",
+    $(
+      "ContextMenuButton",
+      {
+        "ButtonBorder.fill": "white",
+        _buttonFillOver: "#ededed",
+      },
+      $(go.TextBlock, "Course Page"),
+      {
+        click: (e, obj) => {
+          window.open(obj.part.data.url);
+        },
+      }
+    ),
+    $(
+      "ContextMenuButton",
+      {
+        "ButtonBorder.fill": "white",
+        _buttonFillOver: "#ededed",
+      },
+      $(go.TextBlock, "Inverse Tree"),
+      {
+        click: (e, obj) => {
+          //stub
+        },
+      }
     )
   ));
 }

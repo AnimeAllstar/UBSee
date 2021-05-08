@@ -5,7 +5,7 @@ var myDiagram;
 
 // get data asynchronously
 async function getData() {
-  const response = await fetch("/web-prototype/assets/json/CPSC.json");
+  const response = await fetch("/assets/json/CPSC.json");
   const json = await response.json();
   return json;
 }

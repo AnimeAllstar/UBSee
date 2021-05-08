@@ -1,10 +1,6 @@
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;
 
-var myToolTip = $(go.HTMLInfo, {
-  show: showToolTip,
-  // do nothing on hide: This tooltip doesn't hide unless the mouse leaves the diagram
-})
 var myDiagram;
 
 // get data asynchronously
@@ -13,8 +9,6 @@ async function getData() {
   const json = await response.json();
   return json;
 }
-
-var lastStroked = null;  // this remembers the last highlight Shape
 
 // return node and links arrays
 async function init() {
@@ -66,9 +60,6 @@ function createDiagram() {
     allowCopy: false,
     allowMove: false,
     allowInsert: false,
-    mouseHover: doMouseHover,  // this event handler is defined below
-    click: doMouseHover,  // this event handler is defined below
-    "toolManager.hoverDelay": 300,
   });
 }
 
@@ -93,12 +84,21 @@ function createNodeTemplate() {
       click: function (e, node) {
         nodeClickHandler(node);
       },
-      toolTip: myToolTip,
+      toolTip: $(
+        "ToolTip",
+        $(
+          go.TextBlock,
+          { margin: 4 },
+          new go.Binding("text", "", (data) => {
+            return data.title + "\nPre-reqs: " + (data.prereqs[0].length !== 0 ? data.prereqs : "none");
+          })
+        )
+      ),
     },
     $(
       go.Shape,
       "Rectangle",
-      { strokeWidth: 2, stroke: null, fill: "#FFF", name:"Rectangle" },
+      { strokeWidth: 2, stroke: null, fill: "#FFF" },
       // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
       new go.Binding("stroke", "isHighlighted", (h) => {
         return h ? "#000" : "#000";
@@ -152,34 +152,4 @@ function createLinkTemplate() {
       }).ofObject()
     )
   ));
-}
-
-// Called when the mouse is over the diagram's background
-function doMouseHover(e) {
-  if (e === undefined) e = myDiagram.lastInput;
-  var doc = e.documentPoint;
-  // find all Nodes that are within 100 units
-  var list = myDiagram.findObjectsNear(doc, 100, null, function(x) { return x instanceof go.Node; });
-  // now find the one that is closest to e.documentPoint
-  var closest = null;
-  var closestDist = 999999999;
-  list.each(function(node) {
-    var dist = doc.distanceSquaredPoint(node.getDocumentPoint(go.Spot.Center));
-    if (dist < closestDist) {
-      closestDist = dist;
-      closest = node;
-    }
-  });
-  showToolTip(closest, myDiagram);
-}
-
-// Called with a Node (or null) that the mouse is over or near
-function showToolTip(obj, diagram) {
-  if (obj !== null) {
-    var node = obj.part;
-    var e = diagram.lastInput;
-    updateInfoBox(e.viewPoint, node.data, node.location);
-  } else {
-    document.getElementById("infoBoxHolder").innerHTML = "";
-  }
 }

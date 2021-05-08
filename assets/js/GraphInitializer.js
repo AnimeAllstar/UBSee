@@ -33,7 +33,7 @@ async function createGraph() {
   const graphData = await init();
 
   // make diagram
-  myDiagram = createDiagram();
+  myDiagram = createDiagram("diagram-div");
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
@@ -50,8 +50,8 @@ async function createGraph() {
 }
 
 // returns new diagram
-function createDiagram() {
-  return $(go.Diagram, "diagram-div", {
+function createDiagram(id) {
+  return $(go.Diagram, id, {
     "undoManager.isEnabled": true,
     initialAutoScale: go.Diagram.Uniform,
     layout: createLayout(),

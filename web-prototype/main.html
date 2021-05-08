@@ -13,14 +13,10 @@
       crossorigin="anonymous"
     />
 
-    <title>UBC Degree Visualizer</title>
-    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- UBC Degree Visualizer Scripts -->
-    <script src="assets/js/GraphInitializer.js"></script>
-    <script src="assets/js/NodeEventHandler.js"></script>
-    <script src="assets/js/SettingsUpdater.js"></script>
+    <title>UBC Degree Visualizer</title>
   </head>
 
   <body onload="createGraph()">
@@ -110,11 +106,32 @@
       </div>
     </div>
 
+    <!-- Modal for Inverse Graph (Course Graph) -->
+    <div class="modal fade" id="inverse-graph" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Bootstrap and Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
       crossorigin="anonymous"
     ></script>
+
+    <!-- GoJS -->
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+
+    <!-- UBC Degree Visualizer Scripts -->
+    <script src="assets/js/GraphInitializer.js"></script>
+    <script src="assets/js/NodeEventHandler.js"></script>
+    <script src="assets/js/SettingsUpdater.js"></script>
   </body>
 </html>

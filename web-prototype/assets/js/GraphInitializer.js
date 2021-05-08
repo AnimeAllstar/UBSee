@@ -190,12 +190,20 @@ function createContextMenu() {
         "ButtonBorder.fill": "white",
         _buttonFillOver: "#ededed",
       },
-      $(go.TextBlock, "Inverse Tree"),
+      $(go.TextBlock, "Course Graph"),
       {
         click: (e, obj) => {
-          //stub
+          showModal(obj);
         },
       }
     )
   ));
+}
+
+function showModal(obj) {
+  const modalElem = document.getElementById("inverse-graph");
+  const modal = new bootstrap.Modal(modalElem);
+  const modalTitle = modalElem.querySelector(".modal-title");
+  modalTitle.textContent = obj.part.data.key;
+  modal.show();
 }

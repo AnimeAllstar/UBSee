@@ -6,15 +6,19 @@ body {
 
 .graph-container {
   background-color: #fff;
-  height: 100% !important;
+  height: 100%;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .navbar {
     float: left !important;
   }
 
   .graph-container {
     float: right !important;
+  }
+
+  .navbar {
+    height: 100%;
   }
 }

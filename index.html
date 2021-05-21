@@ -22,30 +22,16 @@
   <body onload="createGraph()">
     <div class="container-fluid h-100 p-0">
       <!-- Sidebar -->
-      <nav class="navbar navbar-expand-xl navbar-dark bg-dark col-xl-3">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <span class="text-white h3 ps-2 pe-3">UBC Degree Visualizer</span>
-        <div class="collapse navbar-collapse ps-2" id="navbarNav">
-          <ul class="navbar-nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
+        <div class="d-flex justify-content-between p-2">
+          <h3 class="text-white">UBC Degree Visualizer</h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-      </nav>
-      <!--<div class="p-3 bg-dark col-md-3">
-          <span class="h1 text-white">UBC Degree Visualizer</span>
-          <hr />
-          <div class="accordion" id="sidebar-accordian">
-              //Selection tab
+        <div class="collapse navbar-collapse p-2" id="navbarNav">
+          <div class="accordion w-100" id="sidebar-accordian">
+            <!--Selection tab-->
             <div>
               <h2 class="accordion-header" id="selection-tab">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#selection-content">
@@ -78,7 +64,7 @@
                 </div>
               </div>
             </div>
-             Settings tab 
+            <!--Settings tab-->
             <div>
               <h2 class="accordion-header" id="settings-tab">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#settings-content">
@@ -117,10 +103,11 @@
             <br />
             <button type="button" class="btn btn-primary" onclick="updateGraph()">Create Graph</button>
           </div>
-        </div>-->
+        </div>
+      </nav>
 
       <!-- Graph -->
-      <div id="diagram-div" class="graph-container col-xl-9"></div>
+      <div id="diagram-div" class="graph-container col-lg-9"></div>
     </div>
 
     <!-- Modal for Inverse Graph (Course Graph) -->

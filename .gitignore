@@ -2,3 +2,6 @@
 *.iml
 .idea/
 out/
+
+# Node dependencies
+/node_modules

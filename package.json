@@ -1,0 +1,22 @@
+{
+  "name": "ubc-degree-visualizer",
+  "version": "1.0.0",
+  "description": "Degree Visualizer for UBC Majors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnimeAllstar/ubc-degree-visualizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnimeAllstar/ubc-degree-visualizer/issues"
+  },
+  "homepage": "https://github.com/AnimeAllstar/ubc-degree-visualizer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

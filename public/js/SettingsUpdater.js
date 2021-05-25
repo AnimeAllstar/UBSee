@@ -1,7 +1,7 @@
 function updateGraph() {
-  myDiagram.startTransaction("update");
-  myDiagram.layout.direction = parseInt(getRadioValue("direction"));
-  myDiagram.commitTransaction("update");
+  myDiagram.startTransaction('update');
+  myDiagram.layout.direction = parseInt(getRadioValue('direction'));
+  myDiagram.commitTransaction('update');
 }
 
 function getRadioValue(name) {

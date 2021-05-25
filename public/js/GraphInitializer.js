@@ -5,7 +5,7 @@ var myDiagram;
 
 // get data asynchronously
 async function getData() {
-  const response = await fetch("/assets/json/CPSC.json");
+  const response = await fetch('/json/CPSC.json');
   const json = await response.json();
   return json;
 }
@@ -33,7 +33,7 @@ async function createGraph() {
   const graphData = await init();
 
   // make diagram
-  myDiagram = createDiagram("diagram-div");
+  myDiagram = createDiagram('diagram-div');
 
   // add nodes to new model
   myDiagram.model = new go.GraphLinksModel(graphData.nodes);
@@ -52,7 +52,7 @@ async function createGraph() {
 // returns new diagram
 function createDiagram(id) {
   return $(go.Diagram, id, {
-    "undoManager.isEnabled": true,
+    'undoManager.isEnabled': true,
     initialAutoScale: go.Diagram.Uniform,
     layout: createLayout(),
     nodeTemplate: createNodeTemplate(),
@@ -79,7 +79,7 @@ function createLayout() {
 function createNodeTemplate() {
   return (nodeTemplate = $(
     go.Node,
-    "Auto",
+    'Auto',
     {
       selectionAdorned: false,
       click: function (e, node) {
@@ -90,30 +90,30 @@ function createNodeTemplate() {
     },
     $(
       go.Shape,
-      "Rectangle",
-      { strokeWidth: 2, stroke: null, fill: "#FFF" },
+      'Rectangle',
+      { strokeWidth: 2, stroke: null, fill: '#FFF' },
       // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
-      new go.Binding("stroke", "isHighlighted", (h) => {
-        return h ? "#000" : "#000";
+      new go.Binding('stroke', 'isHighlighted', (h) => {
+        return h ? '#000' : '#000';
       }).ofObject(),
-      new go.Binding("fill", "", (node) => {
+      new go.Binding('fill', '', (node) => {
         if (node.data.isClickable) {
           if (node.isHighlighted) {
-            return "#1e90ff";
+            return '#1e90ff';
           } else {
-            return "#1ec887";
+            return '#1ec887';
           }
         } else {
-          return "#ff1a53";
+          return '#ff1a53';
         }
       }).ofObject()
     ),
     $(
       go.TextBlock,
-      "course id", // default text
+      'course id', // default text
       // text config, padding
-      { margin: 12, stroke: "#fff", font: "bold 16px sans-serif" },
-      new go.Binding("text", "key")
+      { margin: 12, stroke: '#fff', font: 'bold 16px sans-serif' },
+      new go.Binding('text', 'key')
     )
   ));
 }
@@ -126,22 +126,22 @@ function createLinkTemplate() {
     $(
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
-      new go.Binding("stroke", "isHighlighted", (h) => {
-        return h ? "#1ec887" : "black";
+      new go.Binding('stroke', 'isHighlighted', (h) => {
+        return h ? '#1ec887' : 'black';
       }).ofObject(),
-      new go.Binding("strokeWidth", "isHighlighted", (h) => {
+      new go.Binding('strokeWidth', 'isHighlighted', (h) => {
         return h ? 3 : 1;
       }).ofObject()
     ),
     $(
       go.Shape,
-      { toArrow: "Standard", strokeWidth: 0 },
+      { toArrow: 'Standard', strokeWidth: 0 },
       // bind Shape.fill to Link.isHighlighted
-      new go.Binding("fill", "isHighlighted", (h) => {
-        return h ? "#1ec887" : "black";
+      new go.Binding('fill', 'isHighlighted', (h) => {
+        return h ? '#1ec887' : 'black';
       }).ofObject(),
-      new go.Binding("fill", "isSelected", (sel) => {
-        return sel ? "#1e90ff" : "black";
+      new go.Binding('fill', 'isSelected', (sel) => {
+        return sel ? '#1e90ff' : 'black';
       }).ofObject()
     )
   ));
@@ -150,17 +150,17 @@ function createLinkTemplate() {
 // returns node tooltip
 function createToolTip() {
   return (ToolTip = $(
-    "ToolTip",
-    { "Border.fill": "#ffffffdd" },
+    'ToolTip',
+    { 'Border.fill': '#ffffffdd' },
     $(
       go.Panel,
-      "Vertical",
-      $(go.TextBlock, { text: "Course Information", font: "12pt sans-serif", alignment: go.Spot.Left }),
+      'Vertical',
+      $(go.TextBlock, { text: 'Course Information', font: '12pt sans-serif', alignment: go.Spot.Left }),
       $(
         go.TextBlock,
         { margin: 4 },
-        new go.Binding("text", "", (data) => {
-          return `${data.title} \nPre-reqs: ${data.prereqs[0].length !== 0 ? data.prereqs : "none"}`;
+        new go.Binding('text', '', (data) => {
+          return `${data.title} \nPre-reqs: ${data.prereqs[0].length !== 0 ? data.prereqs : 'none'}`;
         })
       )
     )
@@ -170,14 +170,14 @@ function createToolTip() {
 // returns contextmenu
 function createContextMenu() {
   return (ContextMenu = $(
-    "ContextMenu",
+    'ContextMenu',
     $(
-      "ContextMenuButton",
+      'ContextMenuButton',
       {
-        "ButtonBorder.fill": "white",
-        _buttonFillOver: "#ededed",
+        'ButtonBorder.fill': 'white',
+        _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, "Course Page"),
+      $(go.TextBlock, 'Course Page'),
       {
         click: (e, obj) => {
           window.open(obj.part.data.url);
@@ -185,12 +185,12 @@ function createContextMenu() {
       }
     ),
     $(
-      "ContextMenuButton",
+      'ContextMenuButton',
       {
-        "ButtonBorder.fill": "white",
-        _buttonFillOver: "#ededed",
+        'ButtonBorder.fill': 'white',
+        _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, "Course Graph"),
+      $(go.TextBlock, 'Course Graph'),
       {
         click: (e, obj) => {
           showModal(obj);
@@ -201,9 +201,9 @@ function createContextMenu() {
 }
 
 function showModal(obj) {
-  const modalElem = document.getElementById("inverse-graph");
+  const modalElem = document.getElementById('inverse-graph');
   const modal = new bootstrap.Modal(modalElem);
-  const modalTitle = modalElem.querySelector(".modal-title");
+  const modalTitle = modalElem.querySelector('.modal-title');
   modalTitle.textContent = obj.part.data.key;
   modal.show();
 }

@@ -12,7 +12,7 @@ function nodeClickHandler(node) {
 function updateHighlight(node, val) {
   const diagram = node.diagram;
   // lock
-  diagram.startTransaction("highlight");
+  diagram.startTransaction('highlight');
 
   // change status of clicked node
   node.isHighlighted = val;
@@ -28,7 +28,7 @@ function updateHighlight(node, val) {
   });
 
   // unlock
-  diagram.commitTransaction("highlight");
+  diagram.commitTransaction('highlight');
 }
 
 // update highlighting for all
@@ -80,6 +80,6 @@ function updateIsclickable(node) {
 
   // update node.data.isClickable using finalCheck
   node.diagram.model.commit((model) => {
-    model.set(node.data, "isClickable", finalCheck);
-  }, "change isClickable");
+    model.set(node.data, 'isClickable', finalCheck);
+  }, 'change isClickable');
 }

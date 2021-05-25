@@ -12,13 +12,10 @@ body {
 @media only screen and (min-width: 992px) {
   .navbar {
     float: left !important;
+    height: 100%;
   }
 
   .graph-container {
     float: right !important;
-  }
-
-  .navbar {
-    height: 100%;
   }
 }

@@ -190,17 +190,17 @@ function createContextMenu() {
         'ButtonBorder.fill': 'white',
         _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, 'Course Graph'),
+      $(go.TextBlock, 'Inverse Graph'),
       {
         click: (e, obj) => {
-          openCourseGraph(obj);
+          openInverseGraph(obj);
         },
       }
     )
   ));
 }
 
-function openCourseGraph(obj) {
-  // stub
-  //obj.part.data.key;
+function openInverseGraph(obj) {
+  const key = obj.part.data.key.split(' ');
+  window.open(`/subject/${key[0]}/course/${key[1]}`);
 }

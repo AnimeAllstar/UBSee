@@ -193,17 +193,14 @@ function createContextMenu() {
       $(go.TextBlock, 'Course Graph'),
       {
         click: (e, obj) => {
-          showModal(obj);
+          openCourseGraph(obj);
         },
       }
     )
   ));
 }
 
-function showModal(obj) {
-  const modalElem = document.getElementById('inverse-graph');
-  const modal = new bootstrap.Modal(modalElem);
-  const modalTitle = modalElem.querySelector('.modal-title');
-  modalTitle.textContent = obj.part.data.key;
-  modal.show();
+function openCourseGraph(obj) {
+  // stub
+  //obj.part.data.key;
 }

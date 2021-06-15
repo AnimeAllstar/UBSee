@@ -4,16 +4,16 @@ const $ = go.GraphObject.make;
 var myDiagram;
 
 // get data asynchronously
-async function getData() {
-  const response = await fetch('/json/CPSC.json');
+async function getJSON() {
+  const response = await fetch('/json/courses.json');
   const json = await response.json();
   return json;
 }
 
 // return node and links arrays
-async function init() {
-  const dataJson = await getData();
-  const dataArray = dataJson.courses;
+async function getData() {
+  const dataJson = await getJSON();
+  const dataArray = dataJson.courses.CPSC;
   const nodes = [];
   const links = [];
   dataArray.forEach((course) => {
@@ -30,7 +30,7 @@ async function init() {
 }
 
 async function createGraph() {
-  const graphData = await init();
+  const graphData = await getData();
 
   // make diagram
   myDiagram = createDiagram('diagram-div');

@@ -4,25 +4,26 @@ const $ = go.GraphObject.make;
 var myDiagram;
 
 // get data asynchronously
-async function getData() {
-  const response = await fetch('/json/CPSC.json');
+async function getJSON() {
+  const response = await fetch('/json/courses.json');
   const json = await response.json();
   return json;
 }
 
 // return node and links arrays
-async function init() {
-  const dataJson = await getData();
-  const dataArray = dataJson.courses;
+async function getData() {
+  const dataJson = await getJSON();
+  const dataArray = dataJson.courses.CPSC;
   const nodes = [];
   const links = [];
   dataArray.forEach((course) => {
     nodes.push({
       key: course.name,
-      prereqs: course.prereqs,
-      isClickable: course.prereqs[0].length === 0 ? true : false,
       title: course.title,
       url: course.url,
+      prereqs: course.prereqs,
+      prereqText: course.prereqText,
+      isClickable: course.prereqs[0].length === 0 ? true : false,
     });
     links.push(course);
   });
@@ -30,7 +31,7 @@ async function init() {
 }
 
 async function createGraph() {
-  const graphData = await init();
+  const graphData = await getData();
 
   // make diagram
   myDiagram = createDiagram('diagram-div');
@@ -158,9 +159,9 @@ function createToolTip() {
       $(go.TextBlock, { text: 'Course Information', font: '12pt sans-serif', alignment: go.Spot.Left }),
       $(
         go.TextBlock,
-        { margin: 4 },
+        { margin: 4, width: 300, wrap: go.TextBlock.WrapFit },
         new go.Binding('text', '', (data) => {
-          return `${data.title} \nPre-reqs: ${data.prereqs[0].length !== 0 ? data.prereqs : 'none'}`;
+          return `${data.title} \nPre-reqs: ${data.prereqText}`;
         })
       )
     )
@@ -190,17 +191,17 @@ function createContextMenu() {
         'ButtonBorder.fill': 'white',
         _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, 'Course Graph'),
+      $(go.TextBlock, 'Inverse Graph'),
       {
         click: (e, obj) => {
-          openCourseGraph(obj);
+          openInverseGraph(obj);
         },
       }
     )
   ));
 }
 
-function openCourseGraph(obj) {
-  // stub
-  //obj.part.data.key;
+function openInverseGraph(obj) {
+  const key = obj.part.data.key.split(' ');
+  window.open(`/subject/${key[0]}/course/${key[1]}`);
 }

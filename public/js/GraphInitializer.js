@@ -19,10 +19,11 @@ async function getData() {
   dataArray.forEach((course) => {
     nodes.push({
       key: course.name,
-      prereqs: course.prereqs,
-      isClickable: course.prereqs[0].length === 0 ? true : false,
       title: course.title,
       url: course.url,
+      prereqs: course.prereqs,
+      prereqText: course.prereqText,
+      isClickable: course.prereqs[0].length === 0 ? true : false,
     });
     links.push(course);
   });
@@ -158,9 +159,9 @@ function createToolTip() {
       $(go.TextBlock, { text: 'Course Information', font: '12pt sans-serif', alignment: go.Spot.Left }),
       $(
         go.TextBlock,
-        { margin: 4 },
+        { margin: 4, width: 300, wrap: go.TextBlock.WrapFit },
         new go.Binding('text', '', (data) => {
-          return `${data.title} \nPre-reqs: ${data.prereqs[0].length !== 0 ? data.prereqs : 'none'}`;
+          return `${data.title} \nPre-reqs: ${data.prereqText}`;
         })
       )
     )

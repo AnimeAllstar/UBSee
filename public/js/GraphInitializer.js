@@ -27,7 +27,10 @@ async function getData() {
     });
     links.push(course);
   });
-  return { nodes, links: links };
+  return {
+    nodes,
+    links: links
+  };
 }
 
 async function createGraph() {
@@ -44,7 +47,10 @@ async function createGraph() {
     const tempPrereqs = link.prereqs;
     tempPrereqs.forEach((andCombo) => {
       andCombo.forEach((orCombo) => {
-        myDiagram.model.addLinkData({ from: orCombo, to: link.name });
+        myDiagram.model.addLinkData({
+          from: orCombo,
+          to: link.name
+        });
       });
     });
   });
@@ -80,8 +86,7 @@ function createLayout() {
 function createNodeTemplate() {
   return (nodeTemplate = $(
     go.Node,
-    'Auto',
-    {
+    'Auto', {
       selectionAdorned: false,
       click: function (e, node) {
         nodeClickHandler(node);
@@ -91,8 +96,11 @@ function createNodeTemplate() {
     },
     $(
       go.Shape,
-      'Rectangle',
-      { strokeWidth: 2, stroke: null, fill: '#FFF' },
+      'Rectangle', {
+        strokeWidth: 2,
+        stroke: null,
+        fill: '#FFF'
+      },
       // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
       new go.Binding('stroke', 'isHighlighted', (h) => {
         return h ? '#000' : '#000';
@@ -113,7 +121,11 @@ function createNodeTemplate() {
       go.TextBlock,
       'course id', // default text
       // text config, padding
-      { margin: 12, stroke: '#fff', font: 'bold 16px sans-serif' },
+      {
+        margin: 12,
+        stroke: '#fff',
+        font: 'bold 16px sans-serif'
+      },
       new go.Binding('text', 'key')
     )
   ));
@@ -122,8 +134,10 @@ function createNodeTemplate() {
 // returns new link template
 function createLinkTemplate() {
   return (LinkTemplate = $(
-    go.Link,
-    { routing: go.Link.Normal, corner: 0 },
+    go.Link, {
+      routing: go.Link.Normal,
+      corner: 0
+    },
     $(
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
@@ -135,8 +149,10 @@ function createLinkTemplate() {
       }).ofObject()
     ),
     $(
-      go.Shape,
-      { toArrow: 'Standard', strokeWidth: 0 },
+      go.Shape, {
+        toArrow: 'Standard',
+        strokeWidth: 0
+      },
       // bind Shape.fill to Link.isHighlighted
       new go.Binding('fill', 'isHighlighted', (h) => {
         return h ? '#1ec887' : 'black';
@@ -151,15 +167,23 @@ function createLinkTemplate() {
 // returns node tooltip
 function createToolTip() {
   return (ToolTip = $(
-    'ToolTip',
-    { 'Border.fill': '#ffffffdd' },
+    'ToolTip', {
+      'Border.fill': '#ffffffdd'
+    },
     $(
       go.Panel,
       'Vertical',
-      $(go.TextBlock, { text: 'Course Information', font: '12pt sans-serif', alignment: go.Spot.Left }),
+      $(go.TextBlock, {
+        text: 'Course Information',
+        font: '12pt sans-serif',
+        alignment: go.Spot.Left
+      }),
       $(
-        go.TextBlock,
-        { margin: 4, width: 300, wrap: go.TextBlock.WrapFit },
+        go.TextBlock, {
+          margin: 4,
+          width: 300,
+          wrap: go.TextBlock.WrapFit
+        },
         new go.Binding('text', '', (data) => {
           return `${data.title} \nPre-reqs: ${data.prereqText}`;
         })
@@ -173,26 +197,22 @@ function createContextMenu() {
   return (ContextMenu = $(
     'ContextMenu',
     $(
-      'ContextMenuButton',
-      {
+      'ContextMenuButton', {
         'ButtonBorder.fill': 'white',
         _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, 'Course Page'),
-      {
+      $(go.TextBlock, 'Course Page'), {
         click: (e, obj) => {
           window.open(obj.part.data.url);
         },
       }
     ),
     $(
-      'ContextMenuButton',
-      {
+      'ContextMenuButton', {
         'ButtonBorder.fill': 'white',
         _buttonFillOver: '#ededed',
       },
-      $(go.TextBlock, 'Inverse Graph'),
-      {
+      $(go.TextBlock, 'Inverse Graph'), {
         click: (e, obj) => {
           openInverseGraph(obj);
         },

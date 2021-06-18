@@ -27,7 +27,9 @@ function addSubject(subject) {
             name: course.name,
             title: course.title,
             url: course.link,
-            prereqs: [[]],
+            prereqs: [
+              []
+            ],
             prereqText: '',
           });
         }

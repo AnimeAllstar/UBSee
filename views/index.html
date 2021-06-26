@@ -104,6 +104,9 @@
 <script src="/js/SettingsUpdater.js"></script>
 
 <script>
-  createGraph();
+  createGraph({
+    subject: "{{ subject }}",
+    course: "{{ course }}"
+  });
 </script>
 {% endblock %}

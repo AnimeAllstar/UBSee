@@ -1,7 +1,8 @@
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;
 
-var myDiagram;
+// global variable for graph
+let myDiagram;
 
 // get data asynchronously
 async function getJSON() {
@@ -10,31 +11,72 @@ async function getJSON() {
   return json;
 }
 
-// return node and links arrays
-async function getData() {
-  const dataJson = await getJSON();
-  const dataArray = dataJson.courses.CPSC;
-  const nodes = [];
-  const links = [];
-  dataArray.forEach((course) => {
-    nodes.push({
-      key: course.name,
-      title: course.title,
-      url: course.url,
-      prereqs: course.prereqs,
-      prereqText: course.prereqText,
-      isClickable: course.prereqs[0].length === 0 ? true : false,
-    });
-    links.push(course);
+const nodes = [];
+const links = [];
+
+function helper(course, subject) {
+  nodes.push({
+    key: course.name,
+    title: course.title,
+    url: course.url,
+    prereqs: course.prereqs,
+    prereqText: course.prereqText,
+    isClickable: course.prereqs[0].length === 0 ? true : false,
   });
+  links.push(course);
+  course.prereqs.forEach((andCombo) => {
+    andCombo.forEach((orCombo) => {
+      if (!nodes.some(e => e.key === orCombo)) {
+        console.log(orCombo);
+        helper(subject[orCombo], subject);
+      }
+    });
+  });
+}
+
+// return node and links arrays
+async function getData(data) {
+  const dataJson = await getJSON();
+
+  let subject = dataJson.courses.CPSC;
+
+  // if is Inverse graph, get only required data
+  if (data.isInv) {
+    helper(subject[data.subject + ' ' + data.course], subject);
+  } else {
+    for (const course in subject) {
+      nodes.push({
+        key: subject[course].name,
+        title: subject[course].title,
+        url: subject[course].url,
+        prereqs: subject[course].prereqs,
+        prereqText: subject[course].prereqText,
+        isClickable: subject[course].prereqs[0].length === 0 ? true : false,
+      });
+      links.push(subject[course]);
+    }
+  }
+
   return {
     nodes,
     links: links
   };
 }
 
-async function createGraph() {
-  const graphData = await getData();
+async function createGraph(data) {
+
+  let graphData;
+
+  // conditions check for what data to fetch
+  if (data.course && data.subject) {
+    data.isInv = true;
+  } else if (!data.course && data.subject) {
+    // TODO
+  } else {
+    data.isInv = false;
+  }
+
+  graphData = await getData(data);
 
   // make diagram
   myDiagram = createDiagram('diagram-div');

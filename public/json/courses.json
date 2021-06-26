@@ -1,6 +1,7 @@
 {
   "courses": {
-    "CPSC": [{
+    "CPSC": {
+      "CPSC 100": {
         "name": "CPSC 100",
         "title": "Computational Thinking",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=100&campuscd=UBC",
@@ -9,7 +10,7 @@
         ],
         "prereqText": "None"
       },
-      {
+      "CPSC 103": {
         "name": "CPSC 103",
         "title": "Introduction to Systematic Program Design",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=103&campuscd=UBC",
@@ -18,7 +19,7 @@
         ],
         "prereqText": "None"
       },
-      {
+      "CPSC 107": {
         "name": "CPSC 107",
         "title": "Systematic Program Design",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=107&campuscd=UBC",
@@ -27,7 +28,7 @@
         ],
         "prereqText": "CPSC 103."
       },
-      {
+      "CPSC 110": {
         "name": "CPSC 110",
         "title": "Computation, Programs, and Programming",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=110&campuscd=UBC",
@@ -36,7 +37,7 @@
         ],
         "prereqText": "None"
       },
-      {
+      "CPSC 121": {
         "name": "CPSC 121",
         "title": "Models of Computation",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=121&campuscd=UBC",
@@ -45,7 +46,7 @@
         ],
         "prereqText": "Principles of Mathematics 12 or Pre-calculus 12."
       },
-      {
+      "CPSC 203": {
         "name": "CPSC 203",
         "title": "Programming, Problem Solving, and Algorithms",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=203&campuscd=UBC",
@@ -54,7 +55,7 @@
         ],
         "prereqText": "One of CPSC 103, CPSC 110, EOSC 211, MATH 210, PHYS 210, COMM 337."
       },
-      {
+      "CPSC 210": {
         "name": "CPSC 210",
         "title": "Software Construction",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=210&campuscd=UBC",
@@ -63,7 +64,7 @@
         ],
         "prereqText": "One of CPSC 107, CPSC 110."
       },
-      {
+      "CPSC 213": {
         "name": "CPSC 213",
         "title": "Introduction to Computer Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=213&campuscd=UBC",
@@ -73,7 +74,7 @@
         ],
         "prereqText": "All of CPSC 121, CPSC 210."
       },
-      {
+      "CPSC 221": {
         "name": "CPSC 221",
         "title": "Basic Algorithms and Data Structures",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221&campuscd=UBC",
@@ -83,7 +84,7 @@
         ],
         "prereqText": "One of CPSC 210, EECE 210, CPEN 221 and one of CPSC 121, MATH 220."
       },
-      {
+      "CPSC 261": {
         "name": "CPSC 261",
         "title": "Basics of Computer Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=261&campuscd=UBC",
@@ -92,7 +93,7 @@
         ],
         "prereqText": "One of EECE 259, CPEN 211 and one of EECE 210, CPEN 221."
       },
-      {
+      "CPSC 302": {
         "name": "CPSC 302",
         "title": "Numerical Computation for Algebraic Problems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=302&campuscd=UBC",
@@ -101,7 +102,7 @@
         ],
         "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223."
       },
-      {
+      "CPSC 303": {
         "name": "CPSC 303",
         "title": "Numerical Approximation and Discretization",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=303&campuscd=UBC",
@@ -110,7 +111,7 @@
         ],
         "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223."
       },
-      {
+      "CPSC 304": {
         "name": "CPSC 304",
         "title": "Introduction to Relational Databases",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=304&campuscd=UBC",
@@ -119,7 +120,7 @@
         ],
         "prereqText": "CPSC 221."
       },
-      {
+      "CPSC 310": {
         "name": "CPSC 310",
         "title": "Introduction to Software Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=310&campuscd=UBC",
@@ -129,7 +130,7 @@
         ],
         "prereqText": "All of CPSC 213, CPSC 221."
       },
-      {
+      "CPSC 311": {
         "name": "CPSC 311",
         "title": "Definition of Programming Languages",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=311&campuscd=UBC",
@@ -138,7 +139,7 @@
         ],
         "prereqText": "CPSC 210."
       },
-      {
+      "CPSC 312": {
         "name": "CPSC 312",
         "title": "Functional and Logic Programming",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=312&campuscd=UBC",
@@ -148,7 +149,7 @@
         ],
         "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221."
       },
-      {
+      "CPSC 313": {
         "name": "CPSC 313",
         "title": "Computer Hardware and Operating Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=313&campuscd=UBC",
@@ -157,7 +158,7 @@
         ],
         "prereqText": "All of CPSC 213, CPSC 221."
       },
-      {
+      "CPSC 314": {
         "name": "CPSC 314",
         "title": "Computer Graphics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=314&campuscd=UBC",
@@ -166,7 +167,7 @@
         ],
         "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223."
       },
-      {
+      "CPSC 317": {
         "name": "CPSC 317",
         "title": "Internet Computing",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=317&campuscd=UBC",
@@ -176,7 +177,7 @@
         ],
         "prereqText": "All of CPSC 213, CPSC 221."
       },
-      {
+      "CPSC 319": {
         "name": "CPSC 319",
         "title": "Software Engineering Project",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=319&campuscd=UBC",
@@ -185,7 +186,7 @@
         ],
         "prereqText": "CPSC 310."
       },
-      {
+      "CPSC 320": {
         "name": "CPSC 320",
         "title": "Intermediate Algorithm Design and Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=320&campuscd=UBC",
@@ -194,7 +195,7 @@
         ],
         "prereqText": "CPSC 221 and at least 3 credits from COMM 291, BIOL 300, MATH or STAT at 200 level or above."
       },
-      {
+      "CPSC 322": {
         "name": "CPSC 322",
         "title": "Introduction to Artificial Intelligence",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=322&campuscd=UBC",
@@ -203,7 +204,7 @@
         ],
         "prereqText": "CPSC 221."
       },
-      {
+      "CPSC 330": {
         "name": "CPSC 330",
         "title": "Applied Machine Learning",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=330&campuscd=UBC",
@@ -212,7 +213,7 @@
         ],
         "prereqText": "Either (a) one of CPSC 203, CPSC 210, CPEN 221 or (b) MATH 210 and one of CPSC 107, CPSC 110."
       },
-      {
+      "CPSC 340": {
         "name": "CPSC 340",
         "title": "Machine Learning and Data Mining",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=340&campuscd=UBC",
@@ -221,7 +222,7 @@
         ],
         "prereqText": "CPSC 221 and one of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and one of STAT 241, STAT 251, ECON 325, ECON 327, MATH 302, STAT 302, MATH 318."
       },
-      {
+      "CPSC 344": {
         "name": "CPSC 344",
         "title": "Introduction to Human Computer Interaction Methods",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=344&campuscd=UBC",
@@ -230,7 +231,7 @@
         ],
         "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221."
       },
-      {
+      "CPSC 404": {
         "name": "CPSC 404",
         "title": "Advanced Relational Databases",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=404&campuscd=UBC",
@@ -240,7 +241,7 @@
         ],
         "prereqText": "CPSC 304 and one of CPSC 213, CPSC 261."
       },
-      {
+      "CPSC 406": {
         "name": "CPSC 406",
         "title": "Computational Optimization",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=406&campuscd=UBC",
@@ -249,7 +250,7 @@
         ],
         "prereqText": "One of CPSC 302, CPSC 303, MATH 307."
       },
-      {
+      "CPSC 410": {
         "name": "CPSC 410",
         "title": "Advanced Software Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=410&campuscd=UBC",
@@ -258,7 +259,7 @@
         ],
         "prereqText": "Either (a) CPSC 310 or (b) one of EECE 310, CPEN 321 and one of EECE 315, CPEN 331."
       },
-      {
+      "CPSC 411": {
         "name": "CPSC 411",
         "title": "Introduction to Compiler Construction",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=411&campuscd=UBC",
@@ -269,7 +270,7 @@
         ],
         "prereqText": "All of CPSC 213, CPSC 221, CPSC 311."
       },
-      {
+      "CPSC 415": {
         "name": "CPSC 415",
         "title": "Advanced Operating Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=415&campuscd=UBC",
@@ -278,7 +279,7 @@
         ],
         "prereqText": "One of CPSC 313, EECE 315, CPEN 331."
       },
-      {
+      "CPSC 416": {
         "name": "CPSC 416",
         "title": "Distributed Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416&campuscd=UBC",
@@ -288,7 +289,7 @@
         ],
         "prereqText": "One of CPSC 313, EECE 315, CPEN 331 and one of CPSC 317, EECE 358, ELEC 331."
       },
-      {
+      "CPSC 417": {
         "name": "CPSC 417",
         "title": "Computer Networking",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=417&campuscd=UBC",
@@ -298,7 +299,7 @@
         ],
         "prereqText": "All of CPSC 313, CPSC 317 and one of STAT 200, STAT 241."
       },
-      {
+      "CPSC 418": {
         "name": "CPSC 418",
         "title": "Parallel Computation",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=418&campuscd=UBC",
@@ -308,7 +309,7 @@
         ],
         "prereqText": "One of CPSC 261, CPSC 313, EECE 476, CPEN 411 and one of CPSC 320, EECE 320."
       },
-      {
+      "CPSC 420": {
         "name": "CPSC 420",
         "title": "Advanced Algorithms Design and Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=420&campuscd=UBC",
@@ -317,7 +318,7 @@
         ],
         "prereqText": "CPSC 320."
       },
-      {
+      "CPSC 421": {
         "name": "CPSC 421",
         "title": "Introduction to Theory of Computing",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=421&campuscd=UBC",
@@ -326,7 +327,7 @@
         ],
         "prereqText": "CPSC 221. CPSC 320 is recommended."
       },
-      {
+      "CPSC 422": {
         "name": "CPSC 422",
         "title": "Intelligent Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=422&campuscd=UBC",
@@ -335,7 +336,7 @@
         ],
         "prereqText": "CPSC 322."
       },
-      {
+      "CPSC 425": {
         "name": "CPSC 425",
         "title": "Computer Vision",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=425&campuscd=UBC",
@@ -344,7 +345,7 @@
         ],
         "prereqText": "All of CPSC 221, MATH 200, MATH 221."
       },
-      {
+      "CPSC 427": {
         "name": "CPSC 427",
         "title": "Video Game Programming",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=427&campuscd=UBC",
@@ -353,7 +354,7 @@
         ],
         "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223."
       },
-      {
+      "CPSC 430": {
         "name": "CPSC 430",
         "title": "Computers and Society",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=430&campuscd=UBC",
@@ -362,7 +363,7 @@
         ],
         "prereqText": "3 credits of Computer Science and at least third-year standing."
       },
-      {
+      "CPSC 440": {
         "name": "CPSC 440",
         "title": "Advanced Machine Learning",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=440&campuscd=UBC",
@@ -372,7 +373,7 @@
         ],
         "prereqText": "All of CPSC 320, CPSC 340."
       },
-      {
+      "CPSC 444": {
         "name": "CPSC 444",
         "title": "Advanced Methods for Human Computer Interaction",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=444&campuscd=UBC",
@@ -382,7 +383,7 @@
         ],
         "prereqText": "CPSC 344 and one of STAT 200, STAT 203, STAT 241, STAT 251, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, GEOG 374, KIN  206, KIN  371, POLI 380, PSYC 218, PSYC 278, PSYC 366, SOCI 328."
       },
-      {
+      "CPSC 445": {
         "name": "CPSC 445",
         "title": "Algorithms in Bioinformatics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=445&campuscd=UBC",
@@ -391,7 +392,7 @@
         ],
         "prereqText": "CPSC 320 and either BMEG 250 or six credits of BIOL beyond BIOL 111."
       },
-      {
+      "CPSC 455": {
         "name": "CPSC 455",
         "title": "Applied Industry Practices",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=455&campuscd=UBC",
@@ -400,7 +401,7 @@
         ],
         "prereqText": "One of CPSC 310, CPEN 321."
       },
-      {
+      "CPSC 491": {
         "name": "CPSC 491",
         "title": "Interactive Digital Media Practicum",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=491&campuscd=UBC",
@@ -411,15 +412,6 @@
         ],
         "prereqText": "All of CPSC 221, CPSC 310, CPSC 344 and Third-year standing."
       }
-    ],
-    "MATH": [{
-      "name": "",
-      "title": "",
-      "url": "",
-      "prereqs": [
-        []
-      ],
-      "prereqText": ""
-    }]
+    }
   }
 }

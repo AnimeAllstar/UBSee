@@ -4,10 +4,14 @@ const $ = go.GraphObject.make;
 // global variable for graph
 let myDiagram;
 
+// global data variable
+let data;
+
 // get data asynchronously
 async function getJSON() {
   const response = await fetch('/json/courses.json');
   const json = await response.json();
+  data = json.courses;
   return json;
 }
 
@@ -27,7 +31,6 @@ function helper(course, subject) {
   course.prereqs.forEach((andCombo) => {
     andCombo.forEach((orCombo) => {
       if (!nodes.some(e => e.key === orCombo)) {
-        console.log(orCombo);
         helper(subject[orCombo], subject);
       }
     });

@@ -15,12 +15,4 @@ router.get('/subject/:subjectId/course/:courseId', (req, res) => {
   res.sendFile(path.join(ROOT, 'views', 'index.html'));
 });
 
-//const addSubjectHelper = require('../util/addSubject.js');
-
-// helper to add new subject data using available api
-// router.get('/addSubject/:subject', (req, res) => {
-//   addSubjectHelper(req.params.subject);
-//   res.send('check terminal');
-// });
-
 module.exports = router;

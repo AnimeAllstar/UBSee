@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/AnimeAllstar/ubc-degree-visualizer#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.3"
   },
   "devDependencies": {
     "jsonfile": "^6.1.0",

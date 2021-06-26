@@ -60,7 +60,10 @@ function updateIsclickable(node) {
 
   // push required data of all in-links of node into inLinksData
   node.findLinksInto().each(function (l) {
-    inLinksData.push({ data: l.data, isHighlighted: l.isHighlighted });
+    inLinksData.push({
+      data: l.data,
+      isHighlighted: l.isHighlighted
+    });
   });
 
   // checks if any of the combinations have been satisfied

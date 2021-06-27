@@ -4,19 +4,23 @@ const $ = go.GraphObject.make;
 // global variable for graph
 let myDiagram;
 
+// global data variable
+let data;
+
 // get data asynchronously
 async function getJSON() {
   const response = await fetch('/json/courses.json');
   const json = await response.json();
+  data = json.courses;
   return json;
 }
 
 const nodes = [];
 const links = [];
 
-function helper(course, subject) {
+function addToGraph(course) {
   nodes.push({
-    key: course.name,
+    key: course.name.trim(),
     title: course.title,
     url: course.url,
     prereqs: course.prereqs,
@@ -24,11 +28,14 @@ function helper(course, subject) {
     isClickable: course.prereqs[0].length === 0 ? true : false,
   });
   links.push(course);
+}
+
+function helper(course, subject) {
+  addToGraph(course);
   course.prereqs.forEach((andCombo) => {
     andCombo.forEach((orCombo) => {
-      if (!nodes.some(e => e.key === orCombo)) {
-        console.log(orCombo);
-        helper(subject[orCombo], subject);
+      if (!nodes.some(e => e.key === orCombo.trim())) {
+        helper(subject[orCombo.trim()], subject);
       }
     });
   });
@@ -38,23 +45,28 @@ function helper(course, subject) {
 async function getData(data) {
   const dataJson = await getJSON();
 
-  let subject = dataJson.courses.CPSC;
+  let subject;
 
-  // if is Inverse graph, get only required data
-  if (data.isInv) {
+  // conditions check for what data to fetch
+  if (data.course && data.subject) {
+    // inverse graph
+    subject = dataJson.courses[data.subject];
     helper(subject[data.subject + ' ' + data.course], subject);
-  } else {
-    for (const course in subject) {
-      nodes.push({
-        key: subject[course].name,
-        title: subject[course].title,
-        url: subject[course].url,
-        prereqs: subject[course].prereqs,
-        prereqText: subject[course].prereqText,
-        isClickable: subject[course].prereqs[0].length === 0 ? true : false,
-      });
-      links.push(subject[course]);
-    }
+    return {
+      nodes,
+      links: links
+    };
+  } else if (!data.course && !data.subject) {
+    // home page
+    let length = Object.keys(dataJson.courses).length;
+    subject = dataJson.courses[Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]];
+  } else if (!data.course && data.subject) {
+    // subject graph
+    subject = dataJson.courses[data.subject];
+  }
+
+  for (const course in subject) {
+    addToGraph(subject[course]);
   }
 
   return {
@@ -65,18 +77,7 @@ async function getData(data) {
 
 async function createGraph(data) {
 
-  let graphData;
-
-  // conditions check for what data to fetch
-  if (data.course && data.subject) {
-    data.isInv = true;
-  } else if (!data.course && data.subject) {
-    // TODO
-  } else {
-    data.isInv = false;
-  }
-
-  graphData = await getData(data);
+  const graphData = await getData(data);
 
   // make diagram
   myDiagram = createDiagram('diagram-div');

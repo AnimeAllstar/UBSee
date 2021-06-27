@@ -580,7 +580,7 @@
       "MATH 221": {
         "name": "MATH 221",
         "prereqs": [
-          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", " MATH 180", " MATH 184", "MATH 101", "MATH 103", "MATH 105", "MATH 121"]
+          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", "MATH 180", "MATH 184", "MATH 101", "MATH 103", "MATH 105", "MATH 121"]
         ],
         "prereqText": "Either (a) a score of 64% or higher in one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 or (b) one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 or (c) advanced credit for MATH 100.",
         "title": "Matrix Algebra",
@@ -635,7 +635,7 @@
       "MATH 255": {
         "name": "MATH 255",
         "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", " MATH 121"],
+          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"],
           ["MATH 152", "MATH 221", "MATH 223"]
         ],
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
@@ -645,7 +645,7 @@
       "MATH 256": {
         "name": "MATH 256",
         "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", " MATH 121"],
+          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"],
           ["MATH 152", "MATH 221", "MATH 223"]
         ],
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
@@ -693,7 +693,7 @@
         "name": "MATH 301",
         "prereqs": [
           ["MATH 300", "MATH 305"],
-          ["MATH 215", " MATH 255", "MATH 256", "MATH 258"]
+          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
         ],
         "prereqText": "One of MATH 300, MATH 305 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Applied Analysis",
@@ -702,7 +702,7 @@
       "MATH 302": {
         "name": "MATH 302",
         "prereqs": [
-          ["MATH 200", " MATH 217", "MATH 226", "MATH 253", "MATH 254"]
+          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
         ],
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Introduction to Probability",
@@ -720,8 +720,8 @@
       "MATH 305": {
         "name": "MATH 305",
         "prereqs": [
-          ["MATH 200", "MATH 217", " MATH 226", " MATH 253", "MATH 254"],
-          ["MATH 215", " MATH 255", " MATH 256", " MATH 258"]
+          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"],
+          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
         ],
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Applied Complex Analysis",
@@ -731,7 +731,7 @@
         "name": "MATH 307",
         "prereqs": [
           ["MATH 152", "MATH 221", "MATH 223"],
-          ["MATH 200", "MATH 217", " MATH 226", " MATH 253", "MATH 254"]
+          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
         ],
         "prereqText": "One of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Applied Linear Algebra",
@@ -891,7 +891,7 @@
         "name": "MATH 400",
         "prereqs": [
           ["MATH 300", "MATH 305"],
-          ["MATH 256", "MATH 257", " MATH 316", " MATH 358"]
+          ["MATH 256", "MATH 257", "MATH 316", "MATH 358"]
         ],
         "prereqText": "One of MATH 300, MATH 305 and one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.",
         "title": "Applied Partial Differential Equations",
@@ -900,7 +900,7 @@
       "MATH 401": {
         "name": "MATH 401",
         "prereqs": [
-          ["MATH 256", " MATH 257", " MATH 316", "MATH 358", "MATH 400"]
+          ["MATH 256", "MATH 257", "MATH 316", "MATH 358", "MATH 400"]
         ],
         "prereqText": "Either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.",
         "title": "Green's Functions and Variational Methods",
@@ -1068,7 +1068,7 @@
       "MATH 442": {
         "name": "MATH 442",
         "prereqs": [
-          ["MATH 220", " MATH 223", " MATH 226"]
+          ["MATH 220", "MATH 223", "MATH 226"]
         ],
         "prereqText": "3rd year standing and one of MATH 220, MATH 223, MATH 226 or CPSC 221.",
         "title": "Graphs and Networks",
@@ -1077,7 +1077,7 @@
       "MATH 443": {
         "name": "MATH 443",
         "prereqs": [
-          ["MATH 220", " MATH 223", "MATH 226"]
+          ["MATH 220", "MATH 223", "MATH 226"]
         ],
         "prereqText": "A score of 68% or higher in one of MATH 220, MATH 223, MATH 226, CPSC 121. And 6 credits of MATH numbered 300 or above.",
         "title": "Graph Theory",
@@ -1086,7 +1086,7 @@
       "MATH 444": {
         "name": "MATH 444",
         "prereqs": [
-          [" MATH 220", "MATH 226"]
+          ["MATH 220", "MATH 226"]
         ],
         "prereqText": "One of MATH 220, MATH 226 and 6 credits of MATH courses numbered 300 or higher.",
         "title": "Mathematical Research and Writing",

@@ -20,7 +20,7 @@ const links = [];
 
 function addToGraph(course) {
   nodes.push({
-    key: course.name.trim(),
+    key: course.name,
     title: course.title,
     url: course.url,
     prereqs: course.prereqs,
@@ -34,8 +34,12 @@ function helper(course, subject) {
   addToGraph(course);
   course.prereqs.forEach((andCombo) => {
     andCombo.forEach((orCombo) => {
-      if (!nodes.some(e => e.key === orCombo.trim())) {
-        helper(subject[orCombo.trim()], subject);
+      if (typeof orCombo === "string") {
+        if (!nodes.some(e => e.key === orCombo)) {
+          helper(subject[orCombo], subject);
+        }
+      } else {
+        helper(subject[orCombo[0]], subject);
       }
     });
   });
@@ -90,10 +94,21 @@ async function createGraph(data) {
     const tempPrereqs = link.prereqs;
     tempPrereqs.forEach((andCombo) => {
       andCombo.forEach((orCombo) => {
-        myDiagram.model.addLinkData({
-          from: orCombo,
-          to: link.name
-        });
+        if (typeof orCombo === "string") {
+          myDiagram.model.addLinkData({
+            from: orCombo,
+            to: link.name
+          });
+        } else {
+          orCombo.forEach((combo) => {
+            if (!links.some(e => e.key === combo)) {
+              myDiagram.model.addLinkData({
+                from: combo,
+                to: link.name
+              });
+            }
+          });
+        }
       });
     });
   });

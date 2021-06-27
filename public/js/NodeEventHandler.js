@@ -54,8 +54,8 @@ function updateIsclickable(node) {
     return;
   }
 
-  let check = false;
-  let finalCheck = true;
+  let finalCheck;
+
   const inLinksData = [];
 
   // push required data of all in-links of node into inLinksData
@@ -67,6 +67,23 @@ function updateIsclickable(node) {
   });
 
   // checks if any of the combinations have been satisfied
+  if (Array.isArray(prereqs[0][0])) {
+    finalCheck = getState(inLinksData, prereqs[0]);
+    finalCheck = finalCheck || checkOption(inLinksData, prereqs[1]);
+  } else {
+    finalCheck = getState(inLinksData, prereqs);
+  }
+
+  // update node.data.isClickable using finalCheck
+  node.diagram.model.commit((model) => {
+    model.set(node.data, 'isClickable', finalCheck);
+  }, 'change isClickable');
+}
+
+function getState(inLinksData, prereqs) {
+  let check = false;
+  let finalCheck = true;
+
   prereqs.forEach((andCombo) => {
     andCombo.forEach((orCombo) => {
       inLinksData.forEach((link) => {
@@ -81,8 +98,24 @@ function updateIsclickable(node) {
     check = false;
   });
 
-  // update node.data.isClickable using finalCheck
-  node.diagram.model.commit((model) => {
-    model.set(node.data, 'isClickable', finalCheck);
-  }, 'change isClickable');
+  return finalCheck;
+}
+
+function checkOption(inLinksData, prereqs) {
+  let check = false;
+  let finalCheck = true;
+
+  prereqs.forEach((andCombo) => {
+    inLinksData.forEach((link) => {
+      if (link.data.from === andCombo && link.isHighlighted) {
+        check = true;
+      }
+    });
+    if (!check) {
+      finalCheck = false;
+    }
+    check = false;
+  });
+
+  return finalCheck;
 }

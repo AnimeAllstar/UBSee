@@ -740,8 +740,11 @@
       "MATH 309": {
         "name": "MATH 309",
         "prereqs": [
-          ["MATH 152, MATH 221"],
-          ["MATH 220", "MATH 226"]
+          [
+            ["MATH 152", "MATH 221"],
+            ["MATH 220", "MATH 226"]
+          ],
+          ["MATH 223"]
         ],
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Topics in Geometry",
@@ -787,8 +790,11 @@
       "MATH 320": {
         "name": "MATH 320",
         "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 253", "MATH 254"],
-          ["MATH 220"]
+          [
+            ["MATH 200", "MATH 217", "MATH 253", "MATH 254"],
+            ["MATH 220"]
+          ],
+          ["MATH 226"]
         ],
         "prereqText": "Either (a) a score of 68% or higher in MATH 226 or (b) one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and a score of 80% or higher in MATH 220.",
         "title": "Real Variables I",
@@ -852,8 +858,11 @@
       "MATH 342": {
         "name": "MATH 342",
         "prereqs": [
-          ["MATH 152", "MATH 221"],
-          ["MATH 220", "MATH 226"]
+          [
+            ["MATH 152", "MATH 221"],
+            ["MATH 220", "MATH 226"]
+          ],
+          ["MATH 223"]
         ],
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Algebra and Coding Theory",
@@ -862,8 +871,11 @@
       "MATH 344": {
         "name": "MATH 344",
         "prereqs": [
-          ["MATH 152", "MATH 221"],
-          ["MATH 220", "MATH 226"]
+          [
+            ["MATH 152", "MATH 221"],
+            ["MATH 220", "MATH 226"]
+          ],
+          ["MATH 223"]
         ],
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Mathematical Game Theory",

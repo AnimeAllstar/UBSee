@@ -5,19 +5,21 @@ const $ = go.GraphObject.make;
 let myDiagram;
 
 // global data variable
-let data;
+let myData;
 
 // get data asynchronously
 async function getJSON() {
   const response = await fetch('/json/courses.json');
   const json = await response.json();
-  data = json.courses;
+  myData = json.courses;
   return json;
 }
 
+// global variables to store nodes and links
 const nodes = [];
 const links = [];
 
+// add relevant data to nodes[] and links[]
 function addToGraph(course) {
   nodes.push({
     key: course.name,
@@ -30,45 +32,50 @@ function addToGraph(course) {
   links.push(course);
 }
 
-function helper(course, subject) {
+// recursively adds all nodes with possibile link to course
+// used to create dataset for inverse graph
+function recursiveAddInverse(course, subject) {
   addToGraph(course);
   course.prereqs.forEach((andCombo) => {
     andCombo.forEach((orCombo) => {
+      // TODO: special case for a few math courses, add a more permanent solution if more instances occur (eg: MATH 320)
       if (typeof orCombo === "string") {
         if (!nodes.some(e => e.key === orCombo)) {
-          helper(subject[orCombo], subject);
+          console.log(subject[orCombo]);
+          recursiveAddInverse(subject[orCombo], subject);
         }
       } else {
-        helper(subject[orCombo[0]], subject);
+        recursiveAddInverse(subject[orCombo[0]], subject);
       }
     });
   });
 }
 
 // return node and links arrays
-async function getData(data) {
+async function getData(req) {
   const dataJson = await getJSON();
 
   let subject;
 
   // conditions check for what data to fetch
-  if (data.course && data.subject) {
+  if (req.course && req.subject) {
     // inverse graph
-    subject = dataJson.courses[data.subject];
-    helper(subject[data.subject + ' ' + data.course], subject);
+    subject = dataJson.courses[req.subject];
+    recursiveAddInverse(subject[req.subject + ' ' + req.course], subject);
     return {
       nodes,
       links: links
     };
-  } else if (!data.course && !data.subject) {
-    // home page
+  } else if (!req.course && !req.subject) {
+    // home page, displays random subject graph
     let length = Object.keys(dataJson.courses).length;
     subject = dataJson.courses[Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]];
-  } else if (!data.course && data.subject) {
+  } else if (!req.course && req.subject) {
     // subject graph
-    subject = dataJson.courses[data.subject];
+    subject = dataJson.courses[req.subject];
   }
 
+  // add courses node to graph
   for (const course in subject) {
     addToGraph(subject[course]);
   }
@@ -79,9 +86,9 @@ async function getData(data) {
   };
 }
 
-async function createGraph(data) {
+async function createGraph(req) {
 
-  const graphData = await getData(data);
+  const graphData = await getData(req);
 
   // make diagram
   myDiagram = createDiagram('diagram-div');

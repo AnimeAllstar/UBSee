@@ -48,7 +48,7 @@ router.get('/subject/:subject', (req, res) => {
     res.render(path.join(ROOT, 'views', 'index.html'), {
       subject: req.params.subject,
       subjects: Object.keys(obj.courses),
-      title: `${req.params.subject} ${req.params.course} - UBC Degree Visualizer`
+      title: `${req.params.subject} - UBC Degree Visualizer`
     });
   })
 });

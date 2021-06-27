@@ -54,8 +54,6 @@ function updateIsclickable(node) {
     return;
   }
 
-  let finalCheck;
-
   const inLinksData = [];
 
   // push required data of all in-links of node into inLinksData
@@ -66,21 +64,23 @@ function updateIsclickable(node) {
     });
   });
 
+  let newState;
+
   // checks if any of the combinations have been satisfied
   if (Array.isArray(prereqs[0][0])) {
-    finalCheck = getState(inLinksData, prereqs[0]);
-    finalCheck = finalCheck || checkOption(inLinksData, prereqs[1]);
+    newState = getNewState(inLinksData, prereqs[0]) || checkOption(inLinksData, prereqs[1])
   } else {
-    finalCheck = getState(inLinksData, prereqs);
+    newState = getNewState(inLinksData, prereqs);
   }
 
-  // update node.data.isClickable using finalCheck
+  // update node.data.isClickable using newState
   node.diagram.model.commit((model) => {
-    model.set(node.data, 'isClickable', finalCheck);
+    model.set(node.data, 'isClickable', newState);
   }, 'change isClickable');
 }
 
-function getState(inLinksData, prereqs) {
+// iterates over prereqs to check conditions
+function getNewState(inLinksData, prereqs) {
   let check = false;
   let finalCheck = true;
 
@@ -101,6 +101,7 @@ function getState(inLinksData, prereqs) {
   return finalCheck;
 }
 
+// TODO: special case for a few math courses, add a more permanent solution if more instances occur (eg: MATH 320)
 function checkOption(inLinksData, prereqs) {
   let check = false;
   let finalCheck = true;

@@ -132,7 +132,7 @@
   jQuery('#subject-select').on("select2:selecting", function (e) {
     jQuery('#course-select').empty().trigger("change");
     jQuery("#course-select").select2({
-      data: Object.keys(data[e.params.args.data.text]),
+      data: Object.keys(myData[e.params.args.data.text]),
       placeholder: 'Course #'
     });
   });
@@ -141,7 +141,7 @@
     const subject = document.getElementById('subject-select').value;
     const course = document.getElementById('course-select').value;
     if (subject && course) {
-      window.open(`/subject/${subject}/course/${course.split(' ')[1]}`)
+      window.open(`/subject/${subject}/course/${course.split(' ')[1]}`);
     }
   }
 </script>

@@ -10,25 +10,25 @@ function nodeClickHandler(node) {
 
 // function that highlights a given node and highlights the links coming out of it
 function updateHighlight(node, val) {
-  const diagram = node.diagram;
+  const graph = node.diagram;
   // lock
-  diagram.startTransaction('highlight');
+  graph.startTransaction('highlight');
 
   // change status of clicked node
   node.isHighlighted = val;
 
   // change node.isHighlighted for all outgoing Links
-  node.findLinksOutOf().each(function (l) {
+  node.findLinksOutOf().each((l) => {
     l.isHighlighted = val;
   });
 
-  // recursively call update on children nodes
-  node.findNodesOutOf().each(function (node) {
+  // recursively call update on nodes dependant on this to evaluate and update their state
+  node.findNodesOutOf().each((node) => {
     recursiveUpdateHighlight(node);
   });
 
   // unlock
-  diagram.commitTransaction('highlight');
+  graph.commitTransaction('highlight');
 }
 
 // update highlighting for all
@@ -45,55 +45,33 @@ function recursiveUpdateHighlight(node) {
   }
 }
 
+// iterates over node.findLinksInto() to check if the links from other nodes are highlighted
+// replaces the course names in prereqs string with l.isHighlighted
+// for example: (CPSC 101 && CPSC 103) || CPSC 110 could be replace to (1 && 0 ) || 1 
+// returns the evaluated newState
+function getNewState(node, prereqs) {
+  node.findLinksInto().each((l) => {
+    const newState = l.isHighlighted ? 1 : 0;
+    const re = new RegExp(l.data.from);
+    prereqs = prereqs.replace(re, newState);
+  });
+  return eval(prereqs);
+}
+
 // checks if the course prerequisites have been satisfied
 function updateIsclickable(node) {
   const prereqs = node.data.prereqs;
 
-  // no prereqs
+  // no prereqs, base case
   if (prereqs.length === 0) {
     return;
   }
 
-  const inLinksData = [];
-
-  // push required data of all in-links of node into inLinksData
-  node.findLinksInto().each(function (l) {
-    inLinksData.push({
-      data: l.data,
-      isHighlighted: l.isHighlighted
-    });
-  });
-
-  // checks if any of the combinations have been satisfied
-  const newState = getNewState(node.data.key.split(' ')[0], inLinksData, prereqs);
+  // gets the new state of the node
+  const newState = getNewState(node, prereqs);
 
   // update node.data.isClickable using newState
   node.diagram.model.commit((model) => {
     model.set(node.data, 'isClickable', newState);
   }, 'change isClickable');
-}
-
-// iterates over prereqs to check conditions
-function getNewState(subjectId, inLinksData, prereqs) {
-  const re = new RegExp(subjectId + '\\s\\d{3}', 'g');
-  const courseList = prereqs.match(re);
-
-  const states = {};
-  courseList.forEach((course) => {
-    inLinksData.forEach((link) => {
-      if (link.data.from === course) {
-        if (link.isHighlighted) {
-          states[course] = 1;
-        } else {
-          states[course] = 0;
-        }
-      }
-    });
-  });
-
-  Object.keys(states).forEach((course) => {
-    const re = new RegExp(course);
-    prereqs = prereqs.replace(re, states[course]);
-  });
-  return eval(prereqs);
 }

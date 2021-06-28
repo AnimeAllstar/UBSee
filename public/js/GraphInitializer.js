@@ -2,7 +2,7 @@
 const $ = go.GraphObject.make;
 
 // global variable for graph
-let myDiagram;
+let myGraph;
 
 // global data variable
 let myData;
@@ -32,6 +32,8 @@ function addToGraph(course) {
   links.push(course);
 }
 
+// splits course.prereqs into an array of course
+// iterates through that array and applies func to each element
 function iterateCourses(course, arg, func) {
   const re = new RegExp(course.name.split(' ')[0] + '\\s\\d{3}', 'g');
   const courseList = course.prereqs.match(re);
@@ -47,8 +49,9 @@ function iterateCourses(course, arg, func) {
 // used to create dataset for inverse graph
 function recursiveAddInverse(course, subject) {
   addToGraph(course);
-
   iterateCourses(course, subject, (c, subject) => {
+    // if course has not been added to nodes[] call recursiveAddInverse on it
+    // this allows all the courses connect to the initial node to be added to nodes[]
     if (!nodes.some(e => e.key === c)) {
       recursiveAddInverse(subject[c], subject);
     }
@@ -94,17 +97,17 @@ async function createGraph(req) {
 
   const graphData = await getData(req);
 
-  // make diagram
-  myDiagram = createDiagram('diagram-div');
+  // make graph
+  myGraph = getGraph('graph-div');
 
   // add nodes to new model
-  myDiagram.model = new go.GraphLinksModel(graphData.nodes);
+  myGraph.model = new go.GraphLinksModel(graphData.nodes);
 
-  // add links for edges
+  // add edges to nodes
   graphData.links.forEach((link) => {
     iterateCourses(link, link.name, (fromKey, toKey) => {
       if (!links.some(e => e.key === fromKey)) {
-        myDiagram.model.addLinkData({
+        myGraph.model.addLinkData({
           from: fromKey,
           to: toKey
         });
@@ -113,8 +116,8 @@ async function createGraph(req) {
   });
 }
 
-// returns new diagram
-function createDiagram(id) {
+// returns new graph
+function getGraph(id) {
   return $(go.Diagram, id, {
     'undoManager.isEnabled': true,
     initialAutoScale: go.Diagram.Uniform,
@@ -278,6 +281,7 @@ function createContextMenu() {
   ));
 }
 
+// opens new tab (for hover menu)
 function openInverseGraph(obj) {
   const key = obj.part.data.key.split(' ');
   window.open(`/subject/${key[0]}/course/${key[1]}`);

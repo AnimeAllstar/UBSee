@@ -27,27 +27,31 @@ function addToGraph(course) {
     url: course.url,
     prereqs: course.prereqs,
     prereqText: course.prereqText,
-    isClickable: course.prereqs[0].length === 0 ? true : false,
+    isClickable: course.prereqs.length === 0 ? true : false,
   });
   links.push(course);
+}
+
+function iterateCourses(course, arg, func) {
+  const re = new RegExp(course.name.split(' ')[0] + '\\s\\d{3}', 'g');
+  const courseList = course.prereqs.match(re);
+
+  if (courseList) {
+    courseList.forEach((c) => {
+      func(c, arg);
+    });
+  }
 }
 
 // recursively adds all nodes with possibile link to course
 // used to create dataset for inverse graph
 function recursiveAddInverse(course, subject) {
   addToGraph(course);
-  course.prereqs.forEach((andCombo) => {
-    andCombo.forEach((orCombo) => {
-      // TODO: special case for a few math courses, add a more permanent solution if more instances occur (eg: MATH 320)
-      if (typeof orCombo === "string") {
-        if (!nodes.some(e => e.key === orCombo)) {
-          console.log(subject[orCombo]);
-          recursiveAddInverse(subject[orCombo], subject);
-        }
-      } else {
-        recursiveAddInverse(subject[orCombo[0]], subject);
-      }
-    });
+
+  iterateCourses(course, subject, (c, subject) => {
+    if (!nodes.some(e => e.key === c)) {
+      recursiveAddInverse(subject[c], subject);
+    }
   });
 }
 
@@ -98,25 +102,13 @@ async function createGraph(req) {
 
   // add links for edges
   graphData.links.forEach((link) => {
-    const tempPrereqs = link.prereqs;
-    tempPrereqs.forEach((andCombo) => {
-      andCombo.forEach((orCombo) => {
-        if (typeof orCombo === "string") {
-          myDiagram.model.addLinkData({
-            from: orCombo,
-            to: link.name
-          });
-        } else {
-          orCombo.forEach((combo) => {
-            if (!links.some(e => e.key === combo)) {
-              myDiagram.model.addLinkData({
-                from: combo,
-                to: link.name
-              });
-            }
-          });
-        }
-      });
+    iterateCourses(link, link.name, (fromKey, toKey) => {
+      if (!links.some(e => e.key === fromKey)) {
+        myDiagram.model.addLinkData({
+          from: fromKey,
+          to: toKey
+        });
+      }
     });
   });
 }

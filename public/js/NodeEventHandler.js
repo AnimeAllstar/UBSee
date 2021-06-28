@@ -50,7 +50,7 @@ function updateIsclickable(node) {
   const prereqs = node.data.prereqs;
 
   // no prereqs
-  if (prereqs[0].length === 0) {
+  if (prereqs.length === 0) {
     return;
   }
 
@@ -64,14 +64,8 @@ function updateIsclickable(node) {
     });
   });
 
-  let newState;
-
   // checks if any of the combinations have been satisfied
-  if (Array.isArray(prereqs[0][0])) {
-    newState = getNewState(inLinksData, prereqs[0]) || checkOption(inLinksData, prereqs[1])
-  } else {
-    newState = getNewState(inLinksData, prereqs);
-  }
+  const newState = getNewState(node.data.key.split(' ')[0], inLinksData, prereqs);
 
   // update node.data.isClickable using newState
   node.diagram.model.commit((model) => {
@@ -80,43 +74,26 @@ function updateIsclickable(node) {
 }
 
 // iterates over prereqs to check conditions
-function getNewState(inLinksData, prereqs) {
-  let check = false;
-  let finalCheck = true;
+function getNewState(subjectId, inLinksData, prereqs) {
+  const re = new RegExp(subjectId + '\\s\\d{3}', 'g');
+  const courseList = prereqs.match(re);
 
-  prereqs.forEach((andCombo) => {
-    andCombo.forEach((orCombo) => {
-      inLinksData.forEach((link) => {
-        if (link.data.from === orCombo && link.isHighlighted) {
-          check = true;
-        }
-      });
-    });
-    if (!check) {
-      finalCheck = false;
-    }
-    check = false;
-  });
-
-  return finalCheck;
-}
-
-// TODO: special case for a few math courses, add a more permanent solution if more instances occur (eg: MATH 320)
-function checkOption(inLinksData, prereqs) {
-  let check = false;
-  let finalCheck = true;
-
-  prereqs.forEach((andCombo) => {
+  const states = {};
+  courseList.forEach((course) => {
     inLinksData.forEach((link) => {
-      if (link.data.from === andCombo && link.isHighlighted) {
-        check = true;
+      if (link.data.from === course) {
+        if (link.isHighlighted) {
+          states[course] = 1;
+        } else {
+          states[course] = 0;
+        }
       }
     });
-    if (!check) {
-      finalCheck = false;
-    }
-    check = false;
   });
 
-  return finalCheck;
+  Object.keys(states).forEach((course) => {
+    const re = new RegExp(course);
+    prereqs = prereqs.replace(re, states[course]);
+  });
+  return eval(prereqs);
 }

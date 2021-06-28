@@ -301,13 +301,6 @@
             "title": "Algorithms in Bioinformatics",
             "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=445&campuscd=UBC"
         },
-        "CPSC 449": {
-            "name": "CPSC 449",
-            "prereqs": "CPSC 349",
-            "prereqText": "CPSC 349.",
-            "title": "Honours Thesis",
-            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=449&campuscd=UBC"
-        },
         "CPSC 455": {
             "name": "CPSC 455",
             "prereqs": "CPSC 310",

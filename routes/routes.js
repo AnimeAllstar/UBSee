@@ -21,35 +21,45 @@ router.get('/', (req, res) => {
 });
 
 router.get('/subject/:subject/course/:course', (req, res) => {
-  // TODO
-  // error handling to be added to check if subjectId and courseId are valid
-
   jsonfile.readFile(source, (err, obj) => {
     if (err) {
       console.error(err);
     }
-    res.render(path.join(ROOT, 'views', 'index.html'), {
-      subject: req.params.subject,
-      course: req.params.course,
-      subjects: Object.keys(obj.courses),
-      title: `${req.params.subject} ${req.params.course} - UBC Degree Visualizer`
-    });
+    let p;
+    let data;
+    const sub = req.params.subject;
+    if (!Object.keys(obj.courses).includes(sub)) {
+      res.redirect('/invalid-subject');
+    } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
+      res.redirect('/invalid-course');
+    } else {
+      p = path.join(ROOT, 'views', 'index.html');
+      data = {
+        subject: sub,
+        course: req.params.course,
+        subjects: Object.keys(obj.courses),
+        title: `${sub} ${req.params.course} - UBC Degree Visualizer`
+      }
+    }
+
+    res.render(p, data);
   })
 });
 
 router.get('/subject/:subject', (req, res) => {
-  // TODO
-  // error handling to be added to check if subjectId is valid
-
   jsonfile.readFile(source, (err, obj) => {
     if (err) {
       console.error(err);
     }
-    res.render(path.join(ROOT, 'views', 'index.html'), {
-      subject: req.params.subject,
-      subjects: Object.keys(obj.courses),
-      title: `${req.params.subject} ${req.params.course} - UBC Degree Visualizer`
-    });
+    if (Object.keys(obj.courses).includes(req.params.subject)) {
+      res.render(path.join(ROOT, 'views', 'index.html'), {
+        subject: req.params.subject,
+        subjects: Object.keys(obj.courses),
+        title: `${req.params.subject} - UBC Degree Visualizer`
+      });
+    } else {
+      res.redirect('/invalid-subject');
+    }
   })
 });
 

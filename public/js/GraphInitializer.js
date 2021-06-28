@@ -2,69 +2,87 @@
 const $ = go.GraphObject.make;
 
 // global variable for graph
-let myDiagram;
+let myGraph;
 
 // global data variable
-let data;
+let myData;
 
 // get data asynchronously
 async function getJSON() {
   const response = await fetch('/json/courses.json');
   const json = await response.json();
-  data = json.courses;
+  myData = json.courses;
   return json;
 }
 
+// global variables to store nodes and links
 const nodes = [];
 const links = [];
 
+// add relevant data to nodes[] and links[]
 function addToGraph(course) {
   nodes.push({
-    key: course.name.trim(),
+    key: course.name,
     title: course.title,
     url: course.url,
     prereqs: course.prereqs,
     prereqText: course.prereqText,
-    isClickable: course.prereqs[0].length === 0 ? true : false,
+    isClickable: course.prereqs.length === 0 ? true : false,
   });
   links.push(course);
 }
 
-function helper(course, subject) {
-  addToGraph(course);
-  course.prereqs.forEach((andCombo) => {
-    andCombo.forEach((orCombo) => {
-      if (!nodes.some(e => e.key === orCombo.trim())) {
-        helper(subject[orCombo.trim()], subject);
-      }
+// splits course.prereqs into an array of course
+// iterates through that array and applies func to each element
+function iterateCourses(course, arg, func) {
+  const re = new RegExp(course.name.split(' ')[0] + '\\s\\d{3}', 'g');
+  const courseList = course.prereqs.match(re);
+
+  if (courseList) {
+    courseList.forEach((c) => {
+      func(c, arg);
     });
+  }
+}
+
+// recursively adds all nodes with possibile link to course
+// used to create dataset for inverse graph
+function recursiveAddInverse(course, subject) {
+  addToGraph(course);
+  iterateCourses(course, subject, (c, subject) => {
+    // if course has not been added to nodes[] call recursiveAddInverse on it
+    // this allows all the courses connect to the initial node to be added to nodes[]
+    if (!nodes.some(e => e.key === c)) {
+      recursiveAddInverse(subject[c], subject);
+    }
   });
 }
 
 // return node and links arrays
-async function getData(data) {
+async function getData(req) {
   const dataJson = await getJSON();
 
   let subject;
 
   // conditions check for what data to fetch
-  if (data.course && data.subject) {
+  if (req.course && req.subject) {
     // inverse graph
-    subject = dataJson.courses[data.subject];
-    helper(subject[data.subject + ' ' + data.course], subject);
+    subject = dataJson.courses[req.subject];
+    recursiveAddInverse(subject[req.subject + ' ' + req.course], subject);
     return {
       nodes,
       links: links
     };
-  } else if (!data.course && !data.subject) {
-    // home page
+  } else if (!req.course && !req.subject) {
+    // home page, displays random subject graph
     let length = Object.keys(dataJson.courses).length;
     subject = dataJson.courses[Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]];
-  } else if (!data.course && data.subject) {
+  } else if (!req.course && req.subject) {
     // subject graph
-    subject = dataJson.courses[data.subject];
+    subject = dataJson.courses[req.subject];
   }
 
+  // add courses node to graph
   for (const course in subject) {
     addToGraph(subject[course]);
   }
@@ -75,32 +93,31 @@ async function getData(data) {
   };
 }
 
-async function createGraph(data) {
+async function createGraph(req) {
 
-  const graphData = await getData(data);
+  const graphData = await getData(req);
 
-  // make diagram
-  myDiagram = createDiagram('diagram-div');
+  // make graph
+  myGraph = getGraph('graph-div');
 
   // add nodes to new model
-  myDiagram.model = new go.GraphLinksModel(graphData.nodes);
+  myGraph.model = new go.GraphLinksModel(graphData.nodes);
 
-  // add links for edges
+  // add edges to nodes
   graphData.links.forEach((link) => {
-    const tempPrereqs = link.prereqs;
-    tempPrereqs.forEach((andCombo) => {
-      andCombo.forEach((orCombo) => {
-        myDiagram.model.addLinkData({
-          from: orCombo,
-          to: link.name
+    iterateCourses(link, link.name, (fromKey, toKey) => {
+      if (!links.some(e => e.key === fromKey)) {
+        myGraph.model.addLinkData({
+          from: fromKey,
+          to: toKey
         });
-      });
+      }
     });
   });
 }
 
-// returns new diagram
-function createDiagram(id) {
+// returns new graph
+function getGraph(id) {
   return $(go.Diagram, id, {
     'undoManager.isEnabled': true,
     initialAutoScale: go.Diagram.Uniform,
@@ -264,6 +281,7 @@ function createContextMenu() {
   ));
 }
 
+// opens new tab (for hover menu)
 function openInverseGraph(obj) {
   const key = obj.part.data.key.split(' ');
   window.open(`/subject/${key[0]}/course/${key[1]}`);

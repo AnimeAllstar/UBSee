@@ -32,9 +32,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
           name: course.name,
           title: course.title,
           url: course.link,
-          prereqs: [
-            []
-          ],
+          prereqs: '',
           prereqText: '',
         };
       }

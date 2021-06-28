@@ -3,1091 +3,821 @@
     "CPSC": {
       "CPSC 100": {
         "name": "CPSC 100",
+        "prereqs": "",
+        "prereqText": "None",
         "title": "Computational Thinking",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=100&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "None"
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=100&campuscd=UBC"
       },
       "CPSC 103": {
         "name": "CPSC 103",
+        "prereqs": "",
+        "prereqText": "None",
         "title": "Introduction to Systematic Program Design",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=103&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "None"
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=103&campuscd=UBC"
       },
       "CPSC 107": {
         "name": "CPSC 107",
+        "prereqs": "CPSC 103",
+        "prereqText": "CPSC 103.",
         "title": "Systematic Program Design",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=107&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 103"]
-        ],
-        "prereqText": "CPSC 103."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=107&campuscd=UBC"
       },
       "CPSC 110": {
         "name": "CPSC 110",
+        "prereqs": "",
+        "prereqText": "None",
         "title": "Computation, Programs, and Programming",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=110&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "None"
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=110&campuscd=UBC"
       },
       "CPSC 121": {
         "name": "CPSC 121",
+        "prereqs": "",
+        "prereqText": "Principles of Mathematics 12 or Pre-calculus 12.",
         "title": "Models of Computation",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=121&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "Principles of Mathematics 12 or Pre-calculus 12."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=121&campuscd=UBC"
       },
       "CPSC 203": {
         "name": "CPSC 203",
+        "prereqs": "CPSC 103 || CPSC 110",
+        "prereqText": "One of CPSC 103, CPSC 110, EOSC 211, MATH 210, PHYS 210, COMM 337.",
         "title": "Programming, Problem Solving, and Algorithms",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=203&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 103", "CPSC 110"]
-        ],
-        "prereqText": "One of CPSC 103, CPSC 110, EOSC 211, MATH 210, PHYS 210, COMM 337."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=203&campuscd=UBC"
       },
       "CPSC 210": {
         "name": "CPSC 210",
+        "prereqs": "CPSC 107 || CPSC 110",
+        "prereqText": "One of CPSC 107, CPSC 110.",
         "title": "Software Construction",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=210&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 107", "CPSC 110"]
-        ],
-        "prereqText": "One of CPSC 107, CPSC 110."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=210&campuscd=UBC"
       },
       "CPSC 213": {
         "name": "CPSC 213",
+        "prereqs": "CPSC 121 && CPSC 210",
+        "prereqText": "All of CPSC 121, CPSC 210.",
         "title": "Introduction to Computer Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=213&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 121"],
-          ["CPSC 210"]
-        ],
-        "prereqText": "All of CPSC 121, CPSC 210."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=213&campuscd=UBC"
       },
       "CPSC 221": {
         "name": "CPSC 221",
+        "prereqs": "CPSC 210 && CPSC 121",
+        "prereqText": "One of CPSC 210, EECE 210, CPEN 221 and one of CPSC 121, MATH 220.",
         "title": "Basic Algorithms and Data Structures",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 121"],
-          ["CPSC 210"]
-        ],
-        "prereqText": "One of CPSC 210, EECE 210, CPEN 221 and one of CPSC 121, MATH 220."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=221&campuscd=UBC"
+      },
+      "CPSC 259": {
+        "name": "CPSC 259",
+        "prereqs": "",
+        "prereqText": "APSC 160.",
+        "title": "Data Structures and Algorithms for Electrical Engineers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=259&campuscd=UBC"
       },
       "CPSC 261": {
         "name": "CPSC 261",
+        "prereqs": "",
+        "prereqText": "One of EECE 259, CPEN 211 and one of EECE 210, CPEN 221.",
         "title": "Basics of Computer Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=261&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "One of EECE 259, CPEN 211 and one of EECE 210, CPEN 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=261&campuscd=UBC"
       },
       "CPSC 302": {
         "name": "CPSC 302",
+        "prereqs": "CPSC 103 || CPSC 110",
+        "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Numerical Computation for Algebraic Problems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=302&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 103", "CPSC 110"]
-        ],
-        "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=302&campuscd=UBC"
       },
       "CPSC 303": {
         "name": "CPSC 303",
+        "prereqs": "CPSC 103 || CPSC 110",
+        "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Numerical Approximation and Discretization",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=303&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 103", "CPSC 110"]
-        ],
-        "prereqText": "One of CPSC 103, CPSC 110, CPEN 221, EOSC 211, PHYS 210 and one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=303&campuscd=UBC"
       },
       "CPSC 304": {
         "name": "CPSC 304",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221.",
         "title": "Introduction to Relational Databases",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=304&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=304&campuscd=UBC"
       },
       "CPSC 310": {
         "name": "CPSC 310",
+        "prereqs": "CPSC 213 || CPSC 221",
+        "prereqText": "All of CPSC 213, CPSC 221.",
         "title": "Introduction to Software Engineering",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=310&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"],
-          ["CPSC 213"]
-        ],
-        "prereqText": "All of CPSC 213, CPSC 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=310&campuscd=UBC"
       },
       "CPSC 311": {
         "name": "CPSC 311",
+        "prereqs": "CPSC 210",
+        "prereqText": "CPSC 210.",
         "title": "Definition of Programming Languages",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=311&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 210"]
-        ],
-        "prereqText": "CPSC 210."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=311&campuscd=UBC"
       },
       "CPSC 312": {
         "name": "CPSC 312",
+        "prereqs": "CPSC 210",
+        "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221.",
         "title": "Functional and Logic Programming",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=312&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 213"],
-          ["CPSC 221"]
-        ],
-        "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=312&campuscd=UBC"
       },
       "CPSC 313": {
         "name": "CPSC 313",
+        "prereqs": "CPSC 213 && CPSC 221",
+        "prereqText": "All of CPSC 213, CPSC 221.",
         "title": "Computer Hardware and Operating Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=313&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 213", "CPSC 211"]
-        ],
-        "prereqText": "All of CPSC 213, CPSC 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=313&campuscd=UBC"
       },
       "CPSC 314": {
         "name": "CPSC 314",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Computer Graphics",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=314&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=314&campuscd=UBC"
       },
       "CPSC 317": {
         "name": "CPSC 317",
+        "prereqs": "CPSC 213 && CPSC 221",
+        "prereqText": "All of CPSC 213, CPSC 221.",
         "title": "Internet Computing",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=317&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"],
-          ["CPSC 213"]
-        ],
-        "prereqText": "All of CPSC 213, CPSC 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=317&campuscd=UBC"
       },
       "CPSC 319": {
         "name": "CPSC 319",
+        "prereqs": "CPSC 310",
+        "prereqText": "CPSC 310.",
         "title": "Software Engineering Project",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=319&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 310"]
-        ],
-        "prereqText": "CPSC 310."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=319&campuscd=UBC"
       },
       "CPSC 320": {
         "name": "CPSC 320",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221 and at least 3 credits from COMM 291, BIOL 300, MATH or STAT at 200 level or above.",
         "title": "Intermediate Algorithm Design and Analysis",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=320&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221 and at least 3 credits from COMM 291, BIOL 300, MATH or STAT at 200 level or above."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=320&campuscd=UBC"
       },
       "CPSC 322": {
         "name": "CPSC 322",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221.",
         "title": "Introduction to Artificial Intelligence",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=322&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=322&campuscd=UBC"
       },
       "CPSC 330": {
         "name": "CPSC 330",
+        "prereqs": "(CPSC 203 || CPSC 210) || (CPSC 107 || CPSC 110)",
+        "prereqText": "Either (a) one of CPSC 203, CPSC 210, CPEN 221 or (b) MATH 210 and one of CPSC 107, CPSC 110.",
         "title": "Applied Machine Learning",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=330&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 203", "CPSC 210", "CPSC 107", "CPSC 110"]
-        ],
-        "prereqText": "Either (a) one of CPSC 203, CPSC 210, CPEN 221 or (b) MATH 210 and one of CPSC 107, CPSC 110."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=330&campuscd=UBC"
       },
       "CPSC 340": {
         "name": "CPSC 340",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221 and one of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and one of STAT 241, STAT 251, ECON 325, ECON 327, MATH 302, STAT 302, MATH 318.",
         "title": "Machine Learning and Data Mining",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=340&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221 and one of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and one of STAT 241, STAT 251, ECON 325, ECON 327, MATH 302, STAT 302, MATH 318."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=340&campuscd=UBC"
       },
       "CPSC 344": {
         "name": "CPSC 344",
+        "prereqs": "CPSC 210",
+        "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221.",
         "title": "Introduction to Human Computer Interaction Methods",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=344&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 210"]
-        ],
-        "prereqText": "One of CPSC 210, EECE 210, EECE 309, CPEN 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=344&campuscd=UBC"
       },
       "CPSC 404": {
         "name": "CPSC 404",
+        "prereqs": "CPSC 304 && (CPSC 213 || CPSC 261)",
+        "prereqText": "CPSC 304 and one of CPSC 213, CPSC 261.",
         "title": "Advanced Relational Databases",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=404&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 304"],
-          ["CPSC 213", "CPSC 261"]
-        ],
-        "prereqText": "CPSC 304 and one of CPSC 213, CPSC 261."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=404&campuscd=UBC"
       },
       "CPSC 406": {
         "name": "CPSC 406",
+        "prereqs": "CPSC 302 || CPSC 303",
+        "prereqText": "One of CPSC 302, CPSC 303, MATH 307.",
         "title": "Computational Optimization",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=406&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 302", "CPSC 303"]
-        ],
-        "prereqText": "One of CPSC 302, CPSC 303, MATH 307."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=406&campuscd=UBC"
       },
       "CPSC 410": {
         "name": "CPSC 410",
+        "prereqs": "CPSC 310",
+        "prereqText": "Either (a) CPSC 310 or (b) one of EECE 310, CPEN 321 and one of EECE 315, CPEN 331.",
         "title": "Advanced Software Engineering",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=410&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 310"]
-        ],
-        "prereqText": "Either (a) CPSC 310 or (b) one of EECE 310, CPEN 321 and one of EECE 315, CPEN 331."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=410&campuscd=UBC"
       },
       "CPSC 411": {
         "name": "CPSC 411",
+        "prereqs": "CPSC 213 && CPSC 221 && CPSC 311",
+        "prereqText": "All of CPSC 213, CPSC 221, CPSC 311.",
         "title": "Introduction to Compiler Construction",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=411&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 213"],
-          ["CPSC 221"],
-          ["CPSC 311"]
-        ],
-        "prereqText": "All of CPSC 213, CPSC 221, CPSC 311."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=411&campuscd=UBC"
       },
       "CPSC 415": {
         "name": "CPSC 415",
+        "prereqs": "CPSC 313",
+        "prereqText": "One of CPSC 313, EECE 315, CPEN 331.",
         "title": "Advanced Operating Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=415&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 313"]
-        ],
-        "prereqText": "One of CPSC 313, EECE 315, CPEN 331."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=415&campuscd=UBC"
       },
       "CPSC 416": {
         "name": "CPSC 416",
+        "prereqs": "CPSC 313 && CPSC 317",
+        "prereqText": "One of CPSC 313, EECE 315, CPEN 331 and one of CPSC 317, EECE 358, ELEC 331.",
         "title": "Distributed Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 313"],
-          ["CPSC 317"]
-        ],
-        "prereqText": "One of CPSC 313, EECE 315, CPEN 331 and one of CPSC 317, EECE 358, ELEC 331."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=416&campuscd=UBC"
       },
       "CPSC 417": {
         "name": "CPSC 417",
+        "prereqs": "CPSC 313 && CPSC 317",
+        "prereqText": "All of CPSC 313, CPSC 317 and one of STAT 200, STAT 241.",
         "title": "Computer Networking",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=417&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 313"],
-          ["CPSC 317"]
-        ],
-        "prereqText": "All of CPSC 313, CPSC 317 and one of STAT 200, STAT 241."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=417&campuscd=UBC"
       },
       "CPSC 418": {
         "name": "CPSC 418",
+        "prereqs": "(CPSC 261 || CPSC 313) && CPSC 320",
+        "prereqText": "One of CPSC 261, CPSC 313, EECE 476, CPEN 411 and one of CPSC 320, EECE 320.",
         "title": "Parallel Computation",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=418&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 261", "CPSC 313"],
-          ["CPSC 320"]
-        ],
-        "prereqText": "One of CPSC 261, CPSC 313, EECE 476, CPEN 411 and one of CPSC 320, EECE 320."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=418&campuscd=UBC"
       },
       "CPSC 420": {
         "name": "CPSC 420",
+        "prereqs": "CPSC 320",
+        "prereqText": "CPSC 320.",
         "title": "Advanced Algorithms Design and Analysis",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=420&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 320"]
-        ],
-        "prereqText": "CPSC 320."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=420&campuscd=UBC"
       },
       "CPSC 421": {
         "name": "CPSC 421",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221. CPSC 320 is recommended.",
         "title": "Introduction to Theory of Computing",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=421&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221. CPSC 320 is recommended."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=421&campuscd=UBC"
       },
       "CPSC 422": {
         "name": "CPSC 422",
+        "prereqs": "CPSC 322",
+        "prereqText": "CPSC 322.",
         "title": "Intelligent Systems",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=422&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 322"]
-        ],
-        "prereqText": "CPSC 322."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=422&campuscd=UBC"
       },
       "CPSC 425": {
         "name": "CPSC 425",
+        "prereqs": "CPSC 221",
+        "prereqText": "All of CPSC 221, MATH 200, MATH 221.",
         "title": "Computer Vision",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=425&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "All of CPSC 221, MATH 200, MATH 221."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=425&campuscd=UBC"
       },
       "CPSC 427": {
         "name": "CPSC 427",
+        "prereqs": "CPSC 221",
+        "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Video Game Programming",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=427&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"]
-        ],
-        "prereqText": "CPSC 221 and one of MATH 200, MATH 217, MATH 226, MATH 253 and one of MATH 152, MATH 221, MATH 223."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=427&campuscd=UBC"
       },
       "CPSC 430": {
         "name": "CPSC 430",
+        "prereqs": "",
+        "prereqText": "3 credits of Computer Science and at least third-year standing.",
         "title": "Computers and Society",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=430&campuscd=UBC",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "3 credits of Computer Science and at least third-year standing."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=430&campuscd=UBC"
       },
       "CPSC 440": {
         "name": "CPSC 440",
+        "prereqs": "CPSC 320 && CPSC 340",
+        "prereqText": "All of CPSC 320, CPSC 340.",
         "title": "Advanced Machine Learning",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=440&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 320"],
-          ["CPSC 340"]
-        ],
-        "prereqText": "All of CPSC 320, CPSC 340."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=440&campuscd=UBC"
       },
       "CPSC 444": {
         "name": "CPSC 444",
+        "prereqs": "CPSC 344",
+        "prereqText": "CPSC 344 and one of STAT 200, STAT 203, STAT 241, STAT 251, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, GEOG 374, KIN  206, KIN  371, POLI 380, PSYC 218, PSYC 278, PSYC 366, SOCI 328.",
         "title": "Advanced Methods for Human Computer Interaction",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=444&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 310"],
-          ["CPSC 344"]
-        ],
-        "prereqText": "CPSC 344 and one of STAT 200, STAT 203, STAT 241, STAT 251, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, GEOG 374, KIN  206, KIN  371, POLI 380, PSYC 218, PSYC 278, PSYC 366, SOCI 328."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=444&campuscd=UBC"
       },
       "CPSC 445": {
         "name": "CPSC 445",
+        "prereqs": "CPSC 320",
+        "prereqText": "CPSC 320 and either BMEG 250 or six credits of BIOL beyond BIOL 111.",
         "title": "Algorithms in Bioinformatics",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=445&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 320"]
-        ],
-        "prereqText": "CPSC 320 and either BMEG 250 or six credits of BIOL beyond BIOL 111."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=445&campuscd=UBC"
       },
       "CPSC 455": {
         "name": "CPSC 455",
+        "prereqs": "CPSC 310",
+        "prereqText": "One of CPSC 310, CPEN 321.",
         "title": "Applied Industry Practices",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=455&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 310"]
-        ],
-        "prereqText": "One of CPSC 310, CPEN 321."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=455&campuscd=UBC"
       },
       "CPSC 491": {
         "name": "CPSC 491",
+        "prereqs": "CPSC 221 && CPSC 310 && CPSC 344",
+        "prereqText": "All of CPSC 221, CPSC 310, CPSC 344 and Third-year standing.",
         "title": "Interactive Digital Media Practicum",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=491&campuscd=UBC",
-        "prereqs": [
-          ["CPSC 221"],
-          ["CPSC 310"],
-          ["CPSC 344"]
-        ],
-        "prereqText": "All of CPSC 221, CPSC 310, CPSC 344 and Third-year standing."
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPSC&course=491&campuscd=UBC"
       }
     },
     "MATH": {
       "MATH 100": {
         "name": "MATH 100",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "High-school calculus and one of (a) a score of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12, or (b) a satisfactory score in the UBC Mathematics Basic Skills Test.",
         "title": "Differential Calculus with Applications to Physical Sciences and Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=100&campuscd=UBC"
       },
       "MATH 101": {
         "name": "MATH 101",
-        "prereqs": [
-          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", "MATH 180", "MATH 184"]
-        ],
+        "prereqs": "MATH 100 || MATH 102 || MATH 104 || MATH 110 || MATH 120 || MATH 180 || MATH 184",
         "prereqText": "One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.",
         "title": "Integral Calculus with Applications to Physical Sciences and Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=101&campuscd=UBC"
       },
       "MATH 102": {
         "name": "MATH 102",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "High-school calculus and one of (a) a grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12, or (b) a satisfactory score in the UBC Mathematics Basic Skills Test.",
         "title": "Differential Calculus with Applications to Life Sciences",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=102&campuscd=UBC"
       },
       "MATH 103": {
         "name": "MATH 103",
-        "prereqs": [
-          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", "MATH 180", "MATH 184"]
-        ],
+        "prereqs": "MATH 100 || MATH 102 || MATH 104 || MATH 110 || MATH 120 || MATH 180 || MATH 184",
         "prereqText": "One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.",
         "title": "Integral Calculus with Applications to Life Sciences",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=103&campuscd=UBC"
       },
       "MATH 104": {
         "name": "MATH 104",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "High-school calculus and one of (a) a grade of 80% or higher in BC Principles of Mathematics 12  or Pre-calculus 12, or (b) a satisfactory score in the UBC Mathematics Basic Skills Test.",
         "title": "Differential Calculus with Applications to Commerce and Social Sciences",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=104&campuscd=UBC"
       },
       "MATH 105": {
         "name": "MATH 105",
-        "prereqs": [
-          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", "MATH 180", "MATH 184"]
-        ],
+        "prereqs": "MATH 100 || MATH 102 || MATH 104 || MATH 110 || MATH 120 || MATH 180 || MATH 184",
         "prereqText": "One of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.",
         "title": "Integral Calculus with Applications to Commerce and Social Sciences",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=105&campuscd=UBC"
       },
       "MATH 110": {
         "name": "MATH 110",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "BC Principles of Mathematics 12 or Pre-calculus 12 (or equivalent), plus permission of  the Mathematics Department;  permission will normally be based on a low grade in BC Principles of Mathematics 12 or Pre-calculus 12 (or equivalent) and a low score in the optional UBC Mathematics Basic Skills Test if taken. See http://www.math.ubc.ca/Ugrad/m110.shtml for details.",
         "title": "Differential Calculus",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=110&campuscd=UBC"
       },
       "MATH 120": {
         "name": "MATH 120",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "High-school calculus and one of (a) a score of 95% or higher in BC Principles of Mathematics 12 or Pre-calculus 12; or (b) permission from the Mathematics Department Head.",
         "title": "Honours Differential Calculus",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=120&campuscd=UBC"
       },
       "MATH 121": {
         "name": "MATH 121",
-        "prereqs": [
-          ["MATH 120", "MATH 100", "MATH 102", "MATH 104", "MATH 180", "MATH 184"]
-        ],
+        "prereqs": "MATH 120 || MATH 100 || MATH 102 || MATH 104 || MATH 180 || MATH 184",
         "prereqText": "Either (a) a score of 68% or higher in MATH 120 or (b) a score of 80% or higher in one of MATH 100, MATH 102, MATH 104, MATH 180, MATH 184 or (c) a score of 5 in AP Calculus AB.",
         "title": "Honours Integral Calculus",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=121&campuscd=UBC"
       },
       "MATH 152": {
         "name": "MATH 152",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "None",
         "title": "Linear Systems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=152&campuscd=UBC"
       },
       "MATH 180": {
         "name": "MATH 180",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "One of BC Principles of Mathematics 12 or Pre-calculus 12 and one of (a) a grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12, (b) a satisfactory score in the UBC Mathematics Basic Skills Test.",
         "title": "Differential Calculus with Physical Applications",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=180&campuscd=UBC"
       },
       "MATH 184": {
         "name": "MATH 184",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "One of BC Principles of Mathematics 12 or Pre-calculus 12 and one of (a) a grade of 80% or higher in BC Principles of Mathematics 12 or Pre-calculus 12, or (b) a satisfactory score in the UBC Mathematics Basic Skills Test.",
         "title": "Differential Calculus for Social Science and Commerce",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=184&campuscd=UBC"
       },
-      "MATH 190": {
-        "name": "MATH 190",
-        "prereqs": [
-          []
-        ],
-        "prereqText": "Principles of Mathematics 12 or Pre-calculus 12 and registration in the B.S.F. or B.Sc.N. programs.",
-        "title": "Calculus Survey",
-        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=190&campuscd=UBC"
-      },
       "MATH 200": {
         "name": "MATH 200",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"]
-        ],
+        "prereqs": "MATH 101 || MATH 103 || MATH 105 || MATH 121",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
         "title": "Calculus III",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=200&campuscd=UBC"
       },
       "MATH 210": {
         "name": "MATH 210",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"]
-        ],
+        "prereqs": "MATH 101 || MATH 103 || MATH 105 || MATH 121",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
         "title": "Introduction to Mathematical Computing",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=210&campuscd=UBC"
       },
       "MATH 215": {
         "name": "MATH 215",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"],
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "(MATH 101 || MATH 103 || MATH 105 || MATH 121) && (MATH 152 || MATH 221 || MATH 223)",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Elementary Differential Equations I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=215&campuscd=UBC"
       },
       "MATH 217": {
         "name": "MATH 217",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"]
-        ],
+        "prereqs": "MATH 101 || MATH 103 || MATH 105 || MATH 121",
         "prereqText": "A score of 68% or higher in one of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
         "title": "Multivariable and Vector Calculus",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=217&campuscd=UBC"
       },
       "MATH 220": {
         "name": "MATH 220",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121", "MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
-        ],
+        "prereqs": "MATH 101 || MATH 103 || MATH 105 || MATH 121 || MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254",
         "prereqText": "Either (a) a score of 64% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001 or (b) one of MATH 121, MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Mathematical Proof",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=220&campuscd=UBC"
       },
       "MATH 221": {
         "name": "MATH 221",
-        "prereqs": [
-          ["MATH 100", "MATH 102", "MATH 104", "MATH 110", "MATH 120", "MATH 180", "MATH 184", "MATH 101", "MATH 103", "MATH 105", "MATH 121"]
-        ],
+        "prereqs": "MATH 100 || MATH 102 || MATH 104 || MATH 110 || MATH 120 || MATH 180 || MATH 184 || MATH 101 || MATH 103 || MATH 105 || MATH 121",
         "prereqText": "Either (a) a score of 64% or higher in one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 or (b) one of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 or (c) advanced credit for MATH 100.",
         "title": "Matrix Algebra",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=221&campuscd=UBC"
       },
       "MATH 223": {
         "name": "MATH 223",
-        "prereqs": [
-          ["MATH 121", "MATH 101", "MATH 103", "MATH 105"]
-        ],
+        "prereqs": "MATH 121 || MATH 101 || MATH 103 || MATH 105",
         "prereqText": "Either (a) MATH 121 or (b) a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001.",
         "title": "Linear Algebra",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=223&campuscd=UBC"
       },
       "MATH 226": {
         "name": "MATH 226",
-        "prereqs": [
-          ["MATH 121", "MATH 101", "MATH 103", "MATH 105"]
-        ],
+        "prereqs": "MATH 121 || MATH 101 || MATH 103 || MATH 105",
         "prereqText": "Either (a) a score of 68% or higher in MATH 121 or (b) a score of 80% or higher in one of MATH 101, MATH 103, MATH 105, SCIE 001.",
         "title": "Advanced Calculus I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=226&campuscd=UBC"
       },
       "MATH 227": {
         "name": "MATH 227",
-        "prereqs": [
-          ["MATH 226"]
-        ],
+        "prereqs": "MATH 226",
         "prereqText": "A score of 68% or higher in MATH 226.",
         "title": "Advanced Calculus II",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=227&campuscd=UBC"
       },
       "MATH 253": {
         "name": "MATH 253",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"]
-        ],
+        "prereqs": "MATH 101 || MATH 103 || MATH 105 || MATH 121",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
         "title": "Multivariable Calculus",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=253&campuscd=UBC"
       },
       "MATH 254": {
         "name": "MATH 254",
-        "prereqs": [
-          ["MATH 101"],
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "MATH 101 && (MATH 152 || MATH 221 || MATH 223)",
         "prereqText": "MATH 101 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Multivariable and Vector Calculus for Mechanical Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=254&campuscd=UBC"
       },
       "MATH 255": {
         "name": "MATH 255",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"],
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "(MATH 101 || MATH 103 || MATH 105 || MATH 121) && (MATH 152 || MATH 221 || MATH 223)",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Ordinary Differential Equations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=255&campuscd=UBC"
       },
       "MATH 256": {
         "name": "MATH 256",
-        "prereqs": [
-          ["MATH 101", "MATH 103", "MATH 105", "MATH 121"],
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "(MATH 101 || MATH 103 || MATH 105 || MATH 121) && (MATH 152 || MATH 221 || MATH 223)",
         "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Differential Equations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=256&campuscd=UBC"
       },
       "MATH 257": {
         "name": "MATH 257",
-        "prereqs": [
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "MATH 215 || MATH 255 || MATH 256 || MATH 258",
         "prereqText": "One of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Partial Differential Equations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=257&campuscd=UBC"
       },
       "MATH 258": {
         "name": "MATH 258",
-        "prereqs": [
-          ["MATH 101"],
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "MATH 101 && (MATH 152 || MATH 221 || MATH 223)",
         "prereqText": "MATH 101 and one of MATH 152, MATH 221, MATH 223.",
         "title": "Differential Equations for Mechanical Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=258&campuscd=UBC"
       },
       "MATH 264": {
         "name": "MATH 264",
-        "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
-        ],
+        "prereqs": "MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254",
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Vector Calculus for Electrical Engineering",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=264&campuscd=UBC"
       },
       "MATH 300": {
         "name": "MATH 300",
-        "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
-        ],
+        "prereqs": "MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254",
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Introduction to Complex Variables",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=300&campuscd=UBC"
       },
       "MATH 301": {
         "name": "MATH 301",
-        "prereqs": [
-          ["MATH 300", "MATH 305"],
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "(MATH 300 || MATH 305) && (MATH 215 || MATH 255 || MATH 256 || MATH 258)",
         "prereqText": "One of MATH 300, MATH 305 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Applied Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=301&campuscd=UBC"
       },
       "MATH 302": {
         "name": "MATH 302",
-        "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
-        ],
+        "prereqs": "MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254",
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Introduction to Probability",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=302&campuscd=UBC"
       },
       "MATH 303": {
         "name": "MATH 303",
-        "prereqs": [
-          ["MATH 302"]
-        ],
+        "prereqs": "MATH 302",
         "prereqText": "One of MATH 302, STAT 302.",
         "title": "Introduction to Stochastic Processes",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=303&campuscd=UBC"
       },
       "MATH 305": {
         "name": "MATH 305",
-        "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"],
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "(MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254) && (MATH 215 || MATH 255 || MATH 256 || MATH 258)",
         "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Applied Complex Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=305&campuscd=UBC"
       },
       "MATH 307": {
         "name": "MATH 307",
-        "prereqs": [
-          ["MATH 152", "MATH 221", "MATH 223"],
-          ["MATH 200", "MATH 217", "MATH 226", "MATH 253", "MATH 254"]
-        ],
+        "prereqs": "(MATH 152 || MATH 221 || MATH 223) && (MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254)",
         "prereqText": "One of MATH 152, MATH 221, MATH 223 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254.",
         "title": "Applied Linear Algebra",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=307&campuscd=UBC"
       },
       "MATH 309": {
         "name": "MATH 309",
-        "prereqs": [
-          ["MATH 152, MATH 221"],
-          ["MATH 220", "MATH 226"]
-        ],
+        "prereqs": "((MATH 152 || MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Topics in Geometry",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=309&campuscd=UBC"
       },
       "MATH 312": {
         "name": "MATH 312",
-        "prereqs": [
-          ["MATH 220", "MATH 223", "MATH 226"]
-        ],
+        "prereqs": "MATH 220 || MATH 223 || MATH 226",
         "prereqText": "One of MATH 220, MATH 223, MATH 226, CPSC 121 and 9 additional credits of mathematics courses.",
         "title": "Introduction to Number Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=312&campuscd=UBC"
       },
       "MATH 316": {
         "name": "MATH 316",
-        "prereqs": [
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "MATH 215 || MATH 255 || MATH 256 || MATH 258",
         "prereqText": "One of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Elementary Differential Equations II",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=316&campuscd=UBC"
       },
       "MATH 317": {
         "name": "MATH 317",
-        "prereqs": [
-          ["MATH 200", "MATH 226", "MATH 253"]
-        ],
+        "prereqs": "MATH 200 || MATH 226 || MATH 253",
         "prereqText": "One of MATH 200, MATH 226, MATH 253. One of MATH 152, MATH 221, MATH 223 is recommended.",
         "title": "Calculus IV",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=317&campuscd=UBC"
       },
       "MATH 318": {
         "name": "MATH 318",
-        "prereqs": [
-          ["MATH 152", "MATH 221", "MATH 223"],
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "(MATH 152 || MATH 221 || MATH 223) && (MATH 215 || MATH 255 || MATH 256 || MATH 258)",
         "prereqText": "One of MATH 152, MATH 221, MATH 223 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Probability with Physical Applications",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=318&campuscd=UBC"
       },
       "MATH 320": {
         "name": "MATH 320",
-        "prereqs": [
-          ["MATH 200", "MATH 217", "MATH 253", "MATH 254"],
-          ["MATH 220"]
-        ],
+        "prereqs": "MATH 226 || ((MATH 200 || MATH 217 || MATH 253 || MATH 254) && MATH 220)",
         "prereqText": "Either (a) a score of 68% or higher in MATH 226 or (b) one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and a score of 80% or higher in MATH 220.",
         "title": "Real Variables I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=320&campuscd=UBC"
       },
       "MATH 321": {
         "name": "MATH 321",
-        "prereqs": [
-          ["MATH 320"]
-        ],
+        "prereqs": "MATH 320",
         "prereqText": "MATH 320.",
         "title": "Real Variables II",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=321&campuscd=UBC"
       },
       "MATH 322": {
         "name": "MATH 322",
-        "prereqs": [
-          ["MATH 152", "MATH 221"],
-          ["MATH 220"]
-        ],
+        "prereqs": "(MATH 223 || MATH 310) || ((MATH 152 || MATH 221) && MATH 220)",
         "prereqText": "Either (a) a score of 68% or higher in one of MATH 223, MATH 310 or (b) one of MATH 152, MATH 221, MATH 223 and a score of 80% or higher in MATH 220.",
         "title": "Introduction to Group Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=322&campuscd=UBC"
       },
       "MATH 323": {
         "name": "MATH 323",
-        "prereqs": [
-          ["MATH 322"]
-        ],
+        "prereqs": "MATH 322",
         "prereqText": "MATH 322.",
         "title": "Introduction to Rings and Modules",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=323&campuscd=UBC"
       },
       "MATH 335": {
         "name": "MATH 335",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "None",
         "title": "Introduction to Mathematics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=335&campuscd=UBC"
       },
       "MATH 340": {
         "name": "MATH 340",
-        "prereqs": [
-          ["MATH 152", "MATH 221", "MATH 223"]
-        ],
+        "prereqs": "MATH 152 || MATH 221 || MATH 223",
         "prereqText": "One of MATH 152, MATH 221, MATH 223.",
         "title": "Introduction to Linear Programming",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=340&campuscd=UBC"
       },
       "MATH 341": {
         "name": "MATH 341",
-        "prereqs": [
-          ["MATH 220", "MATH 223", "MATH 226"]
-        ],
+        "prereqs": "MATH 220 || MATH 223 || MATH 226",
         "prereqText": "One of MATH 220, MATH 223, MATH 226, CPSC 121.",
         "title": "Introduction to Discrete Mathematics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=341&campuscd=UBC"
       },
       "MATH 342": {
         "name": "MATH 342",
-        "prereqs": [
-          ["MATH 152", "MATH 221"],
-          ["MATH 220", "MATH 226"]
-        ],
+        "prereqs": "((MATH 152, MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Algebra and Coding Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=342&campuscd=UBC"
       },
       "MATH 344": {
         "name": "MATH 344",
-        "prereqs": [
-          ["MATH 152", "MATH 221"],
-          ["MATH 220", "MATH 226"]
-        ],
+        "prereqs": "((MATH 152, MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Mathematical Game Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=344&campuscd=UBC"
       },
       "MATH 358": {
         "name": "MATH 358",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "All of MECH 224, MECH 225.",
         "title": "Engineering Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=358&campuscd=UBC"
       },
       "MATH 361": {
         "name": "MATH 361",
-        "prereqs": [
-          ["MATH 215", "MATH 255", "MATH 256", "MATH 258"]
-        ],
+        "prereqs": "MATH 215 || MATH 255 || MATH 256 || MATH 258",
         "prereqText": "One of BIOL 301, MATH 215, MATH 255, MATH 256, MATH 258.",
         "title": "Introduction to Mathematical Biology",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=361&campuscd=UBC"
       },
       "MATH 400": {
         "name": "MATH 400",
-        "prereqs": [
-          ["MATH 300", "MATH 305"],
-          ["MATH 256", "MATH 257", "MATH 316", "MATH 358"]
-        ],
+        "prereqs": "(MATH 300 || MATH 305) && (MATH 256 || MATH 257 || MATH 316 || MATH 358)",
         "prereqText": "One of MATH 300, MATH 305 and one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.",
         "title": "Applied Partial Differential Equations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=400&campuscd=UBC"
       },
       "MATH 401": {
         "name": "MATH 401",
-        "prereqs": [
-          ["MATH 256", "MATH 257", "MATH 316", "MATH 358", "MATH 400"]
-        ],
+        "prereqs": "MATH 256 || MATH 257 || MATH 316 || MATH 358 || MATH 400",
         "prereqText": "Either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.",
         "title": "Green's Functions and Variational Methods",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=401&campuscd=UBC"
       },
       "MATH 404": {
         "name": "MATH 404",
-        "prereqs": [
-          ["MATH 300"],
-          ["MATH 321"]
-        ],
+        "prereqs": "MATH 300 && MATH 321",
         "prereqText": "MATH 300 and a score of 68% or higher in MATH 321.",
         "title": "Harmonic Analysis I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=404&campuscd=UBC"
       },
       "MATH 405": {
         "name": "MATH 405",
-        "prereqs": [
-          ["MATH 256", "MATH 257", "MATH 316", "MATH 358"]
-        ],
+        "prereqs": "MATH 256 || MATH 257 || MATH 316 || MATH 358",
         "prereqText": "One of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312.",
         "title": "Numerical Methods for Differential Equations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=405&campuscd=UBC"
       },
       "MATH 406": {
         "name": "MATH 406",
-        "prereqs": [
-          ["MATH 307"],
-          ["MATH 256", "MATH 257", "MATH 316", "MATH 400"]
-        ],
+        "prereqs": "MATH 307 && (MATH 256 || MATH 257 || MATH 316 || MATH 358 || MATH 400)",
         "prereqText": "One of MATH 307, CPSC 302 and either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.",
         "title": "Variational and Approximate Methods in Applied Mathematics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=406&campuscd=UBC"
       },
       "MATH 414": {
         "name": "MATH 414",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "24 credits in MATH.",
         "title": "Mathematical Demonstrations",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=414&campuscd=UBC"
       },
       "MATH 418": {
         "name": "MATH 418",
-        "prereqs": [
-          ["MATH 321"]
-        ],
+        "prereqs": "MATH 321",
         "prereqText": "A score of 68% or higher in MATH 321.",
         "title": "Probability",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=418&campuscd=UBC"
       },
       "MATH 419": {
         "name": "MATH 419",
-        "prereqs": [
-          ["MATH 418"]
-        ],
+        "prereqs": "MATH 418",
         "prereqText": "MATH 418.",
         "title": "Stochastic Processes",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=419&campuscd=UBC"
       },
       "MATH 420": {
         "name": "MATH 420",
-        "prereqs": [
-          ["MATH 321"]
-        ],
+        "prereqs": "MATH 321",
         "prereqText": "A score of 68% or higher in MATH 321.",
         "title": "Real Analysis I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=420&campuscd=UBC"
       },
       "MATH 421": {
         "name": "MATH 421",
-        "prereqs": [
-          ["MATH 420"]
-        ],
+        "prereqs": "MATH 420",
         "prereqText": "MATH 420.",
         "title": "Real Analysis II",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=421&campuscd=UBC"
       },
       "MATH 422": {
         "name": "MATH 422",
-        "prereqs": [
-          ["MATH 323"]
-        ],
+        "prereqs": "MATH 323",
         "prereqText": "MATH 323.",
         "title": "Fields and Galois Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=422&campuscd=UBC"
       },
       "MATH 423": {
         "name": "MATH 423",
-        "prereqs": [
-          ["MATH 323"],
-          ["MATH 412", "MATH 422"]
-        ],
+        "prereqs": "MATH 323 && (MATH 412 || MATH 422)",
         "prereqText": "MATH 323 and a score of 68% or higher in one of MATH 412, MATH 422.",
         "title": "Commutative Algebra",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=423&campuscd=UBC"
       },
       "MATH 424": {
         "name": "MATH 424",
-        "prereqs": [
-          ["MATH 223", "MATH 152", "MATH 221"],
-          ["MATH 227", "MATH 217", "MATH 254", "MATH 264", "MATH 317"]
-        ],
+        "prereqs": "(MATH 223 || MATH 152 || MATH 221) && (MATH 227 || MATH 217 || MATH 254 || MATH 264 || MATH 317)",
         "prereqText": "Either (a) a score of 68% or higher in MATH 223 or (b) a score of 80% or higher in one of MATH 152, MATH 221;  and either (a) a score of 68% or higher in MATH 227 or (b) a score of 80% or higher in one of MATH 217, MATH 254, MATH 264, MATH 317.",
         "title": "Classical Differential Geometry",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=424&campuscd=UBC"
       },
       "MATH 425": {
         "name": "MATH 425",
-        "prereqs": [
-          ["MATH 424"]
-        ],
+        "prereqs": "MATH 424",
         "prereqText": "MATH 424.",
         "title": "Introduction to Modern Differential Geometry",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=425&campuscd=UBC"
       },
       "MATH 426": {
         "name": "MATH 426",
-        "prereqs": [
-          ["MATH 321"],
-          ["MATH 322"]
-        ],
+        "prereqs": "MATH 321 && MATH 322",
         "prereqText": "A score of 68% or higher in all of MATH 321, MATH 322.",
         "title": "Introduction to Topology",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=426&campuscd=UBC"
       },
       "MATH 427": {
         "name": "MATH 427",
-        "prereqs": [
-          ["MATH 426"]
-        ],
+        "prereqs": "MATH 426",
         "prereqText": "MATH 426.",
         "title": "Topics in Topology",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=427&campuscd=UBC"
       },
       "MATH 437": {
         "name": "MATH 437",
-        "prereqs": [
-          []
-        ],
+        "prereqs": "",
         "prereqText": "None",
         "title": "Number Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=437&campuscd=UBC"
       },
       "MATH 440": {
         "name": "MATH 440",
-        "prereqs": [
-          ["MATH 300"],
-          ["MATH 320"]
-        ],
+        "prereqs": "MATH 300 && MATH 320",
         "prereqText": "MATH 300 and a score of 68% or higher in MATH 320.",
         "title": "Complex Analysis",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=440&campuscd=UBC"
       },
       "MATH 441": {
         "name": "MATH 441",
-        "prereqs": [
-          ["MATH 340"]
-        ],
+        "prereqs": "MATH 340",
         "prereqText": "MATH 340.",
         "title": "Mathematical Modelling: Discrete Optimization Problems",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=441&campuscd=UBC"
       },
       "MATH 442": {
         "name": "MATH 442",
-        "prereqs": [
-          ["MATH 220", "MATH 223", "MATH 226"]
-        ],
+        "prereqs": "MATH 220 || MATH 223 || MATH 226",
         "prereqText": "3rd year standing and one of MATH 220, MATH 223, MATH 226 or CPSC 221.",
         "title": "Graphs and Networks",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=442&campuscd=UBC"
       },
       "MATH 443": {
         "name": "MATH 443",
-        "prereqs": [
-          ["MATH 220", "MATH 223", "MATH 226"]
-        ],
+        "prereqs": "MATH 220 || MATH 223 || MATH 226",
         "prereqText": "A score of 68% or higher in one of MATH 220, MATH 223, MATH 226, CPSC 121. And 6 credits of MATH numbered 300 or above.",
         "title": "Graph Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=443&campuscd=UBC"
       },
       "MATH 444": {
         "name": "MATH 444",
-        "prereqs": [
-          ["MATH 220", "MATH 226"]
-        ],
+        "prereqs": "MATH 220 || MATH 226",
         "prereqText": "One of MATH 220, MATH 226 and 6 credits of MATH courses numbered 300 or higher.",
         "title": "Mathematical Research and Writing",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=444&campuscd=UBC"

@@ -16,7 +16,7 @@ app.use(appRoutes);
 
 app.use((req, res) => {
   res.status(404).render(path.join(__dirname, 'views', '404.html'), {
-    title: "Page Not Found",
+    title: "404 - Page Not Found",
   });
 });
 

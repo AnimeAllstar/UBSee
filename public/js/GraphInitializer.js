@@ -148,8 +148,7 @@ function createLayout() {
 function createNodeTemplate() {
   return (nodeTemplate = $(
     go.Node,
-    "Auto",
-    {
+    "Auto", {
       selectionAdorned: false,
       click: function (e, node) {
         nodeClickHandler(node);
@@ -159,8 +158,7 @@ function createNodeTemplate() {
     },
     $(
       go.Shape,
-      "Rectangle",
-      {
+      "Rectangle", {
         strokeWidth: 2,
         stroke: null,
         fill: "#FFF",
@@ -199,8 +197,7 @@ function createNodeTemplate() {
 // returns new link template
 function createLinkTemplate() {
   return (LinkTemplate = $(
-    go.Link,
-    {
+    go.Link, {
       routing: go.Link.Normal,
       corner: 0,
     },
@@ -215,8 +212,7 @@ function createLinkTemplate() {
       }).ofObject()
     ),
     $(
-      go.Shape,
-      {
+      go.Shape, {
         toArrow: "Standard",
         strokeWidth: 0,
       },
@@ -234,8 +230,7 @@ function createLinkTemplate() {
 // returns node tooltip
 function createToolTip() {
   return (ToolTip = $(
-    "ToolTip",
-    {
+    "ToolTip", {
       "Border.fill": "#ffffffdd",
     },
     $(
@@ -247,8 +242,7 @@ function createToolTip() {
         alignment: go.Spot.Left,
       }),
       $(
-        go.TextBlock,
-        {
+        go.TextBlock, {
           margin: 4,
           width: 300,
           wrap: go.TextBlock.WrapFit,
@@ -266,26 +260,22 @@ function createContextMenu() {
   return (ContextMenu = $(
     "ContextMenu",
     $(
-      "ContextMenuButton",
-      {
+      "ContextMenuButton", {
         "ButtonBorder.fill": "white",
         _buttonFillOver: "#ededed",
       },
-      $(go.TextBlock, "Course Page"),
-      {
+      $(go.TextBlock, "Course Page"), {
         click: (e, obj) => {
           window.open(obj.part.data.url);
         },
       }
     ),
     $(
-      "ContextMenuButton",
-      {
+      "ContextMenuButton", {
         "ButtonBorder.fill": "white",
         _buttonFillOver: "#ededed",
       },
-      $(go.TextBlock, "Inverse Graph"),
-      {
+      $(go.TextBlock, "Inverse Graph"), {
         click: (e, obj) => {
           openInverseGraph(obj);
         },

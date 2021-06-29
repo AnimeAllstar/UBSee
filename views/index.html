@@ -14,7 +14,7 @@
   <!-- Sidebar -->
   <nav class="navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
     <div class="d-flex justify-content-between p-2">
-      <h3 class="text-white">UBC Degree Visualizer</h3>
+      <h2 class="text-white"><a href="/" class="text-white text-decoration-none m-1">Degree Visualizer</a></h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +29,7 @@
               Subject / Course Selection
             </button>
           </h2>
-          <div id="selection-content" class="accordion-collapse collapse show">
+          <div id="selection-content" class="accordion-collapse collapse">
             <div class="accordion-body p-0">
               <ul class="list-group">
                 <li class="list-group-item rounded-0">
@@ -119,38 +119,13 @@
 <script src="/js/GraphInitializer.js"></script>
 <script src="/js/NodeEventHandler.js"></script>
 <script src="/js/PageEventHandler.js"></script>
+<script src="/js/Select2EventHandler.js"></script>
 
 <script>
-  window.$ = jQuery;
-  jQuery(document).ready(function () {
-    // initalizes all <select> tags
-    jQuery('select').select2({
-      theme: "bootstrap-5",
-      placeholder: 'Subject',
-      selectionCssClass: "select2--small",
-      dropdownCssClass: "select2--small",
-    });
-  });
-
   // calls createGraph() in GraphInitalizer.js
-  createGraph({
+  window.onload = createGraph({
     subject: "{{ subject }}",
     course: "{{ course }}"
-  });
-
-  // if subject is selected, update the data in #course-select using myData (declared in in GraphInitalizer.js)
-  jQuery('#subject-select').on("select2:selecting", function (e) {
-    jQuery('#course-select').empty().trigger("change");
-    jQuery("#course-select").select2({
-      data: Object.keys(myData[e.params.args.data.text]),
-      theme: "bootstrap-5",
-      placeholder: 'Course #',
-      selectionCssClass: "select2--small",
-      dropdownCssClass: "select2--small",
-    });
-
-    // adds empty option for placeholder
-    jQuery('#course-select').append(new Option("", "", true, true)).trigger('change');
   });
 </script>
 

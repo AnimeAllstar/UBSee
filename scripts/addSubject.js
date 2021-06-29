@@ -9,7 +9,7 @@ const sortJson = require('sort-json');
 const jsonfile = require('jsonfile');
 
 const path = require('path');
-const ROOT = require('./util/path');
+const ROOT = require('../util/path');
 
 // API used to get relevant data
 const UBCCOURSES = 'https://api.ubccourses.com/course/';
@@ -67,7 +67,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
             ignoreCase: true
           });
 
-          const file = path.join(ROOT, 'public', 'json', subject + '_TEMP.json');
+          const file = path.join(ROOT, '..', 'public', 'json', subject + '_TEMP.json');
           jsonfile.writeFile(file, newSubject, function (err) {
             if (err) {
               console.log('Error while writing to ' + file);

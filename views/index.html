@@ -29,7 +29,7 @@
               Subject / Course Selection
             </button>
           </h2>
-          <div id="selection-content" class="accordion-collapse collapse show">
+          <div id="selection-content" class="accordion-collapse collapse">
             <div class="accordion-body p-0">
               <ul class="list-group">
                 <li class="list-group-item rounded-0">
@@ -141,8 +141,14 @@
   // if subject is selected, update the data in #course-select using myData (declared in in GraphInitalizer.js)
   jQuery('#subject-select').on("select2:selecting", function (e) {
     jQuery('#course-select').empty().trigger("change");
+    const subject = myData[e.params.args.data.text];
+    const data = [];
+    let c = 1;
+    for (course in subject) {
+      data.push(subject[course].name + " - " + subject[course].title);
+    }
     jQuery("#course-select").select2({
-      data: Object.keys(myData[e.params.args.data.text]),
+      data: data,
       theme: "bootstrap-5",
       placeholder: 'Course #',
       selectionCssClass: "select2--small",

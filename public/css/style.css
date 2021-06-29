@@ -19,3 +19,14 @@ body {
     float: right !important;
   }
 }
+
+.select2-container--bootstrap-5.select2-container--focus .select2-selection,
+.select2-container--bootstrap-5.select2-container--open .select2-selection {
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown .select2-search .select2-search__field {
+  border-color: none !important;
+  box-shadow: none !important;
+}

@@ -9,7 +9,7 @@ let myData;
 
 // get data asynchronously
 async function getJSON() {
-  const response = await fetch('/json/courses.json');
+  const response = await fetch("/json/courses.json");
   const json = await response.json();
   myData = json.courses;
   return json;
@@ -35,7 +35,7 @@ function addToGraph(course) {
 // splits course.prereqs into an array of course
 // iterates through that array and applies func to each element
 function iterateCourses(course, arg, func) {
-  const re = new RegExp(course.name.split(' ')[0] + '\\s\\d{3}', 'g');
+  const re = new RegExp(course.name.split(" ")[0] + "\\s\\d{3}", "g");
   const courseList = course.prereqs.match(re);
 
   if (courseList) {
@@ -52,7 +52,7 @@ function recursiveAddInverse(course, subject) {
   iterateCourses(course, subject, (c, subject) => {
     // if course has not been added to nodes[] call recursiveAddInverse on it
     // this allows all the courses connect to the initial node to be added to nodes[]
-    if (!nodes.some(e => e.key === c)) {
+    if (!nodes.some((e) => e.key === c)) {
       recursiveAddInverse(subject[c], subject);
     }
   });
@@ -68,15 +68,18 @@ async function getData(req) {
   if (req.course && req.subject) {
     // inverse graph
     subject = dataJson.courses[req.subject];
-    recursiveAddInverse(subject[req.subject + ' ' + req.course], subject);
+    recursiveAddInverse(subject[req.subject + " " + req.course], subject);
     return {
       nodes,
-      links: links
+      links: links,
     };
   } else if (!req.course && !req.subject) {
     // home page, displays random subject graph
     let length = Object.keys(dataJson.courses).length;
-    subject = dataJson.courses[Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]];
+    subject =
+      dataJson.courses[
+        Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]
+      ];
   } else if (!req.course && req.subject) {
     // subject graph
     subject = dataJson.courses[req.subject];
@@ -89,16 +92,15 @@ async function getData(req) {
 
   return {
     nodes,
-    links: links
+    links: links,
   };
 }
 
 async function createGraph(req) {
-
   const graphData = await getData(req);
 
   // make graph
-  myGraph = getGraph('graph-div');
+  myGraph = getGraph("graph-div");
 
   // add nodes to new model
   myGraph.model = new go.GraphLinksModel(graphData.nodes);
@@ -106,10 +108,10 @@ async function createGraph(req) {
   // add edges to nodes
   graphData.links.forEach((link) => {
     iterateCourses(link, link.name, (fromKey, toKey) => {
-      if (!links.some(e => e.key === fromKey)) {
+      if (!links.some((e) => e.key === fromKey)) {
         myGraph.model.addLinkData({
           from: fromKey,
-          to: toKey
+          to: toKey,
         });
       }
     });
@@ -119,7 +121,7 @@ async function createGraph(req) {
 // returns new graph
 function getGraph(id) {
   return $(go.Diagram, id, {
-    'undoManager.isEnabled': true,
+    "undoManager.isEnabled": true,
     initialAutoScale: go.Diagram.Uniform,
     layout: createLayout(),
     nodeTemplate: createNodeTemplate(),
@@ -146,7 +148,8 @@ function createLayout() {
 function createNodeTemplate() {
   return (nodeTemplate = $(
     go.Node,
-    'Auto', {
+    "Auto",
+    {
       selectionAdorned: false,
       click: function (e, node) {
         nodeClickHandler(node);
@@ -156,37 +159,39 @@ function createNodeTemplate() {
     },
     $(
       go.Shape,
-      'Rectangle', {
+      "Rectangle",
+      {
         strokeWidth: 2,
         stroke: null,
-        fill: '#FFF'
+        fill: "#FFF",
+        name: "SHAPE",
       },
       // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
-      new go.Binding('stroke', 'isHighlighted', (h) => {
-        return h ? '#000' : '#000';
+      new go.Binding("stroke", "isHighlighted", (h) => {
+        return h ? "#000" : "#000";
       }).ofObject(),
-      new go.Binding('fill', '', (node) => {
+      new go.Binding("fill", "", (node) => {
         if (node.data.isClickable) {
           if (node.isHighlighted) {
-            return '#1e90ff';
+            return "#1e90ff";
           } else {
-            return '#1ec887';
+            return "#1ec887";
           }
         } else {
-          return '#ff1a53';
+          return "#ff1a53";
         }
       }).ofObject()
     ),
     $(
       go.TextBlock,
-      'course id', // default text
+      "course id", // default text
       // text config, padding
       {
         margin: 12,
-        stroke: '#fff',
-        font: 'bold 16px sans-serif'
+        stroke: "#fff",
+        font: "bold 16px sans-serif",
       },
-      new go.Binding('text', 'key')
+      new go.Binding("text", "key")
     )
   ));
 }
@@ -194,31 +199,33 @@ function createNodeTemplate() {
 // returns new link template
 function createLinkTemplate() {
   return (LinkTemplate = $(
-    go.Link, {
+    go.Link,
+    {
       routing: go.Link.Normal,
-      corner: 0
+      corner: 0,
     },
     $(
       go.Shape,
       // bind Shape.stroke and Shape.strokeWidth to Link.isHighlighted
-      new go.Binding('stroke', 'isHighlighted', (h) => {
-        return h ? '#1ec887' : 'black';
+      new go.Binding("stroke", "isHighlighted", (h) => {
+        return h ? "#1ec887" : "black";
       }).ofObject(),
-      new go.Binding('strokeWidth', 'isHighlighted', (h) => {
+      new go.Binding("strokeWidth", "isHighlighted", (h) => {
         return h ? 3 : 1;
       }).ofObject()
     ),
     $(
-      go.Shape, {
-        toArrow: 'Standard',
-        strokeWidth: 0
+      go.Shape,
+      {
+        toArrow: "Standard",
+        strokeWidth: 0,
       },
       // bind Shape.fill to Link.isHighlighted
-      new go.Binding('fill', 'isHighlighted', (h) => {
-        return h ? '#1ec887' : 'black';
+      new go.Binding("fill", "isHighlighted", (h) => {
+        return h ? "#1ec887" : "black";
       }).ofObject(),
-      new go.Binding('fill', 'isSelected', (sel) => {
-        return sel ? '#1e90ff' : 'black';
+      new go.Binding("fill", "isSelected", (sel) => {
+        return sel ? "#1e90ff" : "black";
       }).ofObject()
     )
   ));
@@ -227,24 +234,26 @@ function createLinkTemplate() {
 // returns node tooltip
 function createToolTip() {
   return (ToolTip = $(
-    'ToolTip', {
-      'Border.fill': '#ffffffdd'
+    "ToolTip",
+    {
+      "Border.fill": "#ffffffdd",
     },
     $(
       go.Panel,
-      'Vertical',
+      "Vertical",
       $(go.TextBlock, {
-        text: 'Course Information',
-        font: '12pt sans-serif',
-        alignment: go.Spot.Left
+        text: "Course Information",
+        font: "12pt sans-serif",
+        alignment: go.Spot.Left,
       }),
       $(
-        go.TextBlock, {
+        go.TextBlock,
+        {
           margin: 4,
           width: 300,
-          wrap: go.TextBlock.WrapFit
+          wrap: go.TextBlock.WrapFit,
         },
-        new go.Binding('text', '', (data) => {
+        new go.Binding("text", "", (data) => {
           return `${data.title} \nPre-reqs: ${data.prereqText}`;
         })
       )
@@ -255,24 +264,28 @@ function createToolTip() {
 // returns contextmenu
 function createContextMenu() {
   return (ContextMenu = $(
-    'ContextMenu',
+    "ContextMenu",
     $(
-      'ContextMenuButton', {
-        'ButtonBorder.fill': 'white',
-        _buttonFillOver: '#ededed',
+      "ContextMenuButton",
+      {
+        "ButtonBorder.fill": "white",
+        _buttonFillOver: "#ededed",
       },
-      $(go.TextBlock, 'Course Page'), {
+      $(go.TextBlock, "Course Page"),
+      {
         click: (e, obj) => {
           window.open(obj.part.data.url);
         },
       }
     ),
     $(
-      'ContextMenuButton', {
-        'ButtonBorder.fill': 'white',
-        _buttonFillOver: '#ededed',
+      "ContextMenuButton",
+      {
+        "ButtonBorder.fill": "white",
+        _buttonFillOver: "#ededed",
       },
-      $(go.TextBlock, 'Inverse Graph'), {
+      $(go.TextBlock, "Inverse Graph"),
+      {
         click: (e, obj) => {
           openInverseGraph(obj);
         },
@@ -283,6 +296,6 @@ function createContextMenu() {
 
 // opens new tab (for hover menu)
 function openInverseGraph(obj) {
-  const key = obj.part.data.key.split(' ');
+  const key = obj.part.data.key.split(" ");
   window.open(`/subject/${key[0]}/course/${key[1]}`);
 }

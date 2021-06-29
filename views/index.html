@@ -1,21 +1,31 @@
-{% extends "base.html" %}
-
-{% block head %}
+{% extends "base.html" %} {% block head %}
 
 <!-- Select2 CSS and Select2 Bootstrap 5 theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-<link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css"
+/>
 
-{% endblock %}
-
-{% block bodyTop %}
+{% endblock %} {% block bodyTop %}
 <div class="container-fluid h-100 p-0">
   <!-- Sidebar -->
   <nav class="navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
     <div class="d-flex justify-content-between p-2">
-      <h2 class="text-white"><a href="/" class="text-white text-decoration-none m-1">Degree Visualizer</a></h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <h2 class="text-white">
+        <a href="/" class="text-white text-decoration-none m-1"
+          >Degree Visualizer</a
+        >
+      </h2>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
@@ -24,8 +34,12 @@
         <!--Selection tab-->
         <div>
           <h2 class="accordion-header" id="selection-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#selection-content">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#selection-content"
+            >
               Subject / Course Selection
             </button>
           </h2>
@@ -35,7 +49,11 @@
                 <li class="list-group-item rounded-0">
                   <div class="input-group mb-3">
                     <!-- Subject Selection-->
-                    <select id="subject-select" name="subject" style="width: 100%">
+                    <select
+                      id="subject-select"
+                      name="subject"
+                      style="width: 100%"
+                    >
                       <option value=""></option>
                       {% for sub in subjects %}
                       <option value="{{ sub }}">{{ sub }}</option>
@@ -44,14 +62,24 @@
                   </div>
                   <div class="input-group mb-3">
                     <!-- Course Selection-->
-                    <select id="course-select" name="course" style="width: 100%">
+                    <select
+                      id="course-select"
+                      name="course"
+                      style="width: 100%"
+                    >
                       <option value=""></option>
                     </select>
                   </div>
                 </li>
                 <li class="list-group-item rounded-0">
                   <form action="/subject" method="GET">
-                    <button type="button" class="btn btn-primary" onclick="openTab()">Create</button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      onclick="openTab()"
+                    >
+                      Create
+                    </button>
                   </form>
                 </li>
               </ul>
@@ -61,8 +89,12 @@
         <!--Settings tab-->
         <div>
           <h2 class="accordion-header" id="settings-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#settings-content">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#settings-content"
+            >
               Settings
             </button>
           </h2>
@@ -73,24 +105,110 @@
                 <li class="list-group-item rounded-0">
                   <h5>Direction</h5>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="right" value="0" checked />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="right"
+                      value="0"
+                      checked
+                    />
                     <label class="form-check-label" for="right">Right</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="down" value="90" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="down"
+                      value="90"
+                    />
                     <label class="form-check-label" for="down">Down</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="left" value="180" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="left"
+                      value="180"
+                    />
                     <label class="form-check-label" for="left">Left</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="up" value="270" />
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="direction"
+                      id="up"
+                      value="270"
+                    />
                     <label class="form-check-label" for="up">Up</label>
                   </div>
                 </li>
+                <!-- Year Setting -->
                 <li class="list-group-item rounded-0">
-                  <button type="button" class="btn btn-primary" onclick="updateGraph()">Update</button>
+                  <h5>Year</h5>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="year"
+                      id="all"
+                      value="-1"
+                      checked
+                    />
+                    <label class="form-check-label" for="all">All</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="year"
+                      id="1"
+                      value="1"
+                    />
+                    <label class="form-check-label" for="1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="year"
+                      id="2"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="year"
+                      id="3"
+                      value="3"
+                    />
+                    <label class="form-check-label" for="3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="year"
+                      id="4"
+                      value="4"
+                    />
+                    <label class="form-check-label" for="4">4</label>
+                  </div>
+                </li>
+                <li class="list-group-item rounded-0">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="updateGraph()"
+                  >
+                    Update
+                  </button>
                 </li>
               </ul>
             </div>
@@ -104,9 +222,7 @@
   <div id="graph-div" class="graph-container col-lg-9"></div>
 </div>
 
-{% endblock %}
-
-{% block bodyEnd %}
+{% endblock %} {% block bodyEnd %}
 
 <!-- jQuery and Select2 -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
@@ -125,7 +241,7 @@
   // calls createGraph() in GraphInitalizer.js
   window.onload = createGraph({
     subject: "{{ subject }}",
-    course: "{{ course }}"
+    course: "{{ course }}",
   });
 </script>
 

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "add": "node addSubject.js"
+    "add": "node scripts/addSubject.js"
   },
   "repository": {
     "type": "git",

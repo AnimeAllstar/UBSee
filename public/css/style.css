@@ -13,6 +13,11 @@ select {
   width: 100%;
 }
 
+.navbar-collapse {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
 @media only screen and (min-width: 992px) {
   .navbar {
     float: left !important;
@@ -21,6 +26,10 @@ select {
 
   .graph-container {
     float: right !important;
+  }
+
+  .navbar-collapse {
+    max-height: none;
   }
 
   .sidebar {

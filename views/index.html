@@ -3,9 +3,12 @@
 {% block head %}
 
 <!-- Select2 CSS and Select2 Bootstrap 5 theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
 <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css" />
+  href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.1.1/dist/select2-bootstrap-5-theme.min.css">
+
+<!-- Bootstrap icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
 {% endblock %}
 
@@ -14,10 +17,17 @@
 <div class="container-fluid h-100 p-0 fixed-top">
   <!-- Sidebar -->
   <nav class="sidebar navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
-    <div class="d-flex justify-content-between p-2">
-      <h2 class="text-white">
-        <a href="/" class="text-white text-decoration-none m-1">UBSee</a>
-      </h2>
+    <div class="d-flex justify-content-between px-2">
+      <div class="d-flex align-items-center">
+        <div class="flex-shrink-0 mx-1 mt-2">
+          <h1 class="text-white"><a href="/" class="text-white text-decoration-none">UBSee</a></h1>
+        </div>
+        <div class="flex-grow-1 ms-3">
+          <a href="https://github.com/AnimeAllstar/UBSee" target="_blank">
+            <i class="bi-github text-white" style="font-size: 1.5em"></i>
+          </a>
+        </div>
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -36,7 +46,7 @@
             <div class="accordion-body p-0">
               <ul class="list-group">
                 <li class="list-group-item rounded-0">
-                  <div class="input-group mb-3">
+                  <div class="input-group mb-3 mt-2">
                     <!-- Subject Selection-->
                     <select id="subject-select" name="subject">
                       <option value=""></option>
@@ -45,7 +55,7 @@
                       {% endfor %}
                     </select>
                   </div>
-                  <div class="input-group mb-3">
+                  <div class="input-group mb-2">
                     <!-- Course Selection-->
                     <select id="course-select" name="course">
                       <option value=""></option>
@@ -63,11 +73,13 @@
                     onchange="updateDisplayText(this.value)">
                 </li>
                 <li class="list-group-item rounded-0">
-                  <form action="/subject" method="GET">
-                    <button type="button" class="btn btn-primary" onclick="openTab()">
-                      Create
-                    </button>
-                  </form>
+                  <button type="button" class="btn btn-primary" onclick="openTab()">
+                    Create
+                  </button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" onclick="copyToClipboard();"
+                    title="Copy url of current graph to clipboard" id="copyBtn">
+                    Copy Link
+                  </button>
                 </li>
               </ul>
             </div>
@@ -140,9 +152,9 @@
         <!--ReadMe tab-->
         <div>
           <h2 class="accordion-header" id="readme-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse"
               data-bs-target="#readme-content">
-              Read Me!
+              README
             </button>
           </h2>
           <div id="readme-content" class="accordion-collapse collapse">
@@ -151,35 +163,41 @@
                 <!-- How To Use Section -->
                 <li class="list-group-item rounded-0">
                   <h6>How to Use</h6>
-                  <span>Use the dropdown menus in the sidebar to find a subject graph or a course graph. Settings menu
-                    can help improve readability of graph.</span>
-                  <br>
-                  <br>
-                  <span>The Nodes
-                    represent a specific course, ex: CPSC 110.</span>
-                  <br><br>
-                  <span>The lines between courses represent the
-                    prerequisites between courses. Hover over a course for detailed prerequisite information.</span>
-                  <br><br>
-                  <span>Nodes can be clicked to indicate that the requirement as satisfied.</span>
-                  <br>
-                  <br>
-                  <span>
-                    <svg width="20" height="20">
-                      <rect width="20" height="20" style="fill:#1ec887;stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    Eligible
-                    <svg width="20" height="20">
-                      <rect width="20" height="20" style="fill:#1e90ff;stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    Satisfied
-                    <svg width="20" height="20">
-                      <rect width="20" height="20" style="fill:#ff1a53;stroke-width:3;stroke:rgb(0,0,0)" />
-                    </svg>
-                    Ineligible
-                  </span>
-                  <br><br>
-                  <span>Right click on a node to explore more options.</span>
+                  <p>
+                    Use the dropdown menus in the <i class="text-primary"> Subject / Course Selection </i> tab to
+                    create a subject graph or a course graph. Leave the course dropdown empty to create a subject graph.
+                  </p>
+                  <p>The <i class="text-primary"> Settings </i> tab can help improve readability of graph.</p>
+                  <p>The Nodes represent a specific course, ex: CPSC 110.</p>
+                  <p>
+                    The lines between courses represent the prerequisites between courses. <i class="text-primary">
+                      Hover </i> over a course for detailed prerequisite information.
+                  </p>
+                  <p>
+                    Nodes can be <i class="text-primary"> left-clicked </i> to indicate that the requirement as
+                    satisfied.
+                  </p>
+                  <p>
+                    <div class="d-inline-block">
+                      <svg width="20" height="20">
+                        <rect width="20" height="20" style="fill:#1ec887;stroke-width:3;stroke:rgb(0,0,0)" />
+                      </svg>
+                      <span>Eligible</span>
+                    </div>
+                    <div class="d-inline-block">
+                      <svg width="20" height="20">
+                        <rect width="20" height="20" style="fill:#1e90ff;stroke-width:3;stroke:rgb(0,0,0)" />
+                      </svg>
+                      <span>Satisfied</span>
+                    </div>
+                    <div class="d-inline-block">
+                      <svg width="20" height="20">
+                        <rect width="20" height="20" style="fill:#ff1a53;stroke-width:3;stroke:rgb(0,0,0)" />
+                      </svg>
+                      <span>Ineligible</span>
+                    </div>
+                  </p>
+                  <p class="mb-1"><i class="text-primary"> Right click </i> on a node to explore more options.</p>
                 </li>
               </ul>
             </div>
@@ -188,7 +206,7 @@
         <!--Notice tab-->
         <div>
           <h2 class="accordion-header" id="notice-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse"
               data-bs-target="#notice-content">
               Warning!
             </button>
@@ -199,36 +217,13 @@
                 <!-- How To Use Section -->
                 <li class="list-group-item rounded-0">
                   <h6>Be Careful!</h6>
-                  <span>This program may not be accurately representative of the actual course requirements displayed on
+                  <p>This program may not be accurately representative of the actual course requirements displayed on
                     SSC as the information may become outdated. Always refer to SSC information to confirm important
-                    information</span>
-                  <br><br>
-                  <span>Due to graphs becoming too complex, not all the prerequisites are displayed on screen. We
-                    recommend always confirming the information on SSC.</span>
-                  <br><br>
-                  <span>This website is meant to aid students to visualize course eligibilities. We will not be held
-                    responsible for any damages.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!--share tab-->
-        <div>
-          <h2 class="accordion-header" id="share-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#share-content">
-              Share This Graph
-            </button>
-          </h2>
-          <div id="share-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <li class="list-group-item rounded-0">
-                  <button type="button" class="btn btn-primary clipboard" onclick="copyToClipboard();">
-                    Copy link
-                  </button>
-                  <p></p>
+                    information</p>
+                  <p>Due to graphs becoming too complex, only prerequisites of the same subject are displayed on screen.
+                    We recommend always confirming the information on SSC.</p>
+                  <p class="mb-1">This website is meant to aid students to visualize course eligibilities and to reduce
+                    the time students spend on course planning. We will not be held responsible for any damages.</p>
                 </li>
               </ul>
             </div>
@@ -265,19 +260,6 @@
     subject: "{{ subject }}",
     course: "{{ course }}",
   });
-</script>
-
-<!-- Copy link script -->
-<script>
-  function copyToClipboard(text) {
-    var inputc = document.body.appendChild(document.createElement("input"));
-    inputc.value = window.location.href;
-    inputc.focus();
-    inputc.select();
-    document.execCommand('copy');
-    inputc.parentNode.removeChild(inputc);
-    alert("URL Copied.");
-  }
 </script>
 
 {% endblock %}

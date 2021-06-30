@@ -1,5 +1,5 @@
 {
-  "name": "ubcee",
+  "name": "ubsee",
   "version": "1.0.0",
   "description": "Creates interactive graphs for UBC subjects and courses",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnimeAllstar/UBCee.git"
+    "url": "git+https://github.com/AnimeAllstar/UBSee.git"
   },
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/AnimeAllstar/UBCee/issues"
+    "url": "https://github.com/AnimeAllstar/UBSee/issues"
   },
-  "homepage": "https://github.com/AnimeAllstar/UBCee#readme",
+  "homepage": "https://github.com/AnimeAllstar/UBSee#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nunjucks": "^3.2.3"

@@ -95,12 +95,8 @@ async function getData(req) {
       links: links
     };
   } else if (!req.course && !req.subject) {
-    // home page, displays random subject graph
-    let length = Object.keys(dataJson.courses).length;
-    subject =
-      dataJson.courses[
-        Object.keys(dataJson.courses)[Math.floor(Math.random() * length)]
-      ];
+    // home page, displays CPSC subject graph
+    subject = dataJson.courses.CPSC;
   } else if (!req.course && req.subject) {
     // subject graph
     subject = dataJson.courses[req.subject];

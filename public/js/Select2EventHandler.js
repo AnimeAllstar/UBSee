@@ -29,10 +29,20 @@ jQuery('#subject-select').on("select2:selecting", function (e) {
         data: data,
         theme: "bootstrap-5",
         placeholder: 'Course',
+        allowClear: true,
         selectionCssClass: "select2--small",
         dropdownCssClass: "select2--small",
     });
 
     // adds empty option for placeholder
     jQuery('#course-select').append(new Option("", "", true, true)).trigger('change');
+
+    // prevents <select> from opening after it is cleared
+    jQuery("select").on("select2:clear", function (evt) {
+        jQuery(this).on("select2:opening.cancelOpen", function (evt) {
+            evt.preventDefault();
+
+            jQuery(this).off("select2:opening.cancelOpen");
+        });
+    });
 });

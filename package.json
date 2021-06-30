@@ -1,7 +1,7 @@
 {
-  "name": "ubc-degree-visualizer",
+  "name": "ubcee",
   "version": "1.0.0",
-  "description": "Degree Visualizer for UBC Majors",
+  "description": "Creates interactive graphs for UBC subjects and courses",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",

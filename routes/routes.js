@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
       console.error(err);
     }
     res.render(path.join(ROOT, 'views', 'index.html'), {
-      title: 'UBCee',
+      title: 'UBSee',
       subjects: Object.keys(obj.courses),
     });
   })
@@ -38,7 +38,7 @@ router.get('/subject/:subject/course/:course', (req, res) => {
         subject: sub,
         course: req.params.course,
         subjects: Object.keys(obj.courses),
-        title: `${sub} ${req.params.course} - UBCee`
+        title: `${sub} ${req.params.course} - UBSee`
       }
     }
 
@@ -55,7 +55,7 @@ router.get('/subject/:subject', (req, res) => {
       res.render(path.join(ROOT, 'views', 'index.html'), {
         subject: req.params.subject,
         subjects: Object.keys(obj.courses),
-        title: `${req.params.subject} - UBCee`
+        title: `${req.params.subject} - UBSee`
       });
     } else {
       res.redirect('/invalid-subject');

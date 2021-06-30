@@ -63,10 +63,11 @@ needle.get(UBCCOURSES + subject, (err, response) => {
         if (completedRequests === Object.keys(newSubject[subject]).length) {
 
           // sorts newSubject[subject] using course names
-          newSubject[subject] = sortJson(newSubject[subject], {
+          sortJson.overwrite(FILE, {
             ignoreCase: true
           });
 
+          // _TEMP insures that the file is not overwrited
           const file = path.join(ROOT, '..', 'public', 'json', subject + '_TEMP.json');
           jsonfile.writeFile(file, newSubject, function (err) {
             if (err) {

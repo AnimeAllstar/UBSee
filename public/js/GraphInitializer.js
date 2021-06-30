@@ -159,6 +159,7 @@ function createNodeTemplate() {
         strokeWidth: 2,
         stroke: null,
         fill: "#FFF",
+        name: "shape",
       },
       // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
       new go.Binding("stroke", "isHighlighted", (h) => {

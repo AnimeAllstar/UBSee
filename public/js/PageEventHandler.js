@@ -13,7 +13,10 @@ function openTab() {
 function updateGraph() {
   myGraph.startTransaction("update");
   myGraph.layout.direction = parseInt(getRadioValue("direction"));
-  updateYearHighlights(parseInt(getRadioValue("year")));
+  const checkedArr = getCheckboxes("opaque");
+  if (checkedArr) {
+    updateOpacity(checkedArr);
+  }
   myGraph.commitTransaction("update");
 }
 
@@ -27,15 +30,26 @@ function getRadioValue(name) {
   }
 }
 
-const updateYearHighlights = (year) => {
+// returns array of unckecked checkboxes using name
+function getCheckboxes(name) {
+  let checkboxes = document.getElementsByName(name);
+  let unchecked = [];
+  checkboxes.forEach((box) => {
+    if (!box.checked) {
+      unchecked.push(box.value);
+    }
+  });
+  return unchecked;
+}
+
+function updateOpacity(arr) {
   myGraph.nodes.each(function (node) {
-    var shape = node.findObject("SHAPE");
+    const shape = node.findObject("shape");
     shape.opacity = 1.0;
-    if (year === -1) {
-      return;
-    } else {
-      if (parseInt(node.data.key.split(" ")[1].substring(0, 1)) !== year) {
-        shape.opacity = 0.1;
+    for (let i = 0; i < arr.length; i++) {
+      if (node.data.key.split(" ")[1].substring(0, 1) == arr[i]) {
+        shape.opacity = 0.4;
+        break;
       }
     }
   });

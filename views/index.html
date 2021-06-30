@@ -213,6 +213,27 @@
             </div>
           </div>
         </div>
+        <!--share tab-->
+        <div>
+          <h2 class="accordion-header" id="share-tab">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#share-content">
+              Share This Graph
+            </button>
+          </h2>
+          <div id="share-content" class="accordion-collapse collapse">
+            <div class="accordion-body p-0">
+              <ul class="list-group">
+                <li class="list-group-item rounded-0">
+                  <button type="button" class="btn btn-primary clipboard" onclick="copyToClipboard();">
+                    Copy link
+                  </button>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -244,6 +265,19 @@
     subject: "{{ subject }}",
     course: "{{ course }}",
   });
+</script>
+
+<!-- Copy link script -->
+<script>
+  function copyToClipboard(text) {
+    var inputc = document.body.appendChild(document.createElement("input"));
+    inputc.value = window.location.href;
+    inputc.focus();
+    inputc.select();
+    document.execCommand('copy');
+    inputc.parentNode.removeChild(inputc);
+    alert("URL Copied.");
+  }
 </script>
 
 {% endblock %}

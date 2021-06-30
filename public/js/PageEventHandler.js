@@ -21,7 +21,6 @@ function copyToClipboard() {
 
 // updates title of copyToolTip
 function updateCopyTooltip() {
-  copyBtn.setAttribute('title', 'New Tooltip Title');
   copyBtn.setAttribute('data-bs-original-title', 'copied!');
   copyTooltip.update();
   copyTooltip.show();

@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+select {
+  width: 100%;
+}
+
 @media only screen and (min-width: 992px) {
   .navbar {
     float: left !important;
@@ -18,7 +22,14 @@ body {
   .graph-container {
     float: right !important;
   }
+
+  .sidebar {
+    position: absolute;
+    overflow-y: auto
+  }
 }
+
+/* custom changes to Select2 Bootstrap 5 theme */
 
 .select2-container--bootstrap-5.select2-container--focus .select2-selection,
 .select2-container--bootstrap-5.select2-container--open .select2-selection {

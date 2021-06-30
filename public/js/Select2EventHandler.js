@@ -28,7 +28,7 @@ jQuery('#subject-select').on("select2:selecting", function (e) {
     jQuery("#course-select").select2({
         data: data,
         theme: "bootstrap-5",
-        placeholder: 'Course #',
+        placeholder: 'Course',
         selectionCssClass: "select2--small",
         dropdownCssClass: "select2--small",
     });

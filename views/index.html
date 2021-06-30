@@ -10,11 +10,14 @@
 {% endblock %}
 
 {% block bodyTop %}
-<div class="container-fluid h-100 p-0">
+
+<div class="container-fluid h-100 p-0 fixed-top">
   <!-- Sidebar -->
-  <nav class="navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
+  <nav class="sidebar navbar navbar-expand-lg d-block navbar-dark bg-dark col-lg-3">
     <div class="d-flex justify-content-between p-2">
-      <h2 class="text-white"><a href="/" class="text-white text-decoration-none m-1">Degree Visualizer</a></h2>
+      <h2 class="text-white">
+        <a href="/" class="text-white text-decoration-none m-1">UBCee</a>
+      </h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +38,7 @@
                 <li class="list-group-item rounded-0">
                   <div class="input-group mb-3">
                     <!-- Subject Selection-->
-                    <select id="subject-select" name="subject" style="width: 100%">
+                    <select id="subject-select" name="subject">
                       <option value=""></option>
                       {% for sub in subjects %}
                       <option value="{{ sub }}">{{ sub }}</option>
@@ -44,14 +47,26 @@
                   </div>
                   <div class="input-group mb-3">
                     <!-- Course Selection-->
-                    <select id="course-select" name="course" style="width: 100%">
+                    <select id="course-select" name="course">
                       <option value=""></option>
                     </select>
                   </div>
                 </li>
+                <!-- Display Setting -->
+                <li class="list-group-item rounded-0">
+                  <h6>Max Year Level</h6>
+                  <span id="displayRangeText">Display courses up to year 4</span>
+                  <br>
+                  <span><small>(only works on subject graphs)</small></span>
+                  <br>
+                  <input type="range" class="form-range" id="displayRange" min="1" max="4" step="1" value="4"
+                    onchange="updateDisplayText(this.value)">
+                </li>
                 <li class="list-group-item rounded-0">
                   <form action="/subject" method="GET">
-                    <button type="button" class="btn btn-primary" onclick="openTab()">Create</button>
+                    <button type="button" class="btn btn-primary" onclick="openTab()">
+                      Create
+                    </button>
                   </form>
                 </li>
               </ul>
@@ -71,26 +86,52 @@
               <ul class="list-group">
                 <!-- Direction Setting -->
                 <li class="list-group-item rounded-0">
-                  <h5>Direction</h5>
+                  <h6>Direction</h6>
+                  <span>Select the direction of the graph</span>
+                  <br>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="right" value="0" checked />
+                    <input class="form-check-input" type="radio" name="direction" value="0" checked />
                     <label class="form-check-label" for="right">Right</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="down" value="90" />
+                    <input class="form-check-input" type="radio" name="direction" value="90" />
                     <label class="form-check-label" for="down">Down</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="left" value="180" />
+                    <input class="form-check-input" type="radio" name="direction" value="180" />
                     <label class="form-check-label" for="left">Left</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" id="up" value="270" />
+                    <input class="form-check-input" type="radio" name="direction" value="270" />
                     <label class="form-check-label" for="up">Up</label>
                   </div>
                 </li>
+                <!-- Opacity Setting -->
                 <li class="list-group-item rounded-0">
-                  <button type="button" class="btn btn-primary" onclick="updateGraph()">Update</button>
+                  <h6>Opacity</h6>
+                  <span>Unselect the year level you wish to make translucent</span>
+                  <br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="opacity" value="1" checked>
+                    <label class="form-check-label" for="1">year 1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="opacity" value="2" checked>
+                    <label class="form-check-label" for="2">year 2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="opacity" value="3" checked>
+                    <label class="form-check-label" for="3">year 3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="opacity" value="4" checked>
+                    <label class="form-check-label" for="4">year 4</label>
+                  </div>
+                </li>
+                <li class="list-group-item rounded-0">
+                  <button type="button" class="btn btn-primary" onclick="updateGraph()">
+                    Update
+                  </button>
                 </li>
               </ul>
             </div>
@@ -115,7 +156,7 @@
 <!-- GoJS -->
 <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
 
-<!-- UBC Degree Visualizer Scripts -->
+<!-- UBCee Scripts -->
 <script src="/js/GraphInitializer.js"></script>
 <script src="/js/NodeEventHandler.js"></script>
 <script src="/js/PageEventHandler.js"></script>
@@ -125,7 +166,7 @@
   // calls createGraph() in GraphInitalizer.js
   window.onload = createGraph({
     subject: "{{ subject }}",
-    course: "{{ course }}"
+    course: "{{ course }}",
   });
 </script>
 

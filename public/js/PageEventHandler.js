@@ -13,7 +13,7 @@ function openTab() {
 function updateGraph() {
   myGraph.startTransaction("update");
   myGraph.layout.direction = parseInt(getRadioValue("direction"));
-  const checkedArr = getCheckboxes("opaque");
+  const checkedArr = getCheckboxes("opacity");
   if (checkedArr) {
     updateOpacity(checkedArr);
   }
@@ -42,6 +42,11 @@ function getCheckboxes(name) {
   return unchecked;
 }
 
+function updateDisplayText(val) {
+  document.getElementById('displayRangeText').innerText = "Display courses up to year " + val;
+}
+
+// sets node.shape opacity to 0.4 if it is unchecked
 function updateOpacity(arr) {
   myGraph.nodes.each(function (node) {
     const shape = node.findObject("shape");

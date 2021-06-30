@@ -6,6 +6,7 @@ const appRoutes = require('./routes/routes.js');
 
 const app = express();
 
+// nunjucks is the templating engine
 nunjucks.configure('views', {
   autoescape: true,
   express: app
@@ -14,6 +15,7 @@ nunjucks.configure('views', {
 app.use(express.static('public'));
 app.use(appRoutes);
 
+// request reaches here if none of the routes in appRoutes is matched
 app.use((req, res) => {
   res.status(404).render(path.join(__dirname, 'views', '404.html'), {
     title: "404 - Page Not Found",

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnimeAllstar/ubc-degree-visualizer.git"
+    "url": "git+https://github.com/AnimeAllstar/UBCee.git"
   },
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/AnimeAllstar/ubc-degree-visualizer/issues"
+    "url": "https://github.com/AnimeAllstar/UBCee/issues"
   },
-  "homepage": "https://github.com/AnimeAllstar/ubc-degree-visualizer#readme",
+  "homepage": "https://github.com/AnimeAllstar/UBCee#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nunjucks": "^3.2.3"

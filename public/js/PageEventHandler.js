@@ -2,10 +2,15 @@
 function openTab() {
   const subject = document.getElementById("subject-select").value;
   const course = document.getElementById("course-select").value;
+  const year = document.getElementById('displayRange').value;
   if (subject && course) {
     window.open(`/subject/${subject}/course/${course.split(" ")[1]}`);
   } else if (subject) {
-    window.open(`/subject/${subject}`);
+    if (year < 4) {
+      window.open(`/subject/${subject}?year=${year}`);
+    } else {
+      window.open(`/subject/${subject}`);
+    }
   }
 }
 

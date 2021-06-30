@@ -7,12 +7,27 @@ let myGraph;
 // global data variable
 let myData;
 
+// get year param
+const year = getYear();
+
 // get data asynchronously
 async function getJSON() {
   const response = await fetch("/json/courses.json");
   const json = await response.json();
   myData = json.courses;
   return json;
+}
+
+// get year parameter from the URL (will update to getting all parameters if more are added in the future)
+function getYear() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const y = urlParams.get("year");
+  // returns appropriate value for y
+  if (y) {
+    return (y > 0) ? (y < 5 ? y : 4) : 4;
+  } else {
+    return 4;
+  }
 }
 
 // global variables to store nodes and links
@@ -30,6 +45,12 @@ function addToGraph(course) {
     isClickable: course.prereqs.length === 0 ? true : false,
   });
   links.push(course);
+}
+
+function SelectiveAddToGraph(course) {
+  if (course.name.split(" ")[1].substring(0, 1) <= year) {
+    addToGraph(course);
+  }
 }
 
 // splits course.prereqs into an array of course
@@ -85,9 +106,17 @@ async function getData(req) {
     subject = dataJson.courses[req.subject];
   }
 
+  // decides whether course need to be selectively added based on the year parameter
+  let func;
+  if (year != 4) {
+    func = SelectiveAddToGraph;
+  } else {
+    func = addToGraph;
+  }
+
   // add courses node to graph
   for (const course in subject) {
-    addToGraph(subject[course]);
+    func(subject[course]);
   }
 
   return {

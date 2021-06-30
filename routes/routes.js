@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
       console.error(err);
     }
     res.render(path.join(ROOT, 'views', 'index.html'), {
-      title: 'UBSee',
+      title: 'UBSee - Creates interactive graphs for UBC subjects and courses',
       subjects: Object.keys(obj.courses),
     });
   })

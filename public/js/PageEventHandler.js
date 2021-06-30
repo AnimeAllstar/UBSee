@@ -1,3 +1,32 @@
+// initializes copy button Bootstrap tooltip
+const copyBtn = document.getElementById('copyBtn');
+const copyTooltip = new bootstrap.Tooltip(copyBtn, {
+  boundary: document.body
+});
+
+copyBtn.addEventListener('hidden.bs.tooltip', () => {
+  copyBtn.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
+})
+
+// copies URL of page
+function copyToClipboard() {
+  const inputc = document.body.appendChild(document.createElement("input"));
+  inputc.value = window.location.href;
+  inputc.focus();
+  inputc.select();
+  document.execCommand('copy');
+  inputc.parentNode.removeChild(inputc);
+  updateCopyTooltip();
+}
+
+// updates title of copyToolTip
+function updateCopyTooltip() {
+  copyBtn.setAttribute('title', 'New Tooltip Title');
+  copyBtn.setAttribute('data-bs-original-title', 'copied!');
+  copyTooltip.update();
+  copyTooltip.show();
+}
+
 // opens new tab using <select> elements in index.html
 function openTab() {
   const subject = document.getElementById("subject-select").value;

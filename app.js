@@ -24,6 +24,9 @@ app.use(appRoutes);
 app.use((req, res) => {
   res.status(404).render(path.join(__dirname, 'views', '404.html'), {
     title: "404 - Page Not Found",
+    description: '404 - Page Not Found',
+    robots: 'noindex, follow',
+    keywords: 'UBSee, UBC'
   });
 });
 

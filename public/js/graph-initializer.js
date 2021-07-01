@@ -149,6 +149,7 @@ async function createGraph(req) {
 function getGraph(id) {
   return $(go.Diagram, id, {
     "undoManager.isEnabled": true,
+    "toolManager.hoverDelay": 500,
     "toolManager.toolTipDuration": 30000,
     initialAutoScale: go.Diagram.Uniform,
     layout: createLayout(),
@@ -244,8 +245,12 @@ function createLinkTemplate() {
   ));
 }
 
-// returns node tooltip
+// returns node tooltip if device is not a touch mobile device, otherwise returns null
+// this is because the tooltip interferes with the clicking of nodes on touch devices
 function createToolTip() {
+  if (isTouchDevice() && isMobileDevice()) {
+    return null;
+  }
   return (ToolTip = $("ToolTip", {
       "Border.fill": "#ffffff",
     },

@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 
 {% block bodyTop %}
-<div class="container">
-    <h1 class="text-start m-3 fw-bold">404<br />Page Not found</h1>
-    <form action="/" class="inline">
+<div class="container-fluid m-3">
+    <h1 class="text-start fw-bold mb-4">404<br />Page Not found</h1>
+    <a href="/" class="m-1">
         <button class="btn btn-primary">Home</button>
-    </form>
+    </a>
+
+    <a href="https://github.com/AnimeAllstar/UBSee" target="_blank" class="m-1">
+        <button class="btn btn-dark">Github</button>
+    </a>
 </div>
 
 {% endblock %}

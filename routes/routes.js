@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
     res.render(path.join(ROOT, 'views', 'index.html'), {
       title: 'UBSee - Creates interactive graphs for UBC subjects and courses',
       subjects: Object.keys(obj.courses),
+      description: 'UBSee - Creates interactive graphs for UBC subjects and courses',
+      robots: 'index, follow',
+      keywords: 'UBSee, UBC, graphs'
     });
   })
 });
@@ -25,19 +28,20 @@ router.get('/subject/:subject/course/:course', (req, res) => {
     if (err) {
       console.error(err);
     }
-    let p;
-    let data;
     const sub = req.params.subject;
     if (!Object.keys(obj.courses).includes(sub)) {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-subject/${sub}`);
     } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-course/${sub}${req.params.course}`);
     } else {
       res.render(path.join(ROOT, 'views', 'index.html'), {
         subject: sub,
         course: req.params.course,
         subjects: Object.keys(obj.courses),
-        title: `${sub} ${req.params.course} - UBSee`
+        title: `${sub} ${req.params.course} - UBSee`,
+        description: `Course graph for ${sub} ${req.params.course}`,
+        robots: 'index, follow',
+        keywords: `UBSee, UBC, course graph, ${sub}, ${sub} ${req.params.course}`
       });
     }
   })
@@ -48,14 +52,18 @@ router.get('/subject/:subject', (req, res) => {
     if (err) {
       console.error(err);
     }
-    if (Object.keys(obj.courses).includes(req.params.subject)) {
+    const sub = req.params.subject;
+    if (Object.keys(obj.courses).includes(sub)) {
       res.render(path.join(ROOT, 'views', 'index.html'), {
-        subject: req.params.subject,
+        subject: sub,
         subjects: Object.keys(obj.courses),
-        title: `${req.params.subject} - UBSee`
+        title: `${sub} - UBSee`,
+        description: `Subject graph for ${sub}`,
+        robots: 'index, follow',
+        keywords: `UBSee, UBC, subject graph, ${sub}`
       });
     } else {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-subject/${sub}`);
     }
   })
 });

@@ -67,7 +67,7 @@ function checkForRepeats(subjectJson) {
 // this is a more important check
 // it checks if there is a course included in the prerequisites that is not included in the keys of subjectJson
 // this means that there is a non existant node being refereced to in the prereqs. 
-// although there are checks in place to handle this type of scenario in GraphInitializer, it means that we are missing
+// although there are checks in place to handle this type of scenario in graph-initializer, it means that we are missing
 // data and the easiest way to solve this is to run the 'fix' script
 function checkForMissing(subjectJson) {
     const re = new RegExp(SUBJECT + "\\s\\d{3}", "g");

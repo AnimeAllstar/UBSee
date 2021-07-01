@@ -58,14 +58,14 @@
         },
         "ECON 301": {
             "name": "ECON 301",
-            "prereqs": "ECON 101 || ECOn 310",
+            "prereqs": "ECON 101 || ECON 310",
             "prereqText": "One of ECON 101, ECON 310 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
             "title": "Intermediate Microeconomic Analysis I",
             "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=301&campuscd=UBC"
         },
         "ECON 302": {
             "name": "ECON 302",
-            "prereqs": "(ECON 101 || ECOn 310) && (ECON 102 || ECON 311)",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 || ECON 311)",
             "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
             "title": "Intermediate Macroeconomic Analysis I",
             "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=302&campuscd=UBC"

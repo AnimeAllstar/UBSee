@@ -1,0 +1,466 @@
+{
+    "ECON": {
+        "ECON 101": {
+            "name": "ECON 101",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Principles of Microeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=101&campuscd=UBC"
+        },
+        "ECON 102": {
+            "name": "ECON 102",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Principles of Macroeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=102&campuscd=UBC"
+        },
+        "ECON 210": {
+            "name": "ECON 210",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Microeconomic Policy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=210&campuscd=UBC"
+        },
+        "ECON 211": {
+            "name": "ECON 211",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Macroeconomic Policy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=211&campuscd=UBC"
+        },
+        "ECON 221": {
+            "name": "ECON 221",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Introduction to Strategic Thinking",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=221&campuscd=UBC"
+        },
+        "ECON 226": {
+            "name": "ECON 226",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Making Sense of Economic Data",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=226&campuscd=UBC"
+        },
+        "ECON 234": {
+            "name": "ECON 234",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Wealth and Poverty of Nations",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=234&campuscd=UBC"
+        },
+        "ECON 255": {
+            "name": "ECON 255",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Understanding Globalization",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=255&campuscd=UBC"
+        },
+        "ECON 301": {
+            "name": "ECON 301",
+            "prereqs": "ECON 101 || ECOn 310",
+            "prereqText": "One of ECON 101, ECON 310 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Intermediate Microeconomic Analysis I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=301&campuscd=UBC"
+        },
+        "ECON 302": {
+            "name": "ECON 302",
+            "prereqs": "(ECON 101 || ECOn 310) && (ECON 102 || ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Intermediate Macroeconomic Analysis I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=302&campuscd=UBC"
+        },
+        "ECON 303": {
+            "name": "ECON 303",
+            "prereqs": "ECON 301 || ECON 304",
+            "prereqText": "One of ECON 301, ECON 304.",
+            "title": "Intermediate Microeconomics II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=303&campuscd=UBC"
+        },
+        "ECON 304": {
+            "name": "ECON 304",
+            "prereqs": "ECON 101 || ECON 310",
+            "prereqText": "A score of 68% or higher in one of ECON 101, ECON 310 and a score of 68% or higher in one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Honours Intermediate Microeconomic Analysis I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=304&campuscd=UBC"
+        },
+        "ECON 305": {
+            "name": "ECON 305",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 && ECON 311)",
+            "prereqText": "A score of 68% or higher in one of ECON 101, ECON 310 and a score of 68% or higher in one of ECON 102, ECON 311 and a score of 68% or higher in one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and a score of 68% or higher in one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Honours Intermediate Macroeconomic Analysis I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=305&campuscd=UBC"
+        },
+        "ECON 306": {
+            "name": "ECON 306",
+            "prereqs": "ECON 304",
+            "prereqText": "A score of 68% or higher in ECON 304. Permission of the School is also acceptable.",
+            "title": "Honours Intermediate Microeconomics II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=306&campuscd=UBC"
+        },
+        "ECON 307": {
+            "name": "ECON 307",
+            "prereqs": "ECON 305",
+            "prereqText": "A score of 68% or higher in ECON 305. Or permission of the School.",
+            "title": "Honours Intermediate Macroeconomics II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=307&campuscd=UBC"
+        },
+        "ECON 309": {
+            "name": "ECON 309",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 || ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Intermediate Open Economy Macroeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=309&campuscd=UBC"
+        },
+        "ECON 310": {
+            "name": "ECON 310",
+            "prereqs": "",
+            "prereqText": "Third-year, fourth-year, or graduate standing.",
+            "title": "Principles of Microeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=310&campuscd=UBC"
+        },
+        "ECON 311": {
+            "name": "ECON 311",
+            "prereqs": "",
+            "prereqText": "Third-year, fourth-year or graduate standing.",
+            "title": "Principles of Macroeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=311&campuscd=UBC"
+        },
+        "ECON 315": {
+            "name": "ECON 315",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 || ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Intermediate Microeconomics I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=315&campuscd=UBC"
+        },
+        "ECON 316": {
+            "name": "ECON 316",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Intermediate Microeconomics II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=316&campuscd=UBC"
+        },
+        "ECON 317": {
+            "name": "ECON 317",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Poverty and Inequality",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=317&campuscd=UBC"
+        },
+        "ECON 318": {
+            "name": "ECON 318",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "History and Philosophy of Economics from Aristotle to Adam Smith",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=318&campuscd=UBC"
+        },
+        "ECON 319": {
+            "name": "ECON 319",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "History and Philosophy of Economics from Ricardo to Keynes",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=319&campuscd=UBC"
+        },
+        "ECON 323": {
+            "name": "ECON 323",
+            "prereqs": "ECON 101 || ECON 310",
+            "prereqText": "One of ECON 101, ECON 310 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121 and MATH 221. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Quantitative Economic Modelling with Data Science Applications",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=323&campuscd=UBC"
+        },
+        "ECON 325": {
+            "name": "ECON 325",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 || ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Introduction to Empirical Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=325&campuscd=UBC"
+        },
+        "ECON 326": {
+            "name": "ECON 326",
+            "prereqs": "ECON 325 || ECON 327",
+            "prereqText": "One of ECON 325, ECON 327.",
+            "title": "Methods of Empirical Research in Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=326&campuscd=UBC"
+        },
+        "ECON 327": {
+            "name": "ECON 327",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 || ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of MATH 101, MATH 103, MATH 105, MATH 121. MATH 104, 110 or 184 recommended. MATH 105 recommended.",
+            "title": "Introduction to Empirical Methods",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=327&campuscd=UBC"
+        },
+        "ECON 328": {
+            "name": "ECON 328",
+            "prereqs": "ECON 325 || ECON 327",
+            "prereqText": "One of ECON 325, ECON 327.",
+            "title": "Methods of Empirical Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=328&campuscd=UBC"
+        },
+        "ECON 334": {
+            "name": "ECON 334",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Economic History of Modern Europe",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=334&campuscd=UBC"
+        },
+        "ECON 335": {
+            "name": "ECON 335",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Fertility, Families and Human Migration",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=335&campuscd=UBC"
+        },
+        "ECON 336": {
+            "name": "ECON 336",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Economic History of Canada",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=336&campuscd=UBC"
+        },
+        "ECON 339": {
+            "name": "ECON 339",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Economics of Technological Change",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=339&campuscd=UBC"
+        },
+        "ECON 345": {
+            "name": "ECON 345",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Money and Banking",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=345&campuscd=UBC"
+        },
+        "ECON 350": {
+            "name": "ECON 350",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Public Finance Policy Topics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=350&campuscd=UBC"
+        },
+        "ECON 351": {
+            "name": "ECON 351",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Women in the Economy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=351&campuscd=UBC"
+        },
+        "ECON 355": {
+            "name": "ECON 355",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Introduction to International Trade",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=355&campuscd=UBC"
+        },
+        "ECON 356": {
+            "name": "ECON 356",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Introduction to International Finance",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=356&campuscd=UBC"
+        },
+        "ECON 360": {
+            "name": "ECON 360",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Labour Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=360&campuscd=UBC"
+        },
+        "ECON 365": {
+            "name": "ECON 365",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Topics in Canadian Industrial Organization and Regulation Policy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=365&campuscd=UBC"
+        },
+        "ECON 367": {
+            "name": "ECON 367",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Economic Analysis of Law",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=367&campuscd=UBC"
+        },
+        "ECON 370": {
+            "name": "ECON 370",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Benefit-Cost Analysis and the Economics of Project Evaluation",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=370&campuscd=UBC"
+        },
+        "ECON 371": {
+            "name": "ECON 371",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Economics of the Environment",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=371&campuscd=UBC"
+        },
+        "ECON 374": {
+            "name": "ECON 374",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Land Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=374&campuscd=UBC"
+        },
+        "ECON 390": {
+            "name": "ECON 390",
+            "prereqs": "(ECON 101 || ECON 310) && (ECON 102 && ECON 311)",
+            "prereqText": "One of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184. MATH 104, 110 or 184 recommended.",
+            "title": "Introduction to Economic Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=390&campuscd=UBC"
+        },
+        "ECON 398": {
+            "name": "ECON 398",
+            "prereqs": "((ECON 101 || ECON 310) && (ECON 102 && ECON 311)) || (ECON 226 || ECON 325 || ECON 326 || ECON 327)",
+            "prereqText": "Either (a) one of ECON 101, ECON 310 and one of ECON 102, ECON 311 and one of STAT 200, STAT 241, STAT 251, COMM 291, FRST 231;  or (b) one of ECON 226, ECON 325, ECON 326, ECON 327. Not recommended for students who have completed any of ECON 390, ECON 490, ECON 494, ECON 499.",
+            "title": "Introduction to Applied Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=398&campuscd=UBC"
+        },
+        "ECON 407": {
+            "name": "ECON 407",
+            "prereqs": "(ECON 301 || ECON 304) && (ECON 302 || ECON 305) && (ECON 303 || ECON 306)",
+            "prereqText": "One of ECON 301, ECON 304 and one of ECON 302, ECON 305 and one of ECON 303, ECON 306.",
+            "title": "Topics in Macroeconomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=407&campuscd=UBC"
+        },
+        "ECON 420": {
+            "name": "ECON 420",
+            "prereqs": "(ECON 301 || ECON 304 || ECON 315) && (ECON 303 || ECON 306 || ECON 316)",
+            "prereqText": "MATH 200 and one of ECON 301, ECON 304, ECON 315 and one of ECON 303, ECON 306, ECON 316. Permission of the instructor is also acceptable.",
+            "title": "Optimization and Economic Theory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=420&campuscd=UBC"
+        },
+        "ECON 421": {
+            "name": "ECON 421",
+            "prereqs": "(ECON 301 || ECON 304 || ECON 315)",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Introduction to Game Theory and Applications.",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=421&campuscd=UBC"
+        },
+        "ECON 425": {
+            "name": "ECON 425",
+            "prereqs": "(ECON 325 || ECON 327) && (ECON 326 || ECON 328)",
+            "prereqText": "One of ECON 325, ECON 327 and one of ECON 326, ECON 328.",
+            "title": "Introduction to Econometrics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=425&campuscd=UBC"
+        },
+        "ECON 441": {
+            "name": "ECON 441",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "The Process of Economic Development",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=441&campuscd=UBC"
+        },
+        "ECON 442": {
+            "name": "ECON 442",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Issues in Economic Development",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=442&campuscd=UBC"
+        },
+        "ECON 447": {
+            "name": "ECON 447",
+            "prereqs": "(ECON 301 || ECON 304 || ECON 315) && (ECON 302 || ECON 305 || ECON 309)",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315 and one of ECON 302, ECON 305, ECON 309.",
+            "title": "Monetary Theory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=447&campuscd=UBC"
+        },
+        "ECON 451": {
+            "name": "ECON 451",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Economics of Public Expenditures",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=451&campuscd=UBC"
+        },
+        "ECON 455": {
+            "name": "ECON 455",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "International Trade",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=455&campuscd=UBC"
+        },
+        "ECON 456": {
+            "name": "ECON 456",
+            "prereqs": "ECON 302 || ECON 305 || ECON 309",
+            "prereqText": "One of ECON 302, ECON 305, ECON 309.",
+            "title": "International Macroeconomics and Finance",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=456&campuscd=UBC"
+        },
+        "ECON 457": {
+            "name": "ECON 457",
+            "prereqs": "ECON 101 && ECON 102",
+            "prereqText": "All of ECON 101, ECON 102.",
+            "title": "Seminar in International Economic Relations",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=457&campuscd=UBC"
+        },
+        "ECON 460": {
+            "name": "ECON 460",
+            "prereqs": "(ECON 301 || ECON 304 || ECON 315) && (ECON 302 || ECON 305 || ECON 309)",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315 and one of ECON 302, ECON 305, ECON 309.",
+            "title": "Economics of Labour Markets",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=460&campuscd=UBC"
+        },
+        "ECON 465": {
+            "name": "ECON 465",
+            "prereqs": "ECON 301 || ECON 304",
+            "prereqText": "One of ECON 301, ECON 304.",
+            "title": "Market Structure",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=465&campuscd=UBC"
+        },
+        "ECON 466": {
+            "name": "ECON 466",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "The Economics of Government Regulation of Business",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=466&campuscd=UBC"
+        },
+        "ECON 471": {
+            "name": "ECON 471",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Economics of Nonrenewable Resources",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=471&campuscd=UBC"
+        },
+        "ECON 472": {
+            "name": "ECON 472",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "Economics of Renewable Resources",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=472&campuscd=UBC"
+        },
+        "ECON 482": {
+            "name": "ECON 482",
+            "prereqs": "ECON 301 || ECON 304 || ECON 315",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315.",
+            "title": "The Economic Consequences of Religion",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=482&campuscd=UBC"
+        },
+        "ECON 485": {
+            "name": "ECON 485",
+            "prereqs": "(ECON 301 || ECON 304 || ECON 315) && (ECON 302 || ECON 305 || ECON 309) && (ECON 325 || ECON 327) && (ECON 326 || ECON 328)",
+            "prereqText": "One of ECON 301, ECON 304, ECON 315 and one of ECON 302, ECON 305, ECON 309 and one of ECON 325, ECON 327 and one of ECON 326, ECON 328.",
+            "title": "Political Economy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=485&campuscd=UBC"
+        },
+        "ECON 490": {
+            "name": "ECON 490",
+            "prereqs": "(ECON 325 && ECON 326) && (ECON 301 || ECON 304) && (ECON 302 || ECON 305)",
+            "prereqText": "All of ECON 325, ECON 326 and one of ECON 301, ECON 304 and one of ECON 302, ECON 305. For additional possible prerequisites see individual course descriptions on the School's  website.",
+            "title": "Seminar in Applied Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=490&campuscd=UBC"
+        },
+        "ECON 493": {
+            "name": "ECON 493",
+            "prereqs": "ECON 328",
+            "prereqText": "ECON 328.",
+            "title": "Advanced Empirical Methods for International Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=493&campuscd=UBC"
+        },
+        "ECON 494": {
+            "name": "ECON 494",
+            "prereqs": "ECON 493",
+            "prereqText": "ECON 493.",
+            "title": "Seminar in Applied International Economics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=ECON&course=494&campuscd=UBC"
+        }
+    }
+}

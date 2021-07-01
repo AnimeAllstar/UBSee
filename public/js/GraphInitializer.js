@@ -59,7 +59,6 @@ function SelectiveAddToGraph(course) {
 function iterateCourses(course, arg, func) {
   const re = new RegExp(course.name.split(" ")[0] + "\\s\\d{3}", "g");
   const courseList = course.prereqs.match(re);
-
   if (courseList) {
     courseList.forEach((c) => {
       func(c, arg);
@@ -75,7 +74,9 @@ function recursiveAdd(course, subject) {
     // if course has not been added to nodes[] call recursiveAdd on it
     // this allows all the courses connect to the initial node to be added to nodes[]
     if (!nodes.some((e) => e.key === c)) {
-      recursiveAdd(subject[c], subject);
+      if (subject[c]) {
+        recursiveAdd(subject[c], subject);
+      }
     }
   });
 }

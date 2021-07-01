@@ -38,6 +38,10 @@ jsonfile.readFile(FILE, (err, obj) => {
 function addMissingCourse(subjectJson) {
     needle.get(`${UBCEXPLORER}${SUBJECT}%20${COURSE}`, (err, response) => {
         if (!err && response.statusCode == 200) {
+            if (response.body === "Course not found") {
+                console.log(response.body);
+                return;
+            }
             const apiData = response.body[0];
             const newCourse = {
                 name: apiData.code,

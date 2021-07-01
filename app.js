@@ -1,4 +1,5 @@
 const express = require('express');
+const favicon = require('serve-favicon');
 const path = require('path');
 const nunjucks = require('nunjucks');
 
@@ -6,13 +7,17 @@ const appRoutes = require('./routes/routes.js');
 
 const app = express();
 
+app.use(express.static('public'));
+
+// serve favicon
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 // nunjucks is the templating engine
 nunjucks.configure('views', {
   autoescape: true,
   express: app
 })
 
-app.use(express.static('public'));
 app.use(appRoutes);
 
 // request reaches here if none of the routes in appRoutes is matched

@@ -1,0 +1,543 @@
+{
+    "BIOL": {
+        "BIOL 111": {
+            "name": "BIOL 111",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Introduction to Modern Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=111&campuscd=UBC"
+        },
+        "BIOL 112": {
+            "name": "BIOL 112",
+            "prereqs": "BIOL 111",
+            "prereqText": "One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111.",
+            "title": "Biology of the Cell",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=112&campuscd=UBC"
+        },
+        "BIOL 121": {
+            "name": "BIOL 121",
+            "prereqs": "BIOL 111",
+            "prereqText": "One of BIOL 11, BIOL 12, BIOL 111.",
+            "title": "Genetics, Evolution and Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=121&campuscd=UBC"
+        },
+        "BIOL 140": {
+            "name": "BIOL 140",
+            "prereqs": "BIOL 111",
+            "prereqText": "One of BIOL 11, BIOL 12, BIOL 111.",
+            "title": "Laboratory Investigations in Life Science",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=140&campuscd=UBC"
+        },
+        "BIOL 155": {
+            "name": "BIOL 155",
+            "prereqs": "BIOL 111",
+            "prereqText": "One of CHEM 12, CHEM 100, CHEM 110, CHEM 111 and one of BIOL 11, BIOL 12, BIOL 111.",
+            "title": "Human Biology: Physiology and Introductory Anatomy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=155&campuscd=UBC"
+        },
+        "BIOL 200": {
+            "name": "BIOL 200",
+            "prereqs": "BIOL 112 || BIOL 121",
+            "prereqText": "Either (a) BIOL 112 and one of CHEM 123, CHEM 130;  or (b) SCIE 001 or (c) 8 transfer credits of first-year BIOL and 6 credits of first-year CHEM or (d) one of BIOL 112 or BIOL 121 and a corequisite of one of CHEM 203 or CHEM 223.",
+            "title": "Fundamentals of Cell Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=200&campuscd=UBC"
+        },
+        "BIOL 201": {
+            "name": "BIOL 201",
+            "prereqs": "BIOL 200",
+            "prereqText": "BIOL 200 and one of CHEM 233, CHEM 260; or BIOL 200 and a corequisite of CHEM 213; or a corequisite of either CHEM 313 or CHEM 330.",
+            "title": "Introduction to Biochemistry",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=201&campuscd=UBC"
+        },
+        "BIOL 203": {
+            "name": "BIOL 203",
+            "prereqs": "BIOL 140 && BIOL 121",
+            "prereqText": "BIOL 140 and one of BIOL 121, SCIE 001. BIOL 200 recommended.",
+            "title": "Eukaryotic Microbiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=203&campuscd=UBC"
+        },
+        "BIOL 204": {
+            "name": "BIOL 204",
+            "prereqs": "(BIOL 121 && BIOL 140) || BIOL 140",
+            "prereqText": "Either (a) all of BIOL 121, BIOL 140 or (b) all of SCIE 001, BIOL 140. Or (c) 8 transfer credits of first-year biology.",
+            "title": "Vertebrate Structure and Function",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=204&campuscd=UBC"
+        },
+        "BIOL 205": {
+            "name": "BIOL 205",
+            "prereqs": "(BIOL 121 && BIOL 140) || BIOL 140",
+            "prereqText": "Either (a) all of BIOL 121, BIOL 140 or (b) all of SCIE 001, BIOL 140. Or (c) 8 transfer credits of first-year biology.",
+            "title": "Comparative Invertebrate Zoology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=205&campuscd=UBC"
+        },
+        "BIOL 209": {
+            "name": "BIOL 209",
+            "prereqs": "BIOL 121",
+            "prereqText": "One of BIOL 121, SCIE 001. Or 8 transfer credits of first-year biology.",
+            "title": "Biodiversity of Algae, Fungi and Bryophytes",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=209&campuscd=UBC"
+        },
+        "BIOL 210": {
+            "name": "BIOL 210",
+            "prereqs": "BIOL 121",
+            "prereqText": "One of BIOL 121, SCIE 001 or  8 transfer credits of first-year biology.",
+            "title": "Vascular Plants",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=210&campuscd=UBC"
+        },
+        "BIOL 230": {
+            "name": "BIOL 230",
+            "prereqs": "BIOL 121",
+            "prereqText": "One of BIOL 121, SCIE 001.",
+            "title": "Fundamentals of Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=230&campuscd=UBC"
+        },
+        "BIOL 233": {
+            "name": "BIOL 233",
+            "prereqs": "(BIOL 112 || BIOL 121)",
+            "prereqText": "Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001; or (c) a corequisite of one of CHEM 203 or CHEM 223 and one of BIOL 112 or BIOL 121.",
+            "title": "Genetics for Life",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=233"
+        },
+        "BIOL 234": {
+            "name": "BIOL 234",
+            "prereqs": "(BIOL 112 || BIOL 121)",
+            "prereqText": "Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001; or (c) a corequisite of one of CHEM 203 or CHEM 223 and one of BIOL 112 or BIOL 121.",
+            "title": "Fundamentals of Genetics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=234&campuscd=UBC"
+        },
+        "BIOL 260": {
+            "name": "BIOL 260",
+            "prereqs": "BIOL 112 && BIOL 121",
+            "prereqText": "Either (a) all of BIOL 112, BIOL 121 or (b) SCIE 001 or (c) 8 transfer credits of 1st year BIOL and 6 credits of 1st year chemistry.",
+            "title": "Fundamentals of Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=260&campuscd=UBC"
+        },
+        "BIOL 300": {
+            "name": "BIOL 300",
+            "prereqs": "BIOL 121",
+            "prereqText": "Either (a) BIOL 121 and one of MATH 101, MATH 103, MATH 105, MATH 121;  or (b) SCIE 001.",
+            "title": "Fundamentals of Biostatistics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=300&campuscd=UBC"
+        },
+        "BIOL 301": {
+            "name": "BIOL 301",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Biomathematics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=301&campuscd=UBC"
+        },
+        "BIOL 306": {
+            "name": "BIOL 306",
+            "prereqs": "BIOL 230",
+            "prereqText": "BIOL 230.",
+            "title": "Advanced Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=306&campuscd=UBC"
+        },
+        "BIOL 310": {
+            "name": "BIOL 310",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121. Third-year standing is required.",
+            "title": "Introduction to Animal Behaviour",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=310&campuscd=UBC"
+        },
+        "BIOL 320": {
+            "name": "BIOL 320",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121.",
+            "title": "Survey of Algae",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=320&campuscd=UBC"
+        },
+        "BIOL 324": {
+            "name": "BIOL 324",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121.",
+            "title": "Introduction to Seed Plant Taxonomy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=324&campuscd=UBC"
+        },
+        "BIOL 325": {
+            "name": "BIOL 325",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121.",
+            "title": "Introduction to Animal Mechanics and Locomotion",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=325&campuscd=UBC"
+        },
+        "BIOL 326": {
+            "name": "BIOL 326",
+            "prereqs": "BIOL 205",
+            "prereqText": "BIOL 205.",
+            "title": "Experimental Biology of Invertebrates",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=326&campuscd=UBC"
+        },
+        "BIOL 327": {
+            "name": "BIOL 327",
+            "prereqs": "BIOL 121",
+            "prereqText": "One of BIOL 121, SCIE 001.",
+            "title": "Introduction to Entomology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=327&campuscd=UBC"
+        },
+        "BIOL 330": {
+            "name": "BIOL 330",
+            "prereqs": "BIOL 201 || ((BIOL 200 && BIOL 260) && (BIOL 233 || BIOL 234))",
+            "prereqText": "Either (a) BIOL 201 or (b) all of BIOL 200, BIOL 260 and one of BIOL 233, BIOL 234.",
+            "title": "Developmental Biology (Lecture)",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=330&campuscd=UBC"
+        },
+        "BIOL 331": {
+            "name": "BIOL 331",
+            "prereqs": "BIOL 201 || ((BIOL 200 && BIOL 260) && (BIOL 233 || BIOL 234))",
+            "prereqText": "Either (a) BIOL 201 or (b) all of BIOL 200, BIOL 260 and one of BIOL 233, BIOL 234.",
+            "title": "Developmental Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=331"
+        },
+        "BIOL 335": {
+            "name": "BIOL 335",
+            "prereqs": "BIOL 233 || BIOL 234",
+            "prereqText": "One of BIOL 233, BIOL 234, MICB 322, FRST 302.",
+            "title": "Molecular Genetics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=335&campuscd=UBC"
+        },
+        "BIOL 336": {
+            "name": "BIOL 336",
+            "prereqs": "BIOL 233 ||BIOL 234",
+            "prereqText": "One of BIOL 233, BIOL 234.",
+            "title": "Fundamentals of Evolutionary Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=336&campuscd=UBC"
+        },
+        "BIOL 338": {
+            "name": "BIOL 338",
+            "prereqs": "BIOL 243 || BIOL 233",
+            "prereqText": "One of BIOL 234, BIOL 233, FRST 302.",
+            "title": "Introduction to Genomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=338&campuscd=UBC"
+        },
+        "BIOL 340": {
+            "name": "BIOL 340",
+            "prereqs": "BIOL 140 && BIOL 200",
+            "prereqText": "All of BIOL 140, BIOL 200. And at least third-year standing in Science.",
+            "title": "Introductory Cell Biology Laboratory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=340"
+        },
+        "BIOL 341": {
+            "name": "BIOL 341",
+            "prereqs": "BIOL 200",
+            "prereqText": "BIOL 200. And at least third-year standing in Science.",
+            "title": "Introductory Molecular Biology Laboratory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=341&campuscd=UBC"
+        },
+        "BIOL 342": {
+            "name": "BIOL 342",
+            "prereqs": "(BIOL 121 && BIOL 140) || BIOL 140",
+            "prereqText": "Either (a) all of BIOL 121, BIOL 140 or (b) all of SCIE 001, BIOL 140 or (c) 8 transfer credits of first-year biology; and third-year standing or higher in Combined Major in Science.",
+            "title": "Integrative Biology Laboratory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=342&campuscd=UBC"
+        },
+        "BIOL 343": {
+            "name": "BIOL 343",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Plants and Peoples",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=343&campuscd=UBC"
+        },
+        "BIOL 346": {
+            "name": "BIOL 346",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Microbes and Society",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=346&campuscd=UBC"
+        },
+        "BIOL 347": {
+            "name": "BIOL 347",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Principles and Methodology in Biological Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=347&campuscd=UBC"
+        },
+        "BIOL 351": {
+            "name": "BIOL 351",
+            "prereqs": "BIOL 121",
+            "prereqText": "Either (a) BIOL 121 and one of CHEM 123, CHEM 130;  or (b) SCIE 001. CHEM 233 is recommended.",
+            "title": "Plant Physiology I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=351&campuscd=UBC"
+        },
+        "BIOL 352": {
+            "name": "BIOL 352",
+            "prereqs": "BIOL 200 && (BIOL 233 || BIOL 234)",
+            "prereqText": "Either (a) BIOL 200 and one of BIOL 233, BIOL 234;  or (b) FRST 302. CHEM 233 is recommended.",
+            "title": "Plant Physiology II: Plant Development",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=352&campuscd=UBC"
+        },
+        "BIOL 361": {
+            "name": "BIOL 361",
+            "prereqs": "BIOL 200",
+            "prereqText": "BIOL 200.",
+            "title": "Neural and Muscular Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=361"
+        },
+        "BIOL 362": {
+            "name": "BIOL 362",
+            "prereqs": "BIOL 200 && (BIOL 260 || BIOL 351 || BIOL 352 || BIOL 361)",
+            "prereqText": "BIOL 200 and one of APBI 312, APBI 351, BIOL 260, BIOL 351, BIOL 352, BIOL 361, FRST 311.",
+            "title": "Cellular Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=362&campuscd=UBC"
+        },
+        "BIOL 364": {
+            "name": "BIOL 364",
+            "prereqs": "BIOL 204 && (BIOL 260 || BIOL 361)",
+            "prereqText": "BIOL 204 and one of BIOL 260, BIOL 361.",
+            "title": "Comparative Cardiovascular, Respiratory and Osmoregulatory Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=364&campuscd=UBC"
+        },
+        "BIOL 370": {
+            "name": "BIOL 370",
+            "prereqs": "BIOL 200 && BIOL 260",
+            "prereqText": "BIOL 200 and BIOL 260.",
+            "title": "Principles of Muscle Physiology and Energetics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=370&campuscd=UBC"
+        },
+        "BIOL 371": {
+            "name": "BIOL 371",
+            "prereqs": "BIOL 200 && BIOL 260",
+            "prereqText": "BIOL 200 and BIOL 260.",
+            "title": "Principles of Neurobiology I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=371&campuscd=UBC"
+        },
+        "BIOL 372": {
+            "name": "BIOL 372",
+            "prereqs": "BIOL 371",
+            "prereqText": "BIOL 371.",
+            "title": "Principles of Neurobiology II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=372&campuscd=UBC"
+        },
+        "BIOL 402": {
+            "name": "BIOL 402",
+            "prereqs": "BIOL 230 && BIOL 300",
+            "prereqText": "BIOL 230 and one of BIOL 300, STAT 200.",
+            "title": "Aquatic Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=402&campuscd=UBC"
+        },
+        "BIOL 403": {
+            "name": "BIOL 403",
+            "prereqs": "BIOL 121 && BIOL 300",
+            "prereqText": "BIOL 121 and one of BIOL 300, FRST 231, STAT 200. Fourth-year standing.",
+            "title": "Microbial Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=403&campuscd=UBC"
+        },
+        "BIOL 404": {
+            "name": "BIOL 404",
+            "prereqs": "BIOL 230 && BIOL 300",
+            "prereqText": "BIOL 230 and one of BIOL 300, STAT 200.",
+            "title": "Ecological Methodology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=404&campuscd=UBC"
+        },
+        "BIOL 406": {
+            "name": "BIOL 406",
+            "prereqs": "BIOL 230",
+            "prereqText": "BIOL 230. BIOL 324 is recommended.",
+            "title": "Plant Ecology I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=406&campuscd=UBC"
+        },
+        "BIOL 411": {
+            "name": "BIOL 411",
+            "prereqs": "BIOL 205 || BIOL 327",
+            "prereqText": "One of BIOL 205, BIOL 327, APBI 327.",
+            "title": "Insect Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=411&campuscd=UBC"
+        },
+        "BIOL 413": {
+            "name": "BIOL 413",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121.",
+            "title": "Zoogeography",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=413&campuscd=UBC"
+        },
+        "BIOL 416": {
+            "name": "BIOL 416",
+            "prereqs": "BIOL 230",
+            "prereqText": "One of BIOL 230, FRST 201.",
+            "title": "Principles of Conservation Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=416&campuscd=UBC"
+        },
+        "BIOL 417": {
+            "name": "BIOL 417",
+            "prereqs": "BIOL 200 && (BIOL 233 || BIOL 234)",
+            "prereqText": "BIOL 200 and one of BIOL 233, BIOL 234. BIOL 336 is recommended",
+            "title": "Phylogenetic Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=417&campuscd=UBC"
+        },
+        "BIOL 418": {
+            "name": "BIOL 418",
+            "prereqs": "BIOL 336 && BIOL 230",
+            "prereqText": "BIOL 336 and BIOL 230.",
+            "title": "Evolutionary Ecology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=418&campuscd=UBC"
+        },
+        "BIOL 420": {
+            "name": "BIOL 420",
+            "prereqs": "",
+            "prereqText": "Fourth-year standing.",
+            "title": "Ocean Conservation and Sustainability",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=420&campuscd=UBC"
+        },
+        "BIOL 421": {
+            "name": "BIOL 421",
+            "prereqs": "BIOL 200 && (BIOL 201 || BIOL 233 || BIOL 234 || BIOL 260)",
+            "prereqText": "BIOL 200 and one of BIOC 202, BIOC 203, BIOL 201, BIOL 233, BIOL 234, BIOL 260.",
+            "title": "Plant-Microbe Interactions",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=421&campuscd=UBC"
+        },
+        "BIOL 425": {
+            "name": "BIOL 425",
+            "prereqs": "BIOL 325",
+            "prereqText": "BIOL 325.",
+            "title": "Biomechanics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=425&campuscd=UBC"
+        },
+        "BIOL 427": {
+            "name": "BIOL 427",
+            "prereqs": "BIOL 121",
+            "prereqText": "BIOL 121.",
+            "title": "Ornithology and Herpetology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=427&campuscd=UBC"
+        },
+        "BIOL 428": {
+            "name": "BIOL 428",
+            "prereqs": "BIOL 205",
+            "prereqText": "BIOL 205. And third-year standing.",
+            "title": "Evolutionary Morphology of Marine Invertebrates",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=428&campuscd=UBC"
+        },
+        "BIOL 430": {
+            "name": "BIOL 430",
+            "prereqs": "BIOL 335 || BIOL 336 || BIOL 338",
+            "prereqText": "One of BIOL 335, BIOL 336, BIOL 338.",
+            "title": "Genome Evolution",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=430&campuscd=UBC"
+        },
+        "BIOL 432": {
+            "name": "BIOL 432",
+            "prereqs": "BIOL 200 && (BIOL 233 || BIOL 234)",
+            "prereqText": "BIOL 200 and one of BIOL 233, BIOL 234. And fourth-year standing.",
+            "title": "Research Strategies and Techniques in Cell Biology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=432&campuscd=UBC"
+        },
+        "BIOL 434": {
+            "name": "BIOL 434",
+            "prereqs": "BIOL 336 && (BIOL 200 && (BIOL 233 || BIOL 234))",
+            "prereqText": "BIOL 336 and either (a) BIOL 200 and one of BIOL 233, BIOL 234;  or (b) FRST 302.",
+            "title": "Population Genetics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=434&campuscd=UBC"
+        },
+        "BIOL 436": {
+            "name": "BIOL 436",
+            "prereqs": "BIOL 335 || BIOL 338",
+            "prereqText": "One of BIOL 335, BIOL 338.",
+            "title": "Integrated Functional Genomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=436&campuscd=UBC"
+        },
+        "BIOL 438": {
+            "name": "BIOL 438",
+            "prereqs": "",
+            "prereqText": "One of PHYS 101, PHYS 106, PHYS 107, PHYS 117, PHYS 131, PHYS 157, SCIE 001. BIOL 325 is recommended.",
+            "title": "Zoological Physics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=438&campuscd=UBC"
+        },
+        "BIOL 440": {
+            "name": "BIOL 440",
+            "prereqs": "BIOL 335 || BIOL 338",
+            "prereqText": "One of BIOL 335, BIOL 338.",
+            "title": "Plant Genomics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=440&campuscd=UBC"
+        },
+        "BIOL 441": {
+            "name": "BIOL 441",
+            "prereqs": "(BIOL 340 || BIOL 341) && (BIOL 361 || BIOL 362)",
+            "prereqText": "One of BIOL 340, BIOL 341 and one of BIOL 361, BIOL 362.",
+            "title": "Cell Biology of Intracellular Trafficking",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=441&campuscd=UBC"
+        },
+        "BIOL 445": {
+            "name": "BIOL 445",
+            "prereqs": "",
+            "prereqText": "Third-year standing in Science is required.",
+            "title": "Darwin's Fishes",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=445&campuscd=UBC"
+        },
+        "BIOL 447": {
+            "name": "BIOL 447",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Principles and Methodology in Biological Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=447&campuscd=UBC"
+        },
+        "BIOL 449": {
+            "name": "BIOL 449",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Directed Biological Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=449&campuscd=UBC"
+        },
+        "BIOL 450": {
+            "name": "BIOL 450",
+            "prereqs": "(BIOL 361 || BIOL 362 || BIOL 364 || BIOL 370 || BIOL 371) && BIOL 201",
+            "prereqText": "One of BIOL 361, BIOL 362, BIOL 364, BIOL 370, BIOL 371 and one of BIOL 201, BIOC 202, BIOC 203. BIOL 457 is recommended.",
+            "title": "Molecular Adaptation of Animals to the Environment",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=450&campuscd=UBC"
+        },
+        "BIOL 454": {
+            "name": "BIOL 454",
+            "prereqs": "BIOL 362 || BIOL 364",
+            "prereqText": "One of BIOL 362, BIOL 364.",
+            "title": "Comparative Animal Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=454&campuscd=UBC"
+        },
+        "BIOL 455": {
+            "name": "BIOL 455",
+            "prereqs": "BIOL 361 || BIOL 362 || BIOL 364",
+            "prereqText": "One of BIOL 361, BIOL 362, BIOL 364, CAPS 301, PSYC 360.",
+            "title": "Comparative Neurobiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=455&campuscd=UBC"
+        },
+        "BIOL 457": {
+            "name": "BIOL 457",
+            "prereqs": "BIOL 364",
+            "prereqText": "BIOL 364.",
+            "title": "Comparative Environmental Physiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=457&campuscd=UBC"
+        },
+        "BIOL 458": {
+            "name": "BIOL 458",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Developmental Neurobiology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=458&campuscd=UBC"
+        },
+        "BIOL 459": {
+            "name": "BIOL 459",
+            "prereqs": "BIOL 372 || BIOL 455",
+            "prereqText": "One of BIOL 372, BIOL 455.",
+            "title": "Neurobiology of Sensory and Motor Systems",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=459&campuscd=UBC"
+        },
+        "BIOL 463": {
+            "name": "BIOL 463",
+            "prereqs": "BIOL 335 && BIOL 201",
+            "prereqText": "BIOL 335 and one of BIOL 201, BIOC 202, BIOC 203. BIOL 331 is recommended.",
+            "title": "Gene Regulation in Development",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=463&campuscd=UBC"
+        },
+        "BIOL 464": {
+            "name": "BIOL 464",
+            "prereqs": "BIOL 463",
+            "prereqText": "BIOL 463.",
+            "title": "Animal Developmental Genetics",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=464&campuscd=UBC"
+        },
+        "BIOL 465": {
+            "name": "BIOL 465",
+            "prereqs": "BIOL 204",
+            "prereqText": "BIOL 204.",
+            "title": "Diversity and Evolution of Fishes",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=BIOL&course=465&campuscd=UBC"
+        }
+    }
+}

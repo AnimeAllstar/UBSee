@@ -47,7 +47,7 @@ function openTab() {
 function updateGraph() {
   myGraph.startTransaction("update");
   myGraph.layout.direction = parseInt(getRadioValue("direction"));
-  const checkedArr = getCheckboxes("opacity");
+  const checkedArr = getCheckboxes("focus");
   if (checkedArr) {
     updateOpacity(checkedArr);
   }

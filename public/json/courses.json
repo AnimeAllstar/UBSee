@@ -563,6 +563,13 @@
         "title": "Topics in Geometry",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=309&campuscd=UBC"
       },
+      "MATH 310": {
+        "name": "MATH 310",
+        "prereqs": "(MATH 152 || MATH 221) && (MATH 220 || MATH 226)",
+        "prereqText": "One of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121.",
+        "title": "Abstract Linear Algebra",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=310"
+      },
       "MATH 312": {
         "name": "MATH 312",
         "prereqs": "MATH 220 || MATH 223 || MATH 226",
@@ -593,7 +600,7 @@
       },
       "MATH 320": {
         "name": "MATH 320",
-        "prereqs": "MATH 226 || ((MATH 200 || MATH 217 || MATH 253 || MATH 254) && MATH 220)",
+        "prereqs": "MATH 226 || ((MATH 200 || MATH 217 || MATH 226 || MATH 253 || MATH 254) && MATH 220)",
         "prereqText": "Either (a) a score of 68% or higher in MATH 226 or (b) one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 254 and a score of 80% or higher in MATH 220.",
         "title": "Real Variables I",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=320&campuscd=UBC"
@@ -607,7 +614,7 @@
       },
       "MATH 322": {
         "name": "MATH 322",
-        "prereqs": "(MATH 223 || MATH 310) || ((MATH 152 || MATH 221) && MATH 220)",
+        "prereqs": "(MATH 223 || MATH 310) || ((MATH 152 || MATH 221 || MATH 223) && MATH 220)",
         "prereqText": "Either (a) a score of 68% or higher in one of MATH 223, MATH 310 or (b) one of MATH 152, MATH 221, MATH 223 and a score of 80% or higher in MATH 220.",
         "title": "Introduction to Group Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=322&campuscd=UBC"
@@ -642,14 +649,14 @@
       },
       "MATH 342": {
         "name": "MATH 342",
-        "prereqs": "((MATH 152, MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
+        "prereqs": "((MATH 152 || MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Algebra and Coding Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=342&campuscd=UBC"
       },
       "MATH 344": {
         "name": "MATH 344",
-        "prereqs": "((MATH 152, MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
+        "prereqs": "((MATH 152 || MATH 221) && (MATH 220 || MATH 226)) || MATH 223",
         "prereqText": "Either (a) one of MATH 152, MATH 221 and one of MATH 220, MATH 226, CPSC 121;  or (b) MATH 223.",
         "title": "Mathematical Game Theory",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=344&campuscd=UBC"
@@ -702,6 +709,13 @@
         "prereqText": "One of MATH 307, CPSC 302 and either (a) a score of 80% or higher in one of MATH 256, MATH 257, MATH 316, MATH 358, MECH 358, PHYS 312 or (b) MATH 400.",
         "title": "Variational and Approximate Methods in Applied Mathematics",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=406&campuscd=UBC"
+      },
+      "MATH 412": {
+        "name": "MATH 412",
+        "prereqs": "MATH 320 && MATH 322",
+        "prereqText": "A score of 68% or higher in all of MATH 320, MATH 322.",
+        "title": "Advanced Linear Algebra",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=MATH&course=412"
       },
       "MATH 414": {
         "name": "MATH 414",

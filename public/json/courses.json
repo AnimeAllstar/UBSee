@@ -977,6 +977,794 @@
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=473&campuscd=UBC"
       }
     },
+    "COMM": {
+      "COMM 100": {
+        "name": "COMM 100",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Business",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=100&campuscd=UBC"
+      },
+      "COMM 101": {
+        "name": "COMM 101",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Fundamentals",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=101&campuscd=UBC"
+      },
+      "COMM 120": {
+        "name": "COMM 120",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Immersion",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=120&campuscd=UBC"
+      },
+      "COMM 202": {
+        "name": "COMM 202",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Career Fundamentals",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=202&campuscd=UBC"
+      },
+      "COMM 203": {
+        "name": "COMM 203",
+        "prereqs": "COMM 292",
+        "prereqText": "COMM 292 and either (a) all of ECON 101, ECON 102 or (b) ECON 100.",
+        "title": "Managing the Employment Relationship",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=203&campuscd=UBC"
+      },
+      "COMM 204": {
+        "name": "COMM 204",
+        "prereqs": "COMM 290 && COMM 291",
+        "prereqText": "All of COMM 290, COMM 291.",
+        "title": "Logistics and Operations Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=204&campuscd=UBC"
+      },
+      "COMM 205": {
+        "name": "COMM 205",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Management Information Systems",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=205&campuscd=UBC"
+      },
+      "COMM 220": {
+        "name": "COMM 220",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Communications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=220&campuscd=UBC"
+      },
+      "COMM 271": {
+        "name": "COMM 271",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Capital Markets",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=271&campuscd=UBC"
+      },
+      "COMM 280": {
+        "name": "COMM 280",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Entrepreneurship",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=280&campuscd=UBC"
+      },
+      "COMM 290": {
+        "name": "COMM 290",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Quantitative Decision Making",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=290&campuscd=UBC"
+      },
+      "COMM 291": {
+        "name": "COMM 291",
+        "prereqs": "COMM 290",
+        "prereqText": "COMM 290.",
+        "title": "Application of Statistics in Business",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=291&campuscd=UBC"
+      },
+      "COMM 292": {
+        "name": "COMM 292",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Management and Organizational Behaviour",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=292&campuscd=UBC"
+      },
+      "COMM 293": {
+        "name": "COMM 293",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Financial Accounting",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=293&campuscd=UBC"
+      },
+      "COMM 294": {
+        "name": "COMM 294",
+        "prereqs": "COMM 293",
+        "prereqText": "One of COEC 293, COMM 293.",
+        "title": "Managerial Accounting",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=294&campuscd=UBC"
+      },
+      "COMM 295": {
+        "name": "COMM 295",
+        "prereqs": "",
+        "prereqText": "Either (a) ECON 100 or (b) all of ECON 101, ECON 102.",
+        "title": "Managerial Economics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=295&campuscd=UBC"
+      },
+      "COMM 296": {
+        "name": "COMM 296",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Marketing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=296&campuscd=UBC"
+      },
+      "COMM 298": {
+        "name": "COMM 298",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introduction to Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=298&campuscd=UBC"
+      },
+      "COMM 306": {
+        "name": "COMM 306",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301.",
+        "title": "Urban Land Economics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=306&campuscd=UBC"
+      },
+      "COMM 307": {
+        "name": "COMM 307",
+        "prereqs": "COMM 295 && (COMM 298)",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301 and one of COMM 297, COMM 298.",
+        "title": "Real Estate Investment",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=307&campuscd=UBC"
+      },
+      "COMM 311": {
+        "name": "COMM 311",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Research Theory for Commerce Scholars",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=311&campuscd=UBC"
+      },
+      "COMM 312": {
+        "name": "COMM 312",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Ethics Leadership",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=312&campuscd=UBC"
+      },
+      "COMM 320": {
+        "name": "COMM 320",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Foundations in Accounting I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=320&campuscd=UBC"
+      },
+      "COMM 321": {
+        "name": "COMM 321",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Organizational Behaviour",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=321&campuscd=UBC"
+      },
+      "COMM 335": {
+        "name": "COMM 335",
+        "prereqs": "COMM 205",
+        "prereqText": "One of COMM 205, COMM 391, CPSC 210.",
+        "title": "Information Systems Technology and Development",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=335&campuscd=UBC"
+      },
+      "COMM 336": {
+        "name": "COMM 336",
+        "prereqs": "COMM 205",
+        "prereqText": "One of COMM 205, COMM 391.",
+        "title": "Introduction to Digital Business",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=336&campuscd=UBC"
+      },
+      "COMM 337": {
+        "name": "COMM 337",
+        "prereqs": "COMM 205",
+        "prereqText": "COMM 205.",
+        "title": "Business Programming and Analytics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=337&campuscd=UBC"
+      },
+      "COMM 353": {
+        "name": "COMM 353",
+        "prereqs": "COMM 293 && COMM 294",
+        "prereqText": "All of COMM 293, COMM 294.",
+        "title": "Financial Accounting: Intermediate I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=353&campuscd=UBC"
+      },
+      "COMM 354": {
+        "name": "COMM 354",
+        "prereqs": "COMM 290 && COMM 291 && COMM 293 && COMM 294",
+        "prereqText": "All of COMM 290, COMM 291, COMM 293, COMM 294.",
+        "title": "Cost Accounting",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=354&campuscd=UBC"
+      },
+      "COMM 355": {
+        "name": "COMM 355",
+        "prereqs": "COMM 293 || COMM 457",
+        "prereqText": "One of COMM 293, COMM 457.",
+        "title": "Income Taxation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=355&campuscd=UBC"
+      },
+      "COMM 362": {
+        "name": "COMM 362",
+        "prereqs": "COMM 296",
+        "prereqText": "One of COMM 296, COMM 396.",
+        "title": "Consumer Behaviour",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=362&campuscd=UBC"
+      },
+      "COMM 363": {
+        "name": "COMM 363",
+        "prereqs": "COMM 296",
+        "prereqText": "One of COMM 296, COMM 396.",
+        "title": "Marketing Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=363&campuscd=UBC"
+      },
+      "COMM 365": {
+        "name": "COMM 365",
+        "prereqs": "((COMM 290 && COMM 291) && (COMM 296)) && COMM 295",
+        "prereqText": "All of COMM 290, COMM 291 and either (a) COMM 296 or (b) COMM 396;  and one of COMM 295, ECON 201, ECON 301 ",
+        "title": "Market Research",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=365&campuscd=UBC"
+      },
+      "COMM 370": {
+        "name": "COMM 370",
+        "prereqs": "COMM 298",
+        "prereqText": "COMM 298.",
+        "title": "Corporate Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=370&campuscd=UBC"
+      },
+      "COMM 371": {
+        "name": "COMM 371",
+        "prereqs": "COMM 298",
+        "prereqText": "COMM 298.",
+        "title": "Investment Theory",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=371&campuscd=UBC"
+      },
+      "COMM 374": {
+        "name": "COMM 374",
+        "prereqs": "COMM 370 && COMM 371",
+        "prereqText": "All of COMM 370, COMM 371.",
+        "title": "Applied Financial Markets",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=374&campuscd=UBC"
+      },
+      "COMM 377": {
+        "name": "COMM 377",
+        "prereqs": "COMM 370 && COMM 371",
+        "prereqText": "All of COMM 370, COMM 371.",
+        "title": "International Financial Markets and Institutions",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=377&campuscd=UBC"
+      },
+      "COMM 382": {
+        "name": "COMM 382",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Economics of Entrepreneurship and Innovation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=382&campuscd=UBC"
+      },
+      "COMM 383": {
+        "name": "COMM 383",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Innovation Leadership",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=383&campuscd=UBC"
+      },
+      "COMM 387": {
+        "name": "COMM 387",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Entrepreneurial Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=387&campuscd=UBC"
+      },
+      "COMM 388": {
+        "name": "COMM 388",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Design Methods for Business Innovation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=388&campuscd=UBC"
+      },
+      "COMM 390": {
+        "name": "COMM 390",
+        "prereqs": "",
+        "prereqText": "One of ENGL 112, ASTU 150, WRDS 150, ENGL 100, ENGL 120, ENGL 121. ENGL 1st, Arts One, a minimum of 18 cr. of Coordinated Arts Program.",
+        "title": "Business Writing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=390&campuscd=UBC"
+      },
+      "COMM 393": {
+        "name": "COMM 393",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Commercial Law",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=393&campuscd=UBC"
+      },
+      "COMM 394": {
+        "name": "COMM 394",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301.",
+        "title": "Government and Business",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=394&campuscd=UBC"
+      },
+      "COMM 395": {
+        "name": "COMM 395",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Communications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=395&campuscd=UBC"
+      },
+      "COMM 405": {
+        "name": "COMM 405",
+        "prereqs": "COMM 298",
+        "prereqText": "One of COMM 297, COMM 298.",
+        "title": "Real Estate Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=405&campuscd=UBC"
+      },
+      "COMM 407": {
+        "name": "COMM 407",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301.",
+        "title": "Real Estate Economics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=407&campuscd=UBC"
+      },
+      "COMM 408": {
+        "name": "COMM 408",
+        "prereqs": "(COMM 298) && COMM 295",
+        "prereqText": "One of COMM 297, COMM 298 and one of COMM 295, ECON 201, ECON 301.",
+        "title": "Real Estate Development",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=408&campuscd=UBC"
+      },
+      "COMM 412": {
+        "name": "COMM 412",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Negotiation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=412&campuscd=UBC"
+      },
+      "COMM 414": {
+        "name": "COMM 414",
+        "prereqs": "COMM 204",
+        "prereqText": "One of COMM 204.",
+        "title": "Data Visualization and Business Analytics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=414&campuscd=UBC"
+      },
+      "COMM 415": {
+        "name": "COMM 415",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301.",
+        "title": "Quantitative Policy Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=415&campuscd=UBC"
+      },
+      "COMM 420": {
+        "name": "COMM 420",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Marketing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=420&campuscd=UBC"
+      },
+      "COMM 421": {
+        "name": "COMM 421",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Introductory Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=421&campuscd=UBC"
+      },
+      "COMM 431": {
+        "name": "COMM 431",
+        "prereqs": "COMM 393",
+        "prereqText": "COMM 393.",
+        "title": "Law of Business Organizations and Corporate Governance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=431&campuscd=UBC"
+      },
+      "COMM 434": {
+        "name": "COMM 434",
+        "prereqs": "COMM 393",
+        "prereqText": "COMM 393.",
+        "title": "Land Law",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=434&campuscd=UBC"
+      },
+      "COMM 435": {
+        "name": "COMM 435",
+        "prereqs": "COMM 205",
+        "prereqText": "COMM 205.",
+        "title": "CIO Strategies",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=435&campuscd=UBC"
+      },
+      "COMM 436": {
+        "name": "COMM 436",
+        "prereqs": "COMM 335",
+        "prereqText": "One of COMM 335, CPSC 310.",
+        "title": "Information Systems Analysis and Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=436&campuscd=UBC"
+      },
+      "COMM 437": {
+        "name": "COMM 437",
+        "prereqs": "COMM 335",
+        "prereqText": "COMM 335.",
+        "title": "Database Technology",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=437&campuscd=UBC"
+      },
+      "COMM 438": {
+        "name": "COMM 438",
+        "prereqs": "COMM 205",
+        "prereqText": "One of COMM 205, COMM 391.",
+        "title": "Management of Information Systems",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=438&campuscd=UBC"
+      },
+      "COMM 439": {
+        "name": "COMM 439",
+        "prereqs": "COMM 335",
+        "prereqText": "COMM 335.",
+        "title": "Business Telecommunications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=439&campuscd=UBC"
+      },
+      "COMM 443": {
+        "name": "COMM 443",
+        "prereqs": "COMM 204",
+        "prereqText": "One of COMM 204, COMM 399.",
+        "title": "Service Operations",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=443&campuscd=UBC"
+      },
+      "COMM 444": {
+        "name": "COMM 444",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 201, ECON 301.",
+        "title": "Air Transportation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=444&campuscd=UBC"
+      },
+      "COMM 445": {
+        "name": "COMM 445",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Maritime and International Transportation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=445&campuscd=UBC"
+      },
+      "COMM 447": {
+        "name": "COMM 447",
+        "prereqs": "COMM 295",
+        "prereqText": "One of COMM 295, ECON 301.",
+        "title": "Applied Project Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=447&campuscd=UBC"
+      },
+      "COMM 449": {
+        "name": "COMM 449",
+        "prereqs": "COMM 204 || COMM 399",
+        "prereqText": "One of COMM 204, COMM 399.",
+        "title": "Supply-Chain Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=449&campuscd=UBC"
+      },
+      "COMM 450": {
+        "name": "COMM 450",
+        "prereqs": "COMM 353",
+        "prereqText": "COMM 353.",
+        "title": "Financial Accounting - Intermediate II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=450&campuscd=UBC"
+      },
+      "COMM 452": {
+        "name": "COMM 452",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Taxes and Decision Making",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=452&campuscd=UBC"
+      },
+      "COMM 453": {
+        "name": "COMM 453",
+        "prereqs": "COMM 353 && COMM 450",
+        "prereqText": "All of COMM 353, COMM 450.",
+        "title": "Financial Accounting-Advanced",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=453&campuscd=UBC"
+      },
+      "COMM 454": {
+        "name": "COMM 454",
+        "prereqs": "COMM 294",
+        "prereqText": "COMM 294.",
+        "title": "Accounting for Management Control and Incentives",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=454&campuscd=UBC"
+      },
+      "COMM 455": {
+        "name": "COMM 455",
+        "prereqs": "COMM 353",
+        "prereqText": "COMM 353.",
+        "title": "Principles of Auditing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=455&campuscd=UBC"
+      },
+      "COMM 457": {
+        "name": "COMM 457",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Fundamentals of Financial Accounting",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=457"
+      },
+      "COMM 459": {
+        "name": "COMM 459",
+        "prereqs": "COMM 293 && (COMM 298) && (COMM 370)",
+        "prereqText": "COMM 293 and one of COMM 297, COMM 298 and one of COMM 370, COMM 397.",
+        "title": "Financial Statement Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=459&campuscd=UBC"
+      },
+      "COMM 460": {
+        "name": "COMM 460",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Social and Nonprofit Marketing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=460&campuscd=UBC"
+      },
+      "COMM 461": {
+        "name": "COMM 461",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Business Development",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=461&campuscd=UBC"
+      },
+      "COMM 462": {
+        "name": "COMM 462",
+        "prereqs": "COMM 362",
+        "prereqText": "COMM 362.",
+        "title": "Integrated Marketing Communication",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=462&campuscd=UBC"
+      },
+      "COMM 464": {
+        "name": "COMM 464",
+        "prereqs": "COMM 296",
+        "prereqText": "One of COMM 296, COMM 396.",
+        "title": "Digital Marketing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=464&campuscd=UBC"
+      },
+      "COMM 466": {
+        "name": "COMM 466",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "New Venture Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=466&campuscd=UBC"
+      },
+      "COMM 467": {
+        "name": "COMM 467",
+        "prereqs": "COMM 296",
+        "prereqText": "COMM 296.",
+        "title": "Brand Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=467&campuscd=UBC"
+      },
+      "COMM 468": {
+        "name": "COMM 468",
+        "prereqs": "COMM 362 && COMM 363 && COMM 365",
+        "prereqText": "All of COMM 362, COMM 363, COMM 365.",
+        "title": "Marketing Applications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=468&campuscd=UBC"
+      },
+      "COMM 470": {
+        "name": "COMM 470",
+        "prereqs": "COMM 370 || COMM 387",
+        "prereqText": "One of COMM 370, COMM 387.",
+        "title": "Venture Capital",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=470&campuscd=UBC"
+      },
+      "COMM 471": {
+        "name": "COMM 471",
+        "prereqs": "COMM 370",
+        "prereqText": "COMM 370.",
+        "title": "Mergers and Acquisitions",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=471&campuscd=UBC"
+      },
+      "COMM 474": {
+        "name": "COMM 474",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Fixed Income Markets and Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=474&campuscd=UBC"
+      },
+      "COMM 475": {
+        "name": "COMM 475",
+        "prereqs": "COMM 371",
+        "prereqText": "COMM 371.",
+        "title": "Investment Policy",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=475&campuscd=UBC"
+      },
+      "COMM 477": {
+        "name": "COMM 477",
+        "prereqs": "COMM 374",
+        "prereqText": "COMM 374.",
+        "title": "Risk Management and Financial Engineering",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=477&campuscd=UBC"
+      },
+      "COMM 479": {
+        "name": "COMM 479",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Advanced Topics on Corporate Finance",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=479&campuscd=UBC"
+      },
+      "COMM 482": {
+        "name": "COMM 482",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "New Product Development",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=482&campuscd=UBC"
+      },
+      "COMM 484": {
+        "name": "COMM 484",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Sustainability Marketing",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=484&campuscd=UBC"
+      },
+      "COMM 485": {
+        "name": "COMM 485",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Social Entrepreneurship",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=485&campuscd=UBC"
+      },
+      "COMM 491": {
+        "name": "COMM 491",
+        "prereqs": "COMM 390 && COMM 395",
+        "prereqText": "All of COMM 390, COMM 395. Fourth-year standing.",
+        "title": "Strategic Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=491&campuscd=UBC"
+      },
+      "COMM 497": {
+        "name": "COMM 497",
+        "prereqs": "COMM 390 && COMM 395",
+        "prereqText": "All of COMM 390, COMM 395. Fourth-year standing.",
+        "title": "New Enterprise Development",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=497&campuscd=UBC"
+      },
+      "COMM 498": {
+        "name": "COMM 498",
+        "prereqs": "COMM 390 && COMM 395",
+        "prereqText": "All of COMM 390, COMM 395. Fourth-year standing.",
+        "title": "International Business Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=COMM&course=498&campuscd=UBC"
+      }
+    },
+    "CPEN": {
+      "CPEN 211": {
+        "name": "CPEN 211",
+        "prereqs": "",
+        "prereqText": "APSC 160.",
+        "title": "Introduction to Microcomputers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=211&campuscd=UBC"
+      },
+      "CPEN 221": {
+        "name": "CPEN 221",
+        "prereqs": "",
+        "prereqText": "APSC 160.",
+        "title": "Principles of Software Construction",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=221&campuscd=UBC"
+      },
+      "CPEN 223": {
+        "name": "CPEN 223",
+        "prereqs": "",
+        "prereqText": "APSC 160.",
+        "title": "Software Design for Engineers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=223&campuscd=UBC"
+      },
+      "CPEN 281": {
+        "name": "CPEN 281",
+        "prereqs": "",
+        "prereqText": "One of APSC 176, ENGL 110, ENGL 111, ENGL 112, ENGL 120, ENGL 121, WRDS 150.",
+        "title": "Technical Communication",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=281&campuscd=UBC"
+      },
+      "CPEN 291": {
+        "name": "CPEN 291",
+        "prereqs": "CPEN 211",
+        "prereqText": "One of EECE 259, CPEN 211.",
+        "title": "Computer Engineering Design Studio I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=291&campuscd=UBC"
+      },
+      "CPEN 311": {
+        "name": "CPEN 311",
+        "prereqs": "CPEN 211 || CPEN 312",
+        "prereqText": "One of EECE 259, CPEN 211, EECE 355, CPEN 312.",
+        "title": "Digital Systems Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=311&campuscd=UBC"
+      },
+      "CPEN 312": {
+        "name": "CPEN 312",
+        "prereqs": "",
+        "prereqText": "One of EECE 251, ELEC 201, EECE 252, ELEC 204, EECE 263, ELEC 203, MECH 221.",
+        "title": "Digital Systems and Microcomputers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=312&campuscd=UBC"
+      },
+      "CPEN 321": {
+        "name": "CPEN 321",
+        "prereqs": "CPEN 221",
+        "prereqText": "One of EECE 210, CPEN 221, CPSC 210, EECE 309.",
+        "title": "Software Engineering",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=321&campuscd=UBC"
+      },
+      "CPEN 331": {
+        "name": "CPEN 331",
+        "prereqs": "CPEN 221",
+        "prereqText": "CPSC 261 and one of EECE 210, CPEN 221, EECE 309.",
+        "title": "Operating Systems",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=331&campuscd=UBC"
+      },
+      "CPEN 333": {
+        "name": "CPEN 333",
+        "prereqs": "CPEN 223",
+        "prereqText": "One of CPSC 259, CPEN 223.",
+        "title": "System Software Engineering",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=333&campuscd=UBC"
+      },
+      "CPEN 391": {
+        "name": "CPEN 391",
+        "prereqs": "CPEN 291 && CPEN 311",
+        "prereqText": "One of CPEN 291, ELEC 291, ELEC 292, EECE 281 and one of EECE 353, CPEN 311.",
+        "title": "Computer Engineering Design Studio II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=391&campuscd=UBC"
+      },
+      "CPEN 411": {
+        "name": "CPEN 411",
+        "prereqs": "CPEN 311 || CPEN 312",
+        "prereqText": "Either (a) one of EECE 353, CPEN 311 or (b) one of EECE 355, CPEN 312.",
+        "title": "Computer Architecture",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=411&campuscd=UBC"
+      },
+      "CPEN 412": {
+        "name": "CPEN 412",
+        "prereqs": "CPEN 311 && (CPEN 211 || CPEN 312)",
+        "prereqText": "One of EECE 353, CPEN 311 and one of EECE 259, CPEN 211, EECE 355, CPEN 312.",
+        "title": "Microcomputer Systems Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=412&campuscd=UBC"
+      },
+      "CPEN 421": {
+        "name": "CPEN 421",
+        "prereqs": "CPEN 321",
+        "prereqText": "One of EECE 310, CPEN 321, CPSC 310.",
+        "title": "Software Project Management",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=421&campuscd=UBC"
+      },
+      "CPEN 422": {
+        "name": "CPEN 422",
+        "prereqs": "CPEN 221 || CPEN 321",
+        "prereqText": "One of EECE 210, CPEN 221, EECE 309, EECE 310, CPEN 321, CPSC 210, CPSC 310.",
+        "title": "Software Testing and Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=422&campuscd=UBC"
+      },
+      "CPEN 431": {
+        "name": "CPEN 431",
+        "prereqs": "CPEN 331 && CPEN 221",
+        "prereqText": "One of EECE 315, CPEN 331, CPSC 313 and one of EECE 210, CPEN 221, EECE 309, CPSC 210.",
+        "title": "Design of Distributed Software Applications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=431&campuscd=UBC"
+      },
+      "CPEN 432": {
+        "name": "CPEN 432",
+        "prereqs": "CPEN 333 || CPEN 331",
+        "prereqText": "One of EECE 314, CPEN 333, EECE 315, CPEN 331, CPSC 313.",
+        "title": "Real-time System Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=432&campuscd=UBC"
+      },
+      "CPEN 441": {
+        "name": "CPEN 441",
+        "prereqs": "CPEN 221 || CPEN 333",
+        "prereqText": "One of CPSC 260, CPSC 221 and one of EECE 210, CPEN 221, EECE 309, CPSC 210, EECE 314, CPEN 333.",
+        "title": "Human Computer Interfaces in Engineering Design",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=441&campuscd=UBC"
+      },
+      "CPEN 442": {
+        "name": "CPEN 442",
+        "prereqs": "CPEN 333 || CPEN 331",
+        "prereqText": "One of EECE 314, CPEN 333, EECE 315, CPEN 331, CPSC 313.",
+        "title": "Introduction to Cybersecurity",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=442&campuscd=UBC"
+      },
+      "CPEN 481": {
+        "name": "CPEN 481",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Economic Analysis of Engineering Projects",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=481&campuscd=UBC"
+      },
+      "CPEN 491": {
+        "name": "CPEN 491",
+        "prereqs": "CPEN 391 || EECE 381",
+        "prereqText": "One of CPEN 391, EECE 381.",
+        "title": "Computer Engineering Capstone Design Project",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=491&campuscd=UBC"
+      }
+    },
     "CPSC": {
       "CPSC 100": {
         "name": "CPSC 100",

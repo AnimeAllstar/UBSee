@@ -1,3 +1,4 @@
+// resolves conflict with go.GraphObject.make() in graph-initializer
 jQuery.noConflict();
 
 jQuery(document).ready(function () {
@@ -16,7 +17,7 @@ jQuery(document).ready(function () {
     });
 });
 
-// if subject is selected, update the data in #course-select using myData (declared in in GraphInitalizer.js)
+// if subject is selected, update the data in #course-select using myData (declared in in graph-initializer.js)
 jQuery('#subject-select').on("select2:selecting", function (e) {
     jQuery('#course-select').empty().trigger("change");
     const subject = myData[e.params.args.data.text];

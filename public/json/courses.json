@@ -3811,6 +3811,120 @@
         "title": "Advanced Neuroscience of Motivation",
         "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=472&campuscd=UBC"
       }
+    },
+    "STAT": {
+      "STAT 200": {
+        "name": "STAT 200",
+        "prereqs": "",
+        "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
+        "title": "Elementary Statistics for Applications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=200&campuscd=UBC"
+      },
+      "STAT 201": {
+        "name": "STAT 201",
+        "prereqs": "",
+        "prereqText": "DSCI 100.",
+        "title": "Statistical Inference for Data Science",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=201&campuscd=UBC"
+      },
+      "STAT 203": {
+        "name": "STAT 203",
+        "prereqs": "",
+        "prereqText": "MATH 11. Or Pre-calculus 11.",
+        "title": "Statistical Methods",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=203&campuscd=UBC"
+      },
+      "STAT 241": {
+        "name": "STAT 241",
+        "prereqs": "",
+        "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
+        "title": "Introductory Probability and Statistics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=241"
+      },
+      "STAT 251": {
+        "name": "STAT 251",
+        "prereqs": "",
+        "prereqText": "One of MATH 101, MATH 103, MATH 105, MATH 121, SCIE 001.",
+        "title": "Elementary Statistics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=251&campuscd=UBC"
+      },
+      "STAT 300": {
+        "name": "STAT 300",
+        "prereqs": "STAT 200 || STAT 203 || STAT 241 || STAT 251",
+        "prereqText": "One of STAT 200, STAT 203, STAT 241, STAT 251, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, POLI 380, PSYC 218, PSYC 278, PSYC 366.",
+        "title": "Intermediate Statistics for Applications",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=300&campuscd=UBC"
+      },
+      "STAT 302": {
+        "name": "STAT 302",
+        "prereqs": "",
+        "prereqText": "One of MATH 200, MATH 226, MATH 217, MATH 253, MATH 254.",
+        "title": "Introduction to Probability",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=302&campuscd=UBC"
+      },
+      "STAT 305": {
+        "name": "STAT 305",
+        "prereqs": "((STAT 200 || STAT 203 || STAT 241 || STAT 251) && STAT 302) || STAT 302",
+        "prereqText": "Either (a) one of STAT 200, STAT 203, BIOL 300, STAT 241, STAT 251, COMM 291, ECON 325, FRST 231, PSYC 218, PSYC 366 and one of MATH 302, STAT 302;  or (b) a score of 65% or higher in one of MATH 302, STAT 302. The Department recommends that students meet the prerequisite through option (a).",
+        "title": "Introduction to Statistical Inference",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=305&campuscd=UBC"
+      },
+      "STAT 306": {
+        "name": "STAT 306",
+        "prereqs": "(STAT 200 || STAT 241 || STAT 251 || STAT 300) && STAT 302",
+        "prereqText": "One of MATH 152, MATH 221, MATH 223 and one of STAT 200, STAT 241, STAT 251, STAT 300, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, PSYC 218, PSYC 278, PSYC 366 and one of MATH 302, STAT 302.",
+        "title": "Finding Relationships in Data",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=306&campuscd=UBC"
+      },
+      "STAT 321": {
+        "name": "STAT 321",
+        "prereqs": "STAT 305",
+        "prereqText": "One of EECE 269, ELEC 221, STAT 305. STAT 305 may be taken concurrently, with registration assistance from Statistics Student Services.",
+        "title": "Stochastic Signals and Systems",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=321&campuscd=UBC"
+      },
+      "STAT 344": {
+        "name": "STAT 344",
+        "prereqs": "STAT 200 || STAT 241 || STAT 251",
+        "prereqText": "One of STAT 200, STAT 241, STAT 251, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, PSYC 218, PSYC 278, PSYC 366.",
+        "title": "Sample Surveys",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=344&campuscd=UBC"
+      },
+      "STAT 404": {
+        "name": "STAT 404",
+        "prereqs": "STAT 305",
+        "prereqText": "STAT 305.",
+        "title": "Design and Analysis of Experiments",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=404&campuscd=UBC"
+      },
+      "STAT 406": {
+        "name": "STAT 406",
+        "prereqs": "STAT 306",
+        "prereqText": "One of STAT 306, CPSC 340.",
+        "title": "Methods for Statistical Learning",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=406&campuscd=UBC"
+      },
+      "STAT 443": {
+        "name": "STAT 443",
+        "prereqs": "STAT 302 && (STAT 200 || STAT 241 || STAT 251 || STAT 300)",
+        "prereqText": "One of MATH 302, MATH 318, STAT 302 and one of STAT 200, STAT 241, STAT 251, STAT 300, BIOL 300, COMM 291, ECON 325, ECON 327, FRST 231, POLI 380, PSYC 218, PSYC 278, PSYC 366.",
+        "title": "Time Series and Forecasting",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=443&campuscd=UBC"
+      },
+      "STAT 460": {
+        "name": "STAT 460",
+        "prereqs": "STAT 305",
+        "prereqText": "All of MATH 320, STAT 305 and one of MATH 152, MATH 221, MATH 223.",
+        "title": "Statistical Inference I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=460&campuscd=UBC"
+      },
+      "STAT 461": {
+        "name": "STAT 461",
+        "prereqs": "STAT 460",
+        "prereqText": "STAT 460.",
+        "title": "Statistical Inference II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=STAT&course=461&campuscd=UBC"
+      }
     }
   }
 }

@@ -1,0 +1,389 @@
+{
+    "PSYC": {
+        "PSYC 100": {
+            "name": "PSYC 100",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Introductory Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=100"
+        },
+        "PSYC 101": {
+            "name": "PSYC 101",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Introduction to Biological and Cognitive Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=101&campuscd=UBC"
+        },
+        "PSYC 102": {
+            "name": "PSYC 102",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Introduction to Developmental, Social, Personality, and Clinical Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=102&campuscd=UBC"
+        },
+        "PSYC 205": {
+            "name": "PSYC 205",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Contemporary Issues in Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=205"
+        },
+        "PSYC 207": {
+            "name": "PSYC 207",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Contemporary Topics in Biological and Cognitive Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=207&campuscd=UBC"
+        },
+        "PSYC 208": {
+            "name": "PSYC 208",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Contemporary Topics in Social, Developmental, Personality, and Clinical Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=208&campuscd=UBC"
+        },
+        "PSYC 216": {
+            "name": "PSYC 216",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Questioning Psychological Science in the Media",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=216&campuscd=UBC"
+        },
+        "PSYC 217": {
+            "name": "PSYC 217",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Research Methods",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=217&campuscd=UBC"
+        },
+        "PSYC 218": {
+            "name": "PSYC 218",
+            "prereqs": "PSYC 217 || PSYC 277",
+            "prereqText": "One of PSYC 217, PSYC 277. And a major in Psychology, Cognitive Systems, or Speech Sciences.",
+            "title": "Analysis of Behavioural Data",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=218&campuscd=UBC"
+        },
+        "PSYC 260": {
+            "name": "PSYC 260",
+            "prereqs": "",
+            "prereqText": "Completion of first-year Science program and permission of the department head is also required.",
+            "title": "Experimental Psychology and Laboratory",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=260"
+        },
+        "PSYC 263": {
+            "name": "PSYC 263",
+            "prereqs": "",
+            "prereqText": "None.",
+            "title": "Contemporary Issues in Behavioural Neuroscience",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=263"
+        },
+        "PSYC 270": {
+            "name": "PSYC 270",
+            "prereqs": "",
+            "prereqText": "Either (a) SCIE 001 and BIOL 140;  or (b) one of CHEM 111, CHEM 121, CHEM 123 and all of BIOL 121, BIOL 140. And second-year standing in a Behavioural Neuroscience specialization.",
+            "title": "Introduction to Behavioural Neuroscience",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=270&campuscd=UBC"
+        },
+        "PSYC 277": {
+            "name": "PSYC 277",
+            "prereqs": "",
+            "prereqText": "Either (a) SCIE 001 and BIOL 140;  or (b) one of CHEM 111, CHEM 121, CHEM 123 and all of BIOL 121, BIOL 140. And second-year standing in a Behavioural Neuroscience specialization.",
+            "title": "Behavioural and Neuroscientific Research Methods",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=277&campuscd=UBC"
+        },
+        "PSYC 278": {
+            "name": "PSYC 278",
+            "prereqs": "PSYC 217 || PSYC 277",
+            "prereqText": "One of PSYC 217, PSYC 277.",
+            "title": "Analysis of Behavioural and Neuroscientific Data",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=278&campuscd=UBC"
+        },
+        "PSYC 300": {
+            "name": "PSYC 300",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 216 && PSYC 217))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217. Strongly recommended: PSYC 101, 102, and PSYC 216 or one of PSYC 217 or 227.",
+            "title": "Abnormal Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=300"
+        },
+        "PSYC 301": {
+            "name": "PSYC 301",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101, 102, and PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Brain Dysfunction and Recovery",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=301&campuscd=UBC"
+        },
+        "PSYC 302": {
+            "name": "PSYC 302",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101, 102, and PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Infancy",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=302&campuscd=UBC"
+        },
+        "PSYC 303": {
+            "name": "PSYC 303",
+            "prereqs": "PSYC 218 || PSYC 278 || PSYC 366",
+            "prereqText": "One of PSYC 218, PSYC 278, PSYC 366.",
+            "title": "Tests and Measurements",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=303&campuscd=UBC"
+        },
+        "PSYC 304": {
+            "name": "PSYC 304",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and one of PSYC 216, or either PSYC 217 or 277, or either PSYC 260 or 270.",
+            "title": "Brain and Behaviour",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=304&campuscd=UBC"
+        },
+        "PSYC 305": {
+            "name": "PSYC 305",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277",
+            "title": "Personality Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=305"
+        },
+        "PSYC 307": {
+            "name": "PSYC 307",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Cultural Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=307&campuscd=UBC"
+        },
+        "PSYC 308": {
+            "name": "PSYC 308",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Social Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=308"
+        },
+        "PSYC 309": {
+            "name": "PSYC 309",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Cognitive Processes",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=309"
+        },
+        "PSYC 314": {
+            "name": "PSYC 314",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277",
+            "title": "Health Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=314&campuscd=UBC"
+        },
+        "PSYC 315": {
+            "name": "PSYC 315",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Childhood and Adolescence",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=315&campuscd=UBC"
+        },
+        "PSYC 319": {
+            "name": "PSYC 319",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 216 && PSYC 217))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Applied Developmental Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=319&campuscd=UBC"
+        },
+        "PSYC 322": {
+            "name": "PSYC 322",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Adulthood and Aging",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=322&campuscd=UBC"
+        },
+        "PSYC 325": {
+            "name": "PSYC 325",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Socialization: Media Content and Effects",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=325&campuscd=UBC"
+        },
+        "PSYC 331": {
+            "name": "PSYC 331",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Forensic Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=331&campuscd=UBC"
+        },
+        "PSYC 333": {
+            "name": "PSYC 333",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and either PSYC 216 or one of PSYC 217 or 277. Non-PSYC students may substitute LING 420 or LING 200 and 201 for the above prerequisite.",
+            "title": "Memory: Historical, Clinical and Cognitive Perspectives",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=333&campuscd=UBC"
+        },
+        "PSYC 335": {
+            "name": "PSYC 335",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Gambling and Decision Making",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=335&campuscd=UBC"
+        },
+        "PSYC 336": {
+            "name": "PSYC 336",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and either PSYC 216 or one of PSYC 217 or 277. Non-PSYC students may substitute ENGL 329, or LING 420, or LING 200 and 201 for the above prerequisite.",
+            "title": "The Psychology of Language I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=336&campuscd=UBC"
+        },
+        "PSYC 349": {
+            "name": "PSYC 349",
+            "prereqs": "(PSYC 100 || (PSYC 101 && PSYC 102) && PSYC 217)",
+            "prereqText": "Either (a) PSYC 100 or (b) all of PSYC 101, PSYC 102;  and all of PSYC 217,  218. Restricted to students in Honours.",
+            "title": "Honours Seminar",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=349&campuscd=UBC"
+        },
+        "PSYC 358": {
+            "name": "PSYC 358",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 102 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Evolutionary Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=358&campuscd=UBC"
+        },
+        "PSYC 359": {
+            "name": "PSYC 359",
+            "prereqs": "((PSYC 217 || PSYC 277) && (PSYC 218 || PSYC 278)) || PSYC 366",
+            "prereqText": "Either (a) one of PSYC 217, PSYC 277 and one of PSYC 218, PSYC 278;  or (b) PSYC 366.",
+            "title": "Advanced Research Methods in Behavioural Sciences",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=359&campuscd=UBC"
+        },
+        "PSYC 360": {
+            "name": "PSYC 360",
+            "prereqs": "PSYC 260",
+            "prereqText": "PSYC 260.",
+            "title": "Biopsychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=360"
+        },
+        "PSYC 361": {
+            "name": "PSYC 361",
+            "prereqs": "PSYC 260 || PSYC 270 || PSYC 304 || PSYC 360 || PSYC 370",
+            "prereqText": "One of PSYC 260, PSYC 270, PSYC 304, PSYC 360, PSYC 370.",
+            "title": "Neuroscience of Motivation",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=361&campuscd=UBC"
+        },
+        "PSYC 363": {
+            "name": "PSYC 363",
+            "prereqs": "PSYC 260 || PSYC 263 || PSYC 270 || PSYC 304",
+            "prereqText": "One of BIOL 260, BIOL 361, BIOL 455, BIOL 458, CAPS 301, PSYC 260, PSYC 263, PSYC 270, PSYC 304.",
+            "title": "Neuroscience of Simple Learning",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=363&campuscd=UBC"
+        },
+        "PSYC 365": {
+            "name": "PSYC 365",
+            "prereqs": "PSYC 260 || PSYC 270",
+            "prereqText": "One of PSYC 260, PSYC 270, COGS 200.",
+            "title": "Cognitive Neuroscience",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=365&campuscd=UBC"
+        },
+        "PSYC 366": {
+            "name": "PSYC 366",
+            "prereqs": "PSYC 260",
+            "prereqText": "PSYC 260 or in Honours program.",
+            "title": "Methods in Research",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=366"
+        },
+        "PSYC 367": {
+            "name": "PSYC 367",
+            "prereqs": "PSYC 100 || (PSYC 101 && PSYC 102)",
+            "prereqText": "Either (a) PSYC 100 or (b) all of PSYC 101, PSYC 102 or (c) 6 credits of 200-level Psychology (but not 205 or 263).",
+            "title": "Sensory Systems",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=367&campuscd=UBC"
+        },
+        "PSYC 368": {
+            "name": "PSYC 368",
+            "prereqs": "PSYC 367",
+            "prereqText": "PSYC 367.",
+            "title": "Perceptual Processing",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=368&campuscd=UBC"
+        },
+        "PSYC 370": {
+            "name": "PSYC 370",
+            "prereqs": "(PSYC 260 || PSYC 270) && (PSYC 217 || PSYC 277) && (PSYC 218 || PSYC 278)",
+            "prereqText": "One of PSYC 260, PSYC 270 and one of PSYC 217, PSYC 277 and one of PSYC 218, PSYC 278.",
+            "title": "Behavioural Neuroscience I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=370&campuscd=UBC"
+        },
+        "PSYC 371": {
+            "name": "PSYC 371",
+            "prereqs": "PSYC 370",
+            "prereqText": "PSYC 370.",
+            "title": "Behavioural Neuroscience II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=371&campuscd=UBC"
+        },
+        "PSYC 401": {
+            "name": "PSYC 401",
+            "prereqs": "PSYC 300",
+            "prereqText": "PSYC 300.",
+            "title": "Clinical Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=401&campuscd=UBC"
+        },
+        "PSYC 404": {
+            "name": "PSYC 404",
+            "prereqs": "(PSYC 217 || PSYC 277 || PSYC 366) && (PSYC 305 || PSYC 307 || PSYC 308 || PSYC 358)",
+            "prereqText": "One of PSYC 217, PSYC 277, PSYC 366 and one of PSYC 305, PSYC 307, PSYC 308, PSYC 358.",
+            "title": "Psychology of Religion",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=404&campuscd=UBC"
+        },
+        "PSYC 409": {
+            "name": "PSYC 409",
+            "prereqs": "((PSYC 217 || PSYC 277) && (PSYC 218 || PSYC 277)) || (PSYC 366 && (PSYC 309 || PSYC 365))",
+            "prereqText": "Either (a) one of PSYC 217, PSYC 277 and one of PSYC 218, PSYC 277;  or (b) PSYC 366 and one of PSYC 309, PSYC 365.",
+            "title": "Cognitive Neuropsychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=409&campuscd=UBC"
+        },
+        "PSYC 413": {
+            "name": "PSYC 413",
+            "prereqs": "PSYC 302 || PSYC 315 || PSYC 319 || PSYC 322 || PSYC 325",
+            "prereqText": "One of PSYC 302, PSYC 315, PSYC 319, PSYC 322, PSYC 325.",
+            "title": "Social and Personality Development",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=413&campuscd=UBC"
+        },
+        "PSYC 421": {
+            "name": "PSYC 421",
+            "prereqs": "PSYC 100 || ((PSYC 101 && PSYC 102) || (PSYC 101 && PSYC 205) || (PSYC 101 && PSYC 207) || (PSYC 101 && PSYC 208) || (PSYC 101 && PSYC 216) || (PSYC 101 && PSYC 217) || (PSYC 101 && PSYC 277) || (PSYC 102 && PSYC 205) || (PSYC 102 && PSYC 207) || (PSYC 102 && PSYC 208) || (PSYC 102 && PSYC 216) || (PSYC 102 && PSYC 217) || (PSYC 102 && PSYC 277) || (PSYC 205 && PSYC 207) || (PSYC 205 && PSYC 208) || (PSYC 205 && PSYC 216) || (PSYC 205 && PSYC 217) || (PSYC 205 && PSYC 277) || (PSYC 207 && PSYC 208) || (PSYC 207 && PSYC 216) || (PSYC 207 && PSYC 217) || (PSYC 207 && PSYC 277) || (PSYC 208 && PSYC 216) || (PSYC 208 && PSYC 217) || (PSYC 208 && PSYC 277) || (PSYC 216 && PSYC 217) || (PSYC 216 && PSYC 277) || (PSYC 217 && PSYC 277))",
+            "prereqText": "Either (a) PSYC 100 or (b) two of PSYC 101, PSYC 102, PSYC 205, PSYC 207, PSYC 208, PSYC 216, PSYC 217, PSYC 277. Strongly recommended: PSYC 101 and either PSYC 216 or one of PSYC 217 or 277.",
+            "title": "Environmental Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=421&campuscd=UBC"
+        },
+        "PSYC 427": {
+            "name": "PSYC 427",
+            "prereqs": "((PSYC 217 || PSYC 277) && (PSYC 218 || PSYC 278)) || PSYC 366",
+            "prereqText": "Either (a) one of PSYC 217, PSYC 277 and one of PSYC 218, PSYC 278;  or (b) PSYC 366. Restricted to Majors and Honours in Psychology. Consult Section Notes or the Psychology Department website for 300-level course(s) recommended for a specific offering.",
+            "title": "Advanced Seminar in Psychology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=427&campuscd=UBC"
+        },
+        "PSYC 449": {
+            "name": "PSYC 449",
+            "prereqs": "PSYC 349",
+            "prereqText": "PSYC 349. Fourth-year standing. Restricted to students in Honours. Intended for students in their graduating year.",
+            "title": "Honours Seminar and Essay",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=449&campuscd=UBC"
+        },
+        "PSYC 460": {
+            "name": "PSYC 460",
+            "prereqs": "PSYC 304 || PSYC 360 || PSYC 371",
+            "prereqText": "One of PSYC 304, PSYC 360, PSYC 371.",
+            "title": "Behavioural Neuroendocrinology",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=460&campuscd=UBC"
+        },
+        "PSYC 461": {
+            "name": "PSYC 461",
+            "prereqs": "PSYC 304 || PSYC 360 || PSYC 371 || PSYC 460",
+            "prereqText": "One of PSYC 304, PSYC 360, PSYC 371, PSYC 460.",
+            "title": "Neuroplasticity and Behaviour",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=461&campuscd=UBC"
+        },
+        "PSYC 462": {
+            "name": "PSYC 462",
+            "prereqs": "PSYC 304 || PSYC 360 || PSYC 371",
+            "prereqText": "One of PSYC 304, PSYC 360, PSYC 371. BIOL 205 and/or PCTH 325 recommended.",
+            "title": "Drugs and Behavioural Neuroscience",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=462&campuscd=UBC"
+        },
+        "PSYC 472": {
+            "name": "PSYC 472",
+            "prereqs": "PSYC 361",
+            "prereqText": "PSYC 361.",
+            "title": "Advanced Neuroscience of Motivation",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PSYC&course=472&campuscd=UBC"
+        }
+    }
+}

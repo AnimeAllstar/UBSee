@@ -118,6 +118,24 @@
                     <label class="form-check-label" for="up">Up</label>
                   </div>
                 </li>
+                <!-- Layering Setting -->
+                <li class="list-group-item rounded-0">
+                  <h6>Layering</h6>
+                  <span>Select the layering style of the graph</span>
+                  <br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layering" value="0" checked />
+                    <label class="form-check-label" for="right">longest path to source</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layering" value="1" />
+                    <label class="form-check-label" for="down">Longest path to sink</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layering" value="2" />
+                    <label class="form-check-label" for="down">Optimal link length</label>
+                  </div>
+                </li>
                 <!-- Focus Setting -->
                 <li class="list-group-item rounded-0">
                   <h6>Focus</h6>
@@ -204,9 +222,15 @@
                       <span>Ineligible</span>
                     </div>
                   </p>
-                  <p class="mb-1">
+                  <p>
                     <i class="text-primary"> Right-click </i> on a node to see the UBC course page link and the UBSee
-                    course graph link.</p>
+                    course graph link.
+                  </p>
+                  <p class="mb-1">
+                    <i class="text-primary"> Ctrl + z </i> is undo and <i class="text-primary"> Ctrl + y </i> is redo.
+                    The graph has to be selected (click anywhere on the graph to select it (on the white space, for
+                    example)).
+                  </p>
                 </li>
               </ul>
             </div>

@@ -1,0 +1,151 @@
+{
+    "CPEN": {
+        "CPEN 211": {
+            "name": "CPEN 211",
+            "prereqs": "",
+            "prereqText": "APSC 160.",
+            "title": "Introduction to Microcomputers",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=211&campuscd=UBC"
+        },
+        "CPEN 221": {
+            "name": "CPEN 221",
+            "prereqs": "",
+            "prereqText": "APSC 160.",
+            "title": "Principles of Software Construction",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=221&campuscd=UBC"
+        },
+        "CPEN 223": {
+            "name": "CPEN 223",
+            "prereqs": "",
+            "prereqText": "APSC 160.",
+            "title": "Software Design for Engineers",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=223&campuscd=UBC"
+        },
+        "CPEN 281": {
+            "name": "CPEN 281",
+            "prereqs": "",
+            "prereqText": "One of APSC 176, ENGL 110, ENGL 111, ENGL 112, ENGL 120, ENGL 121, WRDS 150.",
+            "title": "Technical Communication",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=281&campuscd=UBC"
+        },
+        "CPEN 291": {
+            "name": "CPEN 291",
+            "prereqs": "CPEN 211",
+            "prereqText": "One of EECE 259, CPEN 211.",
+            "title": "Computer Engineering Design Studio I",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=291&campuscd=UBC"
+        },
+        "CPEN 311": {
+            "name": "CPEN 311",
+            "prereqs": "CPEN 211 || CPEN 312",
+            "prereqText": "One of EECE 259, CPEN 211, EECE 355, CPEN 312.",
+            "title": "Digital Systems Design",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=311&campuscd=UBC"
+        },
+        "CPEN 312": {
+            "name": "CPEN 312",
+            "prereqs": "",
+            "prereqText": "One of EECE 251, ELEC 201, EECE 252, ELEC 204, EECE 263, ELEC 203, MECH 221.",
+            "title": "Digital Systems and Microcomputers",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=312&campuscd=UBC"
+        },
+        "CPEN 321": {
+            "name": "CPEN 321",
+            "prereqs": "CPEN 221",
+            "prereqText": "One of EECE 210, CPEN 221, CPSC 210, EECE 309.",
+            "title": "Software Engineering",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=321&campuscd=UBC"
+        },
+        "CPEN 331": {
+            "name": "CPEN 331",
+            "prereqs": "CPEN 221",
+            "prereqText": "CPSC 261 and one of EECE 210, CPEN 221, EECE 309.",
+            "title": "Operating Systems",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=331&campuscd=UBC"
+        },
+        "CPEN 333": {
+            "name": "CPEN 333",
+            "prereqs": "CPEN 223",
+            "prereqText": "One of CPSC 259, CPEN 223.",
+            "title": "System Software Engineering",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=333&campuscd=UBC"
+        },
+        "CPEN 391": {
+            "name": "CPEN 391",
+            "prereqs": "CPEN 291 && CPEN 311",
+            "prereqText": "One of CPEN 291, ELEC 291, ELEC 292, EECE 281 and one of EECE 353, CPEN 311.",
+            "title": "Computer Engineering Design Studio II",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=391&campuscd=UBC"
+        },
+        "CPEN 411": {
+            "name": "CPEN 411",
+            "prereqs": "CPEN 311 || CPEN 312",
+            "prereqText": "Either (a) one of EECE 353, CPEN 311 or (b) one of EECE 355, CPEN 312.",
+            "title": "Computer Architecture",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=411&campuscd=UBC"
+        },
+        "CPEN 412": {
+            "name": "CPEN 412",
+            "prereqs": "CPEN 311 && (CPEN 211 || CPEN 312)",
+            "prereqText": "One of EECE 353, CPEN 311 and one of EECE 259, CPEN 211, EECE 355, CPEN 312.",
+            "title": "Microcomputer Systems Design",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=412&campuscd=UBC"
+        },
+        "CPEN 421": {
+            "name": "CPEN 421",
+            "prereqs": "CPEN 321",
+            "prereqText": "One of EECE 310, CPEN 321, CPSC 310.",
+            "title": "Software Project Management",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=421&campuscd=UBC"
+        },
+        "CPEN 422": {
+            "name": "CPEN 422",
+            "prereqs": "CPEN 221 || CPEN 321",
+            "prereqText": "One of EECE 210, CPEN 221, EECE 309, EECE 310, CPEN 321, CPSC 210, CPSC 310.",
+            "title": "Software Testing and Analysis",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=422&campuscd=UBC"
+        },
+        "CPEN 431": {
+            "name": "CPEN 431",
+            "prereqs": "CPEN 331 && CPEN 221",
+            "prereqText": "One of EECE 315, CPEN 331, CPSC 313 and one of EECE 210, CPEN 221, EECE 309, CPSC 210.",
+            "title": "Design of Distributed Software Applications",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=431&campuscd=UBC"
+        },
+        "CPEN 432": {
+            "name": "CPEN 432",
+            "prereqs": "CPEN 333 || CPEN 331",
+            "prereqText": "One of EECE 314, CPEN 333, EECE 315, CPEN 331, CPSC 313.",
+            "title": "Real-time System Design",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=432&campuscd=UBC"
+        },
+        "CPEN 441": {
+            "name": "CPEN 441",
+            "prereqs": "CPEN 221 || CPEN 333",
+            "prereqText": "One of CPSC 260, CPSC 221 and one of EECE 210, CPEN 221, EECE 309, CPSC 210, EECE 314, CPEN 333.",
+            "title": "Human Computer Interfaces in Engineering Design",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=441&campuscd=UBC"
+        },
+        "CPEN 442": {
+            "name": "CPEN 442",
+            "prereqs": "CPEN 333 || CPEN 331",
+            "prereqText": "One of EECE 314, CPEN 333, EECE 315, CPEN 331, CPSC 313.",
+            "title": "Introduction to Cybersecurity",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=442&campuscd=UBC"
+        },
+        "CPEN 481": {
+            "name": "CPEN 481",
+            "prereqs": "",
+            "prereqText": "None",
+            "title": "Economic Analysis of Engineering Projects",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=481&campuscd=UBC"
+        },
+        "CPEN 491": {
+            "name": "CPEN 491",
+            "prereqs": "CPEN 391 || EECE 381",
+            "prereqText": "One of CPEN 391, EECE 381.",
+            "title": "Computer Engineering Capstone Design Project",
+            "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CPEN&course=491&campuscd=UBC"
+        }
+    }
+}

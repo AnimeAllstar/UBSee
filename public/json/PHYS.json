@@ -1,0 +1,361 @@
+{
+  "PHYS": {
+    "PHYS 100": {
+      "name": "PHYS 100",
+      "prereqs": "",
+      "prereqText": "Not open to students with credit for PHYS 12. Principles of Mathematics 12 or Pre-calculus 12 is required; Physics 11 is required for first-year students, strongly recommended for others.",
+      "title": "Introductory Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=100&campuscd=UBC"
+    },
+    "PHYS 101": {
+      "name": "PHYS 101",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Energy and Waves",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=101"
+    },
+    "PHYS 102": {
+      "name": "PHYS 102",
+      "prereqs": "PHYS 101 || PHYS 107",
+      "prereqText": "One of PHYS 101, PHYS 107.",
+      "title": "Electricity, Light and Radiation",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=102"
+    },
+    "PHYS 106": {
+      "name": "PHYS 106",
+      "prereqs": "PHYS 100",
+      "prereqText": "Either (a) a score more than 85% in all of PHYS 12, MATH 12 or (b) a score more than 85% in all of PHYS 12, PREC 12 or (c) a score more than 85% in all of PHYS 12, CALC 12 or (d) a score more than 85% in PHYS 100. PHYS 12 = Physics 12; MATH 12 = Principles of Mathematics 12; PREC 12 = Pre-Calculus 12; CALC 12 = Calculus 12.",
+      "title": "Enriched Physics 1 (lecture)",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=106&campuscd=UBC"
+    },
+    "PHYS 107": {
+      "name": "PHYS 107",
+      "prereqs": "PHYS 100",
+      "prereqText": "Either (a) a score of 85% or higher in all of PHYS 12, MATH 12 or (b) a score of 85% or higher in all of PHYS 12, PREC 12 or (c) a score of 85% or higher in all of PHYS 12, CALC 12 or (d) a score of 85% or higher in PHYS 100. MATH 12 = Principles of Mathematics 12; PREC 12 = Pre-Calculus 12; CALC 12 = Calculus 12; PHYS 12 = Physics 12.",
+      "title": "Enriched Physics 1",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=107"
+    },
+    "PHYS 108": {
+      "name": "PHYS 108",
+      "prereqs": "PHYS 106 || PHYS 107 || PHYS 101 || PHYS 131 || PHYS 117",
+      "prereqText": "Either (a) one of PHYS 106, PHYS 107 or (b) a score of 85% or higher in one of PHYS 101, PHYS 131 or (c) a score of 85% or higher in PHYS 117.",
+      "title": "Enriched Physics II",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=108&campuscd=UBC"
+    },
+    "PHYS 109": {
+      "name": "PHYS 109",
+      "prereqs": "PHYS 107",
+      "prereqText": "PHYS 107.",
+      "title": "Enriched Experimental Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=109&campuscd=UBC"
+    },
+    "PHYS 117": {
+      "name": "PHYS 117",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Dynamics and Waves",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=117&campuscd=UBC"
+    },
+    "PHYS 118": {
+      "name": "PHYS 118",
+      "prereqs": "PHYS 101 || PHYS 106 || PHYS 107 || PHYS 117 || PHYS 131 || PHYS 157",
+      "prereqText": "One of PHYS 101, PHYS 106, PHYS 107, PHYS 117, PHYS 131, PHYS 157 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.",
+      "title": "Electricity, Light and Radiation",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=118&campuscd=UBC"
+    },
+    "PHYS 119": {
+      "name": "PHYS 119",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Experimental Physics Lab",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=119&campuscd=UBC"
+    },
+    "PHYS 131": {
+      "name": "PHYS 131",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Energy and Waves (Lecture)",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=131&campuscd=UBC"
+    },
+    "PHYS 153": {
+      "name": "PHYS 153",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Elements of Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=153"
+    },
+    "PHYS 157": {
+      "name": "PHYS 157",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Introductory Physics for Engineers I",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=157&campuscd=UBC"
+    },
+    "PHYS 158": {
+      "name": "PHYS 158",
+      "prereqs": "PHYS 157",
+      "prereqText": "PHYS 157.",
+      "title": "Introductory Physics for Engineers II",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=158&campuscd=UBC"
+    },
+    "PHYS 159": {
+      "name": "PHYS 159",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100.",
+      "title": "Introductory Physics Laboratory for Engineers",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=159&campuscd=UBC"
+    },
+    "PHYS 170": {
+      "name": "PHYS 170",
+      "prereqs": "PHYS 100",
+      "prereqText": "One of PHYS 12, PHYS 100 and one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184.",
+      "title": "Mechanics I",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=170&campuscd=UBC"
+    },
+    "PHYS 200": {
+      "name": "PHYS 200",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 158 || PHYS 153",
+      "prereqText": "Either (a) one of PHYS 102, PHYS 108, PHYS 118, PHYS 158, PHYS 153 and one of MATH 101, MATH 103, MATH 105, MATH 121;  or (b) SCIE 001.",
+      "title": "Relativity and Quanta",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=200&campuscd=UBC"
+    },
+    "PHYS 203": {
+      "name": "PHYS 203",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 158 || PHYS 153",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 158, PHYS 153, SCIE 001.",
+      "title": "Thermal Physics I",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=203&campuscd=UBC"
+    },
+    "PHYS 209": {
+      "name": "PHYS 209",
+      "prereqs": "(PHYS 108 && PHYS 109) || (PHYS 102 || PHYS 153) || (PHYS 158 && PHYS 159) || (PHYS 118 || PHYS 119)",
+      "prereqText": "Either (a) all of PHYS 108, PHYS 109 or (b) one of PHYS 102, PHYS 153 or (c) SCIE 001 or (d) all of PHYS 158, PHYS 159 or (e) all of PHYS 118, PHYS 119.",
+      "title": "Intermediate Experimental Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=209"
+    },
+    "PHYS 210": {
+      "name": "PHYS 210",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 158 || PHYS 153",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 158, PHYS 153, SCIE 001.",
+      "title": "Introduction to Computational Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=210&campuscd=UBC"
+    },
+    "PHYS 216": {
+      "name": "PHYS 216",
+      "prereqs": "PHYS 107 || PHYS 117 || PHYS 170",
+      "prereqText": "One of PHYS 107, PHYS 117, PHYS 170, SCIE 001 and one of MATH 152, MATH 221, MATH 223.",
+      "title": "Intermediate Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=216&campuscd=UBC"
+    },
+    "PHYS 219": {
+      "name": "PHYS 219",
+      "prereqs": "((PHYS 108 || PHYS 118) && (PHYS 109 || PHYS 119)) || PHYS 102 || (PHYS 158 && PHYS 159)",
+      "prereqText": "Either (a) one of PHYS 108, PHYS 118 and one of PHYS 109, PHYS 119;  or (b) PHYS 102 or (c) all of PHYS 158, PHYS 159 or (d) SCIE 001.",
+      "title": "Intermediate Experimental Physics I",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=219&campuscd=UBC"
+    },
+    "PHYS 229": {
+      "name": "PHYS 229",
+      "prereqs": "PHYS 219",
+      "prereqText": "PHYS 219.",
+      "title": "Intermediate Experimental Physics II",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=229&campuscd=UBC"
+    },
+    "PHYS 250": {
+      "name": "PHYS 250",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 158 || PHYS 153",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 158, PHYS 153, SCIE 001.",
+      "title": "Introduction to Modern Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=250"
+    },
+    "PHYS 301": {
+      "name": "PHYS 301",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 153 || PHYS 158",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and one of MATH 217, MATH 227, MATH 317 and one of MATH 215, MATH 255.",
+      "title": "Electricity and Magnetism",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=301&campuscd=UBC"
+    },
+    "PHYS 304": {
+      "name": "PHYS 304",
+      "prereqs": "PHYS 200 || PHYS 250",
+      "prereqText": "One of PHYS 200, PHYS 250.",
+      "title": "Introduction to Quantum Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=304&campuscd=UBC"
+    },
+    "PHYS 305": {
+      "name": "PHYS 305",
+      "prereqs": "(PHYS 102 || PHYS 108 || PHYS 118 || PHYS 153 || PHYS 158) && PHYS 203",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and either (a) PHYS 203 or (b) one of ENPH 257, CHEM 201, CHEM 205 and one of MATH 302, MATH 318, STAT 241, STAT 251, STAT 302.",
+      "title": "Introduction to Biophysics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=305&campuscd=UBC"
+    },
+    "PHYS 306": {
+      "name": "PHYS 306",
+      "prereqs": "PHYS 216",
+      "prereqText": "One of PHYS 216, ENPH 270 and one of MATH 215, MATH 255, MATH 256, MATH 258.",
+      "title": "Advanced Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=306&campuscd=UBC"
+    },
+    "PHYS 309": {
+      "name": "PHYS 309",
+      "prereqs": "PHYS 209 || PHYS 229",
+      "prereqText": "One of PHYS 209, PHYS 229, ENPH 259.",
+      "title": "Electrical Laboratory",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=309&campuscd=UBC"
+    },
+    "PHYS 312": {
+      "name": "PHYS 312",
+      "prereqs": "",
+      "prereqText": "MATH 215.",
+      "title": "Introduction to Mathematical Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=312&campuscd=UBC"
+    },
+    "PHYS 319": {
+      "name": "PHYS 319",
+      "prereqs": "PHYS 209 || PHYS 219",
+      "prereqText": "One of PHYS 209, PHYS 219, ENPH 259.",
+      "title": "Electronics Laboratory",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=319&campuscd=UBC"
+    },
+    "PHYS 333": {
+      "name": "PHYS 333",
+      "prereqs": "PHYS 101 || PHYS 102 || PHYS 107 || PHYS 108 || PHYS 117 || PHYS 118 || PHYS 153 || PHYS 157 || PHYS 158",
+      "prereqText": "Either (a) one of MATH 101, MATH 103, MATH 105, MATH 121 and one of PHYS 101, PHYS 102, PHYS 107, PHYS 108, PHYS 117, PHYS 118, PHYS 153, PHYS 157, PHYS 158;  or (b) SCIE 001.",
+      "title": "Energy and Climate",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=333&campuscd=UBC"
+    },
+    "PHYS 341": {
+      "name": "PHYS 341",
+      "prereqs": "",
+      "prereqText": "None",
+      "title": "Physics of Music",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=341&campuscd=UBC"
+    },
+    "PHYS 348": {
+      "name": "PHYS 348",
+      "prereqs": "",
+      "prereqText": "Third-year standing in a physics honours program or fourth-year standing in a physics or astronomy major program.",
+      "title": "Frontiers in Physics and Astronomy",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=348&campuscd=UBC"
+    },
+    "PHYS 349": {
+      "name": "PHYS 349",
+      "prereqs": "",
+      "prereqText": "None",
+      "title": "Directed Research Project in Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=349&campuscd=UBC"
+    },
+    "PHYS 350": {
+      "name": "PHYS 350",
+      "prereqs": "",
+      "prereqText": "One of ENPH 270.",
+      "title": "Applications of Classical Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=350&campuscd=UBC"
+    },
+    "PHYS 354": {
+      "name": "PHYS 354",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 153",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 153, SCIE 001 and one of MATH 215, MATH 255 and one of MATH 217, MATH 227, MATH 317.",
+      "title": "Electric and Magnetic Fields",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=354"
+    },
+    "PHYS 400": {
+      "name": "PHYS 400",
+      "prereqs": "PHYS 304 || PHYS 450",
+      "prereqText": "One of PHYS 304, PHYS 450.",
+      "title": "Introduction to Elementary Particles",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=400&campuscd=UBC"
+    },
+    "PHYS 401": {
+      "name": "PHYS 401",
+      "prereqs": "PHYS 301 || PHYS 354",
+      "prereqText": "One of PHYS 301, PHYS 354.",
+      "title": "Electromagnetic Theory",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=401&campuscd=UBC"
+    },
+    "PHYS 402": {
+      "name": "PHYS 402",
+      "prereqs": "PHYS 304 || PHYS 450",
+      "prereqText": "One of PHYS 304, PHYS 450.",
+      "title": "Applications of Quantum Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=402&campuscd=UBC"
+    },
+    "PHYS 403": {
+      "name": "PHYS 403",
+      "prereqs": "PHYS 203 && (PHYS 304 || PHYS 450)",
+      "prereqText": "One of PHYS 203, ENPH 257, CHEM 201, CHEM 304 and one of PHYS 304, PHYS 450, CHEM 312. One of MATH 302, MATH 318, STAT 241, STAT 251, STAT 302 is recommended.",
+      "title": "Statistical Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=403&campuscd=UBC"
+    },
+    "PHYS 404": {
+      "name": "PHYS 404",
+      "prereqs": "",
+      "prereqText": "Third year standing in Science or Applied Science is required. MATH 200 (or MATH 217 or MATH 226) is recommended.",
+      "title": "Introduction to Medical Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=404&campuscd=UBC"
+    },
+    "PHYS 405": {
+      "name": "PHYS 405",
+      "prereqs": "PHYS 102 || PHYS 108 || PHYS 118 || PHYS 153 || PHYS 158",
+      "prereqText": "One of PHYS 102, PHYS 108, PHYS 118, PHYS 153, PHYS 158, SCIE 001 and third year standing in Science or Applied Science.",
+      "title": "Radiation Biophysics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=405&campuscd=UBC"
+    },
+    "PHYS 407": {
+      "name": "PHYS 407",
+      "prereqs": "",
+      "prereqText": "One of MATH 217, MATH 227, MATH 317 and one of MATH 215, MATH 255. PHYS 301 and PHYS 306 are recommended.",
+      "title": "Introduction to General Relativity",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=407&campuscd=UBC"
+    },
+    "PHYS 408": {
+      "name": "PHYS 408",
+      "prereqs": "PHYS 301 || PHYS 354",
+      "prereqText": "One of PHYS 301, PHYS 354 and one of MATH 215, MATH 255.",
+      "title": "Optics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=408&campuscd=UBC"
+    },
+    "PHYS 410": {
+      "name": "PHYS 410",
+      "prereqs": "PHYS 312 && PHYS 210",
+      "prereqText": "One of PHYS 312, MATH 257, MATH 316 and one of PHYS 210, EOSC 211, CPSC 110, CPSC 103, APSC 160.",
+      "title": "Computational Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=410&campuscd=UBC"
+    },
+    "PHYS 438": {
+      "name": "PHYS 438",
+      "prereqs": "PHYS 101 || PHYS 106 || PHYS 107 || PHYS 117 || PHYS 131 || PHYS 157",
+      "prereqText": "One of PHYS 101, PHYS 106, PHYS 107, PHYS 117, PHYS 131, PHYS 157, SCIE 001. BIOL 325 is recommended.",
+      "title": "Zoological Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=438&campuscd=UBC"
+    },
+    "PHYS 450": {
+      "name": "PHYS 450",
+      "prereqs": "PHYS 200 || PHYS 250",
+      "prereqText": "One of PHYS 200, PHYS 250.",
+      "title": "Quantum Mechanics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=450"
+    },
+    "PHYS 473": {
+      "name": "PHYS 473",
+      "prereqs": "PHYS 304 || PHYS 450",
+      "prereqText": "One of PHYS 304, PHYS 450.",
+      "title": "Applied Nuclear Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=473&campuscd=UBC"
+    },
+    "PHYS 474": {
+      "name": "PHYS 474",
+      "prereqs": "PHYS 450 || PHYS 304",
+      "prereqText": "One of PHYS 450, PHYS 304.",
+      "title": "Applied Solid State Physics",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=474&campuscd=UBC"
+    },
+    "PHYS 490": {
+      "name": "PHYS 490",
+      "prereqs": "",
+      "prereqText": "None",
+      "title": "Student Directed Seminar",
+      "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=PHYS&course=490&campuscd=UBC"
+    }
+  }
+}

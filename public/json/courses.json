@@ -1,5 +1,441 @@
 {
   "courses": {
+    "CHEM": {
+      "CHEM 100": {
+        "name": "CHEM 100",
+        "prereqs": "",
+        "prereqText": "Not open to students with credit for Chemistry 12.  Permission of the department head.",
+        "title": "Foundations of Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=100&campuscd=UBC"
+      },
+      "CHEM 110": {
+        "name": "CHEM 110",
+        "prereqs": "",
+        "prereqText": "Not open to students with credit for Chemistry 12. A satisfactory score on the UBC Chemistry Basic Skills Test.",
+        "title": "Structure, Bonding and Equilibrium in Chemistry (Lecture)",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=110&campuscd=UBC"
+      },
+      "CHEM 111": {
+        "name": "CHEM 111",
+        "prereqs": "",
+        "prereqText": "Not open to students with credit for CHEM 12. A satisfactory score on the UBC Chemistry Basic Skills Test.",
+        "title": "Structure, Bonding, and Equilibrium in Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=111&campuscd=UBC"
+      },
+      "CHEM 115": {
+        "name": "CHEM 115",
+        "prereqs": "CHEM 110 || CHEM 120",
+        "prereqText": "One of CHEM 110, CHEM 120.",
+        "title": "Introductory Chemical Laboratory I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=115&campuscd=UBC"
+      },
+      "CHEM 120": {
+        "name": "CHEM 120",
+        "prereqs": "CHEM 100",
+        "prereqText": "One of CHEM 12, CHEM 100.",
+        "title": "Structure and Bonding in Chemistry (Lecture)",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=120&campuscd=UBC"
+      },
+      "CHEM 121": {
+        "name": "CHEM 121",
+        "prereqs": "CHEM 100",
+        "prereqText": "One of CHEM 12, CHEM 100.",
+        "title": "Structure and Bonding in Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=121&campuscd=UBC"
+      },
+      "CHEM 123": {
+        "name": "CHEM 123",
+        "prereqs": "CHEM 111 || CHEM 121",
+        "prereqText": "One of CHEM 111, CHEM 121.",
+        "title": "Thermodynamics, Kinetics and Organic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=123"
+      },
+      "CHEM 130": {
+        "name": "CHEM 130",
+        "prereqs": "CHEM 110 || CHEM 111 || CHEM 120 || CHEM 121",
+        "prereqText": "One of CHEM 110, CHEM 111, CHEM 120, CHEM 121.",
+        "title": "Thermodynamics, Kinetics and Organic Chemistry (Lecture)",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=130&campuscd=UBC"
+      },
+      "CHEM 135": {
+        "name": "CHEM 135",
+        "prereqs": "CHEM 111 || CHEM 115 || CHEM 121",
+        "prereqText": "One of CHEM 111, CHEM 115, CHEM 121.",
+        "title": "Introductory Chemical Laboratory II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=135&campuscd=UBC"
+      },
+      "CHEM 154": {
+        "name": "CHEM 154",
+        "prereqs": "",
+        "prereqText": "CHEM 12.",
+        "title": "Chemistry for Engineering",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=154&campuscd=UBC"
+      },
+      "CHEM 203": {
+        "name": "CHEM 203",
+        "prereqs": "CHEM 123 || (CHEM 130 && CHEM 135)",
+        "prereqText": "Either (a) CHEM 123 or (b) all of CHEM 130, CHEM 135 or (c) SCIE 001.",
+        "title": "Introduction to Organic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=203&campuscd=UBC"
+      },
+      "CHEM 205": {
+        "name": "CHEM 205",
+        "prereqs": "CHEM 130 || CHEM 123 || CHEM 154",
+        "prereqText": "Either (a) SCIE 001 or (b) one of MATH 100, MATH 102, MATH 104, MATH 110, MATH 120, MATH 180, MATH 184 and one of CHEM 130, CHEM 123, CHEM 154.",
+        "title": "Physical Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=205&campuscd=UBC"
+      },
+      "CHEM 208": {
+        "name": "CHEM 208",
+        "prereqs": "CHEM 130 || CHEM 123",
+        "prereqText": "One of CHEM 130, CHEM 123, SCIE 001.",
+        "title": "Coordination Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=208&campuscd=UBC"
+      },
+      "CHEM 210": {
+        "name": "CHEM 210",
+        "prereqs": " CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130, SCIE 001.",
+        "title": "Introduction to Chemical Analysis (Lecture)",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=210&campuscd=UBC"
+      },
+      "CHEM 211": {
+        "name": "CHEM 211",
+        "prereqs": "CHEM 123 || (CHEM 130 && CHEM 135)",
+        "prereqText": "Either (a) CHEM 123 or (b) all of CHEM 130, CHEM 135 or (c) SCIE 001.",
+        "title": "Introduction to Chemical Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=211&campuscd=UBC"
+      },
+      "CHEM 213": {
+        "name": "CHEM 213",
+        "prereqs": "CHEM 203 || CHEM 223 || CHEM 233",
+        "prereqText": "Either (a) one of CHEM 203, CHEM 223 or (b) a score of 76% or higher in CHEM 233.",
+        "title": "Organic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=213&campuscd=UBC"
+      },
+      "CHEM 215": {
+        "name": "CHEM 215",
+        "prereqs": "CHEM 210 && (CHEM 123 || CHEM 135)",
+        "prereqText": "CHEM 210 and one of CHEM 123, CHEM 135.",
+        "title": "Introductory Analytical Chemical Laboratory",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=215&campuscd=UBC"
+      },
+      "CHEM 218": {
+        "name": "CHEM 218",
+        "prereqs": "CHEM 208",
+        "prereqText": "CHEM 208.",
+        "title": "Fundamentals of Reactivity in Inorganic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=218&campuscd=UBC"
+      },
+      "CHEM 223": {
+        "name": "CHEM 223",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130, SCIE 001.",
+        "title": "Introduction to Organic Chemistry (Lecture)",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=223&campuscd=UBC"
+      },
+      "CHEM 225": {
+        "name": "CHEM 225",
+        "prereqs": "CHEM 123 || CHEM 135",
+        "prereqText": "One of CHEM 123, CHEM 135.",
+        "title": "Introductory Synthetic Chemical Laboratory ",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=225&campuscd=UBC"
+      },
+      "CHEM 233": {
+        "name": "CHEM 233",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130, SCIE 001.",
+        "title": "Organic Chemistry for the Biological Sciences",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=233&campuscd=UBC"
+      },
+      "CHEM 235": {
+        "name": "CHEM 235",
+        "prereqs": "CHEM 123 || CHEM 135",
+        "prereqText": "One of CHEM 123, CHEM 135, SCIE 001.",
+        "title": "Organic Chemistry Laboratory",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=235&campuscd=UBC"
+      },
+      "CHEM 245": {
+        "name": "CHEM 245",
+        "prereqs": "CHEM 203 || (CHEM 223 && CHEM 225) || (CHEM 233 && CHEM 235)",
+        "prereqText": "Either (a) CHEM 203 or (b) all of CHEM 223, CHEM 225 or (c) all of CHEM 233, CHEM 235.",
+        "title": "Intermediate Synthetic Chemistry Laboratory",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=245&campuscd=UBC"
+      },
+      "CHEM 250": {
+        "name": "CHEM 250",
+        "prereqs": "CHEM 123 || CHEM 130 || CHEM 154",
+        "prereqText": "One of CHEM 123, CHEM 130, CHEM 154, SCIE 001.",
+        "title": "Inorganic Chemistry for Engineers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=250&campuscd=UBC"
+      },
+      "CHEM 260": {
+        "name": "CHEM 260",
+        "prereqs": "CHEM 123 || CHEM 130 || CHEM 154",
+        "prereqText": "One of CHEM 123, CHEM 130, CHEM 154, SCIE 001.",
+        "title": "Organic Chemistry for Engineers",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=260&campuscd=UBC"
+      },
+      "CHEM 300": {
+        "name": "CHEM 300",
+        "prereqs": "",
+        "prereqText": "Third year standing",
+        "title": "Communicating Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=300&campuscd=UBC"
+      },
+      "CHEM 301": {
+        "name": "CHEM 301",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130 and Third year standing.",
+        "title": "Aqueous Environmental Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=301&campuscd=UBC"
+      },
+      "CHEM 302": {
+        "name": "CHEM 302",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130, CHBE 220 and Third year standing.",
+        "title": "Atmospheric Environmental Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=302&campuscd=UBC"
+      },
+      "CHEM 304": {
+        "name": "CHEM 304",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 263.",
+        "title": "Fundamentals of Thermodynamics and Statistical Mechanics",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=304&campuscd=UBC"
+      },
+      "CHEM 305": {
+        "name": "CHEM 305",
+        "prereqs": "CHEM 205 || CHEM 304",
+        "prereqText": "One of MATH 200, MATH 217, MATH 226, MATH 253 and either (a) a score of 76% or higher in CHEM 205 or (b) CHEM 304 or (c) PHYS 203.",
+        "title": "Biophysical Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=305&campuscd=UBC"
+      },
+      "CHEM 311": {
+        "name": "CHEM 311",
+        "prereqs": "CHEM 210 || CHEM 211",
+        "prereqText": "One of CHEM 210, CHEM 211.",
+        "title": "Instrumental Analytical Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=311&campuscd=UBC"
+      },
+      "CHEM 312": {
+        "name": "CHEM 312",
+        "prereqs": "CHEM 123",
+        "prereqText": "One of CHEM 123, SCIE 001 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 263.",
+        "title": "Introduction to Quantum Mechanics and Spectroscopy",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=312&campuscd=UBC"
+      },
+      "CHEM 313": {
+        "name": "CHEM 313",
+        "prereqs": "CHEM 213",
+        "prereqText": "CHEM 213.",
+        "title": "Advanced Organic Chemistry for the Life Sciences",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=313&campuscd=UBC"
+      },
+      "CHEM 315": {
+        "name": "CHEM 315",
+        "prereqs": "CHEM 203 || CHEM 208 || CHEM 211 || CHEM 215 || CHEM 225 || CHEM 235",
+        "prereqText": "One of CHEM 203, CHEM 208, CHEM 211, CHEM 215, CHEM 225, CHEM 235.",
+        "title": "Chemistry Integrated Laboratory I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=315&campuscd=UBC"
+      },
+      "CHEM 318": {
+        "name": "CHEM 318",
+        "prereqs": "CHEM 218 || CHEM 250",
+        "prereqText": "One of CHEM 218, CHEM 250.",
+        "title": "Principles of Catalysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=318&campuscd=UBC"
+      },
+      "CHEM 319": {
+        "name": "CHEM 319",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Practical Skills for Chemical Research",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=319&campuscd=UBC"
+      },
+      "CHEM 325": {
+        "name": "CHEM 325",
+        "prereqs": "(CHEM 211 || CHEM 215) && (CHEM 208 && CHEM 213 && CHEM 245)",
+        "prereqText": "One of CHEM 211, CHEM 215 and all of CHEM 208, CHEM 213, CHEM 245.",
+        "title": "Integrated Chemistry Laboratory I",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=325&campuscd=UBC"
+      },
+      "CHEM 327": {
+        "name": "CHEM 327",
+        "prereqs": "(CHEM 208 || CHEM 250) && (CHEM 203 || CHEM 223 || CHEM 233 || CHEM 260)",
+        "prereqText": "One of CHEM 208, CHEM 250 and one of CHEM 203, CHEM 223, CHEM 233, CHEM 260.",
+        "title": "Introduction to Materials Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=327&campuscd=UBC"
+      },
+      "CHEM 329": {
+        "name": "CHEM 329",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Research Ethics and Data Analysis Skills",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=329&campuscd=UBC"
+      },
+      "CHEM 330": {
+        "name": "CHEM 330",
+        "prereqs": "CHEM 213",
+        "prereqText": "CHEM 213.",
+        "title": "Advanced Organic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=330&campuscd=UBC"
+      },
+      "CHEM 335": {
+        "name": "CHEM 335",
+        "prereqs": "CHEM 315",
+        "prereqText": "CHEM 315.",
+        "title": "Chemistry Integrated Laboratory II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=335&campuscd=UBC"
+      },
+      "CHEM 341": {
+        "name": "CHEM 341",
+        "prereqs": "CHEM 203 || CHEM 223 || CHEM 233 || CHEM 260",
+        "prereqText": "One of CHEM 203, CHEM 223, CHEM 233, CHEM 260.",
+        "title": "Global Challenges: A Chemical Perspective",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=341&campuscd=UBC"
+      },
+      "CHEM 345": {
+        "name": "CHEM 345",
+        "prereqs": "CHEM 325",
+        "prereqText": "CHEM 325.",
+        "title": "Integrated Chemistry Laboratory II",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=345&campuscd=UBC"
+      },
+      "CHEM 401": {
+        "name": "CHEM 401",
+        "prereqs": "CHEM 325",
+        "prereqText": "One of CHEM 325, PHYS 304.",
+        "title": "Principles of Spectroscopy",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=401&campuscd=UBC"
+      },
+      "CHEM 402": {
+        "name": "CHEM 402",
+        "prereqs": "CHEM 208",
+        "prereqText": "CHEM 208.",
+        "title": "Diffraction Methods",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=402&campuscd=UBC"
+      },
+      "CHEM 403": {
+        "name": "CHEM 403",
+        "prereqs": "CHEM 304",
+        "prereqText": "CHEM 304 and one of MATH 200, MATH 217, MATH 226, MATH 253, MATH 263.",
+        "title": "Surface Chemistry and Surface Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=403&campuscd=UBC"
+      },
+      "CHEM 404": {
+        "name": "CHEM 404",
+        "prereqs": "CHEM 123 || CHEM 130 || CHEM 154",
+        "prereqText": "Either (a) SCIE 001 or (b) one of CHEM 123, CHEM 130, CHEM 154 and one of PHYS 106, PHYS 107, PHYS 108, PHYS 117, PHYS 118, PHYS 170 and one of MATH 101, MATH 103, MATH 105, MATH 121 and Third-year standing.",
+        "title": "Computational Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=404&campuscd=UBC"
+      },
+      "CHEM 405": {
+        "name": "CHEM 405",
+        "prereqs": "CHEM 304 || CHEM 305",
+        "prereqText": "One of CHEM 304, CHEM 305, PHYS 203.",
+        "title": "Biophysical Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=405&campuscd=UBC"
+      },
+      "CHEM 406": {
+        "name": "CHEM 406",
+        "prereqs": "(CHEM 213 || CHEM 260) && (CHEM 205 || CHEM 304)",
+        "prereqText": "One of CHEM 213, CHEM 260 and one of CHEM 205, CHEM 304, CHBE 220.",
+        "title": "Polymer Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=406&campuscd=UBC"
+      },
+      "CHEM 407": {
+        "name": "CHEM 407",
+        "prereqs": "CHEM 304",
+        "prereqText": "One of CHEM 304, PHYS 203.",
+        "title": "Statistical Mechanics in Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=407&campuscd=UBC"
+      },
+      "CHEM 410": {
+        "name": "CHEM 410",
+        "prereqs": "CHEM 304 && CHEM 312",
+        "prereqText": "One of CHEM 304, PHYS 203 and one of CHEM 312, PHYS 304.",
+        "title": "Properties of Materials",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=410&campuscd=UBC"
+      },
+      "CHEM 411": {
+        "name": "CHEM 411",
+        "prereqs": "CHEM 460",
+        "prereqText": "CHEM 460.",
+        "title": "Synthesis and Chemistry of Natural Products",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=411&campuscd=UBC"
+      },
+      "CHEM 412": {
+        "name": "CHEM 412",
+        "prereqs": "CHEM 312",
+        "prereqText": "One of CHEM 312, PHYS 304 and one of MATH 152, MATH 221, MATH 223.",
+        "title": "Electronic Structure of Atoms and Molecules",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=412&campuscd=UBC"
+      },
+      "CHEM 413": {
+        "name": "CHEM 413",
+        "prereqs": "CHEM 313 || CHEM 330",
+        "prereqText": "One of CHEM 313, CHEM 330.",
+        "title": "Bioorganic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=413&campuscd=UBC"
+      },
+      "CHEM 417": {
+        "name": "CHEM 417",
+        "prereqs": "CHEM 123 || CHEM 130",
+        "prereqText": "One of CHEM 123, CHEM 130 and Third year standing. CHEM 312 is recommended.",
+        "title": "Nuclear Chemistry and Radiochemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=417&campuscd=UBC"
+      },
+      "CHEM 418": {
+        "name": "CHEM 418",
+        "prereqs": "CHEM 318",
+        "prereqText": "CHEM 318.",
+        "title": "Organometallic Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=418&campuscd=UBC"
+      },
+      "CHEM 427": {
+        "name": "CHEM 427",
+        "prereqs": "CHEM 327",
+        "prereqText": "CHEM 327.",
+        "title": "Applications of Materials Chemistry",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=427&campuscd=UBC"
+      },
+      "CHEM 434": {
+        "name": "CHEM 434",
+        "prereqs": "CHEM 311",
+        "prereqText": "CHEM 311.",
+        "title": "Principles of Chemical Separation",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=434&campuscd=UBC"
+      },
+      "CHEM 449": {
+        "name": "CHEM 449",
+        "prereqs": "",
+        "prereqText": "None",
+        "title": "Seminar and Thesis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=449&campuscd=UBC"
+      },
+      "CHEM 460": {
+        "name": "CHEM 460",
+        "prereqs": "CHEM 330",
+        "prereqText": "CHEM 330.",
+        "title": "Organic Synthesis: A Mechanistic Approach",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=460&campuscd=UBC"
+      },
+      "CHEM 461": {
+        "name": "CHEM 461",
+        "prereqs": "CHEM 313 || CHEM 330",
+        "prereqText": "One of CHEM 313, CHEM 330.",
+        "title": "Synthetic Chemical Biology",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=461&campuscd=UBC"
+      },
+      "CHEM 473": {
+        "name": "CHEM 473",
+        "prereqs": "CHEM 245 && (CHEM 313 || CHEM 318 || CHEM 330)",
+        "prereqText": "CHEM 245 and one of CHEM 313, CHEM 318, CHEM 330.",
+        "title": "Structure Determination and Reaction Analysis",
+        "url": "https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&tname=subj-course&dept=CHEM&course=473&campuscd=UBC"
+      }
+    },
     "CPSC": {
       "CPSC 100": {
         "name": "CPSC 100",

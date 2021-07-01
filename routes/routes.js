@@ -33,16 +33,13 @@ router.get('/subject/:subject/course/:course', (req, res) => {
     } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
       res.redirect('/invalid-link');
     } else {
-      p = path.join(ROOT, 'views', 'index.html');
-      data = {
+      res.render(path.join(ROOT, 'views', 'index.html'), {
         subject: sub,
         course: req.params.course,
         subjects: Object.keys(obj.courses),
         title: `${sub} ${req.params.course} - UBSee`
-      }
+      });
     }
-
-    res.render(p, data);
   })
 });
 

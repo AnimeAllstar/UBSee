@@ -29,20 +29,17 @@ router.get('/subject/:subject/course/:course', (req, res) => {
     let data;
     const sub = req.params.subject;
     if (!Object.keys(obj.courses).includes(sub)) {
-      res.redirect('/invalid-subject');
+      res.redirect('/invalid-link');
     } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
-      res.redirect('/invalid-course');
+      res.redirect('/invalid-link');
     } else {
-      p = path.join(ROOT, 'views', 'index.html');
-      data = {
+      res.render(path.join(ROOT, 'views', 'index.html'), {
         subject: sub,
         course: req.params.course,
         subjects: Object.keys(obj.courses),
         title: `${sub} ${req.params.course} - UBSee`
-      }
+      });
     }
-
-    res.render(p, data);
   })
 });
 
@@ -58,7 +55,7 @@ router.get('/subject/:subject', (req, res) => {
         title: `${req.params.subject} - UBSee`
       });
     } else {
-      res.redirect('/invalid-subject');
+      res.redirect('/invalid-link');
     }
   })
 });

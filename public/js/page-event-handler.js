@@ -46,6 +46,7 @@ function openTab() {
 // updates graph paramaters using variables in the Settings tab in index.html
 function updateGraph() {
   myGraph.startTransaction("update");
+  setLayeringOption(getRadioValue("layering"));
   myGraph.layout.direction = parseInt(getRadioValue("direction"));
   const checkedArr = getCheckboxes("focus");
   if (checkedArr) {
@@ -61,6 +62,17 @@ function getRadioValue(name) {
     if (radio[i].checked) {
       return radio[i].value;
     }
+  }
+}
+
+// sets myGraph.layout.layeringOption
+function setLayeringOption(layering) {
+  if (layering == 0) {
+    myGraph.layout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSource;
+  } else if (layering == 1) {
+    myGraph.layout.layeringOption = go.LayeredDigraphLayout.LayerLongestPathSink;
+  } else if (layering == 2) {
+    myGraph.layout.layeringOption = go.LayeredDigraphLayout.LayerOptimalLinkLength;
   }
 }
 

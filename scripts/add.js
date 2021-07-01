@@ -63,7 +63,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
         if (completedRequests === Object.keys(newSubject[subject]).length) {
 
           // sorts newSubject[subject] using course names
-          sortJson.overwrite(FILE, {
+          newSubject[subject] = sortJson(newSubject[subject], {
             ignoreCase: true
           });
 

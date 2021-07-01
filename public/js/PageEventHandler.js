@@ -4,6 +4,7 @@ const copyTooltip = new bootstrap.Tooltip(copyBtn, {
   boundary: document.body
 });
 
+// events listener to reset tooltip text
 copyBtn.addEventListener('hidden.bs.tooltip', () => {
   copyBtn.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
 })
@@ -75,11 +76,12 @@ function getCheckboxes(name) {
   return unchecked;
 }
 
+// updates range slider label value
 function updateDisplayText(val) {
   document.getElementById('displayRangeText').innerText = "Display courses up to year " + val;
 }
 
-// sets node.shape opacity to 0.4 if it is unchecked
+// sets node.shape opacity to 0.4 if it's year level is unchecked
 function updateOpacity(arr) {
   myGraph.nodes.each(function (node) {
     const shape = node.findObject("shape");

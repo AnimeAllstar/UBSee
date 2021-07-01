@@ -47,6 +47,7 @@ function addToGraph(course) {
   links.push(course);
 }
 
+// adds to graph if year level condition is met
 function SelectiveAddToGraph(course) {
   if (course.name.split(" ")[1].substring(0, 1) <= year) {
     addToGraph(course);
@@ -58,7 +59,6 @@ function SelectiveAddToGraph(course) {
 function iterateCourses(course, arg, func) {
   const re = new RegExp(course.name.split(" ")[0] + "\\s\\d{3}", "g");
   const courseList = course.prereqs.match(re);
-
   if (courseList) {
     courseList.forEach((c) => {
       func(c, arg);
@@ -67,14 +67,16 @@ function iterateCourses(course, arg, func) {
 }
 
 // recursively adds all nodes with possibile link to course
-// used to create dataset for inverse graph
-function recursiveAddInverse(course, subject) {
+// used to create dataset for course graph
+function recursiveAdd(course, subject) {
   addToGraph(course);
   iterateCourses(course, subject, (c, subject) => {
-    // if course has not been added to nodes[] call recursiveAddInverse on it
+    // if course has not been added to nodes[] call recursiveAdd on it
     // this allows all the courses connect to the initial node to be added to nodes[]
     if (!nodes.some((e) => e.key === c)) {
-      recursiveAddInverse(subject[c], subject);
+      if (subject[c]) {
+        recursiveAdd(subject[c], subject);
+      }
     }
   });
 }
@@ -87,9 +89,9 @@ async function getData(req) {
 
   // conditions check for what data to fetch
   if (req.course && req.subject) {
-    // inverse graph
+    // course graph
     subject = dataJson.courses[req.subject];
-    recursiveAddInverse(subject[req.subject + " " + req.course], subject);
+    recursiveAdd(subject[req.subject + " " + req.course], subject);
     return {
       nodes,
       links: links
@@ -288,14 +290,14 @@ function createContextMenu() {
       getContextMenuButton("Course Page", "text1", "shape1", (e, obj) => {
         window.open(obj.part.data.url);
       }),
-      getContextMenuButton("Inverse Graph", "text2", "shape2", (e, obj) => {
-        openInverseGraph(obj);
+      getContextMenuButton("Course Graph", "text2", "shape2", (e, obj) => {
+        openCourseGraph(obj);
       })
     ));
 }
 
 // opens new tab (for hover menu)
-function openInverseGraph(obj) {
+function openCourseGraph(obj) {
   const key = obj.part.data.key.split(" ");
   window.open(`/subject/${key[0]}/course/${key[1]}`);
 }

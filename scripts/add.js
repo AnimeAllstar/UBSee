@@ -67,6 +67,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
             ignoreCase: true
           });
 
+          // _TEMP insures that the file is not overwrited
           const file = path.join(ROOT, '..', 'public', 'json', subject + '_TEMP.json');
           jsonfile.writeFile(file, newSubject, function (err) {
             if (err) {

@@ -244,8 +244,12 @@ function createLinkTemplate() {
   ));
 }
 
-// returns node tooltip
+// returns node tooltip if device is not a touch mobile device, otherwise returns null
+// this is because the tooltip interferes with the clicking of nodes on touch devices
 function createToolTip() {
+  if (isTouchDevice() && isMobileDevice()) {
+    return null;
+  }
   return (ToolTip = $("ToolTip", {
       "Border.fill": "#ffffff",
     },

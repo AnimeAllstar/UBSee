@@ -25,13 +25,11 @@ router.get('/subject/:subject/course/:course', (req, res) => {
     if (err) {
       console.error(err);
     }
-    let p;
-    let data;
     const sub = req.params.subject;
     if (!Object.keys(obj.courses).includes(sub)) {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-subject/${sub}`);
     } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-course/${sub}${req.params.course}`);
     } else {
       res.render(path.join(ROOT, 'views', 'index.html'), {
         subject: sub,
@@ -48,14 +46,15 @@ router.get('/subject/:subject', (req, res) => {
     if (err) {
       console.error(err);
     }
-    if (Object.keys(obj.courses).includes(req.params.subject)) {
+    const sub = req.params.subject;
+    if (Object.keys(obj.courses).includes(sub)) {
       res.render(path.join(ROOT, 'views', 'index.html'), {
-        subject: req.params.subject,
+        subject: sub,
         subjects: Object.keys(obj.courses),
-        title: `${req.params.subject} - UBSee`
+        title: `${sub} - UBSee`
       });
     } else {
-      res.redirect('/invalid-link');
+      res.redirect(`/invalid-subject/${sub}`);
     }
   })
 });

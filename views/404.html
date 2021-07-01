@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
 {% block bodyTop %}
-<h1 class="text-start m-3 fw-bold">404<br />Page Not found</h1>
+<div class="container">
+    <h1 class="text-start m-3 fw-bold">404<br />Page Not found</h1>
+    <form action="/" class="inline">
+        <button class="btn btn-primary">Home</button>
+    </form>
+</div>
+
 {% endblock %}

@@ -149,6 +149,7 @@ async function createGraph(req) {
 function getGraph(id) {
   return $(go.Diagram, id, {
     "undoManager.isEnabled": true,
+    "toolManager.hoverDelay": 500,
     "toolManager.toolTipDuration": 30000,
     initialAutoScale: go.Diagram.Uniform,
     layout: createLayout(),

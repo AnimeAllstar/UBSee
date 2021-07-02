@@ -1,10 +1,11 @@
 const express = require('express');
 const favicon = require('serve-favicon');
+const compression = require("compression");
 const helmet = require("helmet");
 const nunjucks = require('nunjucks');
 
 const path = require('path');
-const ROOT = require('../util/path');
+const ROOT = require('./util/path');
 
 const appRoutes = require('./routes/routes.js');
 
@@ -12,11 +13,16 @@ const app = express();
 
 app.use(express.static('public'));
 
-// serve favicon
-app.use(favicon(path.join(ROOT, 'public', 'favicon.ico')))
+// website icon
+app.use(favicon(path.join(ROOT, 'public', 'favicon.ico')));
 
-// helmet
-app.use(helmet());
+// secutity
+app.use(helmet({
+  contentSecurityPolicy: false,
+}));
+
+// asset compression
+app.use(compression());
 
 // nunjucks is the templating engine
 nunjucks.configure('views', {

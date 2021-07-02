@@ -2,6 +2,8 @@
 
 Creates interactive graphs for [UBC](https://www.ubc.ca/) subjects and courses 📚.
 
+Live at : [ubsee.herokuapp.com](https://ubsee.herokuapp.com/)
+
 Make sure to share the website with other students if it helped you out. ⌚ or ⭐ the project to keep up with latest changes.
 
 ## Sample graphs

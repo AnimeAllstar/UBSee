@@ -1,6 +1,6 @@
 # UBSee <img src="https://user-images.githubusercontent.com/39626451/124312404-ddeaf780-db8c-11eb-950e-3ec28175f7b7.png" alt="UBSee icon" width="40" height="40" />
 
-Creates interactive graphs for UBC subjects and courses 📚.
+Creates interactive graphs for [UBC](https://www.ubc.ca/) subjects and courses 📚.
 
 Make sure to share the website with other students if it helped you out. ⌚ or ⭐ the project to keep up with latest changes.
 

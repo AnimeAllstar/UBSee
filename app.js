@@ -1,7 +1,10 @@
 const express = require('express');
 const favicon = require('serve-favicon');
-const path = require('path');
+const helmet = require("helmet");
 const nunjucks = require('nunjucks');
+
+const path = require('path');
+const ROOT = require('../util/path');
 
 const appRoutes = require('./routes/routes.js');
 
@@ -10,7 +13,10 @@ const app = express();
 app.use(express.static('public'));
 
 // serve favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(ROOT, 'public', 'favicon.ico')))
+
+// helmet
+app.use(helmet());
 
 // nunjucks is the templating engine
 nunjucks.configure('views', {
@@ -22,7 +28,7 @@ app.use(appRoutes);
 
 // request reaches here if none of the routes in appRoutes is matched
 app.use((req, res) => {
-  res.status(404).render(path.join(__dirname, 'views', '404.html'), {
+  res.status(404).render(path.join(ROOT, 'views', '404.html'), {
     title: "404 - Page Not Found",
     description: '404 - Page Not Found',
     robots: 'noindex, follow',
@@ -30,6 +36,6 @@ app.use((req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Server Listening on http://localhost:3000');
 });

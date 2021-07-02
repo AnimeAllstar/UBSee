@@ -22,6 +22,7 @@
   "homepage": "https://github.com/AnimeAllstar/UBSee#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "helmet": "^4.6.0",
     "nunjucks": "^3.2.3",
     "serve-favicon": "^2.5.0"
   },

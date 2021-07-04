@@ -17,8 +17,15 @@
     "type": "git",
     "url": "git+https://github.com/AnimeAllstar/UBSee.git"
   },
+  "keywords": [
+    "ubsee",
+    "UBC",
+    "Nodejs",
+    "express",
+    "GoJS"
+  ],
   "author": "",
-  "license": "",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AnimeAllstar/UBSee/issues"
   },

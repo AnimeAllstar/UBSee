@@ -43,5 +43,5 @@ app.use((req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log('Server Listening on ' + (process.env.PORT ? process.env.PORT : "http://localhost:3000"));
+  console.log('listening on ' + (process.env.PORT ? process.env.PORT : "http://localhost:3000"));
 });

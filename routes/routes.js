@@ -8,6 +8,14 @@ const router = express.Router();
 
 const source = path.join(ROOT, 'public', 'json', 'courses.json');
 
+router.get('/*', (req, res, next) => {
+  console.log(req.originalUrl);
+  if (req.hostname === 'ubsee.herokuapp.com') {
+    res.redirect(301, 'https://ubsee.dev' + req.originalUrl);
+  }
+  return next();
+});
+
 router.get('/', (req, res) => {
   jsonfile.readFile(source, (err, obj) => {
     if (err) {

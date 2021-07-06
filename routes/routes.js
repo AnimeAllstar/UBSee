@@ -9,7 +9,7 @@ const router = express.Router();
 const source = path.join(ROOT, 'public', 'json', 'courses.json');
 
 router.get('/*', (req, res, next) => {
-  if (req.hostname !== 'localhost') {
+  if (req.hostname !== 'ubsee.herokuapp.com') {
     return next();
   }
   res.redirect(301, 'https://ubsee.dev' + req.originalUrl);

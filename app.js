@@ -1,7 +1,7 @@
 const express = require('express');
 const favicon = require('serve-favicon');
-const compression = require("compression");
-const helmet = require("helmet");
+const compression = require('compression');
+const helmet = require('helmet');
 const nunjucks = require('nunjucks');
 
 const path = require('path');
@@ -42,6 +42,6 @@ app.use((req, res) => {
   });
 });
 
-const listener = app.listen(process.env.PORT || 3000, () => {
-  console.log('listening on port ' + (listener.address().port ? listener.address().port : '3000'));
+app.listen(process.env.PORT || 3000, () => {
+  console.log('listening on ' + (process.env.PORT ? `port ${process.env.PORT}` : 'http://localhost:3000/'));
 });

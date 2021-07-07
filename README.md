@@ -23,12 +23,13 @@ Make sure to share the website with other students if it helped you out. ⌚ or 
 
 Create an issue or submit a pull request. **Any improvement/feedback about the project is valuable.**
 
-###  Adding new subjects
+### Adding new subjects
 
 Added a new subject is not too challenging (it's just monotonous) since we have written multiple simple scripts to aid in doing so at `./scripts/`
 
 There are a few steps in adding a new subject:
-- run `npm run add [SUBJECT ID]` to add a base json file with an empty *prereqs* fields
+
+- run `npm run add [SUBJECT ID]` to add a base json file with an empty _prereqs_ fields
 - add the prerequisite expressions for each course in the json **manually**
 - rename the file to [SUBJECT ID].json
 - run `npm run test [SUBJECT ID]` to test your json. Read comments in the script file to understand what the tests do
@@ -38,9 +39,13 @@ There are a few steps in adding a new subject:
 - run the server and click all nodes to make sure that an error is not thrown
 - make a pull request making sure you describe any important details
 
-Make sure you read and understand what the scripts do. Unfortunately, because UBC doesn't officially provide the data, courses and subject need to be manually added for now.  
+Make sure you read and understand what the scripts do. Unfortunately, because UBC doesn't officially provide the data, courses and subject need to be manually added for now.
 
 Make sure to submit a pull request if you think you can improve the process of adding new subjects.
+
+### Build command
+
+Use `npm run build` to run the build command. This command concats and minifies the files in `./public/js/` into a single .js file. If you are making changes to `./public/js/` during development, don't worry about this as `npm run dev` builds the js file automatically before running nodemon.
 
 ## Contributors
 

@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "dev": "npm run build && nodemon app.js",
     "add": "node scripts/add.js",
     "test": "node scripts/test.js",
     "fix": "node scripts/fix.js",

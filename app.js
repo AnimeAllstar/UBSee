@@ -1,7 +1,7 @@
 const express = require('express');
 const favicon = require('serve-favicon');
-const compression = require("compression");
-const helmet = require("helmet");
+const compression = require('compression');
+const helmet = require('helmet');
 const nunjucks = require('nunjucks');
 
 const path = require('path');

@@ -11,7 +11,10 @@
     "dev": "nodemon app.js",
     "add": "node scripts/add.js",
     "test": "node scripts/test.js",
-    "fix": "node scripts/fix.js"
+    "fix": "node scripts/fix.js",
+    "concat": "concat -o ./public/js/ubsee.js ./public/js/graph-initializer.js ./public/js/node-event-handler.js ./public/js/page-event-handler.js ./public/js/select2-event-handler.js ./public/js/util.js",
+    "uglify": "uglifyjs public/js/ubsee.js -o public/js/ubsee.min.js",
+    "build": "npm run concat && npm run uglify"
   },
   "repository": {
     "type": "git",
@@ -39,8 +42,10 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
+    "concat": "^1.0.3",
     "needle": "^2.6.0",
     "nodemon": "^2.0.7",
-    "sort-json": "^2.0.0"
+    "sort-json": "^2.0.0",
+    "uglify-js": "^3.13.10"
   }
 }

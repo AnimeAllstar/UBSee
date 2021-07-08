@@ -1,17 +1,17 @@
 // initializes copy button Bootstrap tooltip
 const copyBtn = document.getElementById('copyBtn');
 const copyTooltip = new bootstrap.Tooltip(copyBtn, {
-  boundary: document.body
+  boundary: document.body,
 });
 
 // events listener to reset tooltip text
 copyBtn.addEventListener('hidden.bs.tooltip', () => {
   copyBtn.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
-})
+});
 
 // copies URL of page
 function copyToClipboard() {
-  const inputc = document.body.appendChild(document.createElement("input"));
+  const inputc = document.body.appendChild(document.createElement('input'));
   inputc.value = window.location.href;
   inputc.focus();
   inputc.select();
@@ -29,11 +29,11 @@ function updateCopyTooltip() {
 
 // opens new tab using <select> elements in index.html
 function openTab() {
-  const subject = document.getElementById("subject-select").value;
-  const course = document.getElementById("course-select").value;
+  const subject = document.getElementById('subject-select').value;
+  const course = document.getElementById('course-select').value;
   const year = document.getElementById('displayRange').value;
   if (subject && course) {
-    window.open(`/subject/${subject}/course/${course.split(" ")[1]}`);
+    window.open(`/subject/${subject}/course/${course.split(' ')[1]}`);
   } else if (subject) {
     if (year < 4) {
       window.open(`/subject/${subject}?year=${year}`);
@@ -45,14 +45,14 @@ function openTab() {
 
 // updates graph paramaters using variables in the Settings tab in index.html
 function updateGraph() {
-  myGraph.startTransaction("update");
-  setLayeringOption(getRadioValue("layering"));
-  myGraph.layout.direction = parseInt(getRadioValue("direction"));
-  const checkedArr = getCheckboxes("focus");
+  myGraph.startTransaction('update');
+  setLayeringOption(getRadioValue('layering'));
+  myGraph.layout.direction = parseInt(getRadioValue('direction'));
+  const checkedArr = getCheckboxes('focus');
   if (checkedArr) {
     updateOpacity(checkedArr);
   }
-  myGraph.commitTransaction("update");
+  myGraph.commitTransaction('update');
 }
 
 // returns value of radio button inputs using name
@@ -90,19 +90,19 @@ function getCheckboxes(name) {
 
 // updates range slider label value
 function updateDisplayText(val) {
-  document.getElementById('displayRangeText').innerText = "Display courses up to year " + val;
+  document.getElementById('displayRangeText').innerText = 'Display courses up to year ' + val;
 }
 
 // sets node.shape opacity to 0.4 if it's year level is unchecked
 function updateOpacity(arr) {
   myGraph.nodes.each(function (node) {
-    const shape = node.findObject("shape");
+    const shape = node.findObject('shape');
     shape.opacity = 1.0;
     for (let i = 0; i < arr.length; i++) {
-      if (node.data.key.split(" ")[1].substring(0, 1) == arr[i]) {
+      if (node.data.key.split(' ')[1].substring(0, 1) == arr[i]) {
         shape.opacity = 0.4;
         break;
       }
     }
   });
-};
+}

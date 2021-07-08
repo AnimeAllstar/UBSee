@@ -47,11 +47,11 @@ function recursiveUpdateHighlight(node) {
 
 // iterates over node.findLinksInto() to check if the links from other nodes are highlighted
 // replaces the all course names in prereqs string with l.isHighlighted
-// for example: (CPSC 101 && CPSC 103) || CPSC 110 could be replace to (1 && 0 ) || 1 
+// for example: (CPSC 101 && CPSC 103) || CPSC 110 could be replace to (1 && 0) || 1
 // returns the evaluated newState
 function getNewState(node, prereqs) {
   node.findLinksInto().each((l) => {
-    const newState = l.isHighlighted ? 1 : 0;
+    const newState = l.isHighlighted ? true : false;
     const re = new RegExp(l.data.from, 'g');
     prereqs = prereqs.replaceAll(re, newState);
   });

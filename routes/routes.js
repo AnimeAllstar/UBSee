@@ -12,7 +12,7 @@ router.get('/*', (req, res, next) => {
   if (req.hostname !== 'ubsee.herokuapp.com') {
     return next();
   }
-  res.redirect(301, 'https://ubsee.dev' + req.originalUrl);
+  res.redirect(301, 'https://www.ubsee.dev' + req.originalUrl);
 });
 
 router.get('/', (req, res) => {

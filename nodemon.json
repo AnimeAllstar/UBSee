@@ -1,0 +1,10 @@
+{
+    "ignore": [
+        "public/js/ubsee.js",
+        "public/js/ubsee.min.js"
+    ],
+    "events": {
+        "start": "npm run build"
+    },
+    "ext": "js,html,css"
+}

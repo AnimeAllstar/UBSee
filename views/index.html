@@ -38,284 +38,306 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-    <div class="collapse navbar-collapse p-2" id="navbarNav">
-      <div class="accordion w-100" id="sidebar-accordian">
-        <!-- Selection tab -->
-        <div>
-          <h2 class="accordion-header" id="selection-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#selection-content">
-              Subject / Course Selection
-            </button>
-          </h2>
-          <div id="selection-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <li class="list-group-item rounded-0">
-                  <div class="input-group mb-3 mt-2">
-                    <!-- Subject Selection-->
-                    <select id="subject-select" name="subject">
-                      <option value=""></option>
-                      {% for sub in subjects %}
-                      <option value="{{ sub }}">{{ sub }}</option>
-                      {% endfor %}
-                    </select>
-                  </div>
-                  <div class="input-group mb-2">
-                    <!-- Course Selection-->
-                    <select id="course-select" name="course">
-                      <option value=""></option>
-                    </select>
-                  </div>
-                </li>
-                <!-- Display Range -->
-                <li class="list-group-item rounded-0">
-                  <h6>Max Year Level</h6>
-                  <span id="displayRangeText">Display courses up to year 4</span>
-                  <br>
-                  <span><small>(only works on subject graphs)</small></span>
-                  <br>
-                  <input type="range" class="form-range" id="displayRange" min="1" max="4" step="1" value="4"
-                    onchange="updateDisplayText(this.value)">
-                </li>
-                <!-- Copy to clipboard button -->
-                <li class="list-group-item rounded-0">
-                  <button type="button" class="btn btn-primary" onclick="openTab()">
-                    Create
-                  </button>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" onclick="copyToClipboard();"
-                    title="Copy url of current graph to clipboard" id="copyBtn">
-                    Copy URL
-                  </button>
-                </li>
-              </ul>
+    <div class="collapse navbar-collapse px-2 mt-3" id="navbarNav">
+      <ul class="m-0 p-0 w-100">
+        <li class="nav-item d-block">
+          <div class="accordion w-100" id="sidebar-accordian">
+            <!-- Selection tab -->
+            <div>
+              <h2 class="accordion-header" id="selection-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#selection-content">
+                  Subject / Course Selection
+                </button>
+              </h2>
+              <div id="selection-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <li class="list-group-item rounded-0">
+                      <div class="input-group mb-3 mt-2">
+                        <!-- Subject Selection-->
+                        <select id="subject-select" name="subject">
+                          <option value=""></option>
+                          {% for sub in subjects %}
+                          <option value="{{ sub }}">{{ sub }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                      <div class="input-group mb-2">
+                        <!-- Course Selection-->
+                        <select id="course-select" name="course">
+                          <option value=""></option>
+                        </select>
+                      </div>
+                    </li>
+                    <!-- Display Range -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Max Year Level</h6>
+                      <span id="displayRangeText">Display courses up to year 4</span>
+                      <br>
+                      <span><small>(only works on subject graphs)</small></span>
+                      <br>
+                      <input type="range" class="form-range" id="displayRange" min="1" max="4" step="1" value="4"
+                        onchange="updateDisplayText(this.value)">
+                    </li>
+                    <!-- Copy to clipboard button -->
+                    <li class="list-group-item rounded-0">
+                      <button type="button" class="btn btn-primary" onclick="openTab()">
+                        Create
+                      </button>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="tooltip"
+                        onclick="copyToClipboard();" title="Copy url of current graph to clipboard" id="copyBtn">
+                        Copy URL
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Preferences tab -->
+            <div>
+              <h2 class="accordion-header" id="preferences-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#preferences-content">
+                  Preferences
+                </button>
+              </h2>
+              <div id="preferences-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <!-- Direction -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Direction</h6>
+                      <span>Select the direction of the graph</span>
+                      <br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" value="0" checked />
+                        <label class="form-check-label" for="right">Right</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" value="90" />
+                        <label class="form-check-label" for="down">Down</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" value="180" />
+                        <label class="form-check-label" for="left">Left</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="direction" value="270" />
+                        <label class="form-check-label" for="up">Up</label>
+                      </div>
+                    </li>
+                    <!-- Layering -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Layering</h6>
+                      <span>Select the layering style of the graph</span>
+                      <br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="layering" value="0" checked />
+                        <label class="form-check-label" for="right">Longest path from source</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="layering" value="1" />
+                        <label class="form-check-label" for="down">Longest path to sink</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="layering" value="2" />
+                        <label class="form-check-label" for="down">Optimal link length</label>
+                      </div>
+                    </li>
+                    <!-- Focus -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Focus</h6>
+                      <span>Select year levels you want to focus on.</span>
+                      <br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
+                        <label class="form-check-label" for="1">year 1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
+                        <label class="form-check-label" for="2">year 2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
+                        <label class="form-check-label" for="3">year 3</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
+                        <label class="form-check-label" for="4">year 4</label>
+                      </div>
+                    </li>
+                    <li class="list-group-item rounded-0">
+                      <button type="button" class="btn btn-primary" onclick="updateGraph()">
+                        Update
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- README tab -->
+            <div>
+              <h2 class="accordion-header" id="readme-tab">
+                <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#readme-content">
+                  README
+                </button>
+              </h2>
+              <div id="readme-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <!-- How To Use Section -->
+                    <li class="list-group-item rounded-0">
+                      <h6>How can this tool help you?</h6>
+                      <p>
+                        This tool can help make it easier to visualize course eligibilities. It can also help you find
+                        the
+                        course path you need to take in order to satisfy the requirements of a higher level course.
+                      </p>
+                      <h6>How to Use</h6>
+                      <p>
+                        Use the dropdown menus in the <i class="text-primary"> Subject / Course Selection </i> tab to
+                        create a subject graph or a course graph. You can even <i class="text-primary"> search </i>
+                        for courses in the dropdown by typing the courname name / number in the search bar in the
+                        dropdown. Leave the course dropdown empty to create a subject graph.
+                      </p>
+                      <p>The <i class="text-primary"> Preferences </i> tab can help improve readability of graph.</p>
+                      <p>The Nodes represent a specific course, ex: CPSC 110.</p>
+                      <p>
+                        The lines between courses represent the prerequisites between courses. <i class="text-primary">
+                          Hover </i> over a course for detailed prerequisite information.
+                      </p>
+                      <p>
+                        Nodes can be <i class="text-primary"> left-clicked </i> to indicate that the requirement as
+                        satisfied.
+                      </p>
+                      <p>
+                        <div class="d-inline-block">
+                          <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill:#1ec887;stroke-width:3;stroke:rgb(0,0,0)" />
+                          </svg>
+                          <span>Eligible</span>
+                        </div>
+                        <div class="d-inline-block">
+                          <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill:#1e90ff;stroke-width:3;stroke:rgb(0,0,0)" />
+                          </svg>
+                          <span>Satisfied</span>
+                        </div>
+                        <div class="d-inline-block">
+                          <svg width="20" height="20">
+                            <rect width="20" height="20" style="fill:#ff1a53;stroke-width:3;stroke:rgb(0,0,0)" />
+                          </svg>
+                          <span>Ineligible</span>
+                        </div>
+                      </p>
+                      <p>
+                        <i class="text-primary"> Right-click </i> on a node to see the UBC course page link and the
+                        UBSee
+                        course graph link.
+                      </p>
+                      <p class="mb-1">
+                        <i class="text-primary"> Ctrl + z </i> is undo and <i class="text-primary"> Ctrl + y </i> is
+                        redo.
+                        The graph has to be selected (click anywhere on the graph to select it (on the white space, for
+                        example)).
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Notice tab -->
+            <div>
+              <h2 class="accordion-header" id="notice-tab">
+                <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#notice-content">
+                  Warning!
+                </button>
+              </h2>
+              <div id="notice-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <!-- How To Use Section -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Be Careful!</h6>
+                      <p>
+                        This program may not be accurately representative of the actual course requirements displayed on
+                        SSC as the information may become outdated. Always refer to SSC information to confirm important
+                        information.
+                      </p>
+                      <p>
+                        Due to graphs becoming too complex, only prerequisites of the same subject are displayed on
+                        screen.
+                        We recommend always confirming the information on SSC.
+                      </p>
+                      <p class="mb-1">
+                        This website is meant to aid students to visualize course eligibilities and to reduce
+                        the time students spend on course planning. We will not be held responsible for any damages.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Feedback tab-->
+            <div>
+              <h2 class="accordion-header" id="feedback-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#feedback-content">
+                  Report / Feedback
+                </button>
+              </h2>
+              <div id="feedback-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <li class="list-group-item rounded-0">
+                      <h6>Want to report a bug? Have feedback or features suggestions for UBSee?</h6>
+                      <p>Click the button below to go to the feedback form.</p>
+                      <p>
+                        You can inform us about outdated course infromation, bugs and feature suggestions, or make
+                        requests
+                        for new
+                        courses and give us feedback about UBsee.
+                      </p>
+                      <p>
+                        If you know how to code and use Github, head over to <a
+                          href="https://github.com/AnimeAllstar/UBSee" target="_blank">UBSee's Github Page</a> to <a
+                          href="https://github.com/AnimeAllstar/UBSee#how-to-contribute" target="_blank">contribute</a>
+                        or
+                        to make an <a href="https://github.com/AnimeAllstar/UBSee/issues" target="_blank">issue</a>.
+                      </p>
+                      <p class="mb-1">
+                        Let's try and improve UBSee together so that more people will benefit from using it!
+                      </p>
+                    </li>
+                    <li class="list-group-item rounded-0">
+                      <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank">
+                        <button type="button" class="btn btn-primary">
+                          Feedback Form
+                        </button>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Preferences tab -->
-        <div>
-          <h2 class="accordion-header" id="preferences-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#preferences-content">
-              Preferences
-            </button>
-          </h2>
-          <div id="preferences-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <!-- Direction -->
-                <li class="list-group-item rounded-0">
-                  <h6>Direction</h6>
-                  <span>Select the direction of the graph</span>
-                  <br>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" value="0" checked />
-                    <label class="form-check-label" for="right">Right</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" value="90" />
-                    <label class="form-check-label" for="down">Down</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" value="180" />
-                    <label class="form-check-label" for="left">Left</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="direction" value="270" />
-                    <label class="form-check-label" for="up">Up</label>
-                  </div>
-                </li>
-                <!-- Layering -->
-                <li class="list-group-item rounded-0">
-                  <h6>Layering</h6>
-                  <span>Select the layering style of the graph</span>
-                  <br>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="layering" value="0" checked />
-                    <label class="form-check-label" for="right">Longest path from source</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="layering" value="1" />
-                    <label class="form-check-label" for="down">Longest path to sink</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="layering" value="2" />
-                    <label class="form-check-label" for="down">Optimal link length</label>
-                  </div>
-                </li>
-                <!-- Focus -->
-                <li class="list-group-item rounded-0">
-                  <h6>Focus</h6>
-                  <span>Select year levels you want to focus on.</span>
-                  <br>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
-                    <label class="form-check-label" for="1">year 1</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
-                    <label class="form-check-label" for="2">year 2</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
-                    <label class="form-check-label" for="3">year 3</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
-                    <label class="form-check-label" for="4">year 4</label>
-                  </div>
-                </li>
-                <li class="list-group-item rounded-0">
-                  <button type="button" class="btn btn-primary" onclick="updateGraph()">
-                    Update
-                  </button>
-                </li>
-              </ul>
-            </div>
+        </li>
+        <li class="mt-2 nav-item d-block">
+          <div class="alert alert-success rounded-0" role="alert">
+            <h6 class="alert-heading">Latest feature</h6>
+            <p class="mb-0">
+              <small>
+                The <b>'Copy URL'</b> button now records the nodes that you have currently selected!<br>
+                This means that you can copy the URL of a graph and come back later to pick up from where you left off
+                without having to re-select courses!
+              </small>
+            </p>
           </div>
-        </div>
-        <!-- README tab -->
-        <div>
-          <h2 class="accordion-header" id="readme-tab">
-            <button class="accordion-button collapsed text-primary" type="button" data-bs-toggle="collapse"
-              data-bs-target="#readme-content">
-              README
-            </button>
-          </h2>
-          <div id="readme-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <!-- How To Use Section -->
-                <li class="list-group-item rounded-0">
-                  <h6>How can this tool help you?</h6>
-                  <p>
-                    This tool can help make it easier to visualize course eligibilities. It can also help you find the
-                    course path you need to take in order to satisfy the requirements of a higher level course.
-                  </p>
-                  <h6>How to Use</h6>
-                  <p>
-                    Use the dropdown menus in the <i class="text-primary"> Subject / Course Selection </i> tab to
-                    create a subject graph or a course graph. You can even <i class="text-primary"> search </i>
-                    for courses in the dropdown by typing the courname name / number in the search bar in the
-                    dropdown. Leave the course dropdown empty to create a subject graph.
-                  </p>
-                  <p>The <i class="text-primary"> Preferences </i> tab can help improve readability of graph.</p>
-                  <p>The Nodes represent a specific course, ex: CPSC 110.</p>
-                  <p>
-                    The lines between courses represent the prerequisites between courses. <i class="text-primary">
-                      Hover </i> over a course for detailed prerequisite information.
-                  </p>
-                  <p>
-                    Nodes can be <i class="text-primary"> left-clicked </i> to indicate that the requirement as
-                    satisfied.
-                  </p>
-                  <p>
-                    <div class="d-inline-block">
-                      <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill:#1ec887;stroke-width:3;stroke:rgb(0,0,0)" />
-                      </svg>
-                      <span>Eligible</span>
-                    </div>
-                    <div class="d-inline-block">
-                      <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill:#1e90ff;stroke-width:3;stroke:rgb(0,0,0)" />
-                      </svg>
-                      <span>Satisfied</span>
-                    </div>
-                    <div class="d-inline-block">
-                      <svg width="20" height="20">
-                        <rect width="20" height="20" style="fill:#ff1a53;stroke-width:3;stroke:rgb(0,0,0)" />
-                      </svg>
-                      <span>Ineligible</span>
-                    </div>
-                  </p>
-                  <p>
-                    <i class="text-primary"> Right-click </i> on a node to see the UBC course page link and the UBSee
-                    course graph link.
-                  </p>
-                  <p class="mb-1">
-                    <i class="text-primary"> Ctrl + z </i> is undo and <i class="text-primary"> Ctrl + y </i> is redo.
-                    The graph has to be selected (click anywhere on the graph to select it (on the white space, for
-                    example)).
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Notice tab -->
-        <div>
-          <h2 class="accordion-header" id="notice-tab">
-            <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse"
-              data-bs-target="#notice-content">
-              Warning!
-            </button>
-          </h2>
-          <div id="notice-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <!-- How To Use Section -->
-                <li class="list-group-item rounded-0">
-                  <h6>Be Careful!</h6>
-                  <p>
-                    This program may not be accurately representative of the actual course requirements displayed on
-                    SSC as the information may become outdated. Always refer to SSC information to confirm important
-                    information.
-                  </p>
-                  <p>
-                    Due to graphs becoming too complex, only prerequisites of the same subject are displayed on screen.
-                    We recommend always confirming the information on SSC.
-                  </p>
-                  <p class="mb-1">
-                    This website is meant to aid students to visualize course eligibilities and to reduce
-                    the time students spend on course planning. We will not be held responsible for any damages.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Feedback tab-->
-        <div>
-          <h2 class="accordion-header" id="feedback-tab">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#feedback-content">
-              Report / Feedback
-            </button>
-          </h2>
-          <div id="feedback-content" class="accordion-collapse collapse">
-            <div class="accordion-body p-0">
-              <ul class="list-group">
-                <li class="list-group-item rounded-0">
-                  <h6>Want to report a bug? Have feedback or features suggestions for UBSee?</h6>
-                  <p>Click the button below to go to the feedback form.</p>
-                  <p>
-                    You can inform us about outdated course infromation, bugs and feature suggestions, or make requests
-                    for new
-                    courses and give us feedback about UBsee.
-                  </p>
-                  <p>
-                    If you know how to code and use Github, head over to <a href="https://github.com/AnimeAllstar/UBSee"
-                      target="_blank">UBSee's Github Page</a> to <a
-                      href="https://github.com/AnimeAllstar/UBSee#how-to-contribute" target="_blank">contribute</a> or
-                    to make an <a href="https://github.com/AnimeAllstar/UBSee/issues" target="_blank">issue</a>.
-                  </p>
-                  <p class="mb-1">
-                    Let's try and improve UBSee together so that more people will benefit from using it!
-                  </p>
-                </li>
-                <li class="list-group-item rounded-0">
-                  <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank">
-                    <button type="button" class="btn btn-primary">
-                      Feedback Form
-                    </button>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </nav>
 

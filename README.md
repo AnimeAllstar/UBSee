@@ -45,7 +45,7 @@ Make sure to submit a pull request if you think you can improve the process of a
 
 ### Build command
 
-Use `npm run build` to run the build command. This command concats and minifies the files in `./public/js/` into a single .js file. If you are making changes to `./public/js/` during development, don't worry about this as `npm run dev` builds the js file automatically before running nodemon.
+Use `npm run build` to run the build command. This command concats and uglifies the files in `./public/js/` into a single .js file. If you are making changes to `./public/js/` during development, don't worry about this as `npm run dev` builds the js file automatically before running the server using nodemon. Check the `nodemon.json` file for more information.
 
 ## Contributors
 

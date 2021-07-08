@@ -6,13 +6,13 @@ const copyTooltip = new bootstrap.Tooltip(copyBtn, {
 
 // events listener to reset tooltip text
 copyBtn.addEventListener('hidden.bs.tooltip', () => {
-  copyBtn.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
+  copyBtn.setAttribute('data-bs-original-title', 'Copies URL of current graph to clipboard');
 });
 
 // copies URL of page
 function copyToClipboard() {
   const inputc = document.body.appendChild(document.createElement('input'));
-  inputc.value = window.location.href;
+  inputc.value = getNewURL();
   inputc.focus();
   inputc.select();
   document.execCommand('copy');
@@ -20,9 +20,23 @@ function copyToClipboard() {
   updateCopyTooltip();
 }
 
+// gets new URL by setting the 'nodes' parameter
+// the 'nodes' parameter is a comma separated string containing all selected nodes
+function getNewURL() {
+  const url = new URL(window.location.href);
+  let nodeArr = [];
+  myGraph.nodes.each((node) => {
+    if (node.isHighlighted) {
+      nodeArr.push(node.data.key);
+    }
+  });
+  url.searchParams.set('nodes', nodeArr.join(','));
+  return url;
+}
+
 // updates title of copyToolTip
 function updateCopyTooltip() {
-  copyBtn.setAttribute('data-bs-original-title', 'copied!');
+  copyBtn.setAttribute('data-bs-original-title', 'URL copied!');
   copyTooltip.update();
   copyTooltip.show();
 }
@@ -43,7 +57,7 @@ function openTab() {
   }
 }
 
-// updates graph paramaters using variables in the Settings tab in index.html
+// updates graph paramaters using variables in the Preferences tab in index.html
 function updateGraph() {
   myGraph.startTransaction('update');
   setLayeringOption(getRadioValue('layering'));

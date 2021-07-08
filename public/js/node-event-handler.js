@@ -51,7 +51,7 @@ function recursiveUpdateHighlight(node) {
 // returns the evaluated newState
 function getNewState(node, prereqs) {
   node.findLinksInto().each((l) => {
-    const newState = l.isHighlighted ? 1 : 0;
+    const newState = l.isHighlighted ? true : false;
     const re = new RegExp(l.data.from, 'g');
     prereqs = prereqs.replaceAll(re, newState);
   });

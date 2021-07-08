@@ -7,9 +7,6 @@ let myGraph;
 // global data variable
 let myData;
 
-// get year param
-const year = getYear();
-
 // get data asynchronously
 async function getJSON() {
   const response = await fetch('/json/courses.json');
@@ -18,11 +15,9 @@ async function getJSON() {
   return json;
 }
 
-// get year parameter from the URL (will update to getting all parameters if more are added in the future)
+// gets the 'year' parameter and returns a value between 0 and 4
 function getYear() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const y = urlParams.get('year');
-  // returns appropriate value for y
+  const y = getParam('year');
   if (y) {
     return y > 0 ? (y < 5 ? y : 4) : 4;
   } else {
@@ -30,12 +25,21 @@ function getYear() {
   }
 }
 
+// gets an array of the highlighted nodes from the 'nodes' parameter
+function getHighlightedNodes() {
+  const h = getParam('nodes');
+  if (h) {
+    return h.split(',');
+  }
+  return null;
+}
+
 // global variables to store nodes and links
 const nodes = [];
 const links = [];
 
 // add relevant data to nodes[] and links[]
-function addToGraph(course) {
+function addToGraph(course, arg) {
   nodes.push({
     key: course.name,
     title: course.title,
@@ -48,7 +52,7 @@ function addToGraph(course) {
 }
 
 // adds to graph if year level condition is met
-function SelectiveAddToGraph(course) {
+function SelectiveAddToGraph(course, year) {
   if (course.name.split(' ')[1].substring(0, 1) <= year) {
     addToGraph(course);
   }
@@ -106,6 +110,7 @@ async function getData(req) {
 
   // decides whether course need to be selectively added based on the year parameter
   let func;
+  const year = getYear();
   if (year != 4) {
     func = SelectiveAddToGraph;
   } else {
@@ -114,7 +119,7 @@ async function getData(req) {
 
   // add courses node to graph
   for (const course in subject) {
-    func(subject[course]);
+    func(subject[course], year);
   }
 
   return {
@@ -143,6 +148,30 @@ async function createGraph(req) {
       }
     });
   });
+
+  // set node and link colors
+  setColors();
+}
+
+// sets node and link highlight and clickable values using the 'nodes' URL query parameter
+function setColors() {
+  const highlightedNodes = getHighlightedNodes();
+  // if param is passed (not null)
+  if (highlightedNodes) {
+    // until all nodes are highlighted, remove the first node, find it in the graph, simulate a click on the node
+    // if the node is not highlighted, add it back to the array
+    // (this handles the case where a prereq node is present after the node in the query parameter)
+    while (highlightedNodes.length != 0) {
+      const elem = highlightedNodes.shift();
+      const graphNode = myGraph.findNodeForKey(elem);
+      if (graphNode) {
+        nodeClickHandler(graphNode);
+        if (!graphNode.isHighlighted) {
+          highlightedNodes.push(elem);
+        }
+      }
+    }
+  }
 }
 
 // returns new graph
@@ -404,7 +433,7 @@ function recursiveUpdateHighlight(node) {
 // returns the evaluated newState
 function getNewState(node, prereqs) {
   node.findLinksInto().each((l) => {
-    const newState = l.isHighlighted ? 1 : 0;
+    const newState = l.isHighlighted ? true : false;
     const re = new RegExp(l.data.from, 'g');
     prereqs = prereqs.replaceAll(re, newState);
   });
@@ -436,13 +465,13 @@ const copyTooltip = new bootstrap.Tooltip(copyBtn, {
 
 // events listener to reset tooltip text
 copyBtn.addEventListener('hidden.bs.tooltip', () => {
-  copyBtn.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
+  copyBtn.setAttribute('data-bs-original-title', 'Copies URL of current graph to clipboard');
 });
 
 // copies URL of page
 function copyToClipboard() {
   const inputc = document.body.appendChild(document.createElement('input'));
-  inputc.value = window.location.href;
+  inputc.value = getNewURL();
   inputc.focus();
   inputc.select();
   document.execCommand('copy');
@@ -450,9 +479,23 @@ function copyToClipboard() {
   updateCopyTooltip();
 }
 
+// gets new URL by setting the 'nodes' parameter
+// the 'nodes' parameter is a comma separated string containing all selected nodes
+function getNewURL() {
+  const url = new URL(window.location.href);
+  let nodeArr = [];
+  myGraph.nodes.each((node) => {
+    if (node.isHighlighted) {
+      nodeArr.push(node.data.key);
+    }
+  });
+  url.searchParams.set('nodes', nodeArr.join(','));
+  return url;
+}
+
 // updates title of copyToolTip
 function updateCopyTooltip() {
-  copyBtn.setAttribute('data-bs-original-title', 'copied!');
+  copyBtn.setAttribute('data-bs-original-title', 'URL copied!');
   copyTooltip.update();
   copyTooltip.show();
 }
@@ -473,7 +516,7 @@ function openTab() {
   }
 }
 
-// updates graph paramaters using variables in the Settings tab in index.html
+// updates graph paramaters using variables in the Preferences tab in index.html
 function updateGraph() {
   myGraph.startTransaction('update');
   setLayeringOption(getRadioValue('layering'));
@@ -585,6 +628,12 @@ jQuery('#subject-select').on('select2:selecting', function (e) {
     });
   });
 });
+// gets parameter 'param' from the URL
+function getParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
 // returns whether device is a touch device
 function isTouchDevice() {
   return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));

@@ -68,7 +68,7 @@
                     </select>
                   </div>
                 </li>
-                <!-- Display Setting -->
+                <!-- Display Range -->
                 <li class="list-group-item rounded-0">
                   <h6>Max Year Level</h6>
                   <span id="displayRangeText">Display courses up to year 4</span>
@@ -78,31 +78,32 @@
                   <input type="range" class="form-range" id="displayRange" min="1" max="4" step="1" value="4"
                     onchange="updateDisplayText(this.value)">
                 </li>
+                <!-- Copy to clipboard button -->
                 <li class="list-group-item rounded-0">
                   <button type="button" class="btn btn-primary" onclick="openTab()">
                     Create
                   </button>
                   <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" onclick="copyToClipboard();"
                     title="Copy url of current graph to clipboard" id="copyBtn">
-                    Copy Link
+                    Copy URL
                   </button>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <!-- Settings tab -->
+        <!-- Preferences tab -->
         <div>
-          <h2 class="accordion-header" id="settings-tab">
+          <h2 class="accordion-header" id="preferences-tab">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#settings-content">
-              Settings
+              data-bs-target="#preferences-content">
+              Preferences
             </button>
           </h2>
-          <div id="settings-content" class="accordion-collapse collapse">
+          <div id="preferences-content" class="accordion-collapse collapse">
             <div class="accordion-body p-0">
               <ul class="list-group">
-                <!-- Direction Setting -->
+                <!-- Direction -->
                 <li class="list-group-item rounded-0">
                   <h6>Direction</h6>
                   <span>Select the direction of the graph</span>
@@ -124,7 +125,7 @@
                     <label class="form-check-label" for="up">Up</label>
                   </div>
                 </li>
-                <!-- Layering Setting -->
+                <!-- Layering -->
                 <li class="list-group-item rounded-0">
                   <h6>Layering</h6>
                   <span>Select the layering style of the graph</span>
@@ -142,7 +143,7 @@
                     <label class="form-check-label" for="down">Optimal link length</label>
                   </div>
                 </li>
-                <!-- Focus Setting -->
+                <!-- Focus -->
                 <li class="list-group-item rounded-0">
                   <h6>Focus</h6>
                   <span>Select year levels you want to focus on.</span>
@@ -198,7 +199,7 @@
                     for courses in the dropdown by typing the courname name / number in the search bar in the
                     dropdown. Leave the course dropdown empty to create a subject graph.
                   </p>
-                  <p>The <i class="text-primary"> Settings </i> tab can help improve readability of graph.</p>
+                  <p>The <i class="text-primary"> Preferences </i> tab can help improve readability of graph.</p>
                   <p>The Nodes represent a specific course, ex: CPSC 110.</p>
                   <p>
                     The lines between courses represent the prerequisites between courses. <i class="text-primary">

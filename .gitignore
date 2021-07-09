@@ -3,5 +3,6 @@
 .idea/
 out/
 
-# Node dependencies
+# Node js
 /node_modules
+.env

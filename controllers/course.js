@@ -8,7 +8,7 @@ module.exports.renderCourse = (request, response, next) => {
         } else if (!Object.keys(obj.courses[sub]).includes(`${sub} ${req.params.course}`)) {
             res.redirect(`/invalid-course/${sub}${req.params.course}`);
         } else {
-            res.render('index', {
+            res.render('index.html', {
                 subject: sub,
                 course: req.params.course,
                 subjects: Object.keys(obj.courses),

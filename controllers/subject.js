@@ -4,7 +4,7 @@ module.exports.renderSubject = (request, response, next) => {
     readJson.read(request, response, (req, res, obj) => {
         const sub = req.params.subject;
         if (Object.keys(obj.courses).includes(sub)) {
-            res.render('index', {
+            res.render('index.html', {
                 subject: sub,
                 subjects: Object.keys(obj.courses),
                 title: `${sub} - UBSee`,

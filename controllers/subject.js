@@ -1,19 +1,22 @@
-const readJson = require('../utils/readSource');
+const Subject = require('../models/Subject');
 
-module.exports.renderSubject = (request, response, next) => {
-    readJson.read(request, response, (req, res, obj) => {
-        const sub = req.params.subject;
-        if (Object.keys(obj.courses).includes(sub)) {
+module.exports.renderSubject = (req, res, next) => {
+    const sub = req.params.subject;
+    Subject.getAllNames((names) => {
+        const exists = names.find((elem) => {
+            return elem.name === sub;
+        });
+        if (!exists) {
+            res.redirect(`/invalid-subject/${sub}`);
+        } else {
             res.render('index.html', {
                 subject: sub,
-                subjects: Object.keys(obj.courses),
+                subjects: names,
                 title: `${sub} - UBSee`,
                 description: `Subject graph for ${sub}`,
                 robots: 'index, follow',
                 keywords: `UBSee, UBC, subject graph, ${sub}`
             });
-        } else {
-            res.redirect(`/invalid-subject/${sub}`);
         }
-    })
+    });
 }

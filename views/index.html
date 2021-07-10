@@ -59,7 +59,7 @@
                         <select id="subject-select" name="subject">
                           <option value=""></option>
                           {% for sub in subjects %}
-                          <option value="{{ sub }}">{{ sub }}</option>
+                          <option value="{{ sub.name }}">{{ sub.name }}</option>
                           {% endfor %}
                         </select>
                       </div>

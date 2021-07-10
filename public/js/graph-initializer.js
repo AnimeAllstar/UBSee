@@ -7,21 +7,28 @@ let myGraph;
 // global data variable
 let myData;
 
-// get data asynchronously
-async function getJSON() {
-  const response = await fetch('/json/courses.json');
-  const json = await response.json();
-  myData = json.courses;
-  return json;
+function getApiURL(req) {
+  const temp = `${window.location.origin}/api/subject`;
+  if (req.course && req.subject) {
+    return `${temp}/${req.subject}`;
+  } else if (req.subject) {
+    return `${temp}/${req.subject}?year=${getYear()}`;
+  } else {
+    return `${temp}/CPSC?year=${getYear()}`;
+  }
 }
 
-// gets the 'year' parameter and returns a value between 0 and 4
+// get data asynchronously
+async function setMyData(url) {
+  const response = await fetch(url);
+  myData = await response.json();
+}
+
+// gets the 'year' parameter and returns a value between 1 and 4
 function getYear() {
   const y = getParam('year');
   if (y) {
-    return y > 0 ? (y < 5 ? y : 4) : 4;
-  } else {
-    return 4;
+    return y > 4 ? 4 : y < 1 ? 4 : y;
   }
 }
 
@@ -39,29 +46,24 @@ const nodes = [];
 const links = [];
 
 // add relevant data to nodes[] and links[]
-function addToGraph(course, arg) {
+function addToGraph(course) {
   nodes.push({
     key: course.name,
+    subject: course.subject,
+    year: course.year,
     title: course.title,
-    url: course.url,
     prereqs: course.prereqs,
     prereqText: course.prereqText,
+    url: course.url,
     isClickable: course.prereqs.length === 0 ? true : false,
   });
   links.push(course);
 }
 
-// adds to graph if year level condition is met
-function SelectiveAddToGraph(course, year) {
-  if (course.name.split(' ')[1].substring(0, 1) <= year) {
-    addToGraph(course);
-  }
-}
-
 // splits course.prereqs into an array of course
 // iterates through that array and applies func to each element
 function iterateCourses(course, arg, func) {
-  const re = new RegExp(course.name.split(' ')[0] + '\\s\\d{3}', 'g');
+  const re = new RegExp(course.subject + '\\s\\d{3}', 'g');
   const courseList = course.prereqs.match(re);
   if (courseList) {
     courseList.forEach((c) => {
@@ -72,14 +74,17 @@ function iterateCourses(course, arg, func) {
 
 // recursively adds all nodes with possibile link to course
 // used to create dataset for course graph
-function recursiveAdd(course, subject) {
+function recursiveAdd(course) {
   addToGraph(course);
-  iterateCourses(course, subject, (c, subject) => {
+  iterateCourses(course, myData, (c, myData) => {
     // if course has not been added to nodes[] call recursiveAdd on it
     // this allows all the courses connect to the initial node to be added to nodes[]
     if (!nodes.some((e) => e.key === c)) {
-      if (subject[c]) {
-        recursiveAdd(subject[c], subject);
+      const cElem = myData.find((elem) => {
+        return elem.name === c;
+      });
+      if (cElem) {
+        recursiveAdd(cElem, myData);
       }
     }
   });
@@ -87,41 +92,20 @@ function recursiveAdd(course, subject) {
 
 // return node and links arrays
 async function getData(req) {
-  const dataJson = await getJSON();
-
-  let subject;
-
+  await setMyData(getApiURL(req));
   // conditions check for what data to fetch
   if (req.course && req.subject) {
     // course graph
-    subject = dataJson.courses[req.subject];
-    recursiveAdd(subject[req.subject + ' ' + req.course], subject);
-    return {
-      nodes,
-      links: links,
-    };
-  } else if (!req.course && !req.subject) {
-    // home page, displays CPSC subject graph
-    subject = dataJson.courses.CPSC;
-  } else if (!req.course && req.subject) {
-    // subject graph
-    subject = dataJson.courses[req.subject];
-  }
-
-  // decides whether course need to be selectively added based on the year parameter
-  let func;
-  const year = getYear();
-  if (year != 4) {
-    func = SelectiveAddToGraph;
+    const root = myData.find((course) => {
+      return course.name === req.subject + ' ' + req.course;
+    });
+    recursiveAdd(root);
   } else {
-    func = addToGraph;
+    // add courses node to graph
+    myData.forEach((course) => {
+      addToGraph(course);
+    });
   }
-
-  // add courses node to graph
-  for (const course in subject) {
-    func(subject[course], year);
-  }
-
   return {
     nodes,
     links: links,

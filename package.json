@@ -14,7 +14,8 @@
     "fix": "node scripts/fix.js",
     "concat": "concat -o ./public/js/ubsee.js ./public/js/graph-initializer.js ./public/js/node-event-handler.js ./public/js/page-event-handler.js ./public/js/select2-event-handler.js ./public/js/util.js",
     "uglify": "uglifyjs public/js/ubsee.js -o public/js/ubsee.min.js",
-    "build": "npm run concat && npm run uglify"
+    "build": "npm run concat && npm run uglify",
+    "json-mongo": "node scripts/json-mongo.js"
   },
   "repository": {
     "type": "git",

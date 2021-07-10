@@ -7,6 +7,7 @@ const sortJson = require('sort-json');
 const jsonfile = require('jsonfile');
 
 const path = require('path');
+const appRoot = require('../utils/app-root');
 
 // API used to get relevant data
 const UBCEXPLORER = 'https://ubcexplorer.io/searchAny/';
@@ -16,7 +17,7 @@ const SUBJECT = process.argv[2].toUpperCase();
 const COURSE = process.argv[3].toUpperCase();
 
 // filepath of subject file
-const FILE = path.join(global.appRoot, '..', 'public', 'json', SUBJECT + '.json');
+const FILE = path.join(appRoot, '..', 'public', 'json', SUBJECT + '.json');
 
 jsonfile.readFile(FILE, (err, obj) => {
     if (err) {

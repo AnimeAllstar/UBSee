@@ -1,6 +1,6 @@
 const jsonfile = require('jsonfile');
 const path = require('path');
-const source = path.join(global.appRoot, 'public', 'json', 'courses.json');
+const source = path.join(global.appRoot, 'data', 'json', 'courses.json');
 
 module.exports.read = (arg0, arg1, callback) => {
     jsonfile.readFile(source, (err, obj) => {

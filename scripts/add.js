@@ -1,4 +1,4 @@
-// this script creates a new JSON file for any subject at UBC van and stores it at /public/json
+// this script creates a new JSON file for any subject at UBC van and stores it at /data/json
 // to run the script use 'npm run add [subject ID]'
 // example : npm run add CPSC
 // use the command to add more subjects to this project
@@ -69,7 +69,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
           });
 
           // _TEMP insures that the file is not overwrited
-          const file = path.join(appRoot, '..', 'public', 'json', subject + '_TEMP.json');
+          const file = path.join(appRoot, '..', 'data', 'json', subject + '_TEMP.json');
           jsonfile.writeFile(file, newSubject, function (err) {
             if (err) {
               console.log('Error while writing to ' + file);

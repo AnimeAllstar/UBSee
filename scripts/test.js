@@ -1,4 +1,4 @@
-// this script runs tests on a JSON subject file at /public/json
+// this script runs tests on a JSON subject file at /data/json
 // to run the script use 'npm run test [subject ID]'
 // example : npm run test CPSC
 
@@ -12,7 +12,7 @@ const appRoot = require('../utils/app-root');
 const SUBJECT = process.argv[2].toUpperCase();
 
 // filepath of subject file
-const FILE = path.join(appRoot, '..', 'public', 'json', SUBJECT + '.json');
+const FILE = path.join(appRoot, '..', 'data', 'json', SUBJECT + '.json');
 
 jsonfile.readFile(FILE, (err, obj) => {
     if (err) {

@@ -16,7 +16,7 @@ const SUBJECT = process.argv[2].toUpperCase();
 const COURSE = process.argv[3].toUpperCase();
 
 // filepath of subject file
-const FILE = path.join(global.appRoot, '..', 'public', 'json', SUBJECT + '.json');
+const FILE = path.join(__dirname, '..', 'data', 'json', SUBJECT + '.json');
 
 jsonfile.readFile(FILE, (err, obj) => {
     if (err) {

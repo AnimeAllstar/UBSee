@@ -7,8 +7,12 @@ const path = require('path');
 
 global.appRoot = path.resolve(__dirname);
 
-const appRoutes = require('./routes/routes.js');
-const errorController = require('./controllers/error');
+const domainRoutes = require('./src/routes/domain.js');
+const graphRoutes = require('./src/routes/graph.js');
+const apiRoutes = require('./src/routes/api.js');
+
+const errorController = require('./src/controllers/error');
+const mongoConnect = require('./src/utils/database').connect;
 
 const app = express();
 
@@ -18,24 +22,30 @@ app.use(express.static('public'));
 app.use(favicon(path.join(global.appRoot, 'public', 'favicon.ico')));
 
 // secutity
-app.use(helmet({
-  contentSecurityPolicy: false,
-}));
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
 
 // asset compression
 app.use(compression());
 
 // nunjucks is the templating engine
-nunjucks.configure('views', {
+nunjucks.configure('src/views', {
   autoescape: true,
-  express: app
-})
+  express: app,
+});
 
-app.use(appRoutes);
+app.use(domainRoutes);
+app.use(graphRoutes);
+app.use('/api/', apiRoutes);
 
 // request reaches here if none of the routes in appRoutes is matched
 app.use(errorController.render404);
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log('listening on ' + (process.env.PORT ? `port ${process.env.PORT}` : 'http://localhost:3000/'));
+mongoConnect(() => {
+  app.listen(process.env.PORT || 3000, () => {
+    console.log('listening on ' + (process.env.PORT ? `port ${process.env.PORT}` : 'http://localhost:3000/'));
+  });
 });

@@ -1,39 +1,46 @@
 // resolves conflict with go.GraphObject.make() in graph-initializer
 jQuery.noConflict();
 
+// contains the data for the course and subject selects
+let selectData;
+
+// runs as soon as the document is ready
 jQuery(document).ready(function () {
   // initalizes all <select> tags
-  jQuery('#subject-select').select2({
-    theme: 'bootstrap-5',
-    placeholder: 'Subject',
-    selectionCssClass: 'select2--small',
-    dropdownCssClass: 'select2--small',
-  });
-  jQuery('#course-select').select2({
-    theme: 'bootstrap-5',
-    placeholder: 'Course #',
-    selectionCssClass: 'select2--small',
-    dropdownCssClass: 'select2--small',
-  });
+  setSelect('#subject-select', null, false);
+  setSelect('#course-select', null, false);
+  getSelectData(setSelect);
 });
 
-// if subject is selected, update the data in #course-select using myData (declared in in graph-initializer.js)
-jQuery('#subject-select').on('select2:selecting', function (e) {
-  jQuery('#course-select').empty().trigger('change');
-  const subject = myData[e.params.args.data.text];
-  const data = [];
-  let c = 1;
-  for (course in subject) {
-    data.push(subject[course].name + ' - ' + subject[course].title);
-  }
-  jQuery('#course-select').select2({
+// get subject and course data and initialize selectData
+// store all subject names into d and then execute the callback
+async function getSelectData(callback) {
+  const response = await fetch('/api/subjects');
+  selectData = await response.json();
+  const d = selectData.map(subject => {
+    return subject.name
+  });
+  callback('#subject-select', d, false);
+}
+
+// sets a select2 tag using id, data and clear
+function setSelect(id, data, clear) {
+  jQuery(id).select2({
     data: data,
     theme: 'bootstrap-5',
-    placeholder: 'Course',
-    allowClear: true,
+    placeholder: 'Subject',
+    allowClear: clear,
     selectionCssClass: 'select2--small',
     dropdownCssClass: 'select2--small',
   });
+}
+
+// if subject is selected, update the data in #course-select using selectData
+jQuery('#subject-select').on('select2:selecting', function (e) {
+  jQuery('#course-select').empty().trigger('change');
+  const subject = selectData.find(subject => subject.name === e.params.args.data.text);
+
+  setSelect('#course-select', subject.courses, true);
 
   // adds empty option for placeholder
   jQuery('#course-select').append(new Option('', '', true, true)).trigger('change');

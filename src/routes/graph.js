@@ -1,14 +1,12 @@
+// This file handles all routes that involve rendering pages with graphs
 const express = require('express');
 const router = express.Router();
 
-const domainController = require('../controllers/domain');
-const indexController = require('../controllers/index');
+const homeController = require('../controllers/home');
 const subjectController = require('../controllers/subject');
 const courseController = require('../controllers/course');
 
-router.get('/*', domainController.redirect);
-
-router.get('/', indexController.renderIndex);
+router.get('/', homeController.renderHome);
 
 router.get('/subject/:subject/course/:course', courseController.renderCourse);
 

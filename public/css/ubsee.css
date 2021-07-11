@@ -18,6 +18,8 @@ select {
   overflow-y: auto;
 }
 
+/* For devices with min-width: 992px. lg in Boostrap */
+
 @media only screen and (min-width: 992px) {
   .navbar {
     float: left !important;

@@ -11,7 +11,6 @@ module.exports.renderSubject = (req, res, next) => {
         } else {
             res.render('index.html', {
                 subject: sub,
-                subjects: names,
                 title: `${sub} - UBSee`,
                 description: `Subject graph for ${sub}`,
                 robots: 'index, follow',

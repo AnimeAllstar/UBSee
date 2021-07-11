@@ -48,9 +48,6 @@ module.exports.getSubjects = (req, res) => {
     const db = getdb();
     db.collection('subjects')
         .find()
-        .project({
-            name: 1
-        })
         .toArray((err, result) => {
             if (err) {
                 console.log(err);

@@ -1,3 +1,4 @@
+// This file used domainController to check if a request needs to be redirect
 const express = require('express');
 const router = express.Router();
 

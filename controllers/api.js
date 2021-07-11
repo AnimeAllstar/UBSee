@@ -1,28 +1,16 @@
 const getdb = require('../utils/database').getdb;
 
+// gets course using request params from courses collection
 module.exports.getCourse = (req, res) => {
     const db = getdb();
     db.collection('courses').findOne({
         name: `${req.params.subject} ${req.params.course}`,
     }, (err, result) => {
-        if (err) {
-            console.log(err);
-        }
-        if (!result) {
-            res.status(404).send('Course not found');
-        } else {
-            res.send(result);
-        }
+        handleResponse(err, result, res)
     });
 };
 
-function restrict(val, min, max) {
-    if (val) {
-        return val > max ? max : val < min ? max : val;
-    }
-    return max;
-}
-
+// gets subject using request param and year query from courses collection
 module.exports.getSubject = (req, res) => {
     const db = getdb();
     db.collection('courses')
@@ -33,50 +21,36 @@ module.exports.getSubject = (req, res) => {
             },
         })
         .toArray((err, result) => {
-            if (err) {
-                console.log(err);
-            }
-            if (result.length === 0) {
-                res.status(404).send('Subject not found');
-            } else {
-                res.send(result);
-            }
+            handleResponse(err, result, res)
         });
 };
 
+// gets all subjects from subjects collection
 module.exports.getSubjects = (req, res) => {
     const db = getdb();
     db.collection('subjects')
         .find()
         .toArray((err, result) => {
-            if (err) {
-                console.log(err);
-            }
-            if (!result) {
-                res.status(404).send('No subjects available');
-            } else {
-                res.send(result);
-            }
+            handleResponse(err, result, res)
         });
 };
 
-module.exports.getCourses = (req, res) => {
-    const db = getdb();
-    db.collection('subjects')
-        .find({
-            name: req.params.subject,
-        })
-        .project({
-            courses: 1
-        })
-        .toArray((err, result) => {
-            if (err) {
-                console.log(err);
-            }
-            if (result.length === 0) {
-                res.status(404).send('Courses not found');
-            } else {
-                res.send(result);
-            }
-        })
-};
+// used to restrict query query value between 1 and 4
+function restrict(val, min, max) {
+    if (val) {
+        return val > max ? max : val < min ? max : val;
+    }
+    return max;
+}
+
+// handles the response from the database
+function handleResponse(err, result, res) {
+    if (err) {
+        console.log(err);
+    }
+    if (!result) {
+        res.status(404).send('Not Found');
+    } else {
+        res.send(result);
+    }
+}

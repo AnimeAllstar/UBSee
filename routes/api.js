@@ -1,3 +1,4 @@
+// This file handles all api routes using the apiController
 const express = require('express');
 const router = express.Router();
 
@@ -8,7 +9,5 @@ router.get('/subject/:subject/course/:course', apiController.getCourse);
 router.get('/subject/:subject', apiController.getSubject);
 
 router.get('/subjects/', apiController.getSubjects);
-
-router.get('/courses/:subject', apiController.getCourses);
 
 module.exports = router;

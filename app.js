@@ -7,12 +7,12 @@ const path = require('path');
 
 global.appRoot = path.resolve(__dirname);
 
-const domainRoutes = require('./routes/domain.js');
-const graphRoutes = require('./routes/graph.js');
-const apiRoutes = require('./routes/api.js');
+const domainRoutes = require('./src/routes/domain.js');
+const graphRoutes = require('./src/routes/graph.js');
+const apiRoutes = require('./src/routes/api.js');
 
-const errorController = require('./controllers/error');
-const mongoConnect = require('./utils/database').connect;
+const errorController = require('./src/controllers/error');
+const mongoConnect = require('./src/utils/database').connect;
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.use(
 app.use(compression());
 
 // nunjucks is the templating engine
-nunjucks.configure('views', {
+nunjucks.configure('src/views', {
   autoescape: true,
   express: app,
 });

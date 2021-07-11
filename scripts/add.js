@@ -10,8 +10,6 @@ const jsonfile = require('jsonfile');
 
 const path = require('path');
 
-const appRoot = require('../utils/app-root');
-
 // API used to get relevant data
 const UBCCOURSES = 'https://api.ubccourses.com/course/';
 const UBCEXPLORER = 'https://ubcexplorer.io/searchAny/';
@@ -69,13 +67,13 @@ needle.get(UBCCOURSES + subject, (err, response) => {
           });
 
           // _TEMP insures that the file is not overwrited
-          const file = path.join(appRoot, '..', 'data', 'json', subject + '_TEMP.json');
+          const file = path.join(__dirname, '..', 'data', 'json', subject + '_TEMP.json');
           jsonfile.writeFile(file, newSubject, function (err) {
             if (err) {
               console.log('Error while writing to ' + file);
               console.error(err);
             } else {
-              console.log('Completed file write to ' + appRoot + 'data.json');
+              console.log('Completed file write to ' + file);
             }
           });
         }

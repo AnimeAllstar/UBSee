@@ -5,13 +5,11 @@
 const jsonfile = require('jsonfile');
 const path = require('path');
 
-const appRoot = require('../utils/app-root');
-
 // subject ID of new subject, passed using command line
 const SUBJECT = process.argv[2].toUpperCase();
 
 // filepath of subject file
-const FILE = path.join(appRoot, '..', 'data', 'json', SUBJECT + '.json');
+const FILE = path.join(__dirname, '..', 'data', 'json', SUBJECT + '.json');
 
 jsonfile.readFile(FILE, (err, obj) => {
     if (err) {

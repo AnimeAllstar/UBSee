@@ -43,6 +43,11 @@ Make sure you read and understand what the scripts do. Unfortunately, because UB
 
 Make sure to submit a pull request if you think you can improve the process of adding new subjects.
 
+### From JSON to MongoDB
+
+Use `npm run json-mongo` to add data from `./data/json/courses.json` to MongoDB. Add your `MONGI_URI` in a .env file.
+Uncomment the lines at the bottom of `./scripts/json-mongo.js` before running the command and take a look at the file for more information.
+
 ### Build command
 
 Use `npm run build` to run the build command. This command concats and uglifies the files in `./public/js/` into a single .js file. If you are making changes to `./public/js/` during development, don't worry about this as `npm run dev` builds the js file automatically before running the server using nodemon. Check the `nodemon.json` file for more information.
@@ -56,6 +61,7 @@ Use `npm run build` to run the build command. This command concats and uglifies 
 
 - Node.js
 - Express
+- MongoDB
 - GoJS
 
 ## Credits

@@ -7,6 +7,7 @@ let myGraph;
 // global data variable
 let myData;
 
+// returns Api URL
 function getApiURL(req) {
   const temp = `${window.location.origin}/api/subject`;
   if (req.course && req.subject) {
@@ -18,7 +19,7 @@ function getApiURL(req) {
   }
 }
 
-// get data asynchronously
+// set myData asynchronously
 async function setMyData(url) {
   const response = await fetch(url);
   myData = await response.json();
@@ -46,7 +47,7 @@ const nodes = [];
 const links = [];
 
 // add relevant data to nodes[] and links[]
-function addToGraph(course) {
+function addToData(course) {
   nodes.push({
     key: course.name,
     subject: course.subject,
@@ -75,7 +76,7 @@ function iterateCourses(course, arg, func) {
 // recursively adds all nodes with possibile link to course
 // used to create dataset for course graph
 function recursiveAdd(course) {
-  addToGraph(course);
+  addToData(course);
   iterateCourses(course, myData, (c, myData) => {
     // if course has not been added to nodes[] call recursiveAdd on it
     // this allows all the courses connect to the initial node to be added to nodes[]
@@ -90,39 +91,40 @@ function recursiveAdd(course) {
   });
 }
 
-// return node and links arrays
-async function getData(req) {
+// populates nodes[] and links[]
+async function setGlobal(req) {
   await setMyData(getApiURL(req));
-  // conditions check for what data to fetch
+
+  // conditions check for type of graph
   if (req.course && req.subject) {
     // course graph
     const root = myData.find((course) => {
       return course.name === req.subject + ' ' + req.course;
     });
+    // recursively add courses node and links to nodes[] and links[]
     recursiveAdd(root);
   } else {
-    // add courses node to graph
+    // subject graph
+    // add all courses node and links to nodes[] and links[]
     myData.forEach((course) => {
-      addToGraph(course);
+      addToData(course);
     });
   }
-  return {
-    nodes,
-    links: links,
-  };
 }
 
+// called from script tag in index.html
+// req contains the subject ID and course #
 async function createGraph(req) {
-  const graphData = await getData(req);
+  await setGlobal(req);
 
   // make graph
   myGraph = getGraph('graph-div');
 
   // add nodes to new model
-  myGraph.model = new go.GraphLinksModel(graphData.nodes);
+  myGraph.model = new go.GraphLinksModel(nodes);
 
-  // add edges to nodes
-  graphData.links.forEach((link) => {
+  // add links to nodes
+  links.forEach((link) => {
     iterateCourses(link, link.name, (fromKey, toKey) => {
       if (!links.some((e) => e.key === fromKey)) {
         myGraph.model.addLinkData({
@@ -566,8 +568,10 @@ function updateOpacity(arr) {
 // resolves conflict with go.GraphObject.make() in graph-initializer
 jQuery.noConflict();
 
+// contains the data for the course and subject selects
 let selectData;
 
+// runs as soon as the document is ready
 jQuery(document).ready(function () {
   // initalizes all <select> tags
   setSelect('#subject-select', null, false);
@@ -575,6 +579,8 @@ jQuery(document).ready(function () {
   getSelectData(setSelect);
 });
 
+// get subject and course data and initialize selectData
+// store all subject names into d and then execute the callback
 async function getSelectData(callback) {
   const response = await fetch('/api/subjects');
   selectData = await response.json();
@@ -584,6 +590,7 @@ async function getSelectData(callback) {
   callback('#subject-select', d, false);
 }
 
+// sets a select2 tag using id, data and clear
 function setSelect(id, data, clear) {
   jQuery(id).select2({
     data: data,
@@ -595,7 +602,7 @@ function setSelect(id, data, clear) {
   });
 }
 
-// if subject is selected, update the data in #course-select using myData (declared in in graph-initializer.js)
+// if subject is selected, update the data in #course-select using selectData
 jQuery('#subject-select').on('select2:selecting', function (e) {
   jQuery('#course-select').empty().trigger('change');
   const subject = selectData.find(subject => subject.name === e.params.args.data.text);

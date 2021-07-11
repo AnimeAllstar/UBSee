@@ -35,7 +35,7 @@ module.exports.getSubjects = (req, res) => {
         });
 };
 
-// used to restrict query query value between 1 and 4
+// used to restrict query value between 1 and 4
 function restrict(val, min, max) {
     if (val) {
         return val > max ? max : val < min ? max : val;

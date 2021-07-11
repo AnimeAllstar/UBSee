@@ -1,5 +1,6 @@
 const getdb = require('../utils/database').getdb;
 
+// Course Object
 class Course {
     constructor(name, prereqs, prereqText, title, url) {
         this.subject = name.split(' ')[0];
@@ -11,26 +12,31 @@ class Course {
         this.url = url;
     }
 
+    // save this to the courses collection
     save() {
         const db = getdb();
         db.collection('courses').insertOne(this, (err) => {
             if (err) {
                 console.log(err);
+            } else {
+                console.log('course saved');
             }
-            console.log('done');
         });
     }
 
+    // save multiple courses to the courses collection
     static saveAll(courses) {
         const db = getdb();
         db.collection('courses').insertMany(courses, (err) => {
             if (err) {
                 console.log(err);
+            } else {
+                console.log('all courses saved');
             }
-            console.log('done');
         });
     }
 
+    // returns whether a course with name == filter exists in courses
     static exists(filter, callback) {
         const db = getdb();
         db.collection('courses')

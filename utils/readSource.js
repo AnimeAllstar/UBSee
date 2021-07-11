@@ -1,7 +1,9 @@
 const jsonfile = require('jsonfile');
 const path = require('path');
-const source = path.join(global.appRoot, 'data', 'json', 'courses.json');
+const appRoot = require('../utils/app-root');
+const source = path.join(appRoot, '..', 'data', 'json', 'courses.json');
 
+// reads source.json [./data/json/courses.json] and calls callback
 module.exports.read = (arg0, arg1, callback) => {
     jsonfile.readFile(source, (err, obj) => {
         if (err) {

@@ -1,8 +1,11 @@
+// this script is used to add data from ./data/json/courses.json to MongoDB
+
 const Subject = require('../models/Subject');
 const Course = require('../models/Course');
 const mongoConnect = require('../utils/database').connect;
 const readJson = require('../utils/readSource');
 
+// adds data to the subjects collection
 function addSubjects() {
     readJson.read(null, null, (arg0, arg1, obj) => {
         const courses = obj.courses;
@@ -20,6 +23,7 @@ function addSubjects() {
     });
 }
 
+// adds data to the subjects courses
 function addCourses() {
     readJson.read(null, null, (arg0, arg1, obj) => {
         const courses = obj.courses;
@@ -37,5 +41,6 @@ function addCourses() {
     });
 }
 
-addSubjects();
-addCourses();
+// DO NOT UNCOMMENT UNLESS YOU WANT TO ADD DATA TO THE DATABASE
+// addSubjects();
+// addCourses();

@@ -7,7 +7,6 @@ const path = require('path');
 
 const appRoot = require('../utils/app-root');
 
-
 // subject ID of new subject, passed using command line
 const SUBJECT = process.argv[2].toUpperCase();
 

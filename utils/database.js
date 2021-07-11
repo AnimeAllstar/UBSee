@@ -8,6 +8,7 @@ const client = new MongoClient(process.env.MONGO_URI, {
     useUnifiedTopology: true
 });
 
+// connects to database, initiliazes _db and calls callback
 function connect(callback) {
     console.log('Connecting to database...');
     client.connect((err) => {
@@ -20,6 +21,7 @@ function connect(callback) {
     })
 }
 
+// gets database
 function getdb() {
     if (_db) {
         return _db;

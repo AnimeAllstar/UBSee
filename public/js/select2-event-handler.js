@@ -1,8 +1,10 @@
 // resolves conflict with go.GraphObject.make() in graph-initializer
 jQuery.noConflict();
 
+// contains the data for the course and subject selects
 let selectData;
 
+// runs as soon as the document is ready
 jQuery(document).ready(function () {
   // initalizes all <select> tags
   setSelect('#subject-select', null, false);
@@ -10,6 +12,8 @@ jQuery(document).ready(function () {
   getSelectData(setSelect);
 });
 
+// get subject and course data and initialize selectData
+// store all subject names into d and then execute the callback
 async function getSelectData(callback) {
   const response = await fetch('/api/subjects');
   selectData = await response.json();
@@ -19,6 +23,7 @@ async function getSelectData(callback) {
   callback('#subject-select', d, false);
 }
 
+// sets a select2 tag using id, data and clear
 function setSelect(id, data, clear) {
   jQuery(id).select2({
     data: data,
@@ -30,7 +35,7 @@ function setSelect(id, data, clear) {
   });
 }
 
-// if subject is selected, update the data in #course-select using myData (declared in in graph-initializer.js)
+// if subject is selected, update the data in #course-select using selectData
 jQuery('#subject-select').on('select2:selecting', function (e) {
   jQuery('#course-select').empty().trigger('change');
   const subject = selectData.find(subject => subject.name === e.params.args.data.text);

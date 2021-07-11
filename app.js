@@ -7,7 +7,10 @@ const path = require('path');
 
 global.appRoot = path.resolve(__dirname);
 
-const appRoutes = require('./routes/routes.js');
+const domainRoutes = require('./routes/domain.js');
+const graphRoutes = require('./routes/graph.js');
+const apiRoutes = require('./routes/api.js');
+
 const errorController = require('./controllers/error');
 const mongoConnect = require('./utils/database').connect;
 
@@ -34,7 +37,9 @@ nunjucks.configure('views', {
   express: app,
 });
 
-app.use(appRoutes);
+app.use(domainRoutes);
+app.use(graphRoutes);
+app.use('/api/', apiRoutes);
 
 // request reaches here if none of the routes in appRoutes is matched
 app.use(errorController.render404);

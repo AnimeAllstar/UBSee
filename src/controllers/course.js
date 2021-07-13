@@ -11,6 +11,7 @@ module.exports.renderCourse = (req, res, next) => {
             res.render('index.html', {
                 subject: sub,
                 course: courseNum,
+                api: `/api/subject/${sub}`,
                 title: `${sub} ${courseNum} - UBSee`,
                 description: `Course graph for ${sub} ${courseNum}`,
                 robots: 'index, follow',

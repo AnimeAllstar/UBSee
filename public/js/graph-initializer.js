@@ -7,18 +7,6 @@ let myGraph;
 // global data variable
 let myData;
 
-// returns Api URL
-function getApiURL(req) {
-  const temp = `${window.location.origin}/api/subject`;
-  if (req.course && req.subject) {
-    return `${temp}/${req.subject}`;
-  } else if (req.subject) {
-    return `${temp}/${req.subject}?year=${getYear()}`;
-  } else {
-    return `${temp}/CPSC?year=${getYear()}`;
-  }
-}
-
 // set myData asynchronously
 async function setMyData(url) {
   const response = await fetch(url);
@@ -93,7 +81,7 @@ function recursiveAdd(course) {
 
 // populates nodes[] and links[]
 async function setGlobal(req) {
-  await setMyData(getApiURL(req));
+  await setMyData(window.location.origin + req.api);
 
   // conditions check for type of graph
   if (req.course && req.subject) {

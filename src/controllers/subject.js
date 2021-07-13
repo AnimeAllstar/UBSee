@@ -12,6 +12,7 @@ module.exports.renderSubject = (req, res, next) => {
         } else {
             res.render('index.html', {
                 subject: sub,
+                api: `/api/subject/CPSC?year=${req.query.year}`,
                 title: `${sub} - UBSee`,
                 description: `Subject graph for ${sub}`,
                 robots: 'index, follow',

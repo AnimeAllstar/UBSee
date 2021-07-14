@@ -45,6 +45,7 @@ function addToData(course) {
     prereqText: course.prereqText,
     url: course.url,
     isClickable: course.prereqs.length === 0 ? true : false,
+    isSearched: false
   });
   links.push(course);
 }
@@ -192,13 +193,12 @@ function createNodeTemplate() {
       go.Shape,
       'Rectangle', {
         strokeWidth: 2,
-        stroke: null,
-        fill: '#fff',
-        name: 'shape',
+        stroke: '#000',
+        name: 'shape'
       },
-      // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
-      new go.Binding('stroke', 'isHighlighted', (h) => {
-        return h ? '#000' : '#000';
+      // bind Shape.scale and Shape.fill to Node.isHighlighted, Node.data.isClickable and Node.data.isSearched
+      new go.Binding('scale', '', (node) => {
+        return node.data.isSearched ? 1.3 : 1;
       }).ofObject(),
       new go.Binding('fill', '', (node) => {
         if (node.data.isClickable) {
@@ -427,9 +427,21 @@ function updateIsclickable(node) {
   const newState = getNewState(node, prereqs);
 
   // update node.data.isClickable using newState
+  updateData(node, 'isClickable', newState, 'change isClickable');
+}
+
+// updates property for all nodes within collection using newVal and transaction name
+function updateDataForAll(collection, property, newVal, tname) {
+  collection.each((node) => {
+    updateData(node, property, newVal, tname);
+  });
+}
+
+// updates property for a node using newVal and transaction name
+function updateData(node, property, newVal, tname) {
   node.diagram.model.commit((model) => {
-    model.set(node.data, 'isClickable', newState);
-  }, 'change isClickable');
+    model.set(node.data, property, newVal);
+  }, tname);
 }
 // initializes copy button Bootstrap tooltip
 const copyBtn = document.getElementById('copyBtn');
@@ -491,15 +503,11 @@ function openTab() {
 }
 
 // updates graph paramaters using variables in the Preferences tab in index.html
-function updateGraph() {
-  myGraph.startTransaction('update');
+function updateAppearance() {
+  myGraph.startTransaction('update appearance');
   setLayeringOption(getRadioValue('layering'));
   myGraph.layout.direction = parseInt(getRadioValue('direction'));
-  const checkedArr = getCheckboxes('focus');
-  if (checkedArr) {
-    updateOpacity(checkedArr);
-  }
-  myGraph.commitTransaction('update');
+  myGraph.commitTransaction('update appearance');
 }
 
 // returns value of radio button inputs using name
@@ -540,6 +548,14 @@ function updateDisplayText(val) {
   document.getElementById('displayRangeText').innerText = 'Display courses up to year ' + val;
 }
 
+// updates focus(opacity) of year levels in the graph
+function updateFocus() {
+  const checkedArr = getCheckboxes('focus');
+  if (checkedArr) {
+    updateOpacity(checkedArr);
+  }
+}
+
 // sets node.shape opacity to 0.4 if it's year level is unchecked
 function updateOpacity(arr) {
   myGraph.nodes.each(function (node) {
@@ -552,6 +568,34 @@ function updateOpacity(arr) {
       }
     }
   });
+}
+
+// searches for nodes within graph
+function searchGraph() {
+  const searchString = document.getElementById("search-input");
+
+  if (searchString.value) {
+    // search key and title data property of all nodes using regex made using searchString
+    const safe = searchString.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(safe, "i");
+    const results = myGraph.findNodesByExample({
+      key: regex
+    }, {
+      title: regex
+    });
+
+    // update isSearched data property of results collection (method from node-even-handler.js)
+    updateDataForAll(results, 'isSearched', true, 'set isSearched to true');
+  }
+}
+
+// clear search selection of all searched nodes
+function clearSelection() {
+  const searchedNodes = myGraph.findNodesByExample({
+    isSearched: true
+  });
+  // since isSearched is bound to scale (see graph-initializer), setting it to false, returns scale to normal
+  updateDataForAll(searchedNodes, 'isSearched', false, 'set isSearched to false for searched nodes');
 }
 // resolves conflict with go.GraphObject.make() in graph-initializer
 jQuery.noConflict();

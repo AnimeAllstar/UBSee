@@ -79,12 +79,67 @@
                     </li>
                     <!-- Copy to clipboard button -->
                     <li class="list-group-item rounded-0">
-                      <button type="button" class="btn btn-primary" onclick="openTab()">
+                      <button type="button" class="btn btn-outline-primary" onclick="openTab()">
                         Create
                       </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="tooltip"
+                      <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip"
                         onclick="copyToClipboard();" title="Copy url of current graph to clipboard" id="copyBtn">
                         Copy URL
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Tools tab -->
+            <div>
+              <h2 class="accordion-header" id="tools-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#tools-content">
+                  Tools
+                </button>
+              </h2>
+              <div id="tools-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <!-- Search -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Search</h6>
+                      <span>Search for a node within the graph.</span>
+                      <div class="input-group my-2">
+                        <input type="search" class="form-control" placeholder="Enter search string" id="search-input"
+                          onkeypress="if (event.keyCode === 13) searchGraph()" />
+                        <button class="btn btn-outline-primary" type="button" id="button-addon2"
+                          onclick="searchGraph()">Search</button>
+                        <button class="btn btn-outline-primary border-start-0" type="button"
+                          onclick="clearSelection()">Clear</button>
+                      </div>
+                    </li>
+                    <!-- Focus -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Focus</h6>
+                      <span>Select year levels you want to focus on.</span>
+                      <br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
+                        <label class="form-check-label" for="1">year 1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
+                        <label class="form-check-label" for="2">year 2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
+                        <label class="form-check-label" for="3">year 3</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
+                        <label class="form-check-label" for="4">year 4</label>
+                      </div>
+                    </li>
+                    <li class="list-group-item rounded-0">
+                      <button type="button" class="btn btn-outline-primary" onclick="updateFocus()">
+                        Update Focus
                       </button>
                     </li>
                   </ul>
@@ -142,30 +197,8 @@
                         <label class="form-check-label" for="down">Optimal link length</label>
                       </div>
                     </li>
-                    <!-- Focus -->
                     <li class="list-group-item rounded-0">
-                      <h6>Focus</h6>
-                      <span>Select year levels you want to focus on.</span>
-                      <br>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
-                        <label class="form-check-label" for="1">year 1</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
-                        <label class="form-check-label" for="2">year 2</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
-                        <label class="form-check-label" for="3">year 3</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
-                        <label class="form-check-label" for="4">year 4</label>
-                      </div>
-                    </li>
-                    <li class="list-group-item rounded-0">
-                      <button type="button" class="btn btn-primary" onclick="updateGraph()">
+                      <button type="button" class="btn btn-outline-primary" onclick="updateAppearance()">
                         Update
                       </button>
                     </li>
@@ -311,7 +344,7 @@
                     </li>
                     <li class="list-group-item rounded-0">
                       <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank">
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-outline-primary">
                           Feedback Form
                         </button>
                       </a>
@@ -324,12 +357,16 @@
         </li>
         <li class="mt-2 nav-item d-block">
           <div class="alert alert-success rounded-0" role="alert">
-            <h6 class="alert-heading">Latest feature</h6>
+            <h6 class="alert-heading"><i class="bi bi-exclamation-lg"></i> Latest feature</h6>
             <p class="mb-0">
               <small>
-                The <b>'Copy URL'</b> button now records the nodes that you have currently selected!<br>
-                This means that you can copy the URL of a graph and come back later to pick up from where you left off
-                without having to re-select courses!
+                You can now <b>Search</b> for courses within a graph!
+                Use the input field in the new <b>'Tools'</b> tab to search for nodes within a graph.
+                <br>
+                You can search using course code or titles. eg: 'econ 101', '101' 'Micro', 'Microecon', etc.
+                <br>
+                Click 'Clear' to clear all searches. You can also use ctrl + z and ctrl + y to undo and redo individual
+                searches
               </small>
             </p>
           </div>

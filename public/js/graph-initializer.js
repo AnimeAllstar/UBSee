@@ -45,6 +45,7 @@ function addToData(course) {
     prereqText: course.prereqText,
     url: course.url,
     isClickable: course.prereqs.length === 0 ? true : false,
+    isSearched: false
   });
   links.push(course);
 }
@@ -192,13 +193,12 @@ function createNodeTemplate() {
       go.Shape,
       'Rectangle', {
         strokeWidth: 2,
-        stroke: null,
-        fill: '#fff',
-        name: 'shape',
+        stroke: '#000',
+        name: 'shape'
       },
-      // bind Shape.stroke and Shape.fill to Node.isHighlighted and Node.isClickable
-      new go.Binding('stroke', 'isHighlighted', (h) => {
-        return h ? '#000' : '#000';
+      // bind Shape.scale and Shape.fill to Node.isHighlighted, Node.data.isClickable and Node.data.isSearched
+      new go.Binding('scale', '', (node) => {
+        return node.data.isSearched ? 1.3 : 1;
       }).ofObject(),
       new go.Binding('fill', '', (node) => {
         if (node.data.isClickable) {

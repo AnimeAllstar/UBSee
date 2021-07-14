@@ -71,7 +71,19 @@ function updateIsclickable(node) {
   const newState = getNewState(node, prereqs);
 
   // update node.data.isClickable using newState
+  updateData(node, 'isClickable', newState, 'change isClickable');
+}
+
+// updates property for all nodes within collection using newVal and transaction name
+function updateDataForAll(collection, property, newVal, tname) {
+  collection.each((node) => {
+    updateData(node, property, newVal, tname);
+  });
+}
+
+// updates property for a node using newVal and transaction name
+function updateData(node, property, newVal, tname) {
   node.diagram.model.commit((model) => {
-    model.set(node.data, 'isClickable', newState);
-  }, 'change isClickable');
+    model.set(node.data, property, newVal);
+  }, tname);
 }

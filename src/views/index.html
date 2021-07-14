@@ -79,12 +79,67 @@
                     </li>
                     <!-- Copy to clipboard button -->
                     <li class="list-group-item rounded-0">
-                      <button type="button" class="btn btn-primary" onclick="openTab()">
+                      <button type="button" class="btn btn-outline-primary" onclick="openTab()">
                         Create
                       </button>
-                      <button type="button" class="btn btn-primary" data-bs-toggle="tooltip"
+                      <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip"
                         onclick="copyToClipboard();" title="Copy url of current graph to clipboard" id="copyBtn">
                         Copy URL
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Tools tab -->
+            <div>
+              <h2 class="accordion-header" id="tools-tab">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#tools-content">
+                  Tools
+                </button>
+              </h2>
+              <div id="tools-content" class="accordion-collapse collapse">
+                <div class="accordion-body p-0">
+                  <ul class="list-group">
+                    <!-- Search -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Search</h6>
+                      <span>Search for a node within the graph.</span>
+                      <div class="input-group my-2">
+                        <input type="search" class="form-control" placeholder="Enter search string" id="search-input"
+                          onkeypress="if (event.keyCode === 13) searchGraph()" />
+                        <button class="btn btn-outline-primary" type="button" id="button-addon2"
+                          onclick="searchGraph()">Search</button>
+                        <button class="btn btn-outline-primary border-start-0" type="button"
+                          onclick="clearSelection()">Clear</button>
+                      </div>
+                    </li>
+                    <!-- Focus -->
+                    <li class="list-group-item rounded-0">
+                      <h6>Focus</h6>
+                      <span>Select year levels you want to focus on.</span>
+                      <br>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
+                        <label class="form-check-label" for="1">year 1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
+                        <label class="form-check-label" for="2">year 2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
+                        <label class="form-check-label" for="3">year 3</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
+                        <label class="form-check-label" for="4">year 4</label>
+                      </div>
+                    </li>
+                    <li class="list-group-item rounded-0">
+                      <button type="button" class="btn btn-outline-primary" onclick="updateFocus()">
+                        Set Focus
                       </button>
                     </li>
                   </ul>
@@ -142,30 +197,8 @@
                         <label class="form-check-label" for="down">Optimal link length</label>
                       </div>
                     </li>
-                    <!-- Focus -->
                     <li class="list-group-item rounded-0">
-                      <h6>Focus</h6>
-                      <span>Select year levels you want to focus on.</span>
-                      <br>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="1" checked>
-                        <label class="form-check-label" for="1">year 1</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="2" checked>
-                        <label class="form-check-label" for="2">year 2</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="3" checked>
-                        <label class="form-check-label" for="3">year 3</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="focus" value="4" checked>
-                        <label class="form-check-label" for="4">year 4</label>
-                      </div>
-                    </li>
-                    <li class="list-group-item rounded-0">
-                      <button type="button" class="btn btn-primary" onclick="updateGraph()">
+                      <button type="button" class="btn btn-outline-primary" onclick="updateAppearance()">
                         Update
                       </button>
                     </li>
@@ -189,17 +222,42 @@
                       <h6>How can this tool help you?</h6>
                       <p>
                         This tool can help make it easier to visualize course eligibilities. It can also help you find
-                        the
-                        course path you need to take in order to satisfy the requirements of a higher level course.
+                        the course path you need to take in order to satisfy the requirements of a higher level course.
                       </p>
                       <h6>How to Use</h6>
                       <p>
-                        Use the dropdown menus in the <i class="text-primary"> Subject / Course Selection </i> tab to
-                        create a subject graph or a course graph. You can even <i class="text-primary"> search </i>
-                        for courses in the dropdown by typing the courname name / number in the search bar in the
-                        dropdown. Leave the course dropdown empty to create a subject graph.
+                        <i class="text-primary"> Subject / Course Selection </i>
+                        <br>
+                        Use the dropdown menus to create a subject graph or a course graph.
+                        <br>
+                        You can <i class="text-primary"> search </i> for courses in the dropdown by typing the course
+                        name / number in the search bar in the dropdown.
                       </p>
-                      <p>The <i class="text-primary"> Preferences </i> tab can help improve readability of graph.</p>
+                      <p>
+                        Click the 'Copy URL' button to copy the URL of the current graph. <i class="text-primary">The
+                          copied url also contains a list of currently selected nodes so you will not have to re-select
+                          nodes if you visit UBSee using the copied link.</i>
+                      </p>
+                      <p>
+                        Leave the course dropdown empty to create a subject graph.
+                        <br>
+                        Adjust the slider to create subject graphs containing courses upto a certain year.
+                      </p>
+                      <p>
+                        <i class="text-primary"> Tools </i>
+                        <br>
+                        Use the input field to <i class="text-primary"> search </i> for courses within the graph. You
+                        can search using course code or titles. eg: 'econ 101', '101' 'Micro', 'Microecon', etc.
+                        Click 'Clear' to clear all searches.
+                        <br>
+                        Use the focus checkboxes to <i class="text-primary"> focus </i> on courses of a certain year.
+                      </p>
+                      <p>
+                        <i class="text-primary"> Preferences </i>
+                        <br>
+                        Includes options to change graph appearance settings.
+                      </p>
+                      <hr>
                       <p>The Nodes represent a specific course, ex: CPSC 110.</p>
                       <p>
                         The lines between courses represent the prerequisites between courses. <i class="text-primary">
@@ -236,9 +294,8 @@
                       </p>
                       <p class="mb-1">
                         <i class="text-primary"> Ctrl + z </i> is undo and <i class="text-primary"> Ctrl + y </i> is
-                        redo.
-                        The graph has to be selected (click anywhere on the graph to select it (on the white space, for
-                        example)).
+                        redo. This means that you can de-select nodes if you accidentally click something.
+                        The graph has to be selected (click anywhere on the graph background to select it).
                       </p>
                     </li>
                   </ul>
@@ -311,7 +368,7 @@
                     </li>
                     <li class="list-group-item rounded-0">
                       <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank">
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-outline-primary">
                           Feedback Form
                         </button>
                       </a>
@@ -324,12 +381,16 @@
         </li>
         <li class="mt-2 nav-item d-block">
           <div class="alert alert-success rounded-0" role="alert">
-            <h6 class="alert-heading">Latest feature</h6>
+            <h6 class="alert-heading"><i class="bi bi-exclamation-lg"></i> Latest feature</h6>
             <p class="mb-0">
               <small>
-                The <b>'Copy URL'</b> button now records the nodes that you have currently selected!<br>
-                This means that you can copy the URL of a graph and come back later to pick up from where you left off
-                without having to re-select courses!
+                You can now <b>Search</b> for courses within a graph!
+                Use the input field in the new <b>'Tools'</b> tab to search for nodes within a graph.
+                <br>
+                You can search using course code or titles. eg: 'econ 101', '101' 'Micro', 'Microecon', etc.
+                <br>
+                Click 'Clear' to clear all searches. You can also use ctrl + z and ctrl + y to undo and redo individual
+                searches
               </small>
             </p>
           </div>

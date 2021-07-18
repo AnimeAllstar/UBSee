@@ -49,11 +49,7 @@ function openTab() {
   if (subject && course) {
     window.open(`/subject/${subject}/course/${course.split(' ')[1]}`);
   } else if (subject) {
-    if (year < 4) {
-      window.open(`/subject/${subject}?year=${year}`);
-    } else {
-      window.open(`/subject/${subject}`);
-    }
+    window.open(`/subject/${subject}?year=${year}`);
   }
 }
 

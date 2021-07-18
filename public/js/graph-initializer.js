@@ -4,21 +4,13 @@ const $ = go.GraphObject.make;
 // global variable for graph
 let myGraph;
 
-// global data variable
+// global variable for api data
 let myData;
 
 // set myData asynchronously
 async function setMyData(url) {
   const response = await fetch(url);
   myData = await response.json();
-}
-
-// gets the 'year' parameter and returns a value between 1 and 4
-function getYear() {
-  const y = getParam('year');
-  if (y) {
-    return y > 4 ? 4 : y < 1 ? 4 : y;
-  }
 }
 
 // gets an array of the highlighted nodes from the 'nodes' parameter
@@ -81,14 +73,14 @@ function recursiveAdd(course) {
 }
 
 // populates nodes[] and links[]
-async function setGlobal(req) {
-  await setMyData(window.location.origin + req.api);
+async function setGlobal(params) {
+  await setMyData(window.location.origin + params.api);
 
-  // conditions check for type of graph
-  if (req.course && req.subject) {
+  // if params.course is present, generate a course graph
+  if (params.course && params.subject) {
     // course graph
     const root = myData.find((course) => {
-      return course.name === req.subject + ' ' + req.course;
+      return course.name === params.subject + ' ' + params.course;
     });
     // recursively add courses node and links to nodes[] and links[]
     recursiveAdd(root);
@@ -102,9 +94,9 @@ async function setGlobal(req) {
 }
 
 // called from script tag in index.html
-// req contains the subject ID and course #
-async function createGraph(req) {
-  await setGlobal(req);
+// params contains the subject ID, course # and API url
+async function createGraph(params) {
+  await setGlobal(params);
 
   // make graph
   myGraph = getGraph('graph-div');

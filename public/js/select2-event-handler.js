@@ -7,8 +7,8 @@ let selectData;
 // runs as soon as the document is ready
 jQuery(document).ready(function () {
   // initalizes all <select> tags
-  setSelect('#subject-select', null, false);
-  setSelect('#course-select', null, false);
+  setSelect('#subject-select', 'Subject', null, false);
+  setSelect('#course-select', 'Course', null, false);
   getSelectData(setSelect);
 });
 
@@ -20,15 +20,15 @@ async function getSelectData(callback) {
   const d = selectData.map(subject => {
     return subject.name
   });
-  callback('#subject-select', d, false);
+  callback('#subject-select', 'Subject', d, false);
 }
 
 // sets a select2 tag using id, data and clear
-function setSelect(id, data, clear) {
+function setSelect(id, placeholder, data, clear) {
   jQuery(id).select2({
     data: data,
     theme: 'bootstrap-5',
-    placeholder: 'Subject',
+    placeholder: placeholder,
     allowClear: clear,
     selectionCssClass: 'select2--small',
     dropdownCssClass: 'select2--small',
@@ -40,7 +40,7 @@ jQuery('#subject-select').on('select2:selecting', function (e) {
   jQuery('#course-select').empty().trigger('change');
   const subject = selectData.find(subject => subject.name === e.params.args.data.text);
 
-  setSelect('#course-select', subject.courses, true);
+  setSelect('#course-select', 'Course', subject.courses, true);
 
   // adds empty option for placeholder
   jQuery('#course-select').append(new Option('', '', true, true)).trigger('change');

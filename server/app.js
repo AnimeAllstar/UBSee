@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const favicon = require('serve-favicon');
 const compression = require('compression');
 const helmet = require('helmet');
@@ -18,10 +19,12 @@ const app = express();
 
 app.use(express.static('public'));
 
+app.use(cors());
+
 // website icon
 app.use(favicon(path.join(global.appRoot, 'public', 'favicon.ico')));
 
-// secutity
+// security
 app.use(
   helmet({
     contentSecurityPolicy: false,
@@ -45,7 +48,7 @@ app.use('/api/', apiRoutes);
 app.use(errorController.render404);
 
 mongoConnect(() => {
-  app.listen(process.env.PORT || 3000, () => {
-    console.log('listening on ' + (process.env.PORT ? `port ${process.env.PORT}` : 'http://localhost:3000/'));
+  app.listen(process.env.PORT || 8080, () => {
+    console.log('listening on ' + (process.env.PORT ? `port ${process.env.PORT}` : 'http://localhost:8080/'));
   });
 });

@@ -1,6 +1,41 @@
-.diagram-component {
-  width: 1000px;
-  height: 1000px;
-  border: solid 1px black;
-  background-color: white;
+.graph-component {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.graph-container {
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-collapse {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* For devices with min-width: 992px. lg in Boostrap */
+
+@media only screen and (min-width: 992px) {
+  .graph-container {
+    float: right !important;
+  }
+
+  .navbar {
+    float: left !important;
+    height: 100%;
+  }
+
+  .navbar-collapse {
+    max-height: none;
+  }
+
+  .sidebar {
+    height: 100%;
+    position: absolute;
+    overflow-y: auto;
+  }
 }

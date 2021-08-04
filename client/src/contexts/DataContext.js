@@ -7,6 +7,20 @@ export function useData() {
   return useContext(DataContext);
 }
 
+function getApiData() {
+  const splitUrl = window.location.pathname.split('/');
+  const subject = splitUrl[2];
+  const course = splitUrl[4];
+  const urlParams = new URLSearchParams(window.location.search);
+  const nodes = urlParams.get('nodes');
+  const queryString = course ? `?nodes=${nodes}` : window.location.search;
+  return {
+    subject: subject,
+    course: course,
+    url: `api/subject/${subject}${queryString}`,
+  };
+}
+
 export function DataProvider({ children }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
   const [linkDataArray, setLinkDataArray] = useState([]);
@@ -15,10 +29,11 @@ export function DataProvider({ children }) {
   useEffect(() => {
     setLoading(true);
     const setData = async () => {
+      const apiData = getApiData();
       const data = await getData({
-        subject: '',
-        course: '',
-        api: 'api/subject/CPSC?year=undefined',
+        subject: apiData.subject,
+        course: apiData.course,
+        api: apiData.url,
       });
       setNodeDataArray(data.nodes);
       setLinkDataArray(data.links);

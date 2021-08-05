@@ -1,5 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { getData } from '../utils/data-initializer';
+import { getParam } from '../utils/utils';
 
 const DataContext = React.createContext();
 
@@ -11,9 +12,7 @@ function getApiData() {
   const splitUrl = window.location.pathname.split('/');
   const subject = splitUrl[2];
   const course = splitUrl[4];
-  const urlParams = new URLSearchParams(window.location.search);
-  const nodes = urlParams.get('nodes');
-  const queryString = course ? `?nodes=${nodes}` : window.location.search;
+  const queryString = course ? `?nodes=${getParam('nodes')}` : window.location.search;
   return {
     subject: subject,
     course: course,
@@ -24,6 +23,8 @@ function getApiData() {
 export function DataProvider({ children }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
   const [linkDataArray, setLinkDataArray] = useState([]);
+  const [skipsDiagramUpdate, setSkipsDiagramUpdate] = useState(false);
+  const graphRef = useRef(null);
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,24 +39,20 @@ export function DataProvider({ children }) {
       setNodeDataArray(data.nodes);
       setLinkDataArray(data.links);
       setLoading(false);
-      console.log(data.nodes);
-      console.log(data.links);
     };
     setData();
   }, []);
 
-  /**
-   * This function handles any changes to the GoJS model.
-   * It is here that you would make any updates to your React state, which is dicussed below.
-   */
   const handleModelChange = (changes) => {
-    console.log('GoJS model changed!');
     console.log(changes);
+    console.log('GoJS model changed!');
   };
 
   const value = {
     nodeDataArray,
     linkDataArray,
+    skipsDiagramUpdate,
+    graphRef,
     isLoading,
     handleModelChange,
   };

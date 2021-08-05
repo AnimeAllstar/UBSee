@@ -7,7 +7,7 @@ import { useData } from '../contexts/DataContext';
 import Spinny from './Spinny';
 
 const Graph = () => {
-  const { isLoading, nodeDataArray, linkDataArray, handleModelChange } = useData();
+  const { isLoading, nodeDataArray, linkDataArray, skipsDiagramUpdate, handleModelChange, graphRef } = useData();
 
   return (
     <Col lg="9" className="graph-container">
@@ -15,10 +15,12 @@ const Graph = () => {
         <Spinny />
       ) : (
         <ReactDiagram
+          ref={graphRef}
           initDiagram={graphInitializer}
           divClassName="graph-component"
           nodeDataArray={nodeDataArray}
           linkDataArray={linkDataArray}
+          skipsDiagramUpdate={skipsDiagramUpdate}
           onModelChange={handleModelChange}
         />
       )}

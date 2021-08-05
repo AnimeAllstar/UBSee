@@ -25,6 +25,8 @@ function updateHighlight(node, val) {
   // recursively call update on nodes dependant on this to evaluate and update their state
   node.findNodesOutOf().each((node) => {
     recursiveUpdateHighlight(node);
+    // updates node bindings (color)
+    node.updateTargetBindings();
   });
 
   // unlock

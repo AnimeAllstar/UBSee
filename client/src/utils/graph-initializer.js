@@ -1,6 +1,7 @@
 import * as go from 'gojs';
 import { isTouchDevice, isMobileDevice } from './utils';
 import { nodeClickHandler } from './node-event-handler';
+import { getHighlightedNodes } from './utils';
 
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;
@@ -16,6 +17,9 @@ function getGraph() {
     'toolManager.hoverDelay': 500,
     'toolManager.toolTipDuration': 30000,
     initialAutoScale: go.Diagram.Uniform,
+    InitialLayoutCompleted: (obj) => {
+      setColors(obj.diagram);
+    },
     layout: createLayout(),
     nodeTemplate: createNodeTemplate(),
     linkTemplate: createLinkTemplate(),
@@ -27,6 +31,27 @@ function getGraph() {
       linkKeyProperty: 'key',
     }),
   });
+}
+
+// sets node and link highlight and clickable values using the 'nodes' URL query parameter
+function setColors(myGraph) {
+  const highlightedNodes = getHighlightedNodes();
+  // if param is passed (not null)
+  if (highlightedNodes && myGraph) {
+    // until all nodes are highlighted, remove the first node, find it in the graph, simulate a click on the node
+    // if the node is not highlighted, add it back to the array
+    // (this handles the case where a prereq node is present after the node in the query parameter)
+    while (highlightedNodes.length !== 0) {
+      const elem = highlightedNodes.shift();
+      const graphNode = myGraph.findNodeForKey(elem);
+      if (graphNode) {
+        nodeClickHandler(graphNode);
+        if (!graphNode.isHighlighted) {
+          highlightedNodes.push(elem);
+        }
+      }
+    }
+  }
 }
 
 // returns new layout
@@ -47,7 +72,7 @@ function createNodeTemplate() {
     'Auto',
     {
       selectionAdorned: false,
-      click: function (e, node) {
+      click: (e, node) => {
         nodeClickHandler(node);
       },
       toolTip: createToolTip(),

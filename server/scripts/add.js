@@ -54,16 +54,15 @@ needle.get(UBCCOURSES + subject, (err, response) => {
             newSubject[subject][course].prereqText = 'None';
           }
         } else {
-          console.log("Error while fetching data from UBCEXPLORER");
+          console.log('Error while fetching data from UBCEXPLORER');
           console.error(err);
         }
 
         // if all requests are completed, write the newSubject as a json
         if (completedRequests === Object.keys(newSubject[subject]).length) {
-
           // sorts newSubject[subject] using course names
           newSubject[subject] = sortJson(newSubject[subject], {
-            ignoreCase: true
+            ignoreCase: true,
           });
 
           // _TEMP insures that the file is not overwrited
@@ -80,7 +79,7 @@ needle.get(UBCCOURSES + subject, (err, response) => {
       });
     }
   } else {
-    console.log("Error while fetching data from UBCCOURSES");
+    console.log('Error while fetching data from UBCCOURSES');
     console.log(err);
   }
 });

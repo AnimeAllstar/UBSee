@@ -5,6 +5,7 @@ import { ButtonGroup, Button } from 'react-bootstrap';
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
 import { useData } from '../../contexts/DataContext';
+import { getRoute } from '../../functions/utils';
 
 // Selection Tab in ../Tabs
 const Selection = () => {
@@ -48,13 +49,6 @@ const Selection = () => {
     getSubjectOptions();
   }, []);
 
-  // adds event listener to copyBtn
-  useEffect(() => {
-    copyBtn.current.addEventListener('hidden.bs.tooltip', () => {
-      copyBtn.current.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
-    });
-  }, []);
-
   // if selected subject changes, sets selected course to null and set course options to match the subject
   // then calls courseRef.current.select.clearValue() to rerender course select <Select>
   useEffect(() => {
@@ -93,14 +87,45 @@ const Selection = () => {
     return url;
   };
 
+  // opens selected graph in new tab using selectedSubject, selectedCourse and year
+  const openInNewTab = () => {
+    if (selectedSubject) {
+      const course = selectedCourse ? selectedCourse.value.split(' ')[1] : null;
+      window.open(getRoute(selectedSubject.value, course, year));
+    }
+  };
+
+  const selectStyle = {
+    option: (provided) => ({
+      ...provided,
+      padding: '6px',
+      fontSize: '15px',
+    }),
+  };
+
   return (
     <Tab title="Subject / Course Selection" id="selection-tab">
       <ListGroup>
         {/* Subject and Course Selection */}
         <ListGroup.Item>
-          <Select defaultValue={selectedSubject} onChange={setselectedSubject} options={subjectOptions} />
-          <br />
-          <Select ref={courseRef} defaultValue={selectedCourse} onChange={setSelectedCourse} options={courseOptions} isClearable />
+          <Select
+            defaultValue={selectedSubject}
+            placeholder="Subject"
+            onChange={setselectedSubject}
+            options={subjectOptions}
+            className="mb-3 mt-2"
+            styles={selectStyle}
+          />
+          <Select
+            ref={courseRef}
+            defaultValue={selectedCourse}
+            placeholder="Course"
+            onChange={setSelectedCourse}
+            options={courseOptions}
+            className="mb-2 mt-2"
+            styles={selectStyle}
+            isClearable
+          />
         </ListGroup.Item>
         {/* Display Range */}
         <ListGroup.Item>
@@ -115,11 +140,14 @@ const Selection = () => {
             <input type="range" className="form-range" min={1} max={4} step={1} defaultValue={year} onChange={(e) => setYear(e.target.value)} />
           </Item.Body>
         </ListGroup.Item>
-        {/* Copy to clipboard and Update buttons */}
+        {/* Copy to clipboard, Update Graph and Open in new tab buttons */}
         <ListGroup.Item>
           <ButtonGroup>
             <Button variant="outline-primary" onClick={updateGraph}>
-              Update
+              Create
+            </Button>
+            <Button variant="outline-primary" onClick={openInNewTab}>
+              New tab
             </Button>
             <Button
               ref={copyBtn}

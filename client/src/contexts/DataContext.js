@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { getData } from '../functions/data-initializer';
 import { getApiUrl, getRoute } from '../functions/utils';
@@ -15,6 +16,7 @@ export function DataProvider({ subject, course, year, children }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
   const [linkDataArray, setLinkDataArray] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const history = useHistory();
 
   // stores stateful data on the current graph
   const [currentGraph, setCurrentGraph] = useState({
@@ -54,7 +56,7 @@ export function DataProvider({ subject, course, year, children }) {
   // sets loading to false, causing the graph to replace the spinner
   useEffect(() => {
     const setDataArrays = async () => {
-      window.history.replaceState(null, '', currentGraph.route);
+      history.push(currentGraph.route);
 
       const data = await getData({ ...currentGraph });
       setNodeDataArray(data.nodes);

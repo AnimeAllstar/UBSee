@@ -1,7 +1,6 @@
 import * as go from 'gojs';
-import { isTouchDevice, isMobileDevice } from './utils';
+import { isTouchDevice, isMobileDevice, getHighlightedNodes } from './utils';
 import { nodeClickHandler } from './node-event-handler';
-import { getHighlightedNodes } from './utils';
 
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;

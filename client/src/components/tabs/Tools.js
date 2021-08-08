@@ -1,66 +1,114 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tab } from '../Tab';
+import { Item, ListGroup } from '../ListGroup';
+import { Button, InputGroup, FormControl, Form } from 'react-bootstrap';
+import { useData } from '../../contexts/DataContext';
+import { updateDataForAll } from '../../functions/node-event-handler';
 
 const Tools = () => {
+  const [search, setSearch] = useState('');
+  const [checkBoxes, setcheckBoxes] = useState({ 1: true, 2: true, 3: true, 4: true });
+  const { graphRef } = useData();
+
+  const searchGraph = () => {
+    if (search) {
+      // search key and title data property of all nodes using regex made using searchString
+      const safe = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(safe, 'i');
+      const results = graphRef.current.getDiagram().findNodesByExample(
+        {
+          key: regex,
+        },
+        {
+          title: regex,
+        }
+      );
+
+      // update isSearched data property of results collection (method from node-even-handler.js)
+      updateDataForAll(results, 'isSearched', true, 'set isSearched to true');
+    }
+  };
+
+  const clearSelection = () => {
+    const searchedNodes = graphRef.current.getDiagram().findNodesByExample({
+      isSearched: true,
+    });
+    // since isSearched is bound to scale (see graph-initializer), setting it to false, returns scale to normal
+    updateDataForAll(searchedNodes, 'isSearched', false, 'set isSearched to false for searched nodes');
+  };
+
+  const updateFocus = () => {
+    if (checkBoxes) {
+      const graph = graphRef.current.getDiagram();
+      graph.startTransaction('opacity');
+      graph.nodes.each((node) => {
+        const shape = node.findObject('shape');
+        shape.opacity = 1.0;
+        for (const year in checkBoxes) {
+          if (!checkBoxes[year]) {
+            console.log();
+            if (node.data.key.split(' ')[1].substring(0, 1) === year) {
+              shape.opacity = 0.4;
+              break;
+            }
+          }
+        }
+      });
+      graph.commitTransaction('opacity');
+    }
+  };
+
   return (
     <Tab title="Tools" id="tools-tab">
-      <ul className="list-group">
+      <ListGroup>
         {/* Search */}
-        <li className="list-group-item rounded-0">
-          <h6>Search</h6>
-          <span>Search for a node within the graph.</span>
-          <div className="input-group my-2">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Enter search string"
-              id="search-input"
-              onkeypress="if (event.keyCode === 13) searchGraph()"
-            />
-            <button className="btn btn-outline-primary" type="button" id="button-addon2" onclick="searchGraph()">
-              Search
-            </button>
-            <button className="btn btn-outline-primary border-start-0" type="button" onclick="clearSelection()">
-              Clear
-            </button>
-          </div>
-        </li>
+        <ListGroup.Item>
+          <Item.Title>Search</Item.Title>
+          <Item.Description>Search for a node within the graph.</Item.Description>
+          <Item.Body>
+            <InputGroup className="my-2">
+              <FormControl value={search} placeholder="Enter search string" onChange={(e) => setSearch(e.target.value)} />
+              <Button variant="outline-primary" onClick={searchGraph}>
+                Search
+              </Button>
+              <Button variant="outline-primary" onClick={clearSelection}>
+                Clear
+              </Button>
+            </InputGroup>
+          </Item.Body>
+        </ListGroup.Item>
         {/* Focus */}
-        <li className="list-group-item rounded-0">
-          <h6>Focus</h6>
-          <span>Select year levels you want to focus on.</span>
-          <br />
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="checkbox" name="focus" defaultValue={1} defaultChecked />
-            <label className="form-check-label" htmlFor={1}>
-              year 1
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="checkbox" name="focus" defaultValue={2} defaultChecked />
-            <label className="form-check-label" htmlFor={2}>
-              year 2
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="checkbox" name="focus" defaultValue={3} defaultChecked />
-            <label className="form-check-label" htmlFor={3}>
-              year 3
-            </label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" type="checkbox" name="focus" defaultValue={4} defaultChecked />
-            <label className="form-check-label" htmlFor={4}>
-              year 4
-            </label>
-          </div>
-        </li>
-        <li className="list-group-item rounded-0">
-          <button type="button" className="btn btn-outline-primary" onclick="updateFocus()">
+        <ListGroup.Item>
+          <Item.Title>Focus</Item.Title>
+          <Item.Description>Select year levels you want to focus on.</Item.Description>
+          <Item.Body>
+            <Form>
+              <div className="my-1">
+                {[1, 2, 3, 4].map((num) => {
+                  return (
+                    <Form.Check
+                      key={num}
+                      inline
+                      label={`year ${num}`}
+                      name="focus"
+                      type="checkbox"
+                      defaultChecked={checkBoxes[num]}
+                      onClick={() => {
+                        setcheckBoxes({ ...checkBoxes, [num]: !checkBoxes[num] });
+                      }}
+                    />
+                  );
+                })}
+              </div>
+            </Form>
+          </Item.Body>
+        </ListGroup.Item>
+        <ListGroup.Item>
+          <Button variant="outline-primary" onClick={updateFocus}>
             Set Focus
-          </button>
-        </li>
-      </ul>
+          </Button>
+        </ListGroup.Item>
+      </ListGroup>
     </Tab>
   );
 };

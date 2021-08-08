@@ -18,6 +18,7 @@ function getGraph() {
     'toolManager.toolTipDuration': 30000,
     initialAutoScale: go.Diagram.Uniform,
     InitialLayoutCompleted: (obj) => {
+      console.log('setColors called');
       setColors(obj.diagram);
     },
     layout: createLayout(),

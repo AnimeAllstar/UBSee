@@ -1,14 +1,17 @@
 // global variables to store nodes and links
-const nodes = [];
-const links = [];
-const finLinks = [];
+let nodes;
+let links;
+let finLinks;
 
 let myData;
 
 // called from script tag in index.html
 // params contains the subject ID, course # and API url
-export async function getData(params) {
-  await setGlobal(params);
+export async function getData({ subject, course, api }) {
+  nodes = [];
+  links = [];
+  finLinks = [];
+  await setGlobal(subject, course, api);
 
   // add links to nodes
   links.forEach((link) => {
@@ -26,22 +29,22 @@ export async function getData(params) {
 }
 
 // populates nodes[] and links[]
-async function setGlobal(params) {
-  await setMyData('http://localhost:8080/' + params.api);
+async function setGlobal(subject, course, api) {
+  await setMyData('http://localhost:8080/' + api);
 
   // if params.course is present, generate a course graph
-  if (params.course && params.subject) {
+  if (course && subject) {
     // course graph
-    const root = myData.find((course) => {
-      return course.name === params.subject + ' ' + params.course;
+    const root = myData.find((c) => {
+      return c.name === subject + ' ' + course;
     });
     // recursively add courses node and links to nodes[] and links[]
     recursiveAdd(root);
   } else {
     // subject graph
     // add all courses node and links to nodes[] and links[]
-    myData.forEach((course) => {
-      addToData(course);
+    myData.forEach((c) => {
+      addToData(c);
     });
   }
 }

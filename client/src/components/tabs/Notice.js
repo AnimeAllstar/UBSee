@@ -1,12 +1,13 @@
 import React from 'react';
 import { Tab } from '../Tab';
+import { ListGroup } from '../ListGroup';
 
 const Notice = () => {
   return (
     <Tab id="notice-tab" title="Warning!" color="text-danger">
-      <ul className="list-group">
+      <ListGroup>
         {/* How To Use Section */}
-        <li className="list-group-item rounded-0">
+        <ListGroup.Item>
           <h6>Be Careful!</h6>
           <p>
             This program may not be accurately representative of the actual course requirements displayed on SSC as the information may become
@@ -20,8 +21,8 @@ const Notice = () => {
             This website is meant to aid students to visualize course eligibilities and to reduce the time students spend on course planning. We will
             not be held responsible for any damages.
           </p>
-        </li>
-      </ul>
+        </ListGroup.Item>
+      </ListGroup>
     </Tab>
   );
 };

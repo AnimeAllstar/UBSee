@@ -22,3 +22,12 @@ export function getHighlightedNodes() {
   }
   return null;
 }
+
+// gets an array of the highlighted nodes from the 'nodes' parameter
+export function getYear() {
+  const y = getParam('year');
+  if (y) {
+    return y;
+  }
+  return 4;
+}

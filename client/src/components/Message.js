@@ -3,9 +3,7 @@ import React from 'react';
 const Message = () => {
   return (
     <div className="alert alert-success rounded-0" role="alert">
-      <h6 className="alert-heading">
-        <i className="bi bi-exclamation-lg" /> Latest feature
-      </h6>
+      <h6 className="alert-heading">Latest feature</h6>
       <p className="mb-0">
         <small>
           You can now <b>Search</b> for courses within a graph! Use the input field in the new <b>'Tools'</b> tab to search for nodes within a graph.

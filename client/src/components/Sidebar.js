@@ -1,8 +1,7 @@
 import React from 'react';
-import { useData } from '../contexts/DataContext';
 import Message from './Message';
 import NavBrand from './NavBrand';
-import Tabs from './Tabs';
+import { Tabs } from './Tabs';
 
 const Sidebar = () => {
   return (

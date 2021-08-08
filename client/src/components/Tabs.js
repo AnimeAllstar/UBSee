@@ -6,7 +6,7 @@ import ReadMe from './tabs/ReadMe';
 import Notice from './tabs/Notice';
 import Feedback from './tabs/Feedback';
 
-const Tabs = () => {
+export const Tabs = () => {
   return (
     <div className="accordion w-100" id="sidebar-accordian">
       <Selection />
@@ -18,5 +18,3 @@ const Tabs = () => {
     </div>
   );
 };
-
-export default Tabs;

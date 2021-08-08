@@ -1,4 +1,5 @@
 import React from 'react';
+import { Github } from 'react-bootstrap-icons';
 
 const NavBrand = () => {
   return (
@@ -12,8 +13,8 @@ const NavBrand = () => {
           </h1>
         </div>
         <div className="flex-grow-1 ms-3">
-          <a href="https://github.com/AnimeAllstar/UBSee" target="_blank">
-            <i className="bi-github text-white" style={{ fontSize: '1.5em' }} />
+          <a href="https://github.com/AnimeAllstar/UBSee" target="_blank" rel="noreferrer">
+            <Github color="white" style={{ fontSize: '1.5em' }} />
           </a>
         </div>
       </div>

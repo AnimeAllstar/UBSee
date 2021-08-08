@@ -17,6 +17,10 @@
   overflow-y: auto;
 }
 
+i {
+  color: #0d6efd;
+}
+
 /* For devices with min-width: 992px. lg in Boostrap */
 
 @media only screen and (min-width: 992px) {

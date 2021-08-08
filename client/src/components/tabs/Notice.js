@@ -1,12 +1,14 @@
 import React from 'react';
+
 import { Tab } from '../Tab';
 import { ListGroup } from '../ListGroup';
 
+// Notice Tab in ../Tabs
 const Notice = () => {
   return (
     <Tab id="notice-tab" title="Warning!" color="text-danger">
       <ListGroup>
-        {/* How To Use Section */}
+        {/* Warning on how to use */}
         <ListGroup.Item>
           <h6>Be Careful!</h6>
           <p>

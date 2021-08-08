@@ -1,5 +1,6 @@
 import React from 'react';
 
+// returns div with Message
 const Message = () => {
   return (
     <div className="alert alert-success rounded-0" role="alert">

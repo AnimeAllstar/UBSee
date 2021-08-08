@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { Tab } from '../Tab';
 import { ListGroup } from '../ListGroup';
-import ColorBox from '../ColorBox';
+import { ColorBox } from '../ColorBox';
 
+// ReadMe Tab in ../Tabs
 const ReadMe = () => {
   return (
     <Tab title="README" id="readme-tab" color="text-primary">
@@ -65,7 +67,7 @@ const ReadMe = () => {
           <ColorBox color="#ff1a53">
             <ColorBox.Text text="Ineligible" />
           </ColorBox>
-          <p />
+          <p></p>
           <p>
             <i> Right-click </i> on a node to see the UBC course page link and the UBSee course graph link.
           </p>

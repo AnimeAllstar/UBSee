@@ -1,7 +1,8 @@
 import React from 'react';
 import { Github } from 'react-bootstrap-icons';
 
-const NavBrand = () => {
+// returns website Title, Link to Github via an icon and hamburger menu button
+const NavTop = () => {
   return (
     <div className="d-flex justify-content-between px-2">
       <div className="d-flex align-items-center">
@@ -25,4 +26,4 @@ const NavBrand = () => {
   );
 };
 
-export default NavBrand;
+export default NavTop;

@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-
 import { Form, Button } from 'react-bootstrap';
+import * as go from 'gojs';
+
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
 import { useData } from '../../contexts/DataContext';
-import * as go from 'gojs';
 
+// Preferences Tab in ../Tabs
 const Preferences = () => {
-  const { graphRef } = useData();
   const [direction, setDirection] = useState(0);
   const [layering, setLayering] = useState(0);
 
-  // sets myGraph.layout.layeringOption
+  const { graphRef } = useData();
+
+  // sets graph.layout.layeringOption
   const setLayeringOption = () => {
     const graph = graphRef.current.getDiagram();
     if (layering === 0) {
@@ -23,6 +25,7 @@ const Preferences = () => {
     }
   };
 
+  // updates graph preferences (direction, layering)
   const updatePreferences = () => {
     const graph = graphRef.current.getDiagram();
     graph.startTransaction('update preferences');
@@ -34,7 +37,7 @@ const Preferences = () => {
   return (
     <Tab id="preferences-tab" title="Preferences">
       <ListGroup>
-        {/* Direction */}
+        {/* Graph Direction Form. Updates 'direction' variable */}
         <ListGroup.Item>
           <Item.Title>Direction</Item.Title>
           <Item.Description>Select the direction of the graph</Item.Description>
@@ -46,7 +49,7 @@ const Preferences = () => {
             <Form.Check inline label="Up" name="direction" type="radio" onClick={() => setDirection(270)} />
           </Item.Body>
         </ListGroup.Item>
-        {/* Layering */}
+        {/* Graph Layering Form. Updates 'layering' variable */}
         <ListGroup.Item>
           <Item.Title>Layering</Item.Title>
           <Item.Description>Select the layering style of the graph</Item.Description>
@@ -57,6 +60,7 @@ const Preferences = () => {
             <Form.Check inline label="Optimal link length" name="layering" type="radio" onClick={() => setLayering(3)} />
           </Item.Body>
         </ListGroup.Item>
+        {/* Calls updatePreferences */}
         <ListGroup.Item>
           <Button variant="outline-primary" onClick={updatePreferences}>
             Update

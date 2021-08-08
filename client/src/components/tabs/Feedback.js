@@ -1,12 +1,14 @@
 import React from 'react';
-import { ListGroup } from '../ListGroup';
 
 import { Tab } from '../Tab';
+import { ListGroup } from '../ListGroup';
 
+// Feeback Tab in ../Tabs
 const Feedback = () => {
   return (
     <Tab id="feedback-tab" title="Report / Feedback">
       <ListGroup>
+        {/* Information on how to provide feedback */}
         <ListGroup.Item>
           <h6>Want to report a bug? Have feedback or features suggestions for UBSee?</h6>
           <p>Click the button below to go to the feedback form.</p>
@@ -31,6 +33,7 @@ const Feedback = () => {
           </p>
           <p className="mb-1">Let's try and improve UBSee together so that more people will benefit from using it!</p>
         </ListGroup.Item>
+        {/* Link to gitreports feedback form */}
         <ListGroup.Item>
           <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank" rel="noreferrer">
             <button type="button" className="btn btn-outline-primary">

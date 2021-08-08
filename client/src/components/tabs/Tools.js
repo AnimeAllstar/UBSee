@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import { Button, InputGroup, FormControl, Form } from 'react-bootstrap';
+
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
-import { Button, InputGroup, FormControl, Form } from 'react-bootstrap';
 import { useData } from '../../contexts/DataContext';
 import { updateDataForAll } from '../../functions/node-event-handler';
 
+// Tools Tab in ../Tabs
 const Tools = () => {
   const [search, setSearch] = useState('');
   const [checkBoxes, setcheckBoxes] = useState({ 1: true, 2: true, 3: true, 4: true });
+
   const { graphRef } = useData();
 
+  // Searches graph for nodes that match search string, if any nodes found, set isSearched to true
+  // isSearched is bound to size (check graph-initializer), so updating isSearched to true makes the searched nodes bigger
   const searchGraph = () => {
     if (search) {
       // search key and title data property of all nodes using regex made using searchString
@@ -29,14 +34,18 @@ const Tools = () => {
     }
   };
 
+  // Searches graph for nodes that are marked as 'searched' and sets isSearched to 'false' for them
   const clearSelection = () => {
     const searchedNodes = graphRef.current.getDiagram().findNodesByExample({
       isSearched: true,
     });
+
     // since isSearched is bound to scale (see graph-initializer), setting it to false, returns scale to normal
     updateDataForAll(searchedNodes, 'isSearched', false, 'set isSearched to false for searched nodes');
   };
 
+  // updates focus(opacity) of year levels in the graph
+  // sets node.shape opacity to 0.4 if it's year level is unchecked
   const updateFocus = () => {
     if (checkBoxes) {
       const graph = graphRef.current.getDiagram();
@@ -46,7 +55,6 @@ const Tools = () => {
         shape.opacity = 1.0;
         for (const year in checkBoxes) {
           if (!checkBoxes[year]) {
-            console.log();
             if (node.data.key.split(' ')[1].substring(0, 1) === year) {
               shape.opacity = 0.4;
               break;
@@ -61,7 +69,7 @@ const Tools = () => {
   return (
     <Tab title="Tools" id="tools-tab">
       <ListGroup>
-        {/* Search */}
+        {/* Search For nodes within the graph */}
         <ListGroup.Item>
           <Item.Title>Search</Item.Title>
           <Item.Description>Search for a node within the graph.</Item.Description>
@@ -77,7 +85,7 @@ const Tools = () => {
             </InputGroup>
           </Item.Body>
         </ListGroup.Item>
-        {/* Focus */}
+        {/* Seelct which years you want to focus on */}
         <ListGroup.Item>
           <Item.Title>Focus</Item.Title>
           <Item.Description>Select year levels you want to focus on.</Item.Description>
@@ -103,6 +111,7 @@ const Tools = () => {
             </Form>
           </Item.Body>
         </ListGroup.Item>
+        {/* Updates Focus on click */}
         <ListGroup.Item>
           <Button variant="outline-primary" onClick={updateFocus}>
             Set Focus

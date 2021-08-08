@@ -18,7 +18,6 @@ function getGraph() {
     'toolManager.toolTipDuration': 30000,
     initialAutoScale: go.Diagram.Uniform,
     InitialLayoutCompleted: (obj) => {
-      console.log('setColors called');
       setColors(obj.diagram);
     },
     layout: createLayout(),
@@ -35,16 +34,16 @@ function getGraph() {
 }
 
 // sets node and link highlight and clickable values using the 'nodes' URL query parameter
-function setColors(myGraph) {
+function setColors(graphh) {
   const highlightedNodes = getHighlightedNodes();
   // if param is passed (not null)
-  if (highlightedNodes && myGraph) {
+  if (highlightedNodes && graphh) {
     // until all nodes are highlighted, remove the first node, find it in the graph, simulate a click on the node
     // if the node is not highlighted, add it back to the array
     // (this handles the case where a prereq node is present after the node in the query parameter)
     while (highlightedNodes.length !== 0) {
       const elem = highlightedNodes.shift();
-      const graphNode = myGraph.findNodeForKey(elem);
+      const graphNode = graphh.findNodeForKey(elem);
       if (graphNode) {
         nodeClickHandler(graphNode);
         if (!graphNode.isHighlighted) {

@@ -1,5 +1,6 @@
 import React from 'react';
 
+// returns boostrap accordian Tab
 export const Tab = ({ id, title, color, children }) => {
   return (
     <>

@@ -1,24 +1,28 @@
-import React, { useEffect, useRef } from 'react';
-
-import { Tab } from '../Tab';
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Select from 'react-select';
-import { useData } from '../../contexts/DataContext';
-import { Item, ListGroup } from '../ListGroup';
 import { ButtonGroup, Button } from 'react-bootstrap';
 
+import { Tab } from '../Tab';
+import { Item, ListGroup } from '../ListGroup';
+import { useData } from '../../contexts/DataContext';
+
+// Selection Tab in ../Tabs
 const Selection = () => {
   const [year, setYear] = useState(4);
+
   const [selectData, setSelectData] = useState([]);
   const [subjectOptions, setSubjectOptions] = useState([]);
   const [courseOptions, setCourseOptions] = useState([]);
   const [selectedSubject, setselectedSubject] = useState(null);
   const [selectedCourse, setSelectedCourse] = useState(null);
+
   const courseRef = useRef(null);
   const copyBtn = useRef(null);
 
   const { graphRef, updateGraphState } = useData();
 
+  // fetches and sets subject and course options for <Select> components
+  // stores data from '/api/subjects' route in selectData so that it doesn't have to be fetched again
   useEffect(() => {
     const getSubjectOptions = async () => {
       const response = await fetch('http://localhost:8080/api/subjects');
@@ -44,13 +48,15 @@ const Selection = () => {
     getSubjectOptions();
   }, []);
 
+  // adds event listener to copyBtn
   useEffect(() => {
-    // events listener to reset tooltip text
     copyBtn.current.addEventListener('hidden.bs.tooltip', () => {
       copyBtn.current.setAttribute('data-bs-original-title', 'Copy url of current graph to clipboard');
     });
   }, []);
 
+  // if selected subject changes, sets selected course to null and set course options to match the subject
+  // then calls courseRef.current.select.clearValue() to rerender course select <Select>
   useEffect(() => {
     if (selectedSubject && selectData) {
       const subject = selectData.find((subject) => {
@@ -62,6 +68,7 @@ const Selection = () => {
     }
   }, [selectData, selectedSubject]);
 
+  // Calls updateGraphState from DataContext if selectedSubject is present
   const updateGraph = () => {
     if (selectedSubject) {
       if (selectedCourse) {
@@ -72,7 +79,7 @@ const Selection = () => {
     }
   };
 
-  // gets new URL by setting the 'nodes' parameter
+  // gets new URL by setting the 'nodes' search parameter to the current page url
   // the 'nodes' parameter is a comma separated string containing all selected nodes
   const getNewURL = () => {
     const url = new URL(window.location.href);
@@ -89,11 +96,10 @@ const Selection = () => {
   return (
     <Tab title="Subject / Course Selection" id="selection-tab">
       <ListGroup>
+        {/* Subject and Course Selection */}
         <ListGroup.Item>
-          {/* Subject Selection*/}
           <Select defaultValue={selectedSubject} onChange={setselectedSubject} options={subjectOptions} />
           <br />
-          {/* Course Selection*/}
           <Select ref={courseRef} defaultValue={selectedCourse} onChange={setSelectedCourse} options={courseOptions} isClearable />
         </ListGroup.Item>
         {/* Display Range */}
@@ -109,7 +115,7 @@ const Selection = () => {
             <input type="range" className="form-range" min={1} max={4} step={1} defaultValue={year} onChange={(e) => setYear(e.target.value)} />
           </Item.Body>
         </ListGroup.Item>
-        {/* Copy to clipboard button */}
+        {/* Copy to clipboard and Update buttons */}
         <ListGroup.Item>
           <ButtonGroup>
             <Button variant="outline-primary" onClick={updateGraph}>

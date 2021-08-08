@@ -1,6 +1,7 @@
 import React from 'react';
 
-const ColorBox = ({ color, children }) => {
+// returns an svg rectangle with fill='color' wrapped in an inline div
+export const ColorBox = ({ color, children }) => {
   return (
     <div className="d-inline-block">
       <svg width={20} height={20}>
@@ -19,10 +20,9 @@ const ColorBox = ({ color, children }) => {
   );
 };
 
+// returns text next to ColorBox svg
 const Text = ({ text }) => {
   return <span>&nbsp;{text}&nbsp;</span>;
 };
 
 ColorBox.Text = Text;
-
-export default ColorBox;

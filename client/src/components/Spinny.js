@@ -1,7 +1,8 @@
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
 
-const Spinny = () => {
+// returns loading spinner
+export const Spinny = () => {
   return (
     <div className="d-flex justify-content-center h-100">
       <Spinner className="my-auto" animation="grow" variant="warning" style={{ width: '3rem', height: '3rem' }}>
@@ -10,5 +11,3 @@ const Spinny = () => {
     </div>
   );
 };
-
-export default Spinny;

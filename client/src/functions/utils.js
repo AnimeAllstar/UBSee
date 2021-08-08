@@ -31,3 +31,21 @@ export function getYear() {
   }
   return 4;
 }
+
+// gets ApiUrl using subject, course and year
+export const getApiUrl = (s, c, y) => {
+  if (s && c) {
+    return `api/subject/${s}`;
+  } else if (s) {
+    return `api/subject/${s}?year=${y}`;
+  }
+};
+
+// gets new route using subject, course and year
+export const getRoute = (s, c, y) => {
+  if (s && c) {
+    return `/subject/${s}/course/${c}`;
+  } else if (s) {
+    return `/subject/${s}?year=${y}`;
+  }
+};

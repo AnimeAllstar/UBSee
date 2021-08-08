@@ -64,6 +64,7 @@ export function DataProvider({ subject, course, year, children }) {
       setLoading(false);
     };
     setDataArrays();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentGraph]);
 
   // object of functions/variables that are accessible using through DataContext.Provider

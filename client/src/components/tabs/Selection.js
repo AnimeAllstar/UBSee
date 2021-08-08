@@ -156,7 +156,7 @@ const Selection = () => {
                 navigator.clipboard.writeText(getNewURL());
               }}
             >
-              Copy
+              Copy url
             </Button>
           </ButtonGroup>
         </ListGroup.Item>

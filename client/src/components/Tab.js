@@ -5,7 +5,7 @@ export const Tab = ({ id, title, color, children }) => {
   return (
     <>
       <h2 className="accordion-header">
-        <button className={`accordion-button collapsed ${color ? color : ''}`} type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`}>
+        <button className="accordion-button collapsed" style={{ color: color }} type="button" data-bs-toggle="collapse" data-bs-target={`#${id}`}>
           {title}
         </button>
       </h2>

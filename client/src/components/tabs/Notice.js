@@ -6,7 +6,7 @@ import { ListGroup } from '../ListGroup';
 // Notice Tab in ../Tabs
 const Notice = () => {
   return (
-    <Tab id="notice-tab" title="Warning!" color="text-danger">
+    <Tab id="notice-tab" title="Warning!" color="#dc3545">
       <ListGroup>
         {/* Warning on how to use */}
         <ListGroup.Item>

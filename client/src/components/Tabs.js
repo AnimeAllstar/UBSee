@@ -6,6 +6,7 @@ import Preferences from './tabs/Preferences';
 import ReadMe from './tabs/ReadMe';
 import Notice from './tabs/Notice';
 import Feedback from './tabs/Feedback';
+import Credits from './tabs/Credits';
 
 // returns boostrap accordian
 const Tabs = () => {
@@ -17,6 +18,7 @@ const Tabs = () => {
       <ReadMe />
       <Notice />
       <Feedback />
+      <Credits />
     </div>
   );
 };

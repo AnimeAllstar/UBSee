@@ -24,7 +24,7 @@ const Feedback = () => {
             to{' '}
             <a href="https://github.com/AnimeAllstar/UBSee#how-to-contribute" target="_blank" rel="noreferrer">
               contribute
-            </a>
+            </a>{' '}
             or to make an{' '}
             <a href="https://github.com/AnimeAllstar/UBSee/issues" target="_blank" rel="noreferrer">
               issue

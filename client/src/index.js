@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+
+import NotFound from './components/NotFound';
 import App from './App';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route exact path="/" children={<App />} />
-        <Route path="/subject/:subject/course/:course" children={<App />} />
-        <Route path="/subject/:subject" children={<App />} />
+        <Route exact path="/">
+          <Redirect to="/subject/CPSC" />
+        </Route>
+        <Route exact path="/subject/:subject/course/:course" children={<App />} />
+        <Route exact path="/subject/:subject" children={<App />} />
+        <Route path="*" children={<NotFound />} />
       </Switch>
     </Router>
   </React.StrictMode>,

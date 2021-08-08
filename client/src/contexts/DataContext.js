@@ -16,6 +16,7 @@ export function DataProvider({ subject, course, year, children }) {
   const [nodeDataArray, setNodeDataArray] = useState([]);
   const [linkDataArray, setLinkDataArray] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [isError, setError] = useState(false);
   const history = useHistory();
 
   // stores stateful data on the current graph
@@ -40,6 +41,7 @@ export function DataProvider({ subject, course, year, children }) {
   // sets loading to true, causing the spinner to replace the graph
   const updateGraphState = (subject, course, year) => {
     setLoading(true);
+    setError(false);
     setCurrentGraph({
       subject: subject,
       course: course,
@@ -67,12 +69,20 @@ export function DataProvider({ subject, course, year, children }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentGraph]);
 
+  useEffect(() => {
+    if (nodeDataArray.length === 0 && !isLoading) {
+      setError(true);
+    }
+  }, [nodeDataArray, isLoading]);
+
   // object of functions/variables that are accessible using through DataContext.Provider
   const value = {
+    currentGraph,
     nodeDataArray,
     linkDataArray,
     graphRef,
     isLoading,
+    isError,
     handleModelChange,
     updateGraphState,
   };

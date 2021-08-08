@@ -5,7 +5,7 @@ import { nodeClickHandler } from './node-event-handler';
 // $ is a function pointer for go.GraphObject.make()
 const $ = go.GraphObject.make;
 
-export default function createGraph(params) {
+export default function createGraph() {
   return getGraph();
 }
 

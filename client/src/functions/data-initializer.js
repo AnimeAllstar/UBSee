@@ -40,8 +40,10 @@ async function setGlobal(subject, course, api) {
     const root = myData.find((c) => {
       return c.name === subject + ' ' + course;
     });
-    // recursively add courses node and links to nodes[] and links[]
-    recursiveAdd(root);
+    // recursively add courses node and links to nodes[] and links[] if root exists
+    if (root) {
+      recursiveAdd(root);
+    }
   } else {
     // subject graph
     // add all courses node and links to nodes[] and links[]

@@ -5,17 +5,20 @@ import { Col } from 'react-bootstrap';
 import { Spinny } from './Spinny';
 import { useData } from '../contexts/DataContext';
 import graphInitializer from '../functions/graph-initializer';
+import Error from './Error';
 
 // if graph data is being fetched, return loading spinner
 // otherwise, return GoJS diagram
 const Graph = () => {
-  const { isLoading, nodeDataArray, linkDataArray, handleModelChange, graphRef } = useData();
+  const { isLoading, isError, nodeDataArray, linkDataArray, handleModelChange, graphRef } = useData();
 
-  return (
-    <Col lg="9" className="graph-container">
-      {isLoading ? (
-        <Spinny />
-      ) : (
+  const renderGraph = () => {
+    if (isError) {
+      return <Error />;
+    } else if (isLoading) {
+      return <Spinny />;
+    } else {
+      return (
         <ReactDiagram
           ref={graphRef}
           initDiagram={graphInitializer}
@@ -24,7 +27,13 @@ const Graph = () => {
           linkDataArray={linkDataArray}
           onModelChange={handleModelChange}
         />
-      )}
+      );
+    }
+  };
+
+  return (
+    <Col lg="9" className="graph-container">
+      {renderGraph()}
     </Col>
   );
 };

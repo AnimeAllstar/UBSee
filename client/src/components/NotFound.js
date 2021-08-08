@@ -10,7 +10,7 @@ const NotFound = () => {
         <br />
         Page Not found
       </h1>
-      <Link to="/subject/CPSC" className="m-1">
+      <Link to="/" className="m-1">
         <Button variant="primary">Home</Button>
       </Link>
 

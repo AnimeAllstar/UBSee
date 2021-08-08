@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 
 // returns website Title, Link to Github via an icon and hamburger menu button
 const NavTop = () => {
@@ -8,9 +9,9 @@ const NavTop = () => {
       <div className="d-flex align-items-center">
         <div className="flex-shrink-0 mx-1 mt-2">
           <h1 className="text-white">
-            <a href="/" className="text-white text-decoration-none">
+            <Link to="/" className="text-white text-decoration-none">
               UBSee
-            </a>
+            </Link>
           </h1>
         </div>
         <div className="flex-grow-1 ms-3">

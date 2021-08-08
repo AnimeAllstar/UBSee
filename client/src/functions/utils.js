@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 // gets parameter 'param' from the URL
 export function getParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -48,4 +50,11 @@ export const getRoute = (s, c, y) => {
   } else if (s) {
     return `/subject/${s}?year=${y}`;
   }
+};
+
+export const getUrl = (api) => {
+  if (process.env.NODE_ENV === 'development') {
+    return `http://localhost:8080/${api}`;
+  }
+  return `https://www.ubsee.dev/${api}`;
 };

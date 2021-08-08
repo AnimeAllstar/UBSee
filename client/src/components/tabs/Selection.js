@@ -5,7 +5,7 @@ import { ButtonGroup, Button } from 'react-bootstrap';
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
 import { useData } from '../../contexts/DataContext';
-import { getRoute } from '../../functions/utils';
+import { getRoute, getUrl } from '../../functions/utils';
 
 // Selection Tab in ../Tabs
 const Selection = () => {
@@ -26,7 +26,7 @@ const Selection = () => {
   // stores data from '/api/subjects' route in selectData so that it doesn't have to be fetched again
   useEffect(() => {
     const getSubjectOptions = async () => {
-      const response = await fetch('http://localhost:8080/api/subjects');
+      const response = await fetch(getUrl('api/subjects'));
       const subjectsJson = await response.json();
 
       const subjectData = subjectsJson.map((subject) => {

@@ -1,3 +1,5 @@
+import { getUrl } from './utils';
+
 // global variables to store nodes and links
 let nodes;
 let links;
@@ -30,7 +32,7 @@ export async function getData({ subject, course, api }) {
 
 // populates nodes[] and links[]
 async function setGlobal(subject, course, api) {
-  await setMyData('http://localhost:8080/' + api);
+  await setMyData(getUrl(api));
 
   // if params.course is present, generate a course graph
   if (course && subject) {

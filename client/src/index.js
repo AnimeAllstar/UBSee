@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import './index.css';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import NotFound from './components/NotFound';
 import App from './App';
-import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

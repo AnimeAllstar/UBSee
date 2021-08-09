@@ -37,9 +37,9 @@ export function getYear() {
 // gets ApiUrl using subject, course and year
 export const getApiUrl = (s, c, y) => {
   if (s && c) {
-    return `api/subject/${s}`;
+    return `/api/subject/${s}`;
   } else if (s) {
-    return `api/subject/${s}?year=${y}`;
+    return `/api/subject/${s}?year=${y}`;
   }
 };
 
@@ -54,7 +54,7 @@ export const getRoute = (s, c, y) => {
 
 export const getUrl = (api) => {
   if (process.env.NODE_ENV === 'development') {
-    return `http://localhost:8080/${api}`;
+    return `http://localhost:8080${api}`;
   }
-  return `https://www.ubsee.dev/${api}`;
+  return `https://www.ubsee.dev${api}`;
 };

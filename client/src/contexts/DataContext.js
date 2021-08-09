@@ -17,6 +17,7 @@ export function DataProvider({ subject, course, year, children }) {
   const [linkDataArray, setLinkDataArray] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
+  const [ErrorMessage, setErrorMessage] = useState(null);
   const history = useHistory();
 
   // stores stateful data on the current graph
@@ -65,6 +66,14 @@ export function DataProvider({ subject, course, year, children }) {
     }
   };
 
+  const handleError = (e) => {
+    if (!isError) {
+      console.error(e);
+      setErrorMessage(e.message);
+      setError(true);
+    }
+  };
+
   // called when currentGraph is updated
   // changes url to currentGraph.route
   // fetches new data
@@ -77,20 +86,18 @@ export function DataProvider({ subject, course, year, children }) {
         currentGraph: currentGraph,
       });
 
-      const data = await getData({ ...currentGraph });
-      setNodeDataArray(data.nodes);
-      setLinkDataArray(data.links);
-      setLoading(false);
+      try {
+        const data = await getData({ ...currentGraph });
+        setNodeDataArray(data.nodes);
+        setLinkDataArray(data.links);
+        setLoading(false);
+      } catch (e) {
+        handleError(e);
+      }
     };
     setDataArrays();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentGraph]);
-
-  useEffect(() => {
-    if (nodeDataArray.length === 0 && !isLoading) {
-      setError(true);
-    }
-  }, [nodeDataArray, isLoading]);
 
   // object of functions/variables that are accessible using through DataContext.Provider
   const value = {
@@ -100,6 +107,8 @@ export function DataProvider({ subject, course, year, children }) {
     graphRef,
     isLoading,
     isError,
+    ErrorMessage,
+    handleError,
     handleModelChange,
     updateGraphState,
   };

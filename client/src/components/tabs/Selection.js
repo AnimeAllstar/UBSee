@@ -20,34 +20,36 @@ const Selection = () => {
   const courseRef = useRef(null);
   const copyBtn = useRef(null);
 
-  const { graphRef, updateGraphState } = useData();
+  const { handleError, graphRef, updateGraphState } = useData();
 
   // fetches and sets subject and course options for <Select> components
   // stores data from '/api/subjects' route in selectData so that it doesn't have to be fetched again
   useEffect(() => {
     const getSubjectOptions = async () => {
-      const response = await fetch(getUrl('api/subjects'));
-      const subjectsJson = await response.json();
-
-      const subjectData = subjectsJson.map((subject) => {
-        return { value: subject.name, label: subject.name };
-      });
-      setSubjectOptions([...subjectData]);
-
-      const apiData = subjectsJson.map((subject) => {
-        return {
-          name: subject.name,
-          courses: subject.courses.map((course) => {
-            const split = course.split(' ');
-            return { value: `${split[0]} ${split[1]}`, label: course };
-          }),
-        };
-      });
-      setSelectData([...apiData]);
+      try {
+        const response = await fetch(getUrl('/api/subjects'));
+        const subjectsJson = await response.json();
+        const subjectData = subjectsJson.map((subject) => {
+          return { value: subject.name, label: subject.name };
+        });
+        setSubjectOptions([...subjectData]);
+        const apiData = subjectsJson.map((subject) => {
+          return {
+            name: subject.name,
+            courses: subject.courses.map((course) => {
+              const split = course.split(' ');
+              return { value: `${split[0]} ${split[1]}`, label: course };
+            }),
+          };
+        });
+        setSelectData([...apiData]);
+      } catch (e) {
+        handleError(new Error('Unable to fetch Graph data'));
+      }
     };
 
     getSubjectOptions();
-  }, []);
+  }, [handleError]);
 
   // if selected subject changes, sets selected course to null and set course options to match the subject
   // then calls courseRef.current.select.clearValue() to rerender course select <Select>

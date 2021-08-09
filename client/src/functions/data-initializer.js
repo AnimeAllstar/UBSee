@@ -41,10 +41,14 @@ async function setGlobal(subject, course, api) {
       return c.name === subject + ' ' + course;
     });
     // recursively add courses node and links to nodes[] and links[] if root exists
-    if (root) {
-      recursiveAdd(root);
+    if (!root) {
+      throw new Error('Invalid Course');
     }
+    recursiveAdd(root);
   } else {
+    if (myData.length === 0) {
+      throw new Error('Invalid Subject');
+    }
     // subject graph
     // add all courses node and links to nodes[] and links[]
     myData.forEach((c) => {
@@ -54,8 +58,13 @@ async function setGlobal(subject, course, api) {
 }
 
 async function setMyData(url) {
-  const response = await fetch(url);
-  myData = await response.json();
+  try {
+    const response = await fetch(url);
+    myData = await response.json();
+  } catch (e) {
+    console.error(e);
+    throw new Error('Unable to fetch Graph data');
+  }
 }
 
 // recursively adds all nodes with possibile link to course

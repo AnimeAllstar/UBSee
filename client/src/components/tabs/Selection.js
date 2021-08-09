@@ -150,7 +150,7 @@ const Selection = () => {
           <ButtonGroup>
             <OverlayTrigger
               placement="top"
-              delay={{ show: 200, hide: 100 }}
+              delay={{ show: 300, hide: 100 }}
               overlay={(props) => renderTooltip('replace current graph with selected graph', { id: 'create-tooltip', ...props })}
             >
               <Button variant="outline-primary" onClick={updateGraph}>

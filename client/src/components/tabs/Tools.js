@@ -89,7 +89,7 @@ const Tools = () => {
               </OverlayTrigger>
               <OverlayTrigger
                 placement="top"
-                delay={{ show: 200, hide: 100 }}
+                delay={{ show: 300, hide: 100 }}
                 overlay={(props) => renderTooltip('clear all searches in the graph', { id: 'clear-tooltip', ...props })}
               >
                 <Button variant="outline-primary" onClick={clearSelection}>

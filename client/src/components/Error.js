@@ -30,6 +30,7 @@ const Error = () => {
         <p>
           An unnexpected erorr has occured while connecting to the server. Please try creating the graph again or try again later.
           <br />
+          <br />
           If the issue persists you can inform us by making a report{' '}
           <a href="https://gitreports.com/issue/AnimeAllstar/UBSee/" target="_blank" rel="noreferrer">
             here
@@ -56,7 +57,7 @@ const Error = () => {
 
   return (
     <div className="d-flex justify-content-center h-100">
-      <div className="my-auto">
+      <div className="my-auto mx-3">
         <h3 className="text-center">{ErrorMessage ? ErrorMessage : 'Error while connecting to the server'}</h3>
         <h6 className="text-center fw-normal">
           <RenderMessage />

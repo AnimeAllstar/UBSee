@@ -120,6 +120,7 @@ const Selection = () => {
             options={subjectOptions}
             className="mb-3 mt-2"
             styles={selectStyle}
+            noOptionsMessage={() => 'Unable to fetch Subjects'}
           />
           <Select
             ref={courseRef}
@@ -129,6 +130,7 @@ const Selection = () => {
             options={courseOptions}
             className="mb-2 mt-2"
             styles={selectStyle}
+            noOptionsMessage={() => 'Select Subject to see options'}
             isClearable
           />
         </ListGroup.Item>

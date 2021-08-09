@@ -66,9 +66,9 @@ const Selection = () => {
   const updateGraph = () => {
     if (selectedSubject) {
       if (selectedCourse) {
-        updateGraphState(selectedSubject.value, selectedCourse.value.split(' ')[1], 4);
+        updateGraphState(selectedSubject.value, selectedCourse.value.split(' ')[1], 4, null);
       } else {
-        updateGraphState(selectedSubject.value, selectedCourse, year);
+        updateGraphState(selectedSubject.value, selectedCourse, year, null);
       }
     }
   };

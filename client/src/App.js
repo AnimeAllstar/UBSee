@@ -17,7 +17,7 @@ function App() {
   const year = getYear();
 
   return (
-    <DataProvider subject={subject} course={course} year={year}>
+    <DataProvider subject={subject.toUpperCase()} course={course} year={year}>
       <Container fluid className="h-100 p-0 fixed-top">
         <Sidebar />
         <Graph />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, InputGroup, FormControl, Form } from 'react-bootstrap';
+import { Button, InputGroup, FormControl, Form, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
@@ -66,6 +66,8 @@ const Tools = () => {
     }
   };
 
+  const renderTooltip = (text, props) => <Tooltip {...props}>{text}</Tooltip>;
+
   return (
     <Tab title="Tools" id="tools-tab">
       <ListGroup>
@@ -76,12 +78,24 @@ const Tools = () => {
           <Item.Body>
             <InputGroup className="my-2">
               <FormControl value={search} placeholder="Enter search string" onChange={(e) => setSearch(e.target.value)} />
-              <Button variant="outline-primary" onClick={searchGraph}>
-                Search
-              </Button>
-              <Button variant="outline-primary" onClick={clearSelection}>
-                Clear
-              </Button>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 200, hide: 100 }}
+                overlay={(props) => renderTooltip('search for a node in the graph', { id: 'search-tooltip', ...props })}
+              >
+                <Button variant="outline-primary" onClick={searchGraph}>
+                  Search
+                </Button>
+              </OverlayTrigger>
+              <OverlayTrigger
+                placement="top"
+                delay={{ show: 200, hide: 100 }}
+                overlay={(props) => renderTooltip('clear all searches in the graph', { id: 'clear-tooltip', ...props })}
+              >
+                <Button variant="outline-primary" onClick={clearSelection}>
+                  Clear
+                </Button>
+              </OverlayTrigger>
             </InputGroup>
           </Item.Body>
         </ListGroup.Item>

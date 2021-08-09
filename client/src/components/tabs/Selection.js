@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Select from 'react-select';
-import { ButtonGroup, Button } from 'react-bootstrap';
+import { ButtonGroup, Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
@@ -106,6 +106,8 @@ const Selection = () => {
     }),
   };
 
+  const renderTooltip = (text, props) => <Tooltip {...props}>{text}</Tooltip>;
+
   return (
     <Tab title="Subject / Course Selection" id="selection-tab">
       <ListGroup>
@@ -146,21 +148,39 @@ const Selection = () => {
         {/* Copy to clipboard, Update Graph and Open in new tab buttons */}
         <ListGroup.Item>
           <ButtonGroup>
-            <Button variant="outline-primary" onClick={updateGraph}>
-              Create
-            </Button>
-            <Button variant="outline-primary" onClick={openInNewTab}>
-              New tab
-            </Button>
-            <Button
-              ref={copyBtn}
-              variant="outline-primary"
-              onClick={() => {
-                navigator.clipboard.writeText(getNewURL());
-              }}
+            <OverlayTrigger
+              placement="top"
+              delay={{ show: 200, hide: 100 }}
+              overlay={(props) => renderTooltip('replace current graph with selected graph', { id: 'create-tooltip', ...props })}
             >
-              Copy url
-            </Button>
+              <Button variant="outline-primary" onClick={updateGraph}>
+                Create
+              </Button>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="top"
+              delay={{ show: 200, hide: 100 }}
+              overlay={(props) => renderTooltip('open selected graph in a new tab', { id: 'new-tooltip', ...props })}
+            >
+              <Button variant="outline-primary" onClick={openInNewTab}>
+                New tab
+              </Button>
+            </OverlayTrigger>
+            <OverlayTrigger
+              placement="top"
+              delay={{ show: 200, hide: 100 }}
+              overlay={(props) => renderTooltip('copy the url of the current graph to your clipboard', { id: 'copy-tooltip', ...props })}
+            >
+              <Button
+                ref={copyBtn}
+                variant="outline-primary"
+                onClick={() => {
+                  navigator.clipboard.writeText(getNewURL());
+                }}
+              >
+                Copy url
+              </Button>
+            </OverlayTrigger>
           </ButtonGroup>
         </ListGroup.Item>
       </ListGroup>

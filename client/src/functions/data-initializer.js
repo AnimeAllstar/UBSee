@@ -3,31 +3,16 @@ import { getUrl } from './utils';
 // global variables to store nodes and links
 let nodes;
 let links;
-let finLinks;
 
 let myData;
 
-// called from script tag in index.html
-// params contains the subject ID, course # and API url
+// returns nodes and links for the requested graph
 export async function getData({ subject, course, api }) {
   nodes = [];
   links = [];
-  finLinks = [];
   await setGlobal(subject, course, api);
 
-  // add links to nodes
-  links.forEach((link) => {
-    iterateCourses(link, link.name, (fromKey, toKey) => {
-      if (!links.some((e) => e.key === fromKey)) {
-        finLinks.push({
-          from: fromKey,
-          to: toKey,
-        });
-      }
-    });
-  });
-
-  return { nodes: nodes, links: finLinks };
+  return { nodes: nodes, links: links };
 }
 
 // populates nodes[] and links[]
@@ -59,6 +44,7 @@ async function setGlobal(subject, course, api) {
   }
 }
 
+// sets myData
 async function setMyData(url) {
   try {
     const response = await fetch(url);
@@ -100,7 +86,15 @@ function addToData(course) {
     isClickable: course.prereqs.length === 0 ? true : false,
     isSearched: false,
   });
-  links.push(course);
+  // add links for this node if the link doesn't already exist
+  iterateCourses(course, course.name, (fromKey, toKey) => {
+    if (!links.some((e) => e.key === fromKey)) {
+      links.push({
+        from: fromKey,
+        to: toKey,
+      });
+    }
+  });
 }
 
 // splits course.prereqs into an array of course

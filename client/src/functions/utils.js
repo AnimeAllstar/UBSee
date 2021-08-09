@@ -43,7 +43,7 @@ export const getApiUrl = (s, c, y) => {
   }
 };
 
-// gets new route using subject, course and year
+// returns new route using subject, course and year
 export const getRoute = (s, c, y) => {
   if (s && c) {
     return `/subject/${s}/course/${c}`;
@@ -52,6 +52,7 @@ export const getRoute = (s, c, y) => {
   }
 };
 
+// returns url that will be used to fetch api data based on the environment variable NODE_ENV
 export const getUrl = (api) => {
   if (process.env.NODE_ENV === 'development') {
     return `http://localhost:8080${api}`;

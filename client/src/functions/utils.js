@@ -59,3 +59,16 @@ export const getUrl = (api) => {
   }
   return `https://www.ubsee.dev${api}`;
 };
+
+// returns page title
+export const getTitle = (subject, course) => {
+  let title;
+  if (subject && course) {
+    title = `${subject} ${course} | UBSee`;
+  } else if (subject) {
+    title = `${subject} | UBSee`;
+  } else {
+    title = 'UBSee - Creates interactive graphs for UBC subjects and courses';
+  }
+  return { title: title };
+};

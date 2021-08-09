@@ -10,9 +10,11 @@ import Sidebar from './components/Sidebar';
 import Graph from './components/Graph';
 import { DataProvider } from './contexts/DataContext';
 import { getYear } from './functions/utils';
+import usePageTracking from './hooks/usePageTracking';
 
 // App
 function App() {
+  usePageTracking();
   const { subject, course } = useParams();
   const year = getYear();
 

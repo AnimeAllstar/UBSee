@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { getData } from '../functions/data-initializer';
-import { getApiUrl, getRoute } from '../functions/utils';
+import { getApiUrl, getRoute, getTitle } from '../functions/utils';
 
 const DataContext = React.createContext();
 
@@ -20,6 +21,8 @@ export function DataProvider({ subject, course, year, children }) {
   const [isPrev, setPrev] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState(null);
   const history = useHistory();
+
+  const [head, setHead] = useState(getTitle(subject, course));
 
   // stores stateful data on the current graph
   const [currentGraph, setCurrentGraph] = useState({
@@ -71,6 +74,8 @@ export function DataProvider({ subject, course, year, children }) {
 
   const handleError = (e) => {
     if (!isError) {
+      const t = e.message.split(' ').length < 5 ? e.message : 'Error';
+      setHead({ title: `${t} | UBSee` });
       console.error(e);
       setErrorMessage(e.message);
       setError(true);
@@ -93,6 +98,8 @@ export function DataProvider({ subject, course, year, children }) {
           graph: currentGraph,
         });
       }
+
+      setHead(getTitle(currentGraph.subject, currentGraph.course));
 
       try {
         const data = await getData({ ...currentGraph });
@@ -121,5 +128,10 @@ export function DataProvider({ subject, course, year, children }) {
     updateGraphState,
   };
 
-  return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider value={value}>
+      <Helmet>{<title>{head.title}</title>}</Helmet>
+      {children}
+    </DataContext.Provider>
+  );
 }

@@ -52,14 +52,6 @@ export const getRoute = (s, c, y) => {
   }
 };
 
-// returns url that will be used to fetch api data based on the environment variable NODE_ENV
-export const getUrl = (api) => {
-  if (process.env.NODE_ENV === 'development') {
-    return `http://localhost:8080${api}`;
-  }
-  return `https://www.ubsee.dev${api}`;
-};
-
 // returns page title
 export const getTitle = (subject, course) => {
   let title;

@@ -5,7 +5,7 @@ import { ButtonGroup, Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { Tab } from '../Tab';
 import { Item, ListGroup } from '../ListGroup';
 import { useData } from '../../contexts/DataContext';
-import { getRoute, getUrl } from '../../functions/utils';
+import { getRoute } from '../../functions/utils';
 
 // Selection Tab in ../Tabs
 const Selection = () => {
@@ -27,7 +27,7 @@ const Selection = () => {
   useEffect(() => {
     const getSubjectOptions = async () => {
       try {
-        const response = await fetch(getUrl('/api/subjects'));
+        const response = await fetch('/api/subjects');
         const subjectsJson = await response.json();
         const subjectData = subjectsJson.map((subject) => {
           return { value: subject.name, label: subject.name };

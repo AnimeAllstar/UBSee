@@ -17,6 +17,7 @@ export function DataProvider({ subject, course, year, children }) {
   const [linkDataArray, setLinkDataArray] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
+  const [isPrev, setPrev] = useState(false);
   const [ErrorMessage, setErrorMessage] = useState(null);
   const history = useHistory();
 
@@ -34,8 +35,10 @@ export function DataProvider({ subject, course, year, children }) {
   // ensures that clicking the back button in browser rerenders the graph
   // uses the state of the event to update the graph's state
   window.onpopstate = (event) => {
-    const prevGraph = event.state.state.currentGraph;
-    if (prevGraph.route !== currentGraph.route) {
+    const prevState = event.state.state;
+    if (prevState) {
+      const prevGraph = prevState.graph;
+      setPrev(true);
       updateGraphState(prevGraph.subject, prevGraph.course, prevGraph.year, prevGraph);
     }
   };
@@ -81,10 +84,15 @@ export function DataProvider({ subject, course, year, children }) {
   // sets loading to false, causing the graph to replace the spinner
   useEffect(() => {
     const setDataArrays = async () => {
-      // pushes the new route as well as state. the state is used by window.onpopstate to re render the page
-      history.push(currentGraph.route, {
-        currentGraph: currentGraph,
-      });
+      // isPrev ensures that if the back button is clicked, a new state is not pushed to history
+      if (isPrev) {
+        setPrev(false);
+      } else {
+        // pushes the new route as well as state. the state is used by window.onpopstate to re render the page
+        history.push(currentGraph.route, {
+          graph: currentGraph,
+        });
+      }
 
       try {
         const data = await getData({ ...currentGraph });

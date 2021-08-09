@@ -41,16 +41,18 @@ async function setGlobal(subject, course, api) {
       return c.name === subject + ' ' + course;
     });
     // recursively add courses node and links to nodes[] and links[] if root exists
+    // otherwise throw error
     if (!root) {
       throw new Error('Invalid Course');
     }
     recursiveAdd(root);
   } else {
+    // subject graph
+    // add all courses node and links to nodes[] and links[] if myData is not empty
+    // otherwise throw error
     if (myData.length === 0) {
       throw new Error('Invalid Subject');
     }
-    // subject graph
-    // add all courses node and links to nodes[] and links[]
     myData.forEach((c) => {
       addToData(c);
     });

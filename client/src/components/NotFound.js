@@ -4,8 +4,8 @@ import { Button } from 'react-bootstrap';
 
 const NotFound = () => {
   return (
-    <div class="container-fluid m-3">
-      <h1 class="text-start fw-bold mb-4">
+    <div className="container-fluid m-3">
+      <h1 className="text-start fw-bold mb-4">
         404
         <br />
         Page Not found
@@ -14,7 +14,7 @@ const NotFound = () => {
         <Button variant="primary">Home</Button>
       </Link>
 
-      <a href="https://github.com/AnimeAllstar/UBSee" target="_blank" class="m-1" rel="noreferrer">
+      <a href="https://github.com/AnimeAllstar/UBSee" target="_blank" className="m-1" rel="noreferrer">
         <Button variant="dark">Github</Button>
       </a>
     </div>

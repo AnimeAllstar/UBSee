@@ -1,20 +1,20 @@
 const getdb = require('../utils/database').getdb;
 
 // gets course using request params from courses collection
-module.exports.getCourse = (req, res) => {
+module.exports.getCourse = (req, res, next) => {
   const db = getdb();
   db.collection('courses').findOne(
     {
       name: `${req.params.subject} ${req.params.course}`,
     },
     (err, result) => {
-      handleResponse(err, result, res);
+      handleResponse(err, result, res, next);
     }
   );
 };
 
 // gets subject using request param and year query from courses collection
-module.exports.getSubject = (req, res) => {
+module.exports.getSubject = (req, res, next) => {
   const db = getdb();
   db.collection('courses')
     .find({
@@ -24,17 +24,17 @@ module.exports.getSubject = (req, res) => {
       },
     })
     .toArray((err, result) => {
-      handleResponse(err, result, res);
+      handleResponse(err, result, res, next);
     });
 };
 
 // gets all subjects from subjects collection
-module.exports.getSubjects = (req, res) => {
+module.exports.getSubjects = (req, res, next) => {
   const db = getdb();
   db.collection('subjects')
     .find()
     .toArray((err, result) => {
-      handleResponse(err, result, res);
+      handleResponse(err, result, res, next);
     });
 };
 
@@ -47,12 +47,12 @@ function restrict(val, min, max) {
 }
 
 // handles the response from the database
-function handleResponse(err, result, res) {
+function handleResponse(err, result, res, next) {
   if (err) {
-    console.log(err);
+    console.error(err);
   }
   if (!result) {
-    res.status(404).send('Not Found');
+    next();
   } else {
     res.send(result);
   }

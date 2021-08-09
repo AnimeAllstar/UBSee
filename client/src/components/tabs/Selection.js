@@ -49,7 +49,8 @@ const Selection = () => {
     };
 
     getSubjectOptions();
-  }, [handleError]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // if selected subject changes, sets selected course to null and set course options to match the subject
   // then calls courseRef.current.select.clearValue() to rerender course select <Select>

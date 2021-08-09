@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require('cors');
 const compression = require('compression');
 const helmet = require('helmet');
 
@@ -8,9 +7,6 @@ const errorController = require('./src/controllers/error');
 const mongoConnect = require('./src/utils/database').connect;
 
 const app = express();
-
-// Cross-origin resource sharing
-app.use(cors());
 
 // security
 app.use(

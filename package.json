@@ -1,0 +1,10 @@
+{
+    "cacheDirectories": ["client/node_modules", "server/node_modules"],
+    "scripts": {
+        "heroku-postbuild": "cd client && npm install && npm run build",
+        "postinstall": "cd server && npm install"
+    },
+    "engines": {
+        "node": "14.16.1"
+    }
+}

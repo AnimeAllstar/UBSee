@@ -17,7 +17,10 @@
     "fix": "node scripts/fix.js",
     "json-mongo": "node scripts/json-mongo.js"
   },
-  "cacheDirectories": ["/node_modules", "client/node_modules"],
+  "cacheDirectories": [
+    "/node_modules",
+    "client/node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnimeAllstar/UBSee.git"

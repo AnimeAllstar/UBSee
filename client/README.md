@@ -1,8 +1,17 @@
-# Getting Started with Create React App
+# UBSee client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The front-end of UBSee is made using React. The starter files for the client were generated using [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Directories:
+
+- **`./public/`** contains index.html, images, and other static files
+- **`./src/`**:
+  - **`./components/`** contains all components
+  - **`./contexts/`** contains DataContext, which used useContext to provide graph to all components in **`App.js`**
+  - **`./functions/`** contains javascript functions that do not dirrectly update the state of components but are used by componenents throughout the app
+  - **`./hooks/`** contains custom hooks
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -14,10 +23,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Note: The front-end depends on data from the REST API, read the [README](../README.md) in the root folder to know how to run both the client and express server concurrently.
 
 ### `npm run build`
 
@@ -28,43 +34,13 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+customize it when you are ready for it.
 
-### `npm run eject`
+### `npm run analyze`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Uses [Source map explorer](https://www.npmjs.com/package/source-map-explorer) to analyzes JavaScript bundles using the source maps.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To analyze the bundle run the production build then run the analyze script:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run build` \
+`npm run analyze`

@@ -4,6 +4,8 @@ import ReactGA from 'react-ga4';
 
 require('dotenv').config();
 
+// this hook sends pageviews to google analytics if the app is not in development
+// based on code from https://github.com/react-ga/react-ga/issues/122#issuecomment-668640145
 const usePageTracking = () => {
   const location = useLocation();
   const [initialized, setInitialized] = useState(false);

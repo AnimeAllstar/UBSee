@@ -2,6 +2,8 @@
 
 Creates interactive graphs for [UBC](https://www.ubc.ca/) subjects and courses 📚.
 
+UBSee is a full stack single page application made using the MERN stack. The client is made using React and the server is an express REST API that provides graph data stored in a MongoDB cluster.
+
 Live at : [ubsee.dev](https://www.ubsee.dev/) | deployed using [heroku](https://heroku.com)
 
 Make sure to share the website with other students if it helped you out. ⌚ or ⭐ the project to keep up with latest changes.
@@ -16,8 +18,28 @@ Make sure to share the website with other students if it helped you out. ⌚ or 
 ## How to install
 
 - install [Node.js](https://nodejs.org/en/) if you don't already have it
-- run `npm install` to install dependancies
-- run `npm start` or `npm run dev` to start the node app
+- run `npm install` to install server dependancies
+- `cd client` and run `npm install` to install client dependancies
+
+## Available Scripts
+
+### `npm start`
+
+Runs the REST API at [localhost:8080](http://localhost:8080/).
+
+### `npm run dev`
+
+Concurrently runs client and server. **Use this for local development**.
+
+### `npm run nodemon`
+
+Runs the REST API at [localhost:8080](http://localhost:8080/) using [nodemon](https://www.npmjs.com/package/nodemon).
+
+### `npm run client`
+
+Runs client from the root directory.
+
+#### Check package.json to see all scripts
 
 ## How to contribute
 
@@ -48,10 +70,6 @@ Make sure to submit a pull request if you think you can improve the process of a
 Use `npm run json-mongo` to add data from `./data/json/courses.json` to MongoDB. Add your `MONGI_URI` in a .env file.
 Uncomment the lines at the bottom of `./scripts/json-mongo.js` before running the command and take a look at the file for more information.
 
-### Build command
-
-Use `npm run build` to run the build command. This command concats and uglifies the files in `./public/js/` into a single .js file. If you are making changes to `./public/js/` during development, don't worry about this as `npm run dev` builds the js file automatically before running the server using nodemon. Check the `nodemon.json` file for more information.
-
 ## Contributors
 
 - [Asad Dhorajiwala](https://github.com/AnimeAllstar)
@@ -59,10 +77,11 @@ Use `npm run build` to run the build command. This command concats and uglifies 
 
 ## Technologies
 
-- Node.js
-- Express
-- MongoDB
-- GoJS
+- NodeJs
+- Express (web server for REST API)
+- ReactJs (used to create static client)
+- MongoDB (datababse)
+- GoJS (Graphing library)
 
 ## Credits
 

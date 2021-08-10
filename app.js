@@ -3,14 +3,14 @@ const compression = require('compression');
 const helmet = require('helmet');
 const path = require('path');
 
-const apiRoutes = require('./src/routes/api.js');
-const errorController = require('./src/controllers/error');
-const mongoConnect = require('./src/utils/database').connect;
+const apiRoutes = require('./api/routes/api');
+const errorController = require('./api/controllers/error');
+const mongoConnect = require('./api/utils/database').connect;
 
 const app = express();
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // security
 app.use(
@@ -30,7 +30,7 @@ app.use('/api/*', errorController.notFound);
 
 // hanldles client side requests statically
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 mongoConnect(() => {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ReactDiagram } from 'gojs-react';
-import { Col } from 'react-bootstrap';
 
 import { Spinny } from './Spinny';
 import { useData } from '../contexts/DataContext';
@@ -31,11 +30,7 @@ const Graph = () => {
     }
   };
 
-  return (
-    <Col lg="9" className="graph-container">
-      {renderGraph()}
-    </Col>
-  );
+  return <div className="graph-container col-lg-9">{renderGraph()}</div>;
 };
 
 export default Graph;

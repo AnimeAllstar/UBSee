@@ -1,8 +1,8 @@
 // this script is used to add data from ./data/json/courses.json to MongoDB
 
-const Subject = require('../src/models/Subject');
-const Course = require('../src/models/Course');
-const mongoConnect = require('../src/utils/database').connect;
+const Subject = require('../api/models/Subject');
+const Course = require('../api/models/Course');
+const mongoConnect = require('../api/utils/database').connect;
 const readJson = require('./read-source');
 
 // adds data to the subjects collection

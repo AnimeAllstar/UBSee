@@ -1,0 +1,41 @@
+.graph-component {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.graph-container {
+  height: 100%;
+}
+
+.navbar-collapse {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+i {
+  color: #0d6efd;
+}
+
+/* For devices with min-width: 992px. lg in Boostrap */
+
+@media only screen and (min-width: 992px) {
+  .graph-container {
+    float: right !important;
+  }
+
+  .navbar {
+    float: left !important;
+    height: 100%;
+  }
+
+  .navbar-collapse {
+    max-height: none;
+  }
+
+  .sidebar {
+    height: 100%;
+    position: absolute;
+    overflow-y: auto;
+  }
+}

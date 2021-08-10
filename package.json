@@ -1,6 +1,6 @@
 {
   "name": "ubsee",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Creates interactive graphs for UBC subjects and courses",
   "main": "index.js",
   "engines": {
@@ -8,15 +8,19 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "nodemon": "nodemon app.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run nodemon\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "add": "node scripts/add.js",
     "test": "node scripts/test.js",
     "fix": "node scripts/fix.js",
-    "concat": "concat -o ./public/js/ubsee.js ./public/js/graph-initializer.js ./public/js/node-event-handler.js ./public/js/page-event-handler.js ./public/js/select2-event-handler.js ./public/js/util.js",
-    "uglify": "uglifyjs public/js/ubsee.js -o public/js/ubsee.min.js",
-    "build": "npm run concat && npm run uglify",
     "json-mongo": "node scripts/json-mongo.js"
   },
+  "cacheDirectories": [
+    "/node_modules",
+    "client/node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnimeAllstar/UBSee.git"
@@ -25,8 +29,10 @@
     "ubsee",
     "UBC",
     "Nodejs",
-    "express",
-    "GoJS"
+    "Express",
+    "GoJS",
+    "Mongodb",
+    "React"
   ],
   "author": "",
   "license": "MIT",
@@ -39,16 +45,13 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "mongodb": "^3.6.10",
-    "nunjucks": "^3.2.3",
-    "serve-favicon": "^2.5.0"
+    "mongodb": "^3.6.10"
   },
   "devDependencies": {
-    "concat": "^1.0.3",
+    "concurrently": "^6.2.1",
     "jsonfile": "^6.1.0",
     "needle": "^2.6.0",
     "nodemon": "^2.0.7",
-    "sort-json": "^2.0.0",
-    "uglify-js": "^3.13.10"
+    "sort-json": "^2.0.0"
   }
 }

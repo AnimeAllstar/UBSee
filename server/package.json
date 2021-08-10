@@ -1,6 +1,6 @@
 {
   "name": "ubsee",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Creates interactive graphs for UBC subjects and courses",
   "main": "index.js",
   "engines": {
@@ -8,9 +8,10 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "nodemon": "nodemon app.js",
     "client": "cd ../client && npm start",
-    "concurrent": "concurrently \"npm run dev\" \"npm run client\"",
+    "dev": "concurrently \"npm run nodemon\" \"npm run client\"",
+    "heroku-postbuild": "cd ../client && npm install && npm run build",
     "add": "node scripts/add.js",
     "test": "node scripts/test.js",
     "fix": "node scripts/fix.js",

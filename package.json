@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "nodemon": "nodemon app.js",
+    "nodemon": "nodemon --ignore ./client/ app.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run nodemon\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build",

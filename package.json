@@ -47,7 +47,7 @@
     "concurrently": "^6.2.1",
     "jsonfile": "^6.1.0",
     "needle": "^2.9.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.14",
     "sort-json": "^2.0.0"
   }
 }

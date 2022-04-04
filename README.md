@@ -1,8 +1,9 @@
-# UBSee <img src="https://user-images.githubusercontent.com/39626451/124312404-ddeaf780-db8c-11eb-950e-3ec28175f7b7.png" alt="UBSee icon" width="40" height="40" />
+<p align="center"><img src="https://user-images.githubusercontent.com/39626451/124312404-ddeaf780-db8c-11eb-950e-3ec28175f7b7.png" alt="UBSee icon" height="60" /></p>
 
-Creates interactive graphs for [UBC](https://www.ubc.ca/) subjects and courses 📚.
+<h1 align="center">UBSee</h1>
+<p align="center">Creates interactive graphs for <a href="https://www.ubc.ca/" target="_blank">UBC</a> subjects and courses 📖</p>
 
-UBSee is a full stack single page application made using the MERN stack. The client is made using React and the server is an express REST API that provides graph data stored in a MongoDB cluster.
+UBSee is a full stack single page application made using the MERN stack. The client is made using React and the server is an express REST API that provides graph data stored in a MongoDB Atlas cluster.
 
 Live at : [ubsee.dev](https://www.ubsee.dev/) | deployed using [heroku](https://heroku.com)
 
@@ -17,29 +18,18 @@ Make sure to share the website with other students if it helped you out. ⌚ or 
 
 ## How to install
 
-- install [Node.js](https://nodejs.org/en/) if you don't already have it
+- install [Node](https://nodejs.org) `>=16.13.1`.
 - run `npm install` to install server dependancies
 - `cd client` and run `npm install` to install client dependancies
 
 ## Available Scripts
 
-### `npm start`
+- `npm start` - runs the REST API at [localhost:8080](http://localhost:8080/).
+- `npm run dev` - concurrently runs client and server. **Use this for local development**.
+- `npm run nodemon` - runs the REST API at [localhost:8080](http://localhost:8080/) using [nodemon](https://www.npmjs.com/package/nodemon).
+- `npm run client` - runs client from the root directory.
 
-Runs the REST API at [localhost:8080](http://localhost:8080/).
-
-### `npm run dev`
-
-Concurrently runs client and server. **Use this for local development**.
-
-### `npm run nodemon`
-
-Runs the REST API at [localhost:8080](http://localhost:8080/) using [nodemon](https://www.npmjs.com/package/nodemon).
-
-### `npm run client`
-
-Runs client from the root directory.
-
-#### Check package.json to see all scripts
+Check package.json to see all scripts
 
 ## How to contribute
 
@@ -82,6 +72,10 @@ Uncomment the lines at the bottom of `./scripts/json-mongo.js` before running th
 - ReactJs (used to create static client)
 - MongoDB (datababse)
 - GoJS (Graphing library)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Credits
 
